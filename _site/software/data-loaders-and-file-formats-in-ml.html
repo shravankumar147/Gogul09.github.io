@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data loaders and file formats in Machine Learning – Gogul Ilango </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,400|Roboto:300" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="/images/favicon_gi.png"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=12.0, minimum-scale=.25, user-scalable=yes"/>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    <meta property="og:title" content="Data loaders and file formats in Machine Learning" />
+    <meta name="description" content="Learn how to load data to solve a machine learning problem using Python, Numpy and Pandas." />
+    <meta property="og:description" content="Learn how to load data to solve a machine learning problem using Python, Numpy and Pandas." />
+    <meta property="twitter:title" content="Data loaders and file formats in Machine Learning" />
+
+    <meta property="og:image" content="https://drive.google.com/uc?id=1OdUIXkvVj1jbUkTvDAnkcHOZZSqPiWj8"/>
+    <meta property="og:image:width" content="180" />
+    <meta property="og:image:height" content="110" />
+
+    <meta name="twitter:title" content="Data loaders and file formats in Machine Learning">
+    <meta name="twitter:description" content="Learn how to load data to solve a machine learning problem using Python, Numpy and Pandas.">
+    <meta name="twitter:image" content="https://drive.google.com/uc?id=1OdUIXkvVj1jbUkTvDAnkcHOZZSqPiWj8">
+  <!-- Begin Jekyll SEO tag v2.2.2 -->
+<title>Data loaders and file formats in Machine Learning | Gogul Ilango</title>
+<meta property="og:title" content="Data loaders and file formats in Machine Learning" />
+<meta name="author" content="Gogul Ilango" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Learn how to load data to solve a machine learning problem using Python, Numpy and Pandas." />
+<meta property="og:description" content="Learn how to load data to solve a machine learning problem using Python, Numpy and Pandas." />
+<link rel="canonical" href="http://localhost:4000/software/data-loaders-and-file-formats-in-ml" />
+<meta property="og:url" content="http://localhost:4000/software/data-loaders-and-file-formats-in-ml" />
+<meta property="og:site_name" content="Gogul Ilango" />
+<meta property="og:image" content="https://drive.google.com/uc?id=1OdUIXkvVj1jbUkTvDAnkcHOZZSqPiWj8" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-07-05T00:00:00+05:30" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"Data loaders and file formats in Machine Learning","author":{"@type":"Person","name":"Gogul Ilango"},"image":"https://drive.google.com/uc?id=1OdUIXkvVj1jbUkTvDAnkcHOZZSqPiWj8","datePublished":"2018-07-05T00:00:00+05:30","dateModified":"2018-07-05T00:00:00+05:30","description":"Learn how to load data to solve a machine learning problem using Python, Numpy and Pandas.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/software/data-loaders-and-file-formats-in-ml"},"url":"http://localhost:4000/software/data-loaders-and-file-formats-in-ml"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1792372637327333",
+            enable_page_level_ads: true
+       });
+  </script>
+  
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!--[if lte IE 8]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+    <meta name="theme-color" content="#252525" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Gogul Ilango - This blog on Deep Learning, VLSI Design and STA is written by Gogul Ilango. Master VLSI Design, Physical Design, Static Timing Analysis, Deep Learning through my articles, tutorials and resources." href="/feed.xml" />
+  </head>
+
+  <body>
+    <div class="outer-wrapping">
+      <div class="inner-container">
+          <div class="header-left">
+            <a class='logo' href="https://gogul09.github.io/"><img src="/images/icons/logo.png"/></a>
+          </div>
+          <div class="topnav header-right" id="top_navigator">
+            <a title="home" id = "nav_home" href="/"></a>
+            <a title="creations" id = "nav_creations" href="/creations"></a>
+            <a title="music" id = "nav_music" href="/music"></a>
+            <a title="about" id = "nav_about" href="/about"></a>
+            <a href = "javascript:void(0);" style="font-size:14px;" class="icon" onclick="top_navigation()">&#9776;</a>
+          </div>
+      </div>
+    </div>
+
+    <div id="main" role="main">
+      <div class="post-heading post-heading-wrapper post-image">
+	<div class="grad-post">
+		<h1>Data loaders and file formats in Machine Learning</h1>
+		<div class="post-subheading">
+			<p>Machine Learning | 05 July 2018</p>
+			<p><a href="#show_comments" id="comment-count" class="disqus-comment-count" data-disqus-url="https://gogul09.github.io/software/data-loaders-and-file-formats-in-ml"></a></p>
+		</div>
+	</div>
+</div>
+
+<div class="containing">
+	<div class="wrapping">
+
+		<div class="share-box">
+	<button class="top-share-fab" id="top-share-fab" onclick="showShareBox(this.id)"></button>
+	<div id="top-share-box" class="top-share-box">
+		<h5>Share</h5>
+		<ul>
+			<li class="whatsapp-white"><a href="whatsapp://send?text=http://localhost:4000/software/data-loaders-and-file-formats-in-ml" data-action="share/whatsapp/share">WhatsApp</a></li>
+			<li class="facebook-white"><a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/software/data-loaders-and-file-formats-in-ml" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" >Facebook</a></li>
+			<li class="twitter-white"><a href="https://twitter.com/intent/tweet?text=Data loaders and file formats in Machine Learning&url=http://localhost:4000/software/data-loaders-and-file-formats-in-ml" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">Twitter</a></li>
+			<li class="linkedin-white"><a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/software/data-loaders-and-file-formats-in-ml&title=Data loaders and file formats in Machine Learning&summary=Learn how to load data to solve a machine learning problem using Python, Numpy and Pandas.&source=webjeda" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" >LinkedIn</a></li>
+		</ul>
+	</div>
+</div>
+
+		<div class="post-cover">
+
+			<article class="post">
+				<div class="entry">
+					<div class="sidebar_tracker" id="sidebar_tracker">
+  <button onclick="closeSidebar('sidebar_tracker_content')">X</button>
+  <p onclick="showSidebar('sidebar_tracker_content')">Contents</p>
+  <ul id="sidebar_tracker_content">
+		<li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_1" href="#csv-files">CSV files</a></li>
+		<li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_2" href="#load-csv-using-python">Load CSV using Python</a></li>
+		<li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_3" href="#load-csv-using-numpy">Load CSV using Numpy</a></li>
+		<li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_4" href="#load-csv-using-pandas">Load CSV using Pandas</a></li>
+		<li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_5" href="#hdf5-files">HDF5 files</a></li>
+		<li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_6" href="#save-using-h5py">Save HDF5 using h5py</a></li>
+		<li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_7" href="#load-using-h5py">Load HDF5 using h5py</a></li>
+		<li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_8" href="#save-group-using-h5py">Save group using h5py</a></li>
+		<li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_9" href="#load-group-using-h5py">Load group using h5py</a></li>
+	</ul>
+</div>
+
+<p class="hundred-days"><span>#100DaysOfMLCode</span></p>
+
+<p><strong>First step in any machine learning problem is to load data. In this blog post, we will learn what are the different data loaders and file formats available in Python to do machine learning.</strong></p>
+
+<p>Common file formats used to store data in machine learning as well as deep learning are <span class="coding">.csv</span>, <span class="coding">.h5</span> and <span class="coding">.pickle</span>. Apart from these, there are some other ways to handle large data files as discussed <a href="https://machinelearningmastery.com/large-data-files-machine-learning/" target="_blank">here</a>.</p>
+
+<h3 id="csv-files">CSV files</h3>
+
+<p>CSV is the most common file format in machine learning. <strong>CSV</strong> means <strong>C</strong>omma <strong>S</strong>eparated <strong>V</strong>alues. Each row in the file represents an instance and each column represents an attribute or feature.</p>
+
+<p>When working with CSV files, you need to consider the following factors.</p>
+<ul>
+  <li>Does your csv file have <strong>headers</strong> which represent column names?</li>
+  <li>Does your csv file have <strong>comments</strong> specified using any symbol?</li>
+  <li>Does your csv file have <strong>delimiter</strong> apart from the standard <strong>,</strong> delimiter?</li>
+  <li>Does your csv file have <strong>quotes</strong> to represent string values separated by space?</li>
+</ul>
+
+<p>For this tutorial, we will consider the famous <a href="https://en.wikipedia.org/wiki/Iris_flower_data_set" target="_blank">Iris dataset</a>. You can download the <span class="coding">iris.data</span> csv file <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data" target="_blank">here</a>. Go to that page, hit <span class="coding">ctrl+a</span>, <span class="coding">ctrl+c</span>, <span class="coding">ctrl+v</span> and save it as <strong>iris_dataset.csv</strong>. Below is the first 10 rows of Iris dataset which is represented in <span class="coding">.csv</span> format.</p>
+
+<div class="code-head">iris_dataset.csv<span>csv</span></div>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10</pre></td><td class="code"><pre>5.1,3.5,1.4,0.2,Iris-setosa
+4.9,3.0,1.4,0.2,Iris-setosa
+4.7,3.2,1.3,0.2,Iris-setosa
+4.6,3.1,1.5,0.2,Iris-setosa
+5.0,3.6,1.4,0.2,Iris-setosa
+5.4,3.9,1.7,0.4,Iris-setosa
+4.6,3.4,1.4,0.3,Iris-setosa
+5.0,3.4,1.5,0.2,Iris-setosa
+4.4,2.9,1.4,0.2,Iris-setosa
+4.9,3.1,1.5,0.1,Iris-setosa
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 id="load-csv-using-python">Load CSV using Python</h3>
+
+<p><span class="coding">csv</span> module in Python provides a method called <span class="coding">reader()</span> to read <span class="coding">.csv</span> files. You can specify the delimiter used in your csv file as well as quoting constraints as shown below. You can also convert the data read by csv reader into a numpy array and then use it to do machine learning. The below example prints the shape of the iris dataset using python’s csv reader and numpy.</p>
+
+<div class="code-head">load_using_python.py<span>code</span></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="c"># load iris dataset using csv package</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s">"iris_dataset.csv"</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s">"r"</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">","</span><span class="p">,</span> <span class="n">quoting</span><span class="o">=</span><span class="n">csv</span><span class="o">.</span><span class="n">QUOTE_NONE</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c"># use numpy to print the shape</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c"># prints (150, 5)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 id="load-csv-using-numpy">Load CSV using Numpy</h3>
+
+<p><a href="http://www.numpy.org/" target="_blank">Numpy</a> offers two handy functions to load csv files. <span class="coding">numpy.loadtxt()</span> works only if the data present in csv file is of same datatype. <span class="coding">numpy.genfromtxt()</span> works for multiple datatype in a single csv file using the argument <span class="coding">dtype=None</span>.</p>
+<ul>
+  <li><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html" target="_blank">numpy.loadtxt()</a></li>
+  <li><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.genfromtxt.html" target="_blank">numpy.genfromtxt()</a></li>
+</ul>
+
+<div class="code-head">load_using_numpy.py<span>code</span></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="c"># load iris dataset using numpy</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s">"iris_dataset.csv"</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s">"r"</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">","</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c"># prints the iris dataset</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 id="load-csv-using-pandas">Load CSV using Pandas</h3>
+
+<p><a href="https://pandas.pydata.org/" target="_blank">Pandas</a> offers comprehensive and easier ways to load csv files. <span class="coding">pandas.read_csv()</span> method loads the csv data as a pandas dataframe which could directly be used for visualization and machine learning. In the below example, I have specified header names for each column in the csv file and assigned it using <span class="coding">names</span> argument in <span class="coding">pd.read_csv()</span> function.</p>
+
+<ul>
+  <li><a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html" target="_blank">pandas.read_csv()</a></li>
+</ul>
+
+<div class="code-head">load_using_pandas.py<span>code</span></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+
+<span class="c"># load iris dataset using pandas</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s">"iris_dataset.csv"</span>
+<span class="n">header_names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"sepal_length"</span><span class="p">,</span> <span class="s">"sepal_width"</span><span class="p">,</span> <span class="s">"petal_length"</span><span class="p">,</span> <span class="s">"petal_width"</span><span class="p">,</span> <span class="s">"class"</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">header_names</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c"># prints (150, 5)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="c"># prints &lt;class 'pandas.core.frame.DataFrame'&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h4 id="advantages-of-csv">Advantages of CSV</h4>
+<ul>
+  <li>Human-readable format.</li>
+  <li>Easy to edit manually.</li>
+  <li>Easy to implement and parse.</li>
+  <li>Faster to handle for smaller dataset.</li>
+</ul>
+
+<h4 id="disadvantages-of-csv">Disadvantages of CSV</h4>
+<ul>
+  <li>Takes huge time to load large data.</li>
+  <li>Takes huge time to save large data.</li>
+  <li>No standard way to represent binary data and control characters.</li>
+  <li>No distinction between numeric and text values.</li>
+  <li>No way to represent complex hierarchical data.</li>
+</ul>
+
+<h3 id="hdf5-files">HDF5 files</h3>
+<p>An alternative to CSV file format is the <a href="" target="_blank">HDF5</a> file format which is now widely used in Deep Learning. HDF5 is a hierarchical data format to store and manage large chunks of data. It is similar to a filesystem data format which can store complex hierarchical data. Please read <a href="https://support.hdfgroup.org/HDF5/Tutor/HDF5Intro.pdf" target="_blank">this</a> introduction about HDF5 file format and then start using it.</p>
+
+<p>HDF5 includes two major object types.</p>
+<ol>
+  <li><strong>Groups</strong> - Container like structures to hold datasets and other groups.</li>
+  <li><strong>Datasets</strong> - Multi-dimensional arrays of a homogeneous type (You could think of a standard numpy array).</li>
+</ol>
+
+<h3 id="save-using-h5py">Save HDF5 using h5py</h3>
+<p>You can save any number of numpy arrays in <span class="coding">.h5</span> file format and load it again using a python library called <span class="coding">h5py</span>. If you have installed Python via Anaconda, then you should get it by default. Otherwise install it using <span class="coding">pip</span> <a href="http://docs.h5py.org/en/latest/build.html" target="_blank">(installing h5py)</a>.</p>
+
+<p>The following example creates two random numpy arrays and saves a <span class="coding">demo_data.h5</span> file locally. Notice that we pass the numpy array as a <span class="coding">data</span> argument to the <span class="coding">create_dataset()</span> function. You can create as many dataset as you want with unique name to each dataset.</p>
+
+<p>If you execute the below code, you would get a <span class="coding">demo_data.h5</span> file which is of size 9.6MB in your localdisk.</p>
+
+<div class="code-head">save_h5.py<span>code</span></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">h5py</span>
+
+<span class="c"># create two random numpy arrays</span>
+<span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">))</span>
+<span class="n">a2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">))</span>
+
+<span class="c"># save it as a HDF5 file</span>
+<span class="k">with</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="s">"demo_data.h5"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+	<span class="n">f</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">(</span><span class="s">"dataset1"</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">a1</span><span class="p">)</span>
+	<span class="n">f</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">(</span><span class="s">"dataset2"</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">a2</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 id="load-using-h5py">Load HDF5 using h5py</h3>
+<p>You can access the list of keys in the <span class="coding">.h5</span> file using <span class="coding">keys()</span> function directly on the file. This returns the list of keys you have created.</p>
+
+<p>You can access the stored dataset using <span class="coding">get()</span> function with the dataset’s name passed as the argument. After loading the dataset, you can easily use <span class="coding">np.array()</span> function to convert it back to a numpy array.</p>
+
+<p>The following example displays the keys, loads the <span class="coding">demo_data.h5</span> file, loads <span class="coding">dataset1</span>, convert it back to numpy array and prints out its shape.</p>
+
+<div class="code-head">load_h5.py<span>code</span></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">h5py</span>
+
+<span class="c"># load the saved .h5 file</span>
+<span class="k">with</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="s">"demo_data.h5"</span><span class="p">,</span> <span class="s">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+	
+	<span class="c"># display the list of keys in this file</span>
+	<span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">"{0} keys in this file: {1}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">keys</span><span class="p">),</span> <span class="n">keys</span><span class="p">))</span>
+	<span class="c"># prints 2 keys in this file: ['dataset1', 'dataset2']</span>
+	
+	<span class="c"># load the numpy array</span>
+	<span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"dataset1"</span><span class="p">)</span>
+	<span class="n">a1</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">"Shape of dataset1: {0}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a1</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span> 
+	<span class="c"># prints Shape of dataset1: (500, 500)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 id="save-group-using-h5py">Save group using h5py</h3>
+<p>Similar to dataset which holds multi-dimensional numpy arrays, you can create groups to hold datasets and other groups. To do that, you need to use <span class="coding">create_group()</span> function and pass in an unique group name.</p>
+
+<p>The following example creates two random numpy arrays, creates two groups with its corresponding dataset. Running this example generates <span class="coding">demo_group.h5</span> file locally that is of size 3.9MB.</p>
+
+<div class="code-head">save_group_h5.py<span>code</span></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">h5py</span>
+
+<span class="c"># create two random numpy arrays</span>
+<span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">size</span><span class="o">=</span> <span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">))</span>
+<span class="n">a2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">size</span><span class="o">=</span> <span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">))</span>
+
+<span class="c"># create groups and datasets</span>
+<span class="k">with</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="s">"demo_group.h5"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+	<span class="n">group1</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">create_group</span><span class="p">(</span><span class="s">"group1"</span><span class="p">)</span>
+	<span class="n">group1</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">(</span><span class="s">"dataset1"</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">a1</span><span class="p">)</span>
+
+	<span class="n">group2</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">create_group</span><span class="p">(</span><span class="s">"group2"</span><span class="p">)</span>
+	<span class="n">group2</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">(</span><span class="s">"dataset2"</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">a2</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 id="load-group-using-h5py">Load group using h5py</h3>
+<p>To load group from a <span class="coding">.h5</span> file, you need to use the same <span class="coding">get()</span> function with the group’s name as the argument. As <span class="coding">keys()</span> gave datasets in the file, <span class="coding">items()</span> will provide the list of groups in the file.</p>
+
+<p>The following example loads the <span class="coding">demo_group.h5</span> file, loads the list of groups in the file using <span class="coding">items()</span> function and prints out the contents of <span class="coding">group1</span>.</p>
+
+<div class="code-head">load_group_h5.py<span>code</span></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">h5py</span>
+
+<span class="c"># read groups and datasets</span>
+<span class="k">with</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="s">"demo_group.h5"</span><span class="p">,</span> <span class="s">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+
+	<span class="c"># get the list of items in the file</span>
+	<span class="n">groups</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">"{0} items in this file - {1}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">groups</span><span class="p">),</span> <span class="n">groups</span><span class="p">))</span>
+
+	<span class="c"># load group1 and print the items</span>
+	<span class="n">group1</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"group1"</span><span class="p">)</span>
+	<span class="n">group1_items</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">group1</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">"{0} item in group1 - {1}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">group1_items</span><span class="p">),</span> <span class="n">group1_items</span><span class="p">))</span>
+
+	<span class="c"># load dataset1 from group1 and print its shape</span>
+	<span class="n">data1</span> <span class="o">=</span> <span class="n">group1</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"dataset1"</span><span class="p">)</span>
+	<span class="n">a1</span>    <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data1</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">"Shape of dataset1 in group1: {0}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a1</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<div class="code-head">output<span>terminal</span></div>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre>2 items in this file - [('group1', &lt;HDF5 group "/group1" (1 members)&gt;), ('group2', &lt;HDF5 group "/group2" (1 members)&gt;)]
+1 item in group1 - [('dataset1', &lt;HDF5 dataset "dataset1": shape (500, 500), type "&lt;f8"&gt;)]
+Shape of dataset1 in group1: (500, 500)
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+				</div>
+				<div class="note closers">
+	<p>In case if you found something useful to add to this article or you found a bug in the code or would like to improve some points mentioned, feel free to write it down in the comments. Hope you found something useful here.</p>
+	<p class="happy-learning">Happy learning!</p>
+</div>
+				
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<hr>
+<div class="share-it-box">
+<p class="share-this">Share this post! </p>
+<div id="share-box"> 
+		<a href="whatsapp://send?text=http://localhost:4000/software/data-loaders-and-file-formats-in-ml" data-action="share/whatsapp/share"><img src="/images/icons/whatsapp.png"/></a>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/software/data-loaders-and-file-formats-in-ml" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><img src="/images/icons/facebook.png"/></a>
+       
+        <a href="https://twitter.com/intent/tweet?text=Data loaders and file formats in Machine Learning&url=http://localhost:4000/software/data-loaders-and-file-formats-in-ml" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><img src="/images/icons/twitter.png"/></a>
+
+       <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/software/data-loaders-and-file-formats-in-ml&title=Data loaders and file formats in Machine Learning&summary=Learn how to load data to solve a machine learning problem using Python, Numpy and Pandas.&source=webjeda" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><img src="/images/icons/linkedin.png"/></a>                               
+</div>
+</div>
+<hr>
+			</article>
+			
+			<div class="show-comments" onclick="showComments()"><p id="show_comments"><span id="comment_count" class="disqus-comment-count" data-disqus-url="https://gogul09.github.io/software/data-loaders-and-file-formats-in-ml"></span></p></div>
+
+			<div id="disqus_thread"></div>
+			<script>
+				(function() {
+					var d = document, s = d.createElement('script');
+					s.src = '//gogul09.disqus.com/embed.js';
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	
+	window.onscroll = function() {
+		sideBarScrollHandler();
+		windowScrollHandler();
+	};
+	
+	function sideBarScrollHandler() {
+		if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+			document.getElementById("sidebar_tracker").style.top = "20px";
+		} else {
+			document.getElementById("sidebar_tracker").style.top = "70px";
+		}
+	}
+	
+</script>
+    </div>
+
+    <div class="wrapper-footer">
+      <footer class="footer">
+        <p><span>&copy; 2019 - gogul ilango | opinions are my own</span></p>
+       </footer>
+     </div>
+     
+     <button onclick="topScroller()" id="btnScrollTop" title="Go to top" class="w3-animate-bottom"></button>
+
+     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+     <script src="https://apis.google.com/js/platform.js"></script>
+     <script async defer src="https://buttons.github.io/buttons.js"></script>
+     <script id="dsq-count-scr" src="//gogul09.disqus.com/count.js" async></script>
+     <script src="/js/custom.js"></script>
+     
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-93019594-1', 'auto');
+		ga('send', 'pageview', {
+		  'page': '/software/data-loaders-and-file-formats-in-ml',
+		  'title': 'Data loaders and file formats in Machine Learning'
+		});
+	</script>
+	<!-- End Google Analytics -->
+
+
+   </body>
+   </html>

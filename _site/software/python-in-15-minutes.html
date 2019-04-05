@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Python in 15 minutes – Gogul Ilango </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,400|Roboto:300" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="/images/favicon_gi.png"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=12.0, minimum-scale=.25, user-scalable=yes"/>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    <meta property="og:title" content="Python in 15 minutes" />
+    <meta name="description" content="Learn the syntax and how to's of Python programming language which is highly used in tech companies and the easiest programming language for a beginner." />
+    <meta property="og:description" content="Learn the syntax and how to's of Python programming language which is highly used in tech companies and the easiest programming language for a beginner." />
+    <meta property="twitter:title" content="Python in 15 minutes" />
+
+    <meta property="og:image" content="https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk"/>
+    <meta property="og:image:width" content="180" />
+    <meta property="og:image:height" content="110" />
+
+    <meta name="twitter:title" content="Python in 15 minutes">
+    <meta name="twitter:description" content="Learn the syntax and how to's of Python programming language which is highly used in tech companies and the easiest programming language for a beginner.">
+    <meta name="twitter:image" content="https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk">
+  <!-- Begin Jekyll SEO tag v2.2.2 -->
+<title>Python in 15 minutes | Gogul Ilango</title>
+<meta property="og:title" content="Python in 15 minutes" />
+<meta name="author" content="Gogul Ilango" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Learn the syntax and how to’s of Python programming language which is highly used in tech companies and the easiest programming language for a beginner." />
+<meta property="og:description" content="Learn the syntax and how to’s of Python programming language which is highly used in tech companies and the easiest programming language for a beginner." />
+<link rel="canonical" href="http://localhost:4000/software/python-in-15-minutes" />
+<meta property="og:url" content="http://localhost:4000/software/python-in-15-minutes" />
+<meta property="og:site_name" content="Gogul Ilango" />
+<meta property="og:image" content="https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-03-26T00:00:00+05:30" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"Python in 15 minutes","author":{"@type":"Person","name":"Gogul Ilango"},"image":"https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk","datePublished":"2017-03-26T00:00:00+05:30","dateModified":"2017-03-26T00:00:00+05:30","description":"Learn the syntax and how to’s of Python programming language which is highly used in tech companies and the easiest programming language for a beginner.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/software/python-in-15-minutes"},"url":"http://localhost:4000/software/python-in-15-minutes"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1792372637327333",
+            enable_page_level_ads: true
+       });
+  </script>
+  
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!--[if lte IE 8]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+    <meta name="theme-color" content="#252525" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Gogul Ilango - This blog on Deep Learning, VLSI Design and STA is written by Gogul Ilango. Master VLSI Design, Physical Design, Static Timing Analysis, Deep Learning through my articles, tutorials and resources." href="/feed.xml" />
+  </head>
+
+  <body>
+    <div class="outer-wrapping">
+      <div class="inner-container">
+          <div class="menu-icon" onclick="openSideNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="header-left doc-header-left">
+            <a class='logo' href="https://gogul09.github.io/"><img src="/images/icons/logo.png"/></a>
+          </div>
+          <div class="topnav header-right" id="top_navigator">
+            <a title="home" id = "nav_home" href="/"></a>
+            <a title="creations" id = "nav_creations" href="/creations"></a>
+            <a title="music" id = "nav_music" href="/music"></a>
+            <a title="about" id = "nav_about" href="/about"></a>
+            <a href = "javascript:void(0);" style="font-size:14px;" class="icon" onclick="top_navigation()">&#9889;</a>
+          </div>
+      </div>
+    </div>
+
+    <div id="main" role="main">
+      <div class="containing">
+  <div class="wrapping doc-wrapping">
+
+    <div class="post-heading post-heading-wrapper post-image doc-post" style="background-image: url('https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk')">
+      <div class="overlayer doc-overlayer">
+        <div class="grad-post">
+          <h1>Python in 15 minutes</h1>
+          <div class="post-subheading">
+            <p>Code | 26 March 2017</p>
+            <p><a href="#show_comments" id="comment-count" class="disqus-comment-count" data-disqus-url="https://gogul09.github.io/software/python-in-15-minutes"></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="share-box">
+	<button class="top-share-fab" id="top-share-fab" onclick="showShareBox(this.id)"></button>
+	<div id="top-share-box" class="top-share-box">
+		<h5>Share</h5>
+		<ul>
+			<li class="whatsapp-white"><a href="whatsapp://send?text=http://localhost:4000/software/python-in-15-minutes" data-action="share/whatsapp/share">WhatsApp</a></li>
+			<li class="facebook-white"><a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/software/python-in-15-minutes" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" >Facebook</a></li>
+			<li class="twitter-white"><a href="https://twitter.com/intent/tweet?text=Python in 15 minutes&url=http://localhost:4000/software/python-in-15-minutes" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">Twitter</a></li>
+			<li class="linkedin-white"><a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/software/python-in-15-minutes&title=Python in 15 minutes&summary=Learn the syntax and how to's of Python programming language which is highly used in tech companies and the easiest programming language for a beginner.&source=webjeda" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" >LinkedIn</a></li>
+		</ul>
+	</div>
+</div>
+
+    <div class="post-cover">
+
+      <article class="post">
+        <div class="entry">
+          <div id="awesomeSideNav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
+    <h3><a href="#basics">Basics</a></h3>
+    <ul>
+        <li><a href="#data-types">Data types</a></li>
+        <li><a href="#multiple-variable-assignments">Multiple variable assignments</a></li>
+        <li><a href="#math-operations">Math operations</a></li>
+        <li><a href="#logical-operations">Logical operations</a></li>
+        <li><a href="#loops">Loops</a></li>
+        <li><a href="#string-operations">Strings</a></li>
+        <li><a href="#lists">List</a></li>
+        <li><a href="#tuples">Tuple</a></li>
+        <li><a href="#dictionaries">Dictionary</a></li>
+        <li><a href="#set">Set</a></li>
+        <li><a href="#functions_1">Functions</a></li>
+        <li><a href="#regular-expressions">Regular Expressions</a></li>
+    </ul>
+    <h3><a href="#oop">OOP</a></h3>
+    <ul>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#class-variables">Class Variables</a></li>
+    </ul>
+    <h3><a href="#how-tos">How to's</a></h3>
+    <ul>
+        <li><a href="#how-to-read-file-line-by-line">How to read file line-by-line?</a></li>
+        <li><a href="#how-to-write-file-line-by-line">How to write file line-by-line?</a></li>
+        <li><a href="#how-to-load-json-file">How to load json file?</a></li>
+        <li><a href="#how-to-change-current-working-directory">How to change current working directory?</a></li>
+        <li><a href="#how-to-list-files-in-a-directory">How to list files in a directory?</a></li>
+        <li><a href="#how-to-check-if-a-file-exist">How to check if a file exist?</a></li>
+        <li><a href="#how-to-check-if-list-is-empty">How to check if list is empty?</a></li>
+        <li><a href="#how-to-access-index-in-for-loop">How to access index in for loop?</a></li>
+        <li><a href="#how-to-sort-a-dictionary-by-key-alphabetically">How to sort a dictionary by key alphabetically?</a></li>
+    </ul>
+</div>
+
+<div class="sidebar_tracker" id="sidebar_tracker">
+  <button onclick="closeSidebar('sidebar_tracker_content')">X</button>
+  <p onclick="showSidebar('sidebar_tracker_content')">Contents</p>
+  <ul id="sidebar_tracker_content">
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_1" href="#basics">Basics</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_2" href="#oop">OOP</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_3" href="#how-tos">How To's</a></li>
+  </ul>
+</div>
+
+<p>In this page, you will find the <strong>syntax</strong> and <strong>most common how to’s</strong> of python programming language. This might be useful for python beginners to find syntax and code quickly online in a single page. Click on any of the contents in the sidebar to view the code.</p>
+
+<h3 class="centered-heading" id="basics"><span>Basics</span></h3>
+
+<h3 class="code-head" id="data-types">Data types<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></td><td class="code"><pre><span class="c"># declare an integer</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="k">print</span> <span class="n">a</span>       <span class="c"># prints "12"</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c"># prints &lt;type 'int'&gt;</span>
+
+<span class="c"># declare a float</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">1.7</span>
+<span class="k">print</span> <span class="n">b</span>       <span class="c"># prints "1.7"</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c"># prints &lt;type 'float'&gt;</span>
+
+<span class="c"># declare a string</span>
+<span class="n">c</span> <span class="o">=</span> <span class="s">"Python"</span>
+<span class="k">print</span> <span class="n">c</span>       <span class="c"># prints "Python"</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c"># prints &lt;type 'str'&gt;</span>
+
+<span class="c"># declare a boolean</span>
+<span class="n">d</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="k">print</span> <span class="n">d</span>       <span class="c"># prints "True"</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="c"># prints &lt;type 'bool'&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="multiple-variable-assignments">Multiple variable assignments<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9</pre></td><td class="code"><pre><span class="c"># assign values to multiple variables in a single line</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+
+<span class="c"># assign values with different data types to multiple variables in a single line</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="s">"hello"</span>
+
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c"># prints &lt;type 'int'&gt;</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c"># prints &lt;type 'float'&gt;</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c"># prints &lt;type 'str'&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="math-operations">Math operations<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7</pre></td><td class="code"><pre><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="k">print</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c"># Addition: prints "11"</span>
+<span class="k">print</span> <span class="n">a</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c"># Subtraction: prints "9"</span>
+<span class="k">print</span> <span class="n">a</span> <span class="o">*</span> <span class="mi">2</span>  <span class="c"># Multiplication: prints "20"</span>
+<span class="k">print</span> <span class="n">a</span> <span class="o">/</span> <span class="mi">2</span>  <span class="c"># Division: prints "5"</span>
+<span class="k">print</span> <span class="n">a</span>  <span class="mi">2</span> <span class="c"># Exponentiation: prints "100"</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="logical-operations">Logical operations<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8</pre></td><td class="code"><pre><span class="c"># declare some boolean variables</span>
+<span class="n">x</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">y</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">print</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">y</span>  <span class="c"># prints "False"</span>
+<span class="k">print</span> <span class="n">x</span> <span class="ow">or</span> <span class="n">y</span>   <span class="c"># prints "True"</span>
+<span class="k">print</span> <span class="ow">not</span> <span class="n">x</span>    <span class="c"># prints "False"</span>
+<span class="k">print</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span>    <span class="c"># prints "False"</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="loops">Loops<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></td><td class="code"><pre><span class="c"># while loop</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">c</span><span class="p">,</span>  <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+    <span class="n">c</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c"># prints 0123456789</span>
+
+<span class="c"># for loop</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">x</span>
+
+<span class="c"># prints 1</span>
+<span class="c">#        2</span>
+<span class="c">#        4</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span>
+
+<span class="c"># prints 0</span>
+<span class="c">#        1</span>
+<span class="c">#        2</span>
+<span class="c">#        3</span>
+<span class="c">#        4</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="strings">Strings<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14</pre></td><td class="code"><pre><span class="c"># declare two strings</span>
+<span class="n">a</span> <span class="o">=</span> <span class="s">"Python"</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s">" is awesome!"</span>
+
+<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>                        <span class="c"># Length of the string: prints "6"</span>
+<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>                        <span class="c"># prints "12"</span>
+<span class="k">print</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>                         <span class="c"># String concatenation: prints "Python is awesome!"</span>
+<span class="k">print</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>                          <span class="c"># prints "Python  is awesome!"</span>
+<span class="k">print</span> <span class="s">"{}{}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>           <span class="c"># prints "Python is awesome!"</span>
+<span class="k">print</span> <span class="s">"</span><span class="si">%</span><span class="s">s</span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>               <span class="c"># sprintf style formatting: prints "Python is awesome!"</span>
+<span class="k">print</span> <span class="n">a</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>                     <span class="c"># converts all characters to uppercase: prints "PYTHON"</span>
+<span class="k">print</span> <span class="n">a</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>                     <span class="c"># converts all characters to lowercase: prints "python"</span>
+<span class="k">print</span> <span class="n">b</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>                     <span class="c"># removes trailing and leading whitespaces: prints "is awesome!"</span>
+<span class="k">print</span> <span class="n">b</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"awesome"</span><span class="p">,</span> <span class="s">"great"</span><span class="p">)</span> <span class="c"># replace a substring with a new string: prints " is great!"</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="lists">Lists<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</pre></td><td class="code"><pre><span class="c"># declare a list</span>
+<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+
+<span class="c"># length of list</span>
+<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>      <span class="c"># prints "5"</span>
+
+<span class="c"># indexing</span>
+<span class="k">print</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>        <span class="c"># prints "1"</span>
+<span class="k">print</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>        <span class="c"># prints "2"</span>
+<span class="k">print</span> <span class="n">l</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c"># prints "5"</span>
+<span class="k">print</span> <span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>       <span class="c"># negative indexing: prints "5"</span>
+
+<span class="c"># insert and remove</span>
+<span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>        <span class="c"># inserts "6" at last</span>
+<span class="k">print</span> <span class="n">l</span>            <span class="c"># prints "[1,2,3,4,5,6]"</span>
+<span class="n">item</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>     <span class="c"># removes last element and returns that element</span>
+<span class="k">print</span> <span class="n">item</span>         <span class="c"># prints "6"</span>
+<span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">"string"</span><span class="p">)</span> <span class="c"># adds different data type too</span>
+<span class="k">print</span> <span class="n">l</span>            <span class="c"># prints "[1,2,3,4,5,'string']"</span>
+<span class="n">l</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>            <span class="c"># removes last string element</span>
+
+<span class="c"># slicing list</span>
+<span class="k">print</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>       <span class="c"># prints "2"</span>
+<span class="k">print</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>       <span class="c"># prints "2,3"</span>
+<span class="k">print</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">:]</span>        <span class="c"># prints "[1,2,3,4,5,'string']"</span>
+<span class="k">print</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>      <span class="c"># prints "[1,2,3,4,5]"</span>
+<span class="k">print</span> <span class="n">l</span><span class="p">[:]</span>         <span class="c"># prints "[1,2,3,4,5,'string']"</span>
+
+<span class="c"># loop over the list</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">item</span>     <span class="c"># prints each item in list one by one</span>
+
+<span class="c"># enumerate over the list</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+    <span class="k">print</span> <span class="s">"{}-{}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span> <span class="c"># prints each item with its index</span>
+
+
+<span class="c"># squaring elements in a list</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">item</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">item2</span>      <span class="c"># square each even number in the list</span>
+
+<span class="c"># above can be achieved using a list comprehension too! (one-line)</span>
+<span class="k">print</span> <span class="p">[</span><span class="n">x2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c"># sort the list</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+
+<span class="c"># ascending order</span>
+<span class="n">b</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">b</span>  <span class="c"># prints [2, 4, 5, 7, 9]</span>
+
+<span class="c"># descending order</span>
+<span class="n">b</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">b</span> <span class="c"># prints [9, 7, 5, 4, 2]</span>
+
+<span class="c"># reverse the list (notice this is not descending order sort)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s">"dhoni"</span><span class="p">,</span> <span class="s">"sachin"</span><span class="p">,</span> <span class="s">"warner"</span><span class="p">,</span> <span class="s">"abd"</span><span class="p">]</span>
+<span class="n">a</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">a</span> <span class="c"># prints ['abd', 'warner', 'sachin', 'dhoni']</span>
+
+<span class="c"># count of object in list</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">66</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span> 
+<span class="k">print</span> <span class="n">a</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span> <span class="c"># prints 2</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="tuples">Tuples<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></td><td class="code"><pre><span class="c"># declare a tuple</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>    <span class="c"># prints "&lt;type 'tuple'&gt;"</span>
+<span class="k">print</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>       <span class="c"># prints 200</span>
+
+<span class="c"># tuple of tuples</span>
+<span class="n">tt</span> <span class="o">=</span> <span class="p">((</span><span class="mi">200</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span> <span class="n">t</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">tt</span>         <span class="c"># prints "((200, 100), (500, 200))"</span>
+<span class="k">print</span> <span class="n">tt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>      <span class="c"># prints "(500, 200)"</span>
+
+<span class="c"># loop over tuple</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">t</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">item</span>   <span class="c"># prints each item in the tuple</span>
+
+
+<span class="c"># built-in tuple commands</span>
+<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="c"># prints the length of tuple which is 2</span>
+<span class="k">print</span> <span class="nb">max</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="c"># prints the max-valued element which is 500</span>
+<span class="k">print</span> <span class="nb">min</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="c"># prints the min-valued element which is 200</span>
+
+<span class="c"># convert list to tuple</span>
+<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">400</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">1200</span><span class="p">]</span>
+<span class="n">l_to_t</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">l_to_t</span><span class="p">)</span> <span class="c"># prints &lt;class 'tuple'&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="dictionaries">Dictionaries<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10</pre></td><td class="code"><pre><span class="c"># declare a dictionary</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s">"1"</span> <span class="p">:</span> <span class="s">"Pikachu"</span><span class="p">,</span> <span class="s">"2"</span><span class="p">:</span> <span class="s">"Charmander"</span><span class="p">,</span> <span class="s">"3"</span><span class="p">:</span> <span class="s">"Squirtle"</span><span class="p">}</span>
+
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>    <span class="c"># prints "&lt;type 'dict'&gt;"</span>
+<span class="k">print</span> <span class="n">d</span><span class="p">[</span><span class="s">"1"</span><span class="p">]</span>     <span class="c"># prints "Pikachu"</span>
+
+<span class="c"># loop over dictionary</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">key</span>    <span class="c"># prints each key in d</span>
+    <span class="k">print</span> <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="c"># prints value of each key in d (unsorted)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="functions_1">Functions<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">squared</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+
+<span class="k">print</span> <span class="n">squared</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>   <span class="c"># prints "4"</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<div class="code-head" id="regular-expressions">
+    <span title="click to see re rules" id="btn-re-python" onclick="boxHandler(this.id)">re rules    
+    </span>
+    <div class="rule-box" id="box-re-python">
+        <p><b>Identifiers</b></p>
+        <div style="text-align: center; width: 100%">
+            <table>
+                <tr>
+                    <td>\d</td>
+                    <td>any number</td>
+                </tr>
+                <tr>
+                    <td>\D</td>
+                    <td>anything but a number</td>
+                </tr>
+                <tr>
+                    <td>\s</td>
+                    <td>space</td>
+                </tr>
+                <tr>
+                    <td>\S</td>
+                    <td>anything but a space</td>
+                </tr>
+                <tr>
+                    <td>\w</td>
+                    <td>any character</td>
+                </tr>
+                <tr>
+                    <td>\W</td>
+                    <td>anything but a character</td>
+                </tr>
+                <tr>
+                    <td>.</td>
+                    <td>any character, except for a newline</td>
+                </tr>
+                <tr>
+                    <td>\b</td>
+                    <td>the whitespace around words</td>
+                </tr>
+                <tr>
+                    <td>\.</td>
+                    <td>a period</td>
+                </tr>
+            </table>
+        </div>
+        <p><b>Modifiers</b></p>
+        <div style="text-align: center; width: 100%">
+            <table>
+                <tr>
+                    <td>{1,3}</td>
+                    <td>expecting 1-3 digits ~ \d{1,3}</td>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>match 1 or more</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>match 0 or 1</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>match 0 or more</td>
+                </tr>
+                <tr>
+                    <td>$</td>
+                    <td>match the end of a string</td>
+                </tr>
+                <tr>
+                    <td>^</td>
+                    <td>match the start of a string</td>
+                </tr>
+                <tr>
+                    <td>|</td>
+                    <td>either or (\d{1-3} | \w{5-6})</td>
+                </tr>
+                <tr>
+                    <td>[]</td>
+                    <td>range or variance</td>
+                </tr>
+                <tr>
+                    <td>{x}</td>
+                    <td>expecting "x" amount (of digits)</td>
+                </tr>
+            </table>
+        </div>
+        <p><b>White Space Characters</b></p>
+        <div style="text-align: center; width: 100%">
+            <table>
+                <tr>
+                    <td>\n</td>
+                    <td>new line</td>
+                </tr>
+                <tr>
+                    <td>\s</td>
+                    <td>space</td>
+                </tr>
+                <tr>
+                    <td>\t</td>
+                    <td>tab</td>
+                </tr>
+                <tr>
+                    <td>\e</td>
+                    <td>escape</td>
+                </tr>
+                <tr>
+                    <td>\f</td>
+                    <td>form feed</td>
+                </tr>
+                <tr>
+                    <td>\r</td>
+                    <td>return</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+Regular Expressions</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">re</span> 
+
+<span class="c"># multi-line string example</span>
+<span class="nb">str</span> <span class="o">=</span> <span class="s">'''
+Rahul is 19 years old, and Ashok is 24 years old.
+Manoj is 65, and his grandfather, Naveen, is 77.
+'''</span>
+
+<span class="c"># findall()</span>
+<span class="n">ages</span>  <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">r'</span><span class="err">\</span><span class="s">d{1,3}'</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+<span class="n">names</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">r'[A-Z][a-z]*'</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> 
+
+<span class="k">print</span> <span class="n">ages</span>  <span class="c"># prints ['Rahul', 'Ashok', 'Manoj', 'Naveen']</span>
+<span class="k">print</span> <span class="n">names</span> <span class="c"># prints ['19', '24', '65', '77']</span>
+
+<span class="c"># split()</span>
+<span class="nb">str</span> <span class="o">=</span> <span class="s">"This is an example string"</span>
+<span class="n">splitted</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">r'</span><span class="err">\</span><span class="s">s*'</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">splitted</span> <span class="c"># prints ['This', 'is', 'an', 'example', 'string']</span>
+
+<span class="c"># match()</span>
+<span class="nb">str</span> <span class="o">=</span> <span class="s">"Dogs are braver than Cats"</span>
+<span class="n">matches</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">r'[A-Z][a-z]*'</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">matches</span><span class="o">.</span><span class="n">group</span><span class="p">()</span> <span class="c"># prints "Dogs"</span>
+
+<span class="c"># search()</span>
+<span class="nb">str</span> <span class="o">=</span> <span class="s">"For data science help, reach support@datacamp.com"</span>
+<span class="n">searches</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">r'([</span><span class="err">\</span><span class="s">w</span><span class="err">\</span><span class="s">.-]+)@([</span><span class="err">\</span><span class="s">w</span><span class="err">\</span><span class="s">.-]+)'</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">searches</span><span class="o">.</span><span class="n">group</span><span class="p">()</span>  <span class="c"># prints support@datacamp.com</span>
+<span class="k">print</span> <span class="n">searches</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c"># prints support</span>
+<span class="k">print</span> <span class="n">searches</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c"># prints datacamp.com</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="centered-heading" id="how-tos"><span>How to's</span></h3>
+
+<h3 class="code-head" id="how-to-read-file-line-by-line">How to read file line-by-line?<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6</pre></td><td class="code"><pre><span class="n">filename</span> <span class="o">=</span> <span class="s">"entry_1.txt"</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+
+<span class="c"># remove whitespaces at end of each line</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span> 
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="how-to-write-file-line-by-line">How to write file line-by-line?<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s">"pikachu"</span><span class="p">,</span> <span class="s">"charmander"</span><span class="p">,</span> <span class="s">"pidgeotto"</span><span class="p">]</span>
+<span class="n">fout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"entry2.txt"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+    <span class="n">fout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">fout</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="how-to-load-json-file">How to load json file?<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">file_input</span> <span class="o">=</span> <span class="s">"data.json"</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_input</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>    
+    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">datafile</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="how-to-change-current-working-directory">How to change current working directory?<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="s">"/usr/gogul/sample"</span>
+
+<span class="c"># change current working directory</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="how-to-list-files-in-a-directory">How to list files in a directory?<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">dir_path</span> <span class="o">=</span> <span class="s">"/usr/gogul/sample"</span>
+
+<span class="c"># go to that directory</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span> <span class="p">(</span><span class="n">dir_path</span><span class="p">)</span>
+
+<span class="c"># list files in the directory and save it in a list</span>
+<span class="n">l</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s">"ls"</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+
+<span class="c"># remove whitespaces in each element of the list</span>
+<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span><span class="p">]</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="how-to-check-if-a-file-exist">How to check if a file exist?<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">file_name</span> <span class="o">=</span> <span class="s">"/usr/gogul/sample.txt"</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>  <span class="c"># returns True if file exists; else false</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="how-to-check-if-list-is-empty">How to check if list is empty?<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7</pre></td><td class="code"><pre><span class="c"># method 1 </span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">myList</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">"list is empty"</span>
+
+<span class="c"># method 2</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">"list is empty"</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="how-to-access-index-in-for-loop">How to access index in for loop?<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</pre></td><td class="code"><pre><span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">]</span>
+
+<span class="c"># method 1</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">myList</span><span class="p">):</span>
+    <span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span> <span class="o">+</span> <span class="s">"-"</span> <span class="o">+</span> <span class="n">l</span>
+
+<span class="c"># method 2</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">myList</span><span class="p">:</span>
+    <span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span> <span class="o">+</span> <span class="s">"-"</span> <span class="o">+</span> <span class="n">l</span>
+    <span class="n">idx</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c"># both methods print</span>
+<span class="c"># 0-a </span>
+<span class="c"># 1-b</span>
+<span class="c"># 2-c</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="how-to-sort-a-dictionary-by-key-alphabetically">How to sort a dictionary by key alphabetically?<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12</pre></td><td class="code"><pre><span class="n">a</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">a</span><span class="p">[</span><span class="s">"India"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Dhoni"</span>
+<span class="n">a</span><span class="p">[</span><span class="s">"SouthAfrica"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"ABD"</span>
+<span class="n">a</span><span class="p">[</span><span class="s">"Australia"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Smith"</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()):</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">"{0} - {1}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span>
+
+<span class="c"># prints </span>
+<span class="c"># Australia - Smith</span>
+<span class="c"># India - Dhoni</span>
+<span class="c"># SouthAfrica - ABD</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="centered-heading" id="oop"><span>OOP</span></h3>
+
+<h3 class="code-head" id="classes">Classes<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15</pre></td><td class="code"><pre><span class="c"># create a class</span>
+<span class="k">class</span> <span class="nc">Customer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="c"># init method is a must</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span>  <span class="o">=</span> <span class="n">age</span>
+
+    <span class="c"># a simple print method</span>
+    <span class="k">def</span> <span class="nf">print_customer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">"Customer: {}, Age: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
+
+<span class="c"># define an instance</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Customer</span><span class="p">(</span><span class="s">"Gogul"</span><span class="p">,</span> <span class="s">"24"</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">print_customer</span><span class="p">()</span> <span class="c"># prints "Customer: Gogul, Age: 24"</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 class="code-head" id="class-variables">Class Variables<span>code</span></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></td><td class="code"><pre><span class="k">class</span> <span class="nc">Customer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="c"># this is a class variable</span>
+    <span class="n">raise_amount</span> <span class="o">=</span> <span class="mf">1.05</span>
+    <span class="n">num_of_custs</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">pay</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span>  <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pay</span>  <span class="o">=</span> <span class="n">pay</span>
+
+        <span class="n">Customer</span><span class="o">.</span><span class="n">num_of_custs</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">def</span> <span class="nf">apply_raise</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">"Customer {} new pay is {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pay</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">raise_amount</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="c"># class variable not updated</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">Customer</span><span class="p">(</span><span class="s">"Gogul"</span><span class="p">,</span> <span class="s">"24"</span><span class="p">,</span> <span class="s">"5000"</span><span class="p">)</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">apply_raise</span><span class="p">()</span> <span class="c"># prints Customer Gogul new pay is 5250.0</span>
+
+    <span class="c"># class variable updated</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">Customer</span><span class="p">(</span><span class="s">"Mahadevan"</span><span class="p">,</span> <span class="s">"25"</span><span class="p">,</span> <span class="s">"6000"</span><span class="p">)</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">raise_amount</span> <span class="o">=</span> <span class="mf">2.05</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">apply_raise</span><span class="p">()</span> <span class="c"># Customer Mahadevan new pay is 12299.999999999998</span>
+
+    <span class="c"># print dict of an instance</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">__dict__</span><span class="p">)</span> <span class="c"># prints {'name': 'Gogul', 'age': '24', 'pay': '5000'}</span>
+
+    <span class="c"># There are 2 customers</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">"There are {} customers"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Customer</span><span class="o">.</span><span class="n">num_of_custs</span><span class="p">))</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+        </div>
+        <div class="note closers">
+	<p>In case if you found something useful to add to this article or you found a bug in the code or would like to improve some points mentioned, feel free to write it down in the comments. Hope you found something useful here.</p>
+	<p class="happy-learning">Happy learning!</p>
+</div>
+        
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<hr>
+<div class="share-it-box">
+<p class="share-this">Share this post! </p>
+<div id="share-box"> 
+		<a href="whatsapp://send?text=http://localhost:4000/software/python-in-15-minutes" data-action="share/whatsapp/share"><img src="/images/icons/whatsapp.png"/></a>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/software/python-in-15-minutes" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><img src="/images/icons/facebook.png"/></a>
+       
+        <a href="https://twitter.com/intent/tweet?text=Python in 15 minutes&url=http://localhost:4000/software/python-in-15-minutes" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><img src="/images/icons/twitter.png"/></a>
+
+       <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/software/python-in-15-minutes&title=Python in 15 minutes&summary=Learn the syntax and how to's of Python programming language which is highly used in tech companies and the easiest programming language for a beginner.&source=webjeda" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><img src="/images/icons/linkedin.png"/></a>                               
+</div>
+</div>
+<hr>
+      </article>
+      
+      <div class="show-comments" onclick="showComments()"><p id="show_comments"><span id="comment_count" class="disqus-comment-count" data-disqus-url="https://gogul09.github.io/software/python-in-15-minutes"></span></p></div>
+
+      <div id="disqus_thread"></div>
+      <script>
+        (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//gogul09.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  
+  window.onscroll = function() {
+    sideBarScrollHandler();
+    windowScrollHandler();
+  };
+  
+  function sideBarScrollHandler() {
+    if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+      document.getElementById("sidebar_tracker").style.top = "20px";
+    } else {
+      document.getElementById("sidebar_tracker").style.top = "70px";
+    }
+  }
+  
+</script>
+    </div>
+
+    <div class="wrapper-footer">
+      <footer class="footer">
+        <p><span>&copy; 2019 - gogul ilango | opinions are my own</span></p>
+       </footer>
+     </div>
+     
+     <button onclick="topScroller()" id="btnScrollTop" title="Go to top" class="w3-animate-bottom"></button>
+
+     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+     <script src="https://apis.google.com/js/platform.js"></script>
+     <script async defer src="https://buttons.github.io/buttons.js"></script>
+     <script id="dsq-count-scr" src="//gogul09.disqus.com/count.js" async></script>
+     <script src="/js/custom.js"></script>
+     
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-93019594-1', 'auto');
+		ga('send', 'pageview', {
+		  'page': '/software/python-in-15-minutes',
+		  'title': 'Python in 15 minutes'
+		});
+	</script>
+	<!-- End Google Analytics -->
+
+
+   </body>
+   </html>

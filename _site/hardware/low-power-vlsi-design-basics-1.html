@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Low Power VLSI Design Basics (Part 1) – Gogul Ilango </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,400|Roboto:300" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="/images/favicon_gi.png"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=12.0, minimum-scale=.25, user-scalable=yes"/>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    <meta property="og:title" content="Low Power VLSI Design Basics (Part 1)" />
+    <meta name="description" content="Understand power dissipation, types of power dissipation, IR drop, reasons for IR drop and some strategies to minimize IR drop from a VLSI physical design perspective." />
+    <meta property="og:description" content="Understand power dissipation, types of power dissipation, IR drop, reasons for IR drop and some strategies to minimize IR drop from a VLSI physical design perspective." />
+    <meta property="twitter:title" content="Low Power VLSI Design Basics (Part 1)" />
+
+    <meta property="og:image" content="https://drive.google.com/uc?id=1xyGDoXG5-zywLrc3yOrrnCI02FFD7DxW"/>
+    <meta property="og:image:width" content="180" />
+    <meta property="og:image:height" content="110" />
+
+    <meta name="twitter:title" content="Low Power VLSI Design Basics (Part 1)">
+    <meta name="twitter:description" content="Understand power dissipation, types of power dissipation, IR drop, reasons for IR drop and some strategies to minimize IR drop from a VLSI physical design perspective.">
+    <meta name="twitter:image" content="https://drive.google.com/uc?id=1xyGDoXG5-zywLrc3yOrrnCI02FFD7DxW">
+  <!-- Begin Jekyll SEO tag v2.2.2 -->
+<title>Low Power VLSI Design Basics (Part 1) | Gogul Ilango</title>
+<meta property="og:title" content="Low Power VLSI Design Basics (Part 1)" />
+<meta name="author" content="Gogul Ilango" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Understand power dissipation, types of power dissipation, IR drop, reasons for IR drop and some strategies to minimize IR drop from a VLSI physical design perspective." />
+<meta property="og:description" content="Understand power dissipation, types of power dissipation, IR drop, reasons for IR drop and some strategies to minimize IR drop from a VLSI physical design perspective." />
+<link rel="canonical" href="http://localhost:4000/hardware/low-power-vlsi-design-basics-1" />
+<meta property="og:url" content="http://localhost:4000/hardware/low-power-vlsi-design-basics-1" />
+<meta property="og:site_name" content="Gogul Ilango" />
+<meta property="og:image" content="https://drive.google.com/uc?id=1xyGDoXG5-zywLrc3yOrrnCI02FFD7DxW" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-10-26T00:00:00+05:30" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"Low Power VLSI Design Basics (Part 1)","author":{"@type":"Person","name":"Gogul Ilango"},"image":"https://drive.google.com/uc?id=1xyGDoXG5-zywLrc3yOrrnCI02FFD7DxW","datePublished":"2018-10-26T00:00:00+05:30","dateModified":"2018-10-26T00:00:00+05:30","description":"Understand power dissipation, types of power dissipation, IR drop, reasons for IR drop and some strategies to minimize IR drop from a VLSI physical design perspective.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/hardware/low-power-vlsi-design-basics-1"},"url":"http://localhost:4000/hardware/low-power-vlsi-design-basics-1"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1792372637327333",
+            enable_page_level_ads: true
+       });
+  </script>
+  
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!--[if lte IE 8]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+    <meta name="theme-color" content="#252525" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Gogul Ilango - This blog on Deep Learning, VLSI Design and STA is written by Gogul Ilango. Master VLSI Design, Physical Design, Static Timing Analysis, Deep Learning through my articles, tutorials and resources." href="/feed.xml" />
+  </head>
+
+  <body>
+    <div class="outer-wrapping">
+      <div class="inner-container">
+          <div class="header-left">
+            <a class='logo' href="https://gogul09.github.io/"><img src="/images/icons/logo.png"/></a>
+          </div>
+          <div class="topnav header-right" id="top_navigator">
+            <a title="home" id = "nav_home" href="/"></a>
+            <a title="creations" id = "nav_creations" href="/creations"></a>
+            <a title="music" id = "nav_music" href="/music"></a>
+            <a title="about" id = "nav_about" href="/about"></a>
+            <a href = "javascript:void(0);" style="font-size:14px;" class="icon" onclick="top_navigation()">&#9776;</a>
+          </div>
+      </div>
+    </div>
+
+    <div id="main" role="main">
+      <div class="post-heading post-heading-wrapper post-image">
+	<div class="grad-post">
+		<h1>Low Power VLSI Design Basics (Part 1)</h1>
+		<div class="post-subheading">
+			<p>PDN Concepts | 26 October 2018</p>
+			<p><a href="#show_comments" id="comment-count" class="disqus-comment-count" data-disqus-url="https://gogul09.github.io/hardware/low-power-vlsi-design-basics-1"></a></p>
+		</div>
+	</div>
+</div>
+
+<div class="containing">
+	<div class="wrapping">
+
+		<div class="share-box">
+	<button class="top-share-fab" id="top-share-fab" onclick="showShareBox(this.id)"></button>
+	<div id="top-share-box" class="top-share-box">
+		<h5>Share</h5>
+		<ul>
+			<li class="whatsapp-white"><a href="whatsapp://send?text=http://localhost:4000/hardware/low-power-vlsi-design-basics-1" data-action="share/whatsapp/share">WhatsApp</a></li>
+			<li class="facebook-white"><a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/hardware/low-power-vlsi-design-basics-1" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" >Facebook</a></li>
+			<li class="twitter-white"><a href="https://twitter.com/intent/tweet?text=Low Power VLSI Design Basics (Part 1)&url=http://localhost:4000/hardware/low-power-vlsi-design-basics-1" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">Twitter</a></li>
+			<li class="linkedin-white"><a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/hardware/low-power-vlsi-design-basics-1&title=Low Power VLSI Design Basics (Part 1)&summary=Understand power dissipation, types of power dissipation, IR drop, reasons for IR drop and some strategies to minimize IR drop from a VLSI physical design perspective.&source=webjeda" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" >LinkedIn</a></li>
+		</ul>
+	</div>
+</div>
+
+		<div class="post-cover">
+
+			<article class="post">
+				<div class="entry">
+					<div class="sidebar_tracker" id="sidebar_tracker">
+  <button onclick="closeSidebar('sidebar_tracker_content')">X</button>
+  <p onclick="showSidebar('sidebar_tracker_content')">Contents</p>
+  <ul id="sidebar_tracker_content">
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_1" href="#power-dissipation">Power Dissipation</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_2" href="#types-of-power-dissipation">Types of Power Dissipation</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_3" href="#dynamic-power">Dynamic Power</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_4" href="#switching-power">Switching Power</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_5" href="#short-circuit-power">Short-circuit Power</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_6" href="#static-power">Static Power</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_7" href="#what-is-ir-drop">What is IR drop?</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_8" href="#types-of-ir-drop-analysis">Types of IR drop analysis</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_9" href="#reasons-for-high-ir-drop">Reasons for high IR drop</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_10" href="#tools-for-ir-drop-analysis">Tools for IR drop analysis</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_11" href="#references">References</a></li>
+  </ul>
+</div>
+
+<p>Power has become a very important factor be to considered as technology node shrinks. For a VLSI Design Engineer, knowledge on power consumption in a CMOS design is crucial as it has become a very big challenge in latest technology nodes.</p>
+
+<p>Almost any electronic device that you hold in your hand (smartphone, tablet, notebook, laptop etc.,) consume power from a limited power supply (battery). Thus, making the chip consume less power is a mandatory problem to be solved.</p>
+
+<h3 class="code-head">Objectives</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8</pre></td><td class="code"><pre>After reading this tutorial, we will understand
+* Why power is important in VLSI design?
+* What are the different types of power dissipation?
+* What are switching power, short-circuit power and leakage power?
+* What is IR drop &amp; different types of IR drop?
+* What are the reasons for high IR drop?
+* What are the tools available to analyse IR drop?
+* What are some strategies to reduce power dissipation?
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 id="power-dissipation">Power Dissipation</h3>
+
+<p>The process in which a chip produces heat (waste energy) as an unwanted byproduct of its primary action is termed as Power Dissipation. If the chip dissipates power than its maximum limit, it could lead to functionality failure or even burn out. Hence, reducing power dissipation is a necessity in modern semiconductor design due to lower technology nodes, higher frequencies, complex functionalities and portability.</p>
+
+<h3 id="types-of-power-dissipation">Types of Power Dissipation</h3>
+
+<p>In a low-power CMOS VLSI design, there are two types of power dissipation.</p>
+
+<ol>
+  <li>Static power</li>
+  <li>Dynamic power</li>
+</ol>
+
+<p>The sources of these power dissipations as well as the techniques to solve them are different. These two types of power dissipation are further classified as shown in Figure 1.</p>
+
+<figure>
+  <img src="/images/hardware/low-power-chip-design/types-of-power-dissipation.jpg" class="typical-image" />
+  <figcaption>Figure 1. Types of Power Dissipation in CMOS</figcaption>
+</figure>
+
+<h3 id="dynamic-power">Dynamic Power</h3>
+
+<p>As the name suggests, dynamic power dissipation occurs when the transistors are switching from one logic state to another. There are two types of dynamic power dissipation in CMOS circuits namely</p>
+<ol>
+  <li>Switching Power</li>
+  <li>Short-circuit Power</li>
+</ol>
+
+<figure>
+  <img src="/images/hardware/low-power-chip-design/dynamic-power.jpg" class="typical-image" />
+  <figcaption>Figure 2. Types of Dynamic Power</figcaption>
+</figure>
+
+<h4 id="switching-power">Switching Power</h4>
+
+<p>When a transistor switch from one logic state to another, the load capacitance at the output pin needs to be charged or discharged which is referred as the switching power as shown in Figure 2.</p>
+<ul>
+  <li>When the output rises, the load capacitance must go from \( V_{SS} \) to \( V_{DD} \).</li>
+  <li>When the output falls, the load capacitance must go from \( V_{DD} \) to \( V_{SS} \).</li>
+</ul>
+
+<p>Recall that in basic electronic theory, there is a switching current associated on charging or discharging the capacitor which is given as \( i = C \frac{dV_{DD}}{dt}\), which further gets multiplied by \( V_{DD} \) to produce power.</p>
+
+<p>Similarly in CMOS, the average dynamic power (\(P_{dynamic}\)) is given by</p>
+
+<div class="math-cover">
+$$
+\begin{align}
+P_{dynamic} &amp; = \frac{1}{T} \int_0^T i_{DD}(t) V_{DD} dt \\
+ &amp; = \frac{V_{DD}}{T} \int_0^T i_{DD}(t) dt \\
+ &amp; = \frac{V_{DD}}{T} [T f_{sw} C V_{DD}] \\
+ &amp; = C V_{DD}^2 f_{sw}
+\end{align}
+$$
+</div>
+
+<p>where</p>
+<ul>
+  <li>\( f_{sw} \) - frequency of output switching</li>
+  <li>\( C \) - load capacitance</li>
+  <li>\( V_{DD} \) - power supply voltage</li>
+</ul>
+
+<h4 id="switching-factor--alpha-">Switching factor (\( \alpha \))</h4>
+
+<p>To measure how frequently the output pin of a transistor circuit switches, we define a parameter called switching factor or toggle factor (\( \alpha \)).</p>
+
+<p>If the frequency of output switching is \(f_{sw}\), then the charging and discharging cycle will repeat \(T * f_{sw}\) times over a time interval \( T \).</p>
+
+<p>If \( f \) is the clock frequency at which the chip operates, then \( f_{sw} = \alpha * f \).</p>
+
+<ul>
+  <li>\( \alpha = 1 \) - if the output pin of a transistor switches with the clock frequency.</li>
+  <li>\( \alpha = \frac{1}{2} \) - if the output pin of a transistor switches once per cycle of the clock frequency.</li>
+</ul>
+
+<p>If we include this switching factor \( \alpha \) for dynamic power calculation, we get</p>
+
+<div class="math-cover">
+$$
+\begin{align}
+P_{dynamic} &amp; = \alpha C V_{DD}^2 f
+\end{align}
+$$
+</div>
+
+<p>Thus, we can reduce dynamic power by</p>
+
+<ul>
+  <li>Reducing the switching factor \( \alpha \) of the transistor.</li>
+  <li>Reducing the load capacitance \( C \) of the transistor.</li>
+  <li>Reducing the supply voltage \( V_{DD} \) of the transistor.</li>
+  <li>Reducing the clock frequency \( f \) of the transistor.</li>
+</ul>
+
+<p>From an implementation perspective,</p>
+
+<ul>
+  <li>\( C \) comes from <span class="coding">.spef</span> file of the design.</li>
+  <li>\( V_{DD} \) comes from the chosen <span class="coding">corner</span> of the design.</li>
+  <li>\( \alpha \) comes from either <span class="coding">.fsdb</span> file or <span class="coding">.gsc</span> file of the design.</li>
+  <li>\( f \) comes from timing session of the design.</li>
+</ul>
+
+<h4 id="short-circuit-power">Short-circuit Power</h4>
+
+<p>When a transistor switches from one logic state to another, during the signal transition, there exist a direct path from \( V_{DD} \) to \( V_{SS} \) which produces short-circuit current \( I_{SC} \) and short-circuit power dissipation. If clock frequency of the design increases, frequency of transition will increase which further increases short circuit power.</p>
+
+<p>Mathematically, short circuit \( P_{short-circuit} \) power can be written as</p>
+
+<div class="math-cover">
+$$
+\begin{align}
+P_{short-circuit} &amp; = I_{SC} * V_{DD} * f_{sw}
+\end{align}
+$$
+</div>
+
+<p>where</p>
+<ul>
+  <li>\( I_{SC} \) - short circuit current during signal transition</li>
+  <li>\( V_{DD} \) - power supply voltage</li>
+  <li>\( f_{sw} \) - switching frequency</li>
+</ul>
+
+<h3 id="static-power">Static Power</h3>
+
+<p>As the name suggests, even when the chip is off or quiescent (static), there exists some amount of power dissipation due to transistor’s leakage characteristics giving rise to leakage power. This is due to the characteristic of CMOS transistors itself, which is a function of power supply voltage \( V_{DD} \), threshold voltage \( V_{th} \) and transistor’s dimension (width \(W \) and length \( L \)).</p>
+
+<figure>
+  <img src="/images/hardware/low-power-chip-design/leakage-power.jpg" class="typical-image" />
+  <figcaption>Figure 3. Static or Leakage Power Dissipation</figcaption>
+</figure>
+
+<p>As we scale down the technology node, leakage power is becoming a significant contributor in IR drop analysis. Leakage power can further be classified into three types.</p>
+
+<ol>
+  <li>Diode leakage</li>
+  <li>Sub-threshold leakage</li>
+  <li>Gate-oxide leakage</li>
+</ol>
+
+<div class="math-cover">
+$$
+\begin{align}
+P_{leakage}(V_{DD}, V_{th}, W, L)
+\end{align}
+$$
+</div>
+
+<p>From an implementation perspective, <span class="coding">.lib</span> files of a standard cell contains leakage power related information which is further given to power analysis tools such as Apache RedHawk.</p>
+
+<p>You can see more information on leakage power <a href="https://www.youtube.com/watch?v=d0OxV2rA398" target="_blank">here</a>.</p>
+
+<h3 id="what-is-ir-drop">What is IR drop?</h3>
+
+<p>In a typical chip, power to different blocks, standard cells and macros are provided by the power grid which consists of stack of metal layers (conductors) that run horizontally and vertically in a grid-like fashion over the floorplan. These stacked metal layers have power stripes such as \( V_{DD} \) and \( V_{SS} \) at regular intervals (pitch) with defined width and thickness, and are connected through vias from one layer to another as shown in Figure 4. This power distribution grid comprises of power rings, power stripes and power rails that are resistive by nature which creates the IR drop.</p>
+
+<figure>
+  <img src="/images/hardware/low-power-chip-design/metal-stack.jpg" class="typical-image" />
+  <figcaption>Figure 4. Metal layer stack (2D &amp; 3D view)</figcaption>
+</figure>
+
+<p>Currently, there are two approaches followed to redistribute power from package to a chip namely <a href="https://en.wikipedia.org/wiki/Wire_bonding" target="_blank">Wire Bonding</a> and <a href="https://en.wikipedia.org/wiki/Flip_chip" target="_blank">Flip-Chip</a> as shown in Figure 5.</p>
+
+<figure>
+  <img src="/images/hardware/low-power-chip-design/packaging.jpg" class="typical-image" />
+  <figcaption>Figure 5. Wire-bonding and Flip-chip techniques</figcaption>
+</figure>
+
+<p>In flip-chip designs, as power supply voltage gets redistributed from the IO pads to bump pads (containing C4 bump arrays) via top-layer (or <a href="https://en.wikipedia.org/wiki/Redistribution_layer" target="_blank">Redistribution Layer</a> or AP layer), different blocks, standard cells and macros receive power after crossing different metal layers from top to bottom till it reaches the layer in which power pins of the instances reside.</p>
+
+<p>When power supply voltage travels from top-layer (RDL layer) to power pins layer of instances (usually lower layer), there exists drop in the voltage levels due to the resistive nature of these metal layers. As there is resistance in these metal wires, when a voltage is applied, current is produced which further decreases the voltage level reaching the instances which is termed as the IR drop or Voltage drop.</p>
+
+<p>In addition to the voltage drop that is present in the metal layers stack (on-die), there is also some voltage drop called \( \frac{di}{dt} \) drop (off-die) associated with the package leads which has inductance (and less resistance) associated with it due to the time-varying current.</p>
+
+<p>Furthermore, the presence of decoupling capacitors near the instances that store charges locally (which might assist in decreasing voltage drop), adds up some load capacitance. This addition of decaps increases leakage power consumption as well as area which further gets added to the equation.</p>
+
+<p>Thus, we can summarize that the voltage level seen at an instance in the design as</p>
+
+<div class="math-cover">
+$$
+\begin{align}
+V_{instance} = V_{power-supply} - (drop_{metal-stack} + drop_{package-leads} + drop_{decaps})
+\end{align}
+$$
+</div>
+
+<p>From an implementation perspective, if</p>
+
+<ul>
+  <li>\( V_{power-supply} = 2V \)</li>
+  <li>\( drop_{metal-stack} = 0.2V\)</li>
+  <li>\( drop_{package-leads} = 0.1V \)</li>
+  <li>\( drop_{decaps} = 0.1V \)</li>
+</ul>
+
+<p>then, \( V_{instance} = 1.6V \).</p>
+
+<p>Any instance in the design will have a maximum voltage drop limit above which it may fail in functionality or timing. So, it’s the job of the engineer to reduce IR drop in the design before tapeout.</p>
+
+<h3 id="types-of-ir-drop-analysis">Types of IR drop analysis</h3>
+
+<p>There are two types of IR drop analysis for a circuit design namely</p>
+<ol>
+  <li><strong>Static IR drop</strong> - Vectorless IR drop analysis with average current cycles. Typically used for Electro-Migration (EM) analysis where current limit is checked for wires.</li>
+  <li><strong>Dynamic IR drop</strong> - Vectorless or VCD based IR drop analysis with worst-case switching currents. Typically used to check voltage drop limit for switching instances.</li>
+</ol>
+
+<h3 id="reasons-for-high-ir-drop">Reasons for high IR drop</h3>
+
+<p>Some of the standard reasons for high voltage drop in a design are as follows.</p>
+
+<ul>
+  <li>High power grid resistance.</li>
+  <li>High current flowing through the power grid.</li>
+  <li>Simultaneous switching of instances at same time.</li>
+  <li>Less amount of decoupling capacitors near the instances.</li>
+  <li>High parasitics in package leads.</li>
+  <li>Lesser length or width of power stripes in RDL layer.</li>
+  <li>Lesser power sources such as power bumps (in flip-chip).</li>
+  <li>Incorrect input files such as <span class="coding">.lef</span>, <span class="coding">.def</span>, <span class="coding">.lib</span>, <span class="coding">.spef</span>, <span class="coding">.sta</span>, <span class="coding">.ploc</span> or <span class="coding">APL</span> files.</li>
+</ul>
+
+<h3 id="tools-for-ir-drop-analysis">Tools for IR drop analysis</h3>
+
+<p>There are different tools available to perform IR drop analysis for a design from physical design perspective. Some of the industry standard tools are <a href="https://www.ansys.com/products/semiconductors/ansys-redhawk" target="_blank">Apache RedHawk</a> and <a href="https://www.slideshare.net/AlanTran3/voltagestorm" target="_blank">Cadence VoltageStorm</a>.</p>
+
+<p>In Apache RedHawk, we can do static as well as dynamic IR drop analysis. Also, we can analyze the power grid of the design and find out weaknesses such as shorts, opens, missing vias etc., before performing actual IR drop analysis.</p>
+
+<p>After completing IR drop analysis for a design in RedHawk, we can review and analyze different types of maps such as Average IR drop map, Frequency map, Load capacitance map etc., and reports dumped by RedHawk to check for potential issues in the design.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>In this tutorial, we looked at saving power from a physical design perspective. We have understood the different types of power dissipation in a CMOS based circuit design, understood what is IR drop at physical level, why IR drop occur at physical level, what are some techniques to reduce IR drop at physical level and tools available to analyze IR drop.</p>
+
+<h3 id="references">References</h3>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=TFOO1JAll2Y" target="_blank">Low Power VLSI Design</a></li>
+  <li><a href="https://semiengineering.com/knowledge_centers/low-power/low-power-design/power-consumption/" target="_blank">Power Consumption</a></li>
+  <li><a href="http://www.vlsi-basics.com/2013/10/ir-drop-analysis-using-redhawk-overview.html" target="_blank">IR Drop Analysis using RedHawk</a></li>
+  <li><a href="https://www.edn.com/design/systems-design/4419930/An-efficient-RDL-routing-for-flip-chip-designs" target="_blank">An efficient RDL routing for flip-chip designs</a></li>
+  <li><a href="https://www.design-reuse.com/articles/31011/power-grid-design.html" target="_blank">Novel and efficient power grid design for lesser metal layer process SOC’s</a></li>
+  <li><a href="http://www.vlsi-basics.com/2013/12/ir-drop-analysis-interview-questions.html" target="_blank">IR Drop Analysis Interview Questions</a></li>
+  <li><a href="https://www.youtube.com/watch?v=SvZOq2B3-pg" target="_blank">Minimizing Leakage Power - I</a></li>
+  <li><a href="https://www.youtube.com/watch?v=lnDjc_4UB6M" target="_blank">Minimizing Leakage Power - II</a></li>
+  <li><a href="http://asic-soc.blogspot.com/2008/03/leakage-power-trends.html" target="_blank">Leakage Power Trends</a></li>
+</ul>
+
+				</div>
+				<div class="note closers">
+	<p>In case if you found something useful to add to this article or you found a bug in the code or would like to improve some points mentioned, feel free to write it down in the comments. Hope you found something useful here.</p>
+	<p class="happy-learning">Happy learning!</p>
+</div>
+				
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<hr>
+<div class="share-it-box">
+<p class="share-this">Share this post! </p>
+<div id="share-box"> 
+		<a href="whatsapp://send?text=http://localhost:4000/hardware/low-power-vlsi-design-basics-1" data-action="share/whatsapp/share"><img src="/images/icons/whatsapp.png"/></a>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/hardware/low-power-vlsi-design-basics-1" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><img src="/images/icons/facebook.png"/></a>
+       
+        <a href="https://twitter.com/intent/tweet?text=Low Power VLSI Design Basics (Part 1)&url=http://localhost:4000/hardware/low-power-vlsi-design-basics-1" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><img src="/images/icons/twitter.png"/></a>
+
+       <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/hardware/low-power-vlsi-design-basics-1&title=Low Power VLSI Design Basics (Part 1)&summary=Understand power dissipation, types of power dissipation, IR drop, reasons for IR drop and some strategies to minimize IR drop from a VLSI physical design perspective.&source=webjeda" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><img src="/images/icons/linkedin.png"/></a>                               
+</div>
+</div>
+<hr>
+			</article>
+			
+			<div class="show-comments" onclick="showComments()"><p id="show_comments"><span id="comment_count" class="disqus-comment-count" data-disqus-url="https://gogul09.github.io/hardware/low-power-vlsi-design-basics-1"></span></p></div>
+
+			<div id="disqus_thread"></div>
+			<script>
+				(function() {
+					var d = document, s = d.createElement('script');
+					s.src = '//gogul09.disqus.com/embed.js';
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	
+	window.onscroll = function() {
+		sideBarScrollHandler();
+		windowScrollHandler();
+	};
+	
+	function sideBarScrollHandler() {
+		if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+			document.getElementById("sidebar_tracker").style.top = "20px";
+		} else {
+			document.getElementById("sidebar_tracker").style.top = "70px";
+		}
+	}
+	
+</script>
+    </div>
+
+    <div class="wrapper-footer">
+      <footer class="footer">
+        <p><span>&copy; 2019 - gogul ilango | opinions are my own</span></p>
+       </footer>
+     </div>
+     
+     <button onclick="topScroller()" id="btnScrollTop" title="Go to top" class="w3-animate-bottom"></button>
+
+     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+     <script src="https://apis.google.com/js/platform.js"></script>
+     <script async defer src="https://buttons.github.io/buttons.js"></script>
+     <script id="dsq-count-scr" src="//gogul09.disqus.com/count.js" async></script>
+     <script src="/js/custom.js"></script>
+     
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-93019594-1', 'auto');
+		ga('send', 'pageview', {
+		  'page': '/hardware/low-power-vlsi-design-basics-1',
+		  'title': 'Low Power VLSI Design Basics (Part 1)'
+		});
+	</script>
+	<!-- End Google Analytics -->
+
+
+   </body>
+   </html>

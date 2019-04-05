@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Regression Models in Scikit-learn – Gogul Ilango </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,400|Roboto:300" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="/images/favicon_gi.png"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=12.0, minimum-scale=.25, user-scalable=yes"/>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    <meta property="og:title" content="Regression Models in Scikit-learn" />
+    <meta name="description" content="Learn and understand the different regression models (algorithms) offered by scikit-learn to do Machine Learning." />
+    <meta property="og:description" content="Learn and understand the different regression models (algorithms) offered by scikit-learn to do Machine Learning." />
+    <meta property="twitter:title" content="Regression Models in Scikit-learn" />
+
+    <meta property="og:image" content="https://drive.google.com/uc?id=1ECABtqd8BFW-2jBYMTMwvQ-CyMWRz-nV"/>
+    <meta property="og:image:width" content="180" />
+    <meta property="og:image:height" content="110" />
+
+    <meta name="twitter:title" content="Regression Models in Scikit-learn">
+    <meta name="twitter:description" content="Learn and understand the different regression models (algorithms) offered by scikit-learn to do Machine Learning.">
+    <meta name="twitter:image" content="https://drive.google.com/uc?id=1ECABtqd8BFW-2jBYMTMwvQ-CyMWRz-nV">
+  <!-- Begin Jekyll SEO tag v2.2.2 -->
+<title>Regression Models in Scikit-learn | Gogul Ilango</title>
+<meta property="og:title" content="Regression Models in Scikit-learn" />
+<meta name="author" content="Gogul Ilango" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Learn and understand the different regression models (algorithms) offered by scikit-learn to do Machine Learning." />
+<meta property="og:description" content="Learn and understand the different regression models (algorithms) offered by scikit-learn to do Machine Learning." />
+<link rel="canonical" href="http://localhost:4000/software/sklearn-regression-models" />
+<meta property="og:url" content="http://localhost:4000/software/sklearn-regression-models" />
+<meta property="og:site_name" content="Gogul Ilango" />
+<meta property="og:image" content="https://drive.google.com/uc?id=1ECABtqd8BFW-2jBYMTMwvQ-CyMWRz-nV" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-07-18T00:00:00+05:30" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"Regression Models in Scikit-learn","author":{"@type":"Person","name":"Gogul Ilango"},"image":"https://drive.google.com/uc?id=1ECABtqd8BFW-2jBYMTMwvQ-CyMWRz-nV","datePublished":"2018-07-18T00:00:00+05:30","dateModified":"2018-07-18T00:00:00+05:30","description":"Learn and understand the different regression models (algorithms) offered by scikit-learn to do Machine Learning.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/software/sklearn-regression-models"},"url":"http://localhost:4000/software/sklearn-regression-models"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1792372637327333",
+            enable_page_level_ads: true
+       });
+  </script>
+  
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!--[if lte IE 8]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+    <meta name="theme-color" content="#252525" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Gogul Ilango - This blog on Deep Learning, VLSI Design and STA is written by Gogul Ilango. Master VLSI Design, Physical Design, Static Timing Analysis, Deep Learning through my articles, tutorials and resources." href="/feed.xml" />
+  </head>
+
+  <body>
+    <div class="outer-wrapping">
+      <div class="inner-container">
+          <div class="header-left">
+            <a class='logo' href="https://gogul09.github.io/"><img src="/images/icons/logo.png"/></a>
+          </div>
+          <div class="topnav header-right" id="top_navigator">
+            <a title="home" id = "nav_home" href="/"></a>
+            <a title="creations" id = "nav_creations" href="/creations"></a>
+            <a title="music" id = "nav_music" href="/music"></a>
+            <a title="about" id = "nav_about" href="/about"></a>
+            <a href = "javascript:void(0);" style="font-size:14px;" class="icon" onclick="top_navigation()">&#9776;</a>
+          </div>
+      </div>
+    </div>
+
+    <div id="main" role="main">
+      <div class="post-heading post-heading-wrapper post-image">
+	<div class="grad-post">
+		<h1>Regression Models in Scikit-learn</h1>
+		<div class="post-subheading">
+			<p>Machine Learning | 18 July 2018</p>
+			<p><a href="#show_comments" id="comment-count" class="disqus-comment-count" data-disqus-url="https://gogul09.github.io/software/sklearn-regression-models"></a></p>
+		</div>
+	</div>
+</div>
+
+<div class="containing">
+	<div class="wrapping">
+
+		<div class="share-box">
+	<button class="top-share-fab" id="top-share-fab" onclick="showShareBox(this.id)"></button>
+	<div id="top-share-box" class="top-share-box">
+		<h5>Share</h5>
+		<ul>
+			<li class="whatsapp-white"><a href="whatsapp://send?text=http://localhost:4000/software/sklearn-regression-models" data-action="share/whatsapp/share">WhatsApp</a></li>
+			<li class="facebook-white"><a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/software/sklearn-regression-models" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" >Facebook</a></li>
+			<li class="twitter-white"><a href="https://twitter.com/intent/tweet?text=Regression Models in Scikit-learn&url=http://localhost:4000/software/sklearn-regression-models" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">Twitter</a></li>
+			<li class="linkedin-white"><a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/software/sklearn-regression-models&title=Regression Models in Scikit-learn&summary=Learn and understand the different regression models (algorithms) offered by scikit-learn to do Machine Learning.&source=webjeda" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" >LinkedIn</a></li>
+		</ul>
+	</div>
+</div>
+
+		<div class="post-cover">
+
+			<article class="post">
+				<div class="entry">
+					<div class="sidebar_tracker" id="sidebar_tracker">
+  <button onclick="closeSidebar('sidebar_tracker_content')">X</button>
+  <p onclick="showSidebar('sidebar_tracker_content')">Contents</p>
+  <ul id="sidebar_tracker_content">
+  		<li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_1" href="#adaboostregressor">AdaBoostRegressor</a></li>
+      <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_2" href="#baggingregressor">BaggingRegressor</a></li>
+      <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_3" href="#decisiontreeregressor">DecisionTreeRegressor</a></li>
+      <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_4" href="#extratreeregressor">ExtraTreeRegressor</a></li>
+      <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_5" href="#extratreesregressor">ExtraTreesRegressor</a></li>
+      <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_6" href="#gaussianprocessregressor">GaussianProcessRegressor</a></li>
+      <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_7" href="#gradientboostingregressor">GradientBoostingRegressor</a></li>
+      <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_8" href="#huberregressor">HuberRegressor</a></li>
+      <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_9" href="#kneighborsregressor">KNeighborsRegressor</a></li>
+      <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_10" href="#mlpregressor">MLPRegressor</a></li>
+      <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_11" href="#multioutputregressor">MultiOutputRegressor</a></li>
+      <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_12" href="#passiveaggresiveregressor">PassiveAggresiveRegressor</a></li>
+      <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_13" href="#radiusneighborsregressor">RadiusNeighborsRegressor</a></li>
+      <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_14" href="#randomforestregressor">RandomForestRegressor</a></li>
+      <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_15" href="#ransacregressor">RANSACRegressor</a></li>
+      <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_16" href="#sgdregressor">SGDRegressor</a></li>
+      <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_17" href="#theilsenregressor">TheilSenRegressor</a></li>
+	</ul>
+</div>
+
+<p class="hundred-days"><span>#100DaysOfMLCode</span></p>
+
+<p>In machine learning, regression problems go hand in hand with classification problems. If you see the trend between <span class="coding">regression</span> and <span class="coding">classification</span> over the past 5 years, both have similar interest worldwide. In this page, I have collected all the available <span class="coding">regression</span> algorithms implemented in scikit-learn so that we can use it quickly and get to know the available algorithms easily.</p>
+
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1480_RC02/embed_loader.js"></script>
+<script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"regression machine learning","geo":"","time":"today 5-y"},{"keyword":"classification machine learning","geo":"","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&q=regression%20machine%20learning,classification%20machine%20learning","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+
+<h3 id="adaboostregressor">AdaBoostRegressor</h3>
+
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostRegressor.html" target="_blank">official page</a> | <a href="https://github.com/scikit-learn/scikit-learn/blob/ed5e127b/sklearn/ensemble/weight_boosting.py#L853" target="_blank">source</a></p>
+
+<div class="code-head">usage<span>code</span></div>
+
+<div class="language-python code-class highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">AdaBoostRegressor</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AdaBoostRegressor</span><span class="p">(</span><span class="n">base_estimator</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="err">’</span><span class="n">linear</span><span class="err">’</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<ul class="code-class-ul">
+<li><b>Parameters</b>: <span class="coding">base_estimator</span>, <span class="coding">n_estimators</span>, <span class="coding">learning_rate</span>, <span class="coding">loss</span>, <span class="coding">random_state</span>.
+</li>
+<li><b>Attributes</b>: <span class="coding">estimators_</span>, <span class="coding">estimator_weights_</span>, <span class="coding">estimator_errors_</span>, <span class="coding">feature_importances_</span>
+</li>
+</ul>
+
+<hr />
+
+<h3 id="baggingregressor">BaggingRegressor</h3>
+
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingRegressor.html#sklearn.ensemble.BaggingRegressor" target="_blank">official page</a> | <a href="https://github.com/scikit-learn/scikit-learn/blob/ed5e127b/sklearn/ensemble/bagging.py#L797" target="_blank">source</a></p>
+
+<div class="code-head">usage<span>code</span></div>
+
+<div class="language-python code-class highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">BaggingRegressor</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">BaggingRegressor</span><span class="p">(</span><span class="n">base_estimator</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">max_samples</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">max_features</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">bootstrap</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">bootstrap_features</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">oob_score</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">warm_start</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<ul class="code-class-ul">
+<li><b>Parameters</b>: <span class="coding">base_estimator</span>, <span class="coding">n_estimators</span>, <span class="coding">max_samples</span>, <span class="coding">max_features</span>, <span class="coding">bootstrap</span>, <span class="coding">bootstrap_features</span>, <span class="coding">oob_score</span>, <span class="coding">warm_start</span>, <span class="coding">n_jobs</span>, <span class="coding">random_state</span>, <span class="coding">verbose</span>.
+</li>
+<li><b>Attributes</b>: <span class="coding">estimators_</span>, <span class="coding">estimators_samples_</span>, <span class="coding">estimators_features_</span>, <span class="coding">oob_score_</span>, <span class="coding">oob_prediction_</span>.
+</li>
+</ul>
+
+<hr />
+
+<h3 id="decisiontreeregressor">DecisionTreeRegressor</h3>
+
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor" target="_blank">official page</a> | <a href="https://github.com/scikit-learn/scikit-learn/blob/ed5e127b/sklearn/tree/tree.py#L873" target="_blank">source</a></p>
+
+<div class="code-head">usage<span>code</span></div>
+
+<div class="language-python code-class highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeRegressor</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="err">’</span><span class="n">mse</span><span class="err">’</span><span class="p">,</span> <span class="n">splitter</span><span class="o">=</span><span class="err">’</span><span class="n">best</span><span class="err">’</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">min_samples_split</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">min_weight_fraction_leaf</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">max_features</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">max_leaf_nodes</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">min_impurity_decrease</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">min_impurity_split</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">presort</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<ul class="code-class-ul">
+<li><b>Parameters</b>: <span class="coding">criterion</span>, 
+                  <span class="coding">splitter</span>,
+                  <span class="coding">max_depth</span>,
+                  <span class="coding">min_samples_split</span>,
+                  <span class="coding">min_samples_leaf</span>,
+                  <span class="coding">min_weight_fraction_leaf</span>,
+                  <span class="coding">max_features</span>,
+                  <span class="coding">random_state</span>,
+                  <span class="coding">max_leaf_nodes</span>,
+                  <span class="coding">min_impurity_decrease</span>,
+                  <span class="coding">min_impurity_split</span>,
+                  <span class="coding">presort</span>
+</li>
+<li><b>Attributes</b>: <span class="coding">feature_importances_</span>,
+                  <span class="coding">max_features_</span>,
+                  <span class="coding">n_features_</span>,
+                  <span class="coding">n_outputs_</span>,
+                  <span class="coding">tree_</span>
+</li>
+</ul>
+
+<hr />
+
+<h3 id="extratreeregressor">ExtraTreeRegressor</h3>
+
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.tree.ExtraTreeRegressor.html#sklearn.tree.ExtraTreeRegressor" target="_blank">official page</a> | <a href="https://github.com/scikit-learn/scikit-learn/blob/ed5e127b/sklearn/tree/tree.py#L1306" target="_blank">source</a></p>
+
+<div class="code-head">usage<span>code</span></div>
+
+<div class="language-python code-class highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">ExtraTreeRegressor</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">ExtraTreeRegressor</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="err">’</span><span class="n">mse</span><span class="err">’</span><span class="p">,</span> <span class="n">splitter</span><span class="o">=</span><span class="err">’</span><span class="n">random</span><span class="err">’</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">min_samples_split</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">min_weight_fraction_leaf</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">max_features</span><span class="o">=</span><span class="err">’</span><span class="n">auto</span><span class="err">’</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">min_impurity_decrease</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">min_impurity_split</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">max_leaf_nodes</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<ul class="code-class-ul">
+<li><b>Parameters</b>: <span class="coding">criterion</span>,
+                  <span class="coding">splitter</span>,
+                  <span class="coding">max_depth</span>,
+                  <span class="coding">min_samples_split</span>,
+                  <span class="coding">min_samples_leaf</span>,
+                  <span class="coding">min_weight_fraction_leaf</span>,
+                  <span class="coding">max_features</span>,
+                  <span class="coding">random_state</span>,
+                  <span class="coding">min_impurity_decrease</span>,
+                  <span class="coding">min_impurity_split</span>,
+                  <span class="coding">max_leaf_nodes</span>
+</li>
+</ul>
+
+<hr />
+
+<h3 id="extratreesregressor">ExtraTreesRegressor</h3>
+
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.ExtraTreesRegressor.html#sklearn.ensemble.ExtraTreesRegressor" target="_blank">official page</a> | <a href="https://github.com/scikit-learn/scikit-learn/blob/ed5e127b/sklearn/ensemble/forest.py#L1501" target="_blank">source</a></p>
+
+<div class="code-head">usage<span>code</span></div>
+
+<div class="language-python code-class highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">ExtraTreesRegressor</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">ExtraTreesRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">criterion</span><span class="o">=</span><span class="err">’</span><span class="n">mse</span><span class="err">’</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">min_samples_split</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">min_weight_fraction_leaf</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">max_features</span><span class="o">=</span><span class="err">’</span><span class="n">auto</span><span class="err">’</span><span class="p">,</span> <span class="n">max_leaf_nodes</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">min_impurity_decrease</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">min_impurity_split</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">bootstrap</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">oob_score</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">warm_start</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<ul class="code-class-ul">
+<li><b>Parameters</b>: <span class="coding">n_estimators</span>,
+                  <span class="coding">criterion</span>,
+                  <span class="coding">max_features</span>,
+                  <span class="coding">max_depth</span>,
+                  <span class="coding">min_samples_split</span>,
+                  <span class="coding">min_samples_leaf</span>,
+                  <span class="coding">min_weight_fraction_leaf</span>,
+                  <span class="coding">max_leaf_nodes</span>,
+                  <span class="coding">min_impurity_split</span>,
+                  <span class="coding">min_impurity_decrease</span>,
+                  <span class="coding">bootstrap</span>,
+                  <span class="coding">oob_score</span>,
+                  <span class="coding">n_jobs</span>,
+                  <span class="coding">random_state</span>,
+                  <span class="coding">verbose</span>
+</li>
+<li><b>Attributes</b>: <span class="coding">estimators_</span>,
+                  <span class="coding">feature_importances_</span>,
+                  <span class="coding">n_features_</span>,
+                  <span class="coding">n_outputs_</span>,
+                  <span class="coding">oob_score_</span>,
+                  <span class="coding">oob_prediction_</span>
+</li>
+</ul>
+
+<hr />
+
+<h3 id="gaussianprocessregressor">GaussianProcessRegressor</h3>
+
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessRegressor.html#sklearn.gaussian_process.GaussianProcessRegressor" target="_blank">official page</a> | <a href="https://github.com/scikit-learn/scikit-learn/blob/ed5e127b/sklearn/gaussian_process/gpr.py#L21" target="_blank">source</a></p>
+
+<div class="code-head">usage<span>code</span></div>
+
+<div class="language-python code-class highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.gaussian_process</span> <span class="kn">import</span> <span class="n">GaussianProcessRegressor</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">GaussianProcessRegressor</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">1e-10</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="err">’</span><span class="n">fmin_l_bfgs_b</span><span class="err">’</span><span class="p">,</span> <span class="n">n_restarts_optimizer</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">normalize_y</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">copy_X_train</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<ul class="code-class-ul">
+<li><b>Parameters</b>: <span class="coding">kernel</span>,
+                  <span class="coding">alpha</span>,
+                  <span class="coding">optimizer</span>,
+                  <span class="coding">n_restarts_optimizer</span>,
+                  <span class="coding">normalize_y</span>,
+                  <span class="coding">copy_X_train</span>,
+                  <span class="coding">random_state</span>
+</li>
+<li><b>Attributes</b>: <span class="coding">X_train_</span>,
+                  <span class="coding">y_train_</span>,
+                  <span class="coding">kernel_</span>,
+                  <span class="coding">L_</span>,
+                  <span class="coding">alpha_</span>,
+                  <span class="coding">log_marginal_likelihood_value_</span>
+</li>
+</ul>
+<hr />
+
+<h3 id="gradientboostingregressor">GradientBoostingRegressor</h3>
+
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html#sklearn.ensemble.GradientBoostingRegressor" target="_blank">official page</a> | <a href="https://github.com/scikit-learn/scikit-learn/blob/ed5e127b/sklearn/ensemble/gradient_boosting.py#L1640" target="_blank">source</a></p>
+
+<div class="code-head">usage<span>code</span></div>
+
+<div class="language-python code-class highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">GradientBoostingRegressor</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">GradientBoostingRegressor</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="err">’</span><span class="n">ls</span><span class="err">’</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">subsample</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">criterion</span><span class="o">=</span><span class="err">’</span><span class="n">friedman_mse</span><span class="err">’</span><span class="p">,</span> <span class="n">min_samples_split</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">min_weight_fraction_leaf</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">min_impurity_decrease</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">min_impurity_split</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">max_features</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_leaf_nodes</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">warm_start</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">presort</span><span class="o">=</span><span class="err">’</span><span class="n">auto</span><span class="err">’</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<ul class="code-class-ul">
+<li><b>Parameters</b>: <span class="coding">loss</span>,
+                  <span class="coding">learning_rate</span>,
+                  <span class="coding">n_estimators</span>,
+                  <span class="coding">max_depth</span>,
+                  <span class="coding">criterion</span>,
+                  <span class="coding">min_samples_split</span>,
+                  <span class="coding">min_samples_leaf</span>,
+                  <span class="coding">min_weight_fraction_leaf</span>,
+                  <span class="coding">subsample</span>,
+                  <span class="coding">max_features</span>,
+                  <span class="coding">max_leaf_nodes</span>,
+                  <span class="coding">min_impurity_split</span>,
+                  <span class="coding">min_impurity_decrease</span>,
+                  <span class="coding">alpha</span>,
+                  <span class="coding">init</span>,
+                  <span class="coding">verbose</span>,
+                  <span class="coding">warm_start</span>,
+                  <span class="coding">random_state</span>,
+                  <span class="coding">presort</span>
+</li>
+
+<li><b>Attributes</b>: <span class="coding">feature_importances_</span>,
+                  <span class="coding">oob_improvement_</span>,
+                  <span class="coding">train_score_</span>,
+                  <span class="coding">loss_</span>,
+                  <span class="coding">init</span>,
+                  <span class="coding">estimators_</span>
+</li>
+</ul>
+
+<hr />
+
+<h3 id="huberregressor">HuberRegressor</h3>
+
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.HuberRegressor.html#sklearn.linear_model.HuberRegressor" target="_blank">official page</a> | <a href="https://github.com/scikit-learn/scikit-learn/blob/ed5e127b/sklearn/linear_model/huber.py#L125" target="_blank">source</a></p>
+
+<div class="code-head">usage<span>code</span></div>
+
+<div class="language-python code-class highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">HuberRegressor</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">HuberRegressor</span><span class="p">(</span><span class="n">epsilon</span><span class="o">=</span><span class="mf">1.35</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span> <span class="n">warm_start</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">fit_intercept</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-05</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<ul class="code-class-ul">
+<li><b>Parameters</b>: <span class="coding">epsilon</span>,
+                  <span class="coding">max_iter</span>,
+                  <span class="coding">alpha</span>,
+                  <span class="coding">warm_start</span>,
+                  <span class="coding">fit_intercept</span>,
+                  <span class="coding">tol</span>
+</li>
+<li><b>Attributes</b>: <span class="coding">coef_</span>,
+                  <span class="coding">intercept_</span>,
+                  <span class="coding">scale_</span>,
+                  <span class="coding">n_iter_</span>,
+                  <span class="coding">outliers_</span>
+</li>
+</ul>
+
+<hr />
+
+<h3 id="kneighborsregressor">KNeighborsRegressor</h3>
+
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsRegressor.html#sklearn.neighbors.KNeighborsRegressor" target="_blank">official page</a> | <a href="https://github.com/scikit-learn/scikit-learn/blob/ed5e127b/sklearn/neighbors/regression.py#L19" target="_blank">source</a></p>
+
+<div class="code-head">usage<span>code</span></div>
+
+<div class="language-python code-class highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsRegressor</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="err">’</span><span class="n">uniform</span><span class="err">’</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="err">’</span><span class="n">auto</span><span class="err">’</span><span class="p">,</span> <span class="n">leaf_size</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="err">’</span><span class="n">minkowski</span><span class="err">’</span><span class="p">,</span> <span class="n">metric_params</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<ul class="code-class-ul">
+<li><b>Parameters</b>: <span class="coding">n_neighbors</span>,
+                  <span class="coding">weights</span>,
+                  <span class="coding">algorithm</span>,
+                  <span class="coding">leaf_size</span>,
+                  <span class="coding">p</span>,
+                  <span class="coding">metric</span>,
+                  <span class="coding">metric_params</span>,
+                  <span class="coding">n_jobs</span>
+</li>
+</ul>
+
+<hr />
+
+<h3 id="mlpregressor">MLPRegressor</h3>
+
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html#sklearn.neural_network.MLPRegressor" target="_blank">official page</a> | <a href="https://github.com/scikit-learn/scikit-learn/blob/ed5e127b/sklearn/neural_network/multilayer_perceptron.py#L1061" target="_blank">source</a></p>
+
+<div class="code-head">usage<span>code</span></div>
+
+<div class="language-python code-class highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.neural_network</span> <span class="kn">import</span> <span class="n">MLPRegressor</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">MLPRegressor</span><span class="p">(</span><span class="n">hidden_layer_sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="err">’</span><span class="n">relu</span><span class="err">’</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="err">’</span><span class="n">adam</span><span class="err">’</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="err">’</span><span class="n">auto</span><span class="err">’</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="err">’</span><span class="n">constant</span><span class="err">’</span><span class="p">,</span> <span class="n">learning_rate_init</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">power_t</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">warm_start</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">momentum</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">nesterovs_momentum</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">early_stopping</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">validation_fraction</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">beta_1</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">beta_2</span><span class="o">=</span><span class="mf">0.999</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-08</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<ul class="code-class-ul">
+<li><b>Parameters</b>: <span class="coding">hidden_layer_sizes</span>,
+                  <span class="coding">activation</span>,
+                  <span class="coding">solver</span>,
+                  <span class="coding">alpha</span>,
+                  <span class="coding">batch_size</span>,
+                  <span class="coding">learning_rate</span>,
+                  <span class="coding">learning_rate_init</span>,
+                  <span class="coding">power_t</span>,
+                  <span class="coding">max_iter</span>,
+                  <span class="coding">shuffle</span>,
+                  <span class="coding">random_state</span>,
+                  <span class="coding">tol</span>,
+                  <span class="coding">verbose</span>,
+                  <span class="coding">warm_start</span>,
+                  <span class="coding">momentum</span>,
+                  <span class="coding">nesterovs_momentum</span>,
+                  <span class="coding">early_stopping</span>,
+                  <span class="coding">validation_fraction</span>,
+                  <span class="coding">beta_1</span>,
+                  <span class="coding">beta_2</span>,
+                  <span class="coding">epsilon</span>
+</li>
+<li><b>Attributes</b>: <span class="coding">loss_</span>,
+                  <span class="coding">coefs_</span>,
+                  <span class="coding">intercepts_</span>,
+                  <span class="coding">n_iter_</span>,
+                  <span class="coding">n_layers_</span>,
+                  <span class="coding">n_outputs_</span>,
+                  <span class="coding">out_activation_</span>
+</li>
+</ul>
+
+<hr />
+
+<h3 id="multioutputregressor">MultiOutputRegressor</h3>
+
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.multioutput.MultiOutputRegressor.html#sklearn.multioutput.MultiOutputRegressor" target="_blank">official page</a> | <a href="https://github.com/scikit-learn/scikit-learn/blob/ed5e127b/sklearn/multioutput.py#L201" target="_blank">source</a></p>
+
+<div class="code-head">usage<span>code</span></div>
+
+<div class="language-python code-class highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.multioutput</span> <span class="kn">import</span> <span class="n">MultiOutputRegressor</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">MultiOutputRegressor</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<ul class="code-class-ul">
+<li><b>Parameters</b>: <span class="coding">estimator</span>,
+                  <span class="coding">n_jobs</span>
+</li>
+</ul>
+
+<hr />
+
+<h3 id="passiveaggresiveregressor">PassiveAggresiveRegressor</h3>
+
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.PassiveAggressiveRegressor.html#sklearn.linear_model.PassiveAggressiveRegressor" target="_blank">official page</a> | <a href="https://github.com/scikit-learn/scikit-learn/blob/ed5e127b/sklearn/linear_model/passive_aggressive.py#L228" target="_blank">source</a></p>
+
+<div class="code-head">usage<span>code</span></div>
+
+<div class="language-python code-class highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">PassiveAggressiveRegressor</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">PassiveAggressiveRegressor</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">fit_intercept</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="err">’</span><span class="n">epsilon_insensitive</span><span class="err">’</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">warm_start</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<ul class="code-class-ul">
+<li><b>Parameters</b>: <span class="coding">C</span>,
+                       <span class="coding">fit_intercept</span>,
+                       <span class="coding">max_iter</span>,
+                       <span class="coding">tol</span>, 
+                       <span class="coding">shuffle</span>,
+                       <span class="coding">verbose</span>,
+                       <span class="coding">loss</span>,
+                       <span class="coding">epsilon</span>,
+                       <span class="coding">random_state</span>,
+                       <span class="coding">warm_start</span>,
+                       <span class="coding">average</span>,
+                       <span class="coding">n_iter</span>
+</li>
+<li><b>Attributes</b>: <span class="coding">coef_</span>,
+                       <span class="coding">intercept_</span>,
+                       <span class="coding">n_iter_</span>
+</li>
+</ul>
+
+<hr />
+
+<h3 id="radiusneighborsregressor">RadiusNeighborsRegressor</h3>
+
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.RadiusNeighborsRegressor.html#sklearn.neighbors.RadiusNeighborsRegressor" target="_blank">official page</a> | <a href="https://github.com/scikit-learn/scikit-learn/blob/ed5e127b/sklearn/neighbors/regression.py#L168" target="_blank">source</a></p>
+
+<div class="code-head">usage<span>code</span></div>
+
+<div class="language-python code-class highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">RadiusNeighborsRegressor</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">RadiusNeighborsRegressor</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="err">’</span><span class="n">uniform</span><span class="err">’</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="err">’</span><span class="n">auto</span><span class="err">’</span><span class="p">,</span> <span class="n">leaf_size</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="err">’</span><span class="n">minkowski</span><span class="err">’</span><span class="p">,</span> <span class="n">metric_params</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<ul class="code-class-ul">
+<li><b>Parameters</b>: <span class="coding">radius</span>,
+                       <span class="coding">weights</span>,
+                       <span class="coding">algorithm</span>,
+                       <span class="coding">leaf_size</span>,
+                       <span class="coding">p</span>,
+                       <span class="coding">metric</span>,
+                       <span class="coding">metric_params</span>
+</li>
+</ul>
+
+<hr />
+
+<h3 id="randomforestregressor">RandomForestRegressor</h3>
+
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html#sklearn.ensemble.RandomForestRegressor" target="_blank">official page</a> | <a href="https://github.com/scikit-learn/scikit-learn/blob/ed5e127b/sklearn/ensemble/forest.py#L1019" target="_blank">source</a></p>
+
+<div class="code-head">usage<span>code</span></div>
+
+<div class="language-python code-class highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">criterion</span><span class="o">=</span><span class="err">’</span><span class="n">mse</span><span class="err">’</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">min_samples_split</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">min_weight_fraction_leaf</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">max_features</span><span class="o">=</span><span class="err">’</span><span class="n">auto</span><span class="err">’</span><span class="p">,</span> <span class="n">max_leaf_nodes</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">min_impurity_decrease</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">min_impurity_split</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">bootstrap</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">oob_score</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">warm_start</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<ul class="code-class-ul">
+<li><b>Parameters</b>: <span class="coding">n_estimators</span>,
+                       <span class="coding">criterion</span>,
+                       <span class="coding">max_features</span>,
+                       <span class="coding">max_depth</span>,
+                       <span class="coding">min_samples_split</span>,
+                       <span class="coding">min_samples_leaf</span>,
+                       <span class="coding">min_weight_fraction_leaf</span>,
+                       <span class="coding">max_leaf_nodes</span>,
+                       <span class="coding">min_impurity_split</span>,
+                       <span class="coding">min_impurity_decrease</span>,
+                       <span class="coding">bootstrap</span>,
+                       <span class="coding">oob_score</span>,
+                       <span class="coding">n_jobs</span>,
+                       <span class="coding">random_state</span>,
+                       <span class="coding">verbose</span>,
+                       <span class="coding">warm_start</span>
+</li>
+<li><b>Attributes</b>: <span class="coding">estimators_</span>,
+                       <span class="coding">feature_importances_</span>,
+                       <span class="coding">n_features_</span>,
+                       <span class="coding">n_outputs_</span>,
+                       <span class="coding">oob_score_</span>,
+                       <span class="coding">oob_prediction_</span>
+</li>
+</ul>
+
+<hr />
+
+<h3 id="ransacregressor">RANSACRegressor</h3>
+
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RANSACRegressor.html#sklearn.linear_model.RANSACRegressor" target="_blank">official page</a> | <a href="https://github.com/scikit-learn/scikit-learn/blob/ed5e127b/sklearn/linear_model/ransac.py#L54" target="_blank">source</a></p>
+
+<div class="code-head">usage<span>code</span></div>
+
+<div class="language-python code-class highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">RANSACRegressor</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">RANSACRegressor</span><span class="p">(</span><span class="n">base_estimator</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">min_samples</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">residual_threshold</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">is_data_valid</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">is_model_valid</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">max_trials</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">max_skips</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stop_n_inliers</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stop_score</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stop_probability</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span> <span class="n">residual_metric</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="err">’</span><span class="n">absolute_loss</span><span class="err">’</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<ul class="code-class-ul">
+<li><b>Parameters</b>: <span class="coding">base_estimator</span>,
+                       <span class="coding">min_samples</span>,
+                       <span class="coding">residual_threshold</span>,
+                       <span class="coding">is_data_valid</span>,
+                       <span class="coding">is_model_valid</span>,
+                       <span class="coding">max_trials</span>,
+                       <span class="coding">max_skips</span>,
+                       <span class="coding">stop_n_inliers</span>,
+                       <span class="coding">stop_score</span>,
+                       <span class="coding">stop_probability</span>,
+                       <span class="coding">residual_metric</span>,
+                       <span class="coding">loss</span>,
+                       <span class="coding">random_state</span>
+</li>
+<li><b>Attributes</b>: <span class="coding">estimator_</span>,
+                       <span class="coding">n_trials_</span>,
+                       <span class="coding">inlier_mask_</span>,
+                       <span class="coding">n_skips_no_inliers_</span>,
+                       <span class="coding">n_skips_invalid_data_</span>,
+                       <span class="coding">n_skips_invalid_model_</span>
+</li>
+</ul>
+
+<hr />
+
+<h3 id="sgdregressor">SGDRegressor</h3>
+
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDRegressor.html#sklearn.linear_model.SGDRegressor" target="_blank">official page</a> | <a href="https://github.com/scikit-learn/scikit-learn/blob/ed5e127b/sklearn/linear_model/stochastic_gradient.py#L1165" target="_blank">source</a></p>
+
+<div class="code-head">usage<span>code</span></div>
+
+<div class="language-python code-class highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">SGDRegressor</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">SGDRegressor</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="err">’</span><span class="n">squared_loss</span><span class="err">’</span><span class="p">,</span> <span class="n">penalty</span><span class="o">=</span><span class="err">’</span><span class="n">l2</span><span class="err">’</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span> <span class="n">l1_ratio</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">fit_intercept</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="err">’</span><span class="n">invscaling</span><span class="err">’</span><span class="p">,</span> <span class="n">eta0</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">power_t</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">warm_start</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<ul class="code-class-ul">
+<li><b>Parameters</b>: <span class="coding">loss</span>,
+                       <span class="coding">penalty</span>,
+                       <span class="coding">alpha</span>,
+                       <span class="coding">l1_ratio</span>,
+                       <span class="coding">fit_intercept</span>,
+                       <span class="coding">max_iter</span>,
+                       <span class="coding">tol</span>,
+                       <span class="coding">shuffle</span>,
+                       <span class="coding">verbose</span>,
+                       <span class="coding">epsilon</span>,
+                       <span class="coding">random_state</span>,
+                       <span class="coding">learning_rate</span>,
+                       <span class="coding">eta0</span>,
+                       <span class="coding">power_t</span>,
+                       <span class="coding">warm_start</span>,
+                       <span class="coding">average</span>,
+                       <span class="coding">n_iter</span>
+</li>
+<li><b>Attributes</b>: <span class="coding">coef_</span>,
+                       <span class="coding">intercept_</span>,
+                       <span class="coding">average_coef_</span>,
+                       <span class="coding">average_intercept_</span>,
+                       <span class="coding">n_iter_</span>
+</li>
+</ul>
+
+<hr />
+
+<h3 id="theilsenregressor">TheilSenRegressor</h3>
+
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.TheilSenRegressor.html#sklearn.linear_model.TheilSenRegressor" target="_blank">official page</a> | <a href="https://github.com/scikit-learn/scikit-learn/blob/ed5e127b/sklearn/linear_model/theil_sen.py#L198" target="_blank">source</a></p>
+
+<div class="code-head">usage<span>code</span></div>
+
+<div class="language-python code-class highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">TheilSenRegressor</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">TheilSenRegressor</span><span class="p">(</span><span class="n">fit_intercept</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">copy_X</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">max_subpopulation</span><span class="o">=</span><span class="mf">10000.0</span><span class="p">,</span> <span class="n">n_subsamples</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<ul class="code-class-ul">
+<li><b>Parameters</b>: <span class="coding">fit_intercept</span>,
+                       <span class="coding">copy_X</span>,
+                       <span class="coding">max_subpopulation</span>,
+                       <span class="coding">n_subsamples</span>,
+                       <span class="coding">max_iter</span>,
+                       <span class="coding">tol</span>,
+                       <span class="coding">random_state</span>,
+                       <span class="coding">n_jobs</span>,
+                       <span class="coding">verbose</span>
+</li>
+<li><b>Attributes</b>: <span class="coding">coef_</span>,
+                       <span class="coding">intercept_</span>,
+                       <span class="coding">breakdown_</span>,
+                       <span class="coding">n_iter_</span>,
+                       <span class="coding">n_subpopulation_</span>
+</li>
+</ul>
+
+<script type="text/javascript" src="/js/selectbox.js"></script>
+
+
+				</div>
+				<div class="note closers">
+	<p>In case if you found something useful to add to this article or you found a bug in the code or would like to improve some points mentioned, feel free to write it down in the comments. Hope you found something useful here.</p>
+	<p class="happy-learning">Happy learning!</p>
+</div>
+				
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<hr>
+<div class="share-it-box">
+<p class="share-this">Share this post! </p>
+<div id="share-box"> 
+		<a href="whatsapp://send?text=http://localhost:4000/software/sklearn-regression-models" data-action="share/whatsapp/share"><img src="/images/icons/whatsapp.png"/></a>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/software/sklearn-regression-models" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><img src="/images/icons/facebook.png"/></a>
+       
+        <a href="https://twitter.com/intent/tweet?text=Regression Models in Scikit-learn&url=http://localhost:4000/software/sklearn-regression-models" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><img src="/images/icons/twitter.png"/></a>
+
+       <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/software/sklearn-regression-models&title=Regression Models in Scikit-learn&summary=Learn and understand the different regression models (algorithms) offered by scikit-learn to do Machine Learning.&source=webjeda" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><img src="/images/icons/linkedin.png"/></a>                               
+</div>
+</div>
+<hr>
+			</article>
+			
+			<div class="show-comments" onclick="showComments()"><p id="show_comments"><span id="comment_count" class="disqus-comment-count" data-disqus-url="https://gogul09.github.io/software/sklearn-regression-models"></span></p></div>
+
+			<div id="disqus_thread"></div>
+			<script>
+				(function() {
+					var d = document, s = d.createElement('script');
+					s.src = '//gogul09.disqus.com/embed.js';
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	
+	window.onscroll = function() {
+		sideBarScrollHandler();
+		windowScrollHandler();
+	};
+	
+	function sideBarScrollHandler() {
+		if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+			document.getElementById("sidebar_tracker").style.top = "20px";
+		} else {
+			document.getElementById("sidebar_tracker").style.top = "70px";
+		}
+	}
+	
+</script>
+    </div>
+
+    <div class="wrapper-footer">
+      <footer class="footer">
+        <p><span>&copy; 2019 - gogul ilango | opinions are my own</span></p>
+       </footer>
+     </div>
+     
+     <button onclick="topScroller()" id="btnScrollTop" title="Go to top" class="w3-animate-bottom"></button>
+
+     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+     <script src="https://apis.google.com/js/platform.js"></script>
+     <script async defer src="https://buttons.github.io/buttons.js"></script>
+     <script id="dsq-count-scr" src="//gogul09.disqus.com/count.js" async></script>
+     <script src="/js/custom.js"></script>
+     
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-93019594-1', 'auto');
+		ga('send', 'pageview', {
+		  'page': '/software/sklearn-regression-models',
+		  'title': 'Regression Models in Scikit-learn'
+		});
+	</script>
+	<!-- End Google Analytics -->
+
+
+   </body>
+   </html>
