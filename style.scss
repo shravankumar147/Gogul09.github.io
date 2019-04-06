@@ -724,15 +724,17 @@ figcaption {
 
 .blog-category-box {
   display: none;
-  background-color: #f6f6f6;
+  background-color: #ffffff;
   border-radius: 3px;
   width: 100%;
   margin: 0px auto;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 18px rgba(36,37,38,0.05) !important;
   @include mobile {
     width: 100%;
     margin-top: 0px;
-    padding-bottom: 0px;
     margin-bottom: 0px;
   }
 
@@ -742,12 +744,12 @@ figcaption {
     color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    font-size: 13px;
-    padding: 10px 15px;
+    font-size: 15px;
+    padding: 10px;
     text-shadow: none;
     text-align: center;
     @include mobile {
-      font-size: 11px;
+      font-size: 12px;
     }
   }
   a {
@@ -759,7 +761,41 @@ figcaption {
   }
   a:hover {
     text-decoration: none;
+    border-bottom: none !important;
+    font-weight: bold;
   }
+}
+
+.blog-category-box table {
+  table-layout: initial;
+  background-color: white;
+  border: none !important;
+  width: auto;
+  margin-bottom: 0px !important;
+}
+
+.blog-category-box table tr td {
+  background-color: white !important;
+  border: none !important;
+  text-align: left;
+  padding: 10px 5px;
+}
+
+.blog-category-box table tr {
+  background-color: white !important;
+  border: none !important;
+}
+
+.blog-category-box table tbody {
+  background-color: white !important;
+  border: none !important;
+}
+
+.blog-category-box table tr td b {
+  color: lightgray;
+  font-weight: 100;
+  font-size: 12px;
+  letter-spacing: 0.6px;
 }
 
 .category-tab {
@@ -2086,7 +2122,7 @@ u {
   margin-top: 20px !important;
   margin-bottom: 0px !important;
   padding: 10px;
-  background-color: #1f212b;
+  background-color: #191919;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   color: white;

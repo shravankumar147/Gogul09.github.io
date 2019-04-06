@@ -30,257 +30,158 @@ permalink: /
 
       <!--PD STARTS-->
       <div class="blog-category-box" id="box_asic_design">
-        <div class="category-box vlsi-box-special">
+        <div>
           <h4><span>Static Timing Analysis</span></h4>
-          <ul>
+          <table>
             {% for post in site.posts %}
               {% if post.categories contains 'hardware' %}
                 {% if post.class contains 'STA Concepts' %}
-                    <li>
-                      <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">
-                          <div class='inner_box'>
-                            <img src="{{ post.cardimage }}" />
-                            <h3>{{ post.title }}</h3>
-                            <p>{{ post.description }}</p>
-                            <p class='front-date'>{{ post.date | date_to_long_string }}</p>
-                          </div>
-                      </a>
-                    </li>
+                    <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
                   {% endif %}
                 {% endif %}
             {% endfor %}
-          </ul>
+          </table>
           <h4><span>Power Distribution Network</span></h4>
-          <ul>
+          <table>
             {% for post in site.posts %}
               {% if post.categories contains 'hardware' %}
                 {% if post.class contains 'PDN Concepts' %}
-                  <li>
-                    <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">
-                        <div class='inner_box'>
-                          <img src="{{ post.cardimage }}" />
-                          <h3>{{ post.title }}</h3>
-                          <p>{{ post.description }}</p>
-                          <p class='front-date'>{{ post.date | date_to_long_string }}</p>
-                        </div>
-                    </a>
-                  </li>
+                  <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
                 {% endif %}
               {% endif %}
             {% endfor %}
-          </ul>
+          </table>
           <h4><span>Physical Design</span></h4>
-          <ul>
+          <table>
             {% for post in site.posts %}
               {% if post.categories contains 'hardware' %}
                 {% if post.class contains 'PD Concepts' %}
-                  <li>
-                    <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">
-                        <div class='inner_box'>
-                          <img src="{{ post.cardimage }}" />
-                          <h3>{{ post.title }}</h3>
-                          <p>{{ post.description }}</p>
-                          <p class='front-date'>{{ post.date | date_to_long_string }}</p>
-                        </div>
-                    </a>
-                  </li>
+                  <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
                 {% endif %}
               {% endif %}
             {% endfor %}
-          </ul>
+          </table>
           <h4><span>Intelligence in Physical Design</span></h4>
-          <ul>
+          <table>
             {% for post in site.posts %}
               {% if post.categories contains 'hardware' %}
                 {% if post.class contains 'ML for PD' %}
-                  <li>
-                    <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">
-                        <div class='inner_box'>
-                          <img src="{{ post.cardimage }}" />
-                          <h3>{{ post.title }}</h3>
-                          <p>{{ post.description }}</p>
-                          <p class='front-date'>{{ post.date | date_to_long_string }}</p>
-                        </div>
-                    </a>
-                  </li>
+                  <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
                 {% endif %}
               {% endif %}
             {% endfor %}
-          </ul>
+          </table>
         </div>
       </div>
       <!--PD ENDS-->
 
       <!--DL STARTS-->
       <div class="blog-category-box" id="box_deep_learning">
-        <div class="category-box">
-          <ul>
+        <div>
+          <table>
             {% for post in site.posts %}
 
             {% if post.category contains 'software' %}
             {% if post.class contains 'Deep Learning' %}
-            <li>
-              <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">
-                  <div class='inner_box'>
-                    <img src="{{ post.cardimage }}" />
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.description }}</p>
-                    <p class='front-date'>{{ post.date | date_to_long_string }}</p>
-                  </div>
-               </a>
-            </li>
+              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
             {% endif %}
             {% endif %}
             {% endfor %}
-          </ul>
+          </table>
         </div>
       </div>
       <!--DL ENDS-->
 
       <!--ML STARTS-->
       <div class="blog-category-box" id="box_machine_learning">
-        <div class="category-box">
-          <ul>
+        <div>
+          <table>
             {% for post in site.posts %}
 
             {% if post.category contains 'software' %}
             {% if post.class contains 'Machine Learning' %}
-            <li>
-              <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">
-                  <div class='inner_box'>
-                    <img src="{{ post.image }}" />
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.description }}</p>
-                    <p class='front-date'>{{ post.date | date_to_long_string }}</p>
-                  </div>
-              </a>
-            </li>
+              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
             {% endif %}
             {% endif %}
             {% endfor %}
-          </ul>
+          </table>
         </div>
       </div>
       <!--ML ENDS-->
 
       <!--COMPUTER VISION STARTS-->
       <div class="blog-category-box" id="box_computer_vision">
-        <div class="category-box">
-          <ul>
+        <div>
+          <table>
             {% for post in site.posts %}
             {% if post.category contains 'software' %}
             {% if post.class contains 'Computer Vision' %}
-            <li>
-              <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">
-                  <div class='inner_box'>
-                    <img src="{{ post.image }}" />
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.description }}</p>
-                    <p class='front-date'>{{ post.date | date_to_long_string }}</p>
-                  </div>
-              </a>
-            </li>
+              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
             {% endif %}
             {% endif %}
             {% endfor %}
-          </ul>
+          </table>
         </div>
       </div>
       <!--COMPUTER VISION ENDS-->
       
       <!--ENVIRONMENT SETUP STARTS-->
       <div class="blog-category-box" id="box_environment_setup">
-        <div class="category-box">
-          <ul>
+        <div>
+          <table>
             {% for post in site.posts %}
             {% if post.category contains 'software' %}
             {% if post.class contains 'Environment Setup' %}
-            <li>
-              <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">
-                  <div class='inner_box'>
-                    <img src="{{ post.image }}" />
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.description }}</p>
-                    <p class='front-date'>{{ post.date | date_to_long_string }}</p>
-                </div>
-              </a>
-            </li>
+              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
             {% endif %}
             {% endif %}
             {% endfor %}
-          </ul>
+          </table>
         </div>
       </div>
       <!--ENVIRONMENT SETUP ENDS-->
       <!--CODE STARTS-->
       <div class="blog-category-box" id="box_code">
-        <div class="category-box">
-          <ul>
+        <div>
+          <table>
             {% for post in site.posts %}
             {% if post.category contains 'software' or post.category contains 'hardware' %}
             {% if post.class contains 'Code' %}
-            <li>
-              <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">
-                  <div class='inner_box'>
-                    <img src="{{ post.image }}" />
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.description }}</p>
-                    <p class='front-date'>{{ post.date | date_to_long_string }}</p>
-                </div>
-              </a>
-            </li>
+              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
             {% endif %}
             {% endif %}
             {% endfor %}
-          </ul>
+          </table>
         </div>
       </div>
       <!--CODE ENDS-->
       <!--TOOLS STARTS-->
       <div class="blog-category-box" id="box_tools">
-        <div class="category-box">
-          <ul>
+        <div>
+          <table>
             {% for post in site.posts %}
             {% if post.category contains 'software' %}
             {% if post.class contains 'Tools' %}
-            <li>
-              <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">
-                  <div class='inner_box'>
-                    <img src="{{ post.image }}" />
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.description }}</p>
-                    <p class='front-date'>{{ post.date | date_to_long_string }}</p>
-                </div>
-              </a>
-            </li>
+              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
             {% endif %}
             {% endif %}
             {% endfor %}
-          </ul>
+          </table>
         </div>
       </div>
       <!--TOOLS ENDS-->
       <!--RESOURCES STARTS-->
       <div class="blog-category-box" id="box_resources">
-        <div class="category-box">
-          <ul>
+        <div>
+          <table>
             {% for post in site.posts %}
             {% if post.category contains 'software' or post.category contains 'hardware' %}
             {% if post.class contains 'Resources' %}
-            <li>
-              <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">
-                  <div class='inner_box'>
-                    <img src="{{ post.image }}" />
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.description }}</p>
-                    <p class='front-date'>{{ post.date | date_to_long_string }}</p>
-                </div>
-              </a>
-            </li>
+              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
             {% endif %}
             {% endif %}
             {% endfor %}
-          </ul>
+          </table>
         </div>
       </div>
       <!--RESOURCES ENDS-->
