@@ -701,7 +701,7 @@ figcaption {
 
 .home-wrapper {
   margin: 0px auto;
-  width: 75%;
+  width: 50%;
   hr {
     margin: 5px !important;
     border-top: 1px solid #ebebeb !important;
@@ -910,6 +910,16 @@ figcaption {
   @include mobile {
     height: auto !important;
   }
+}
+
+.about-category-box {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.music-category-box {
+  box-shadow: none !important;
+  background-color: transparent !important;
 }
 
 .work-category-box {
@@ -2976,10 +2986,6 @@ del {
   margin-top: 0 !important;
   margin-bottom: 20px !important;
   font-size: 15px;
-}
-
-.music-main {
-  background-color: white !important;
 }
 
 .music-wrapper {

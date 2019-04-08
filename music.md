@@ -29,24 +29,24 @@ image: https://drive.google.com/uc?id=1pg7R9OxRIWv6saDOjoPpgl9nMRB5F-Yd
           <li id="tab_cover_video" onclick="showTabBox(this.id)">covers<br>video</li>
         </ul>
       </div>
-      <div class="blog-category-box work-category-box" id="box_comp_audio">
+      <div class="blog-category-box work-category-box music-category-box" id="box_comp_audio">
         <div class="music-box">
           <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/358230850&color=%23a43837&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
         </div>
       </div>
-      <div class="blog-category-box work-category-box" id="box_cover_audio">
+      <div class="blog-category-box work-category-box music-category-box" id="box_cover_audio">
         <div class="music-box">
           <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/358230735&color=%23a43837&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
         </div>
       </div>
-      <div class="blog-category-box work-category-box" id="box_comp_video">
+      <div class="blog-category-box work-category-box music-category-box" id="box_comp_video">
         <div class="music-box">
           <div class="music-video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL4GdHCdoUoLPmM7Bblzq8YmJLd1y6B9sq" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
-      <div class="blog-category-box work-category-box" id="box_cover_video">
+      <div class="blog-category-box work-category-box music-category-box" id="box_cover_video">
         <div class="music-box">
           <div class="music-video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL4GdHCdoUoLPG6BB-MqNRRtUTxX5Laut6" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

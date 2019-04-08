@@ -19,7 +19,7 @@ permalink: /creations/
   <div class="home-articles">
     <div class="home-wrapper">
       <!--Demo STARTS-->
-      <div class="blog-category-box" style="display: block !important;">
+      <div style="display: block !important;">
         <div class="category-box">
           <ul>
             {% for post in site.posts %}
