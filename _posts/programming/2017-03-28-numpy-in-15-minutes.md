@@ -1,7 +1,7 @@
 ---
 layout: post
 category: software
-class: Code
+class: Programming
 title: NumPy in 15 minutes
 description: Learn the syntax and how to's of NumPy python package which is highly used for scientific computing and data manipulation.
 author: Gogul Ilango

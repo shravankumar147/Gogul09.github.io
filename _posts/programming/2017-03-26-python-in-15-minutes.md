@@ -1,7 +1,7 @@
 ---
 layout: post-doc
 category: software
-class: Code
+class: Programming
 title: Python in 15 minutes
 description: Learn the syntax and how to's of Python programming language which is highly used in tech companies and the easiest programming language for a beginner.
 author: Gogul Ilango

@@ -748,6 +748,7 @@ figcaption {
     padding: 10px;
     text-shadow: none;
     text-align: center;
+    padding-left: 5px;
     @include mobile {
       font-size: 12px;
     }
@@ -792,10 +793,15 @@ figcaption {
 }
 
 .blog-category-box table tr td b {
-  color: lightgray;
+  color: #f29a9a;
   font-weight: 100;
   font-size: 12px;
   letter-spacing: 0.6px;
+}
+
+.blog-category-box table tr td i {
+  font-style: normal;
+  color: #c4c4c4;
 }
 
 .category-tab {
@@ -3363,4 +3369,9 @@ del {
   @include mobile {
     font-size: 30px;
   }
+}
+
+.movie-list {
+  list-style-type: none;
+  padding: 0 !important;
 }

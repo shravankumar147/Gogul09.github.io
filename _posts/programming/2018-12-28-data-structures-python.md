@@ -1,7 +1,7 @@
 ---
 layout: post
 category: software
-class: Code
+class: Programming
 title: Data Structures & Algorithms in Python
 description: Understand Data Structures and Algorithms using Python Programming Language.
 author: Gogul Ilango

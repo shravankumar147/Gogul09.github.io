@@ -21,10 +21,9 @@ permalink: /
         <li id="tab_deep_learning" onclick="showTabBox(this.id)">deep learning</li>
         <li id="tab_machine_learning" onclick="showTabBox(this.id)">machine learning</li>
         <li id="tab_computer_vision" onclick="showTabBox(this.id)">computer vision</li>
-        <li id="tab_setup" onclick="showTabBox(this.id)">setup</li>
-        <li id="tab_code" onclick="showTabBox(this.id)">programming</li>
-        <li id="tab_tools" onclick="showTabBox(this.id)">tools</li>
+        <li id="tab_programming" onclick="showTabBox(this.id)">programming</li>
         <li id="tab_resources" onclick="showTabBox(this.id)">resources</li>
+        <li id="tab_random" onclick="showTabBox(this.id)">random</li>
       </ul>
     </div>
 
@@ -36,7 +35,7 @@ permalink: /
             {% for post in site.posts %}
               {% if post.categories contains 'hardware' %}
                 {% if post.class contains 'STA Concepts' %}
-                    <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
+                    <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
                   {% endif %}
                 {% endif %}
             {% endfor %}
@@ -46,7 +45,7 @@ permalink: /
             {% for post in site.posts %}
               {% if post.categories contains 'hardware' %}
                 {% if post.class contains 'PDN Concepts' %}
-                  <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
+                  <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
                 {% endif %}
               {% endif %}
             {% endfor %}
@@ -56,7 +55,7 @@ permalink: /
             {% for post in site.posts %}
               {% if post.categories contains 'hardware' %}
                 {% if post.class contains 'PD Concepts' %}
-                  <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
+                  <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
                 {% endif %}
               {% endif %}
             {% endfor %}
@@ -66,7 +65,7 @@ permalink: /
             {% for post in site.posts %}
               {% if post.categories contains 'hardware' %}
                 {% if post.class contains 'ML for PD' %}
-                  <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
+                  <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
                 {% endif %}
               {% endif %}
             {% endfor %}
@@ -83,7 +82,7 @@ permalink: /
 
             {% if post.category contains 'software' %}
             {% if post.class contains 'Deep Learning' %}
-              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
+              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
             {% endif %}
             {% endif %}
             {% endfor %}
@@ -100,7 +99,7 @@ permalink: /
 
             {% if post.category contains 'software' %}
             {% if post.class contains 'Machine Learning' %}
-              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
+              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
             {% endif %}
             {% endif %}
             {% endfor %}
@@ -116,7 +115,7 @@ permalink: /
             {% for post in site.posts %}
             {% if post.category contains 'software' %}
             {% if post.class contains 'Computer Vision' %}
-              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
+              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
             {% endif %}
             {% endif %}
             {% endfor %}
@@ -124,30 +123,15 @@ permalink: /
         </div>
       </div>
       <!--COMPUTER VISION ENDS-->
-      
-      <!--ENVIRONMENT SETUP STARTS-->
-      <div class="blog-category-box" id="box_setup">
-        <div>
-          <table>
-            {% for post in site.posts %}
-            {% if post.category contains 'software' %}
-            {% if post.class contains 'Environment Setup' %}
-              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-          </table>
-        </div>
-      </div>
-      <!--ENVIRONMENT SETUP ENDS-->
+    
       <!--CODE STARTS-->
-      <div class="blog-category-box" id="box_code">
+      <div class="blog-category-box" id="box_programming">
         <div>
           <table>
             {% for post in site.posts %}
             {% if post.category contains 'software' or post.category contains 'hardware' %}
-            {% if post.class contains 'Code' %}
-              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
+            {% if post.class contains 'Programming' %}
+              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
             {% endif %}
             {% endif %}
             {% endfor %}
@@ -155,21 +139,6 @@ permalink: /
         </div>
       </div>
       <!--CODE ENDS-->
-      <!--TOOLS STARTS-->
-      <div class="blog-category-box" id="box_tools">
-        <div>
-          <table>
-            {% for post in site.posts %}
-            {% if post.category contains 'software' %}
-            {% if post.class contains 'Tools' %}
-              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-          </table>
-        </div>
-      </div>
-      <!--TOOLS ENDS-->
       <!--RESOURCES STARTS-->
       <div class="blog-category-box" id="box_resources">
         <div>
@@ -177,7 +146,7 @@ permalink: /
             {% for post in site.posts %}
             {% if post.category contains 'software' or post.category contains 'hardware' %}
             {% if post.class contains 'Resources' %}
-              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</td></tr>
+              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
             {% endif %}
             {% endif %}
             {% endfor %}
@@ -185,6 +154,21 @@ permalink: /
         </div>
       </div>
       <!--RESOURCES ENDS-->
+      <!--RANDOM STARTS-->
+      <div class="blog-category-box" id="box_random">
+        <div>
+          <table>
+            {% for post in site.posts %}
+            {% if post.category contains 'random'%}
+            {% if post.class contains 'Entertainment' %}
+              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+      <!--RANDOM ENDS-->
 
     </div>
   </div>
