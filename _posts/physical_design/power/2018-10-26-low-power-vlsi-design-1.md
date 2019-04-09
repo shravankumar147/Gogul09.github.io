@@ -28,7 +28,7 @@ cardimage: https://drive.google.com/uc?id=1pNudcK0doHXtomzrx-lhmgK0JBqlbxwD
   </ul>
 </div>
 
-Power has become a very important factor be to considered as technology node shrinks. For a VLSI Design Engineer, knowledge on power consumption in a CMOS design is crucial as it has become a very big challenge in latest technology nodes.
+Power & Battery life have become very important factors be to considered during chip design as technology node shrinks. For a VLSI Design Engineer, knowledge on power consumption in a CMOS design is crucial as it has become a very big challenge in latest technology nodes.
 
 Almost any electronic device that you hold in your hand (smartphone, tablet, notebook, laptop etc.,) consume power from a limited power supply (battery). Thus, making the chip consume less power is a mandatory problem to be solved.
 
@@ -63,10 +63,9 @@ The sources of these power dissipations as well as the techniques to solve them 
   <figcaption>Figure 1. Types of Power Dissipation in CMOS</figcaption>
 </figure>
 
-
 <h3 id="dynamic-power">Dynamic Power</h3>
 
-As the name suggests, dynamic power dissipation occurs when the transistors are switching from one logic state to another. There are two types of dynamic power dissipation in CMOS circuits namely
+As the name suggests, dynamic power dissipation occurs when the transistors are *switching* from one logic state to another. There are two types of dynamic power dissipation in CMOS circuits namely
 1. Switching Power
 2. Short-circuit Power
 
@@ -77,11 +76,11 @@ As the name suggests, dynamic power dissipation occurs when the transistors are 
 
 <h4 id="switching-power">Switching Power</h4>
 
-When a transistor switch from one logic state to another, the load capacitance at the output pin needs to be charged or discharged which is referred as the switching power as shown in Figure 2. 
+When a transistor switch from one logic state to another, the load capacitance at the output pin needs to be *charged* or *discharged* which is referred as the switching power as shown in Figure 2. 
 * When the output rises, the load capacitance must go from \\( V_{SS} \\) to \\( V_{DD} \\). 
 * When the output falls, the load capacitance must go from \\( V_{DD} \\) to \\( V_{SS} \\).
 
-Recall that in basic electronic theory, there is a switching current associated on charging or discharging the capacitor which is given as \\( i = C \frac{dV_{DD}}{dt}\\), which further gets multiplied by \\( V_{DD} \\) to produce power.
+Recall that in basic electronic theory, there is a *switching current* associated on charging or discharging the capacitor which is given as \\( i = C \frac{dV_{DD}}{dt}\\), which further gets multiplied by \\( V_{DD} \\) to produce power.
 
 Similarly in CMOS, the average dynamic power (\\(P_{dynamic}\\)) is given by 
 
@@ -138,7 +137,7 @@ From an implementation perspective,
 
 <h4 id="short-circuit-power">Short-circuit Power</h4>
 
-When a transistor switches from one logic state to another, during the signal transition, there exist a direct path from \\( V_{DD} \\) to \\( V_{SS} \\) which produces short-circuit current \\( I_{SC} \\) and short-circuit power dissipation. If clock frequency of the design increases, frequency of transition will increase which further increases short circuit power.
+When a transistor switch from one logic state to another, during the signal transition, there exist a *direct path* from \\( V_{DD} \\) to \\( V_{SS} \\) which produces short-circuit current \\( I_{SC} \\) and short-circuit power dissipation. If clock frequency of the design increases, frequency of transition will increase which further increases short circuit power.
 
 Mathematically, short circuit \\( P_{short-circuit} \\) power can be written as 
 
@@ -155,6 +154,8 @@ where
 * \\( V_{DD} \\) - power supply voltage
 * \\( f_{sw} \\) - switching frequency
 
+---
+
 <h3 id="static-power">Static Power</h3>
 
 As the name suggests, even when the chip is off or quiescent (static), there exists some amount of power dissipation due to transistor's leakage characteristics giving rise to leakage power. This is due to the characteristic of CMOS transistors itself, which is a function of power supply voltage \\( V_{DD} \\), threshold voltage \\( V_{th} \\) and transistor's dimension (width \\(W \\) and length \\( L \\)). 
@@ -164,7 +165,7 @@ As the name suggests, even when the chip is off or quiescent (static), there exi
   <figcaption>Figure 3. Static or Leakage Power Dissipation</figcaption>
 </figure>
 
-As we scale down the technology node, leakage power is becoming a significant contributor in IR drop analysis. Leakage power can further be classified into three types.
+As we scale down the technology node, *leakage power* is becoming a significant contributor in IR drop analysis. Leakage power can further be classified into three types.
 
 1. Diode leakage
 2. Sub-threshold leakage
@@ -178,9 +179,11 @@ P_{leakage}(V_{DD}, V_{th}, W, L)
 $$
 </div>
 
-From an implementation perspective, <span class="coding">.lib</span> files of a standard cell contains leakage power related information which is further given to power analysis tools such as Apache RedHawk.
+From an implementation perspective, <span class="coding">.lib</span> files of a standard cell contains leakage power related information which is further given to power analysis tools such as Apache RedHawk for power verification.
 
 You can see more information on leakage power [here](https://www.youtube.com/watch?v=d0OxV2rA398){:target="_blank"}.
+
+---
 
 <h3 id="what-is-ir-drop">What is IR drop?</h3>
 
@@ -229,13 +232,21 @@ Any instance in the design will have a maximum voltage drop limit above which it
 
 <h3 id="types-of-ir-drop-analysis">Types of IR drop analysis</h3>
 
-There are two types of IR drop analysis for a circuit design namely 
+There are two standard types of IR drop analysis for a circuit design namely 
 1. **Static IR drop** - Vectorless IR drop analysis with average current cycles. Typically used for Electro-Migration (EM) analysis where current limit is checked for wires. 
 2. **Dynamic IR drop** - Vectorless or VCD based IR drop analysis with worst-case switching currents. Typically used to check voltage drop limit for switching instances.
 
+| Static IR Drop                                                                                  | Dynamic IR Drop                                                                                                                                                       |
+|-------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| All cell instances will draw average current (DC).                                              | All switching instances will draw transient current (AC). All non-switching instances will draw only leakage current.                                                 |
+| Total Average demand will be much lesser than real peak demand current for the design.          | Real peak demand current is measured and analyzed in dynamic IR.                                                                                                      |
+| Total demand current is supplied from the power source (battery).                               | Total demand current is supplied from the power source (battery) and some portion of the demand current is supplied by decoupling capacitors near the cell instances. |
+| All cell instances will draw current all the time. Hence, switching effects are not considered. | Switching effects are always considered. All instances draw transient current only during switching. Simultaneous switching causes huge peak demand current.          |
+| If package is considered, there is no IR drop due to Ldi/dt effects as current is constant.     | If package is considered, Ldi/dt effects are considered.                                                                                                              |
+
 <h3 id="reasons-for-high-ir-drop">Reasons for high IR drop</h3>
 
-Some of the standard reasons for high voltage drop in a design are as follows.
+Some of the standard reasons for high IR drop in a design are 
 
 * High power grid resistance.
 * High current flowing through the power grid.
