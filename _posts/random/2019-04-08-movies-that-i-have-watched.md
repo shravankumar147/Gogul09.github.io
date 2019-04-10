@@ -21,7 +21,7 @@ Here, I list down all those amazing movies that I have watched and yet to watch.
   <li><input type="checkbox" disabled="disabled" checked="checked">Iron Man 3</li>
   <li><input type="checkbox" disabled="disabled">Thor - The Dark World</li>
   <li><input type="checkbox" disabled="disabled">Captain America - The Winter Soldier</li>
-  <li><input type="checkbox" disabled="disabled">Guardians of the Galaxy</li>
+  <li><input type="checkbox" disabled="disabled" checked="checked">Guardians of the Galaxy</li>
   <li><input type="checkbox" disabled="disabled">Guardians of the Galaxy Vol 2</li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Avengers - Age of Ultron</li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Ant-Man</li>
