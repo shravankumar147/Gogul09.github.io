@@ -10,3 +10,5 @@ This personal website is a mixture of blog, creations, music and portfolio.
 * [My Portfolio](https://gogul09.github.io/about/)
 
 Handcrafted with love and passion ❤️
+
+![blog](/images/blog-screenshot.png)
