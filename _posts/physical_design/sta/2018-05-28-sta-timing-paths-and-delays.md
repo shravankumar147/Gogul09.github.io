@@ -27,15 +27,17 @@ cardimage: https://drive.google.com/uc?id=1EUN8aZtQ_MW8rPz-6efDMUiXhmZCygzq
 
 When designing a chip, performance is the number one concern for chip designers. The chip needs to meet timing to work properly else user experience suffers. To verify whether a design meets timing, there are different techniques such as Timing Simulation, Static Timing Analysis (STA) and Dynamic Timing Analysis (DTA). 
 
-<h3 class="code-head">Objectives</h3>
+<div class="obj-container">
+  <h3>Objectives</h3>
+  <p>After reading this tutorial, we will understand</p>
+  <ul>
+    <li>What is Static Timing Analysis (STA)?</li>
+    <li>Why STA is used?</li>
+    <li>What are timing paths?</li>
+    <li>What are the different types of delays?</li>
+  </ul>
+</div>
 
-```
-After reading this tutorial, we will understand
-* What is Static Timing Analysis (STA)?
-* Why STA is used?
-* What are timing paths?
-* What are the different types of delays?
-```
 
 <h3>Prerequisites</h3>
 <ul>
@@ -51,7 +53,7 @@ In other words, STA is the method of summing up cell delays and net delays in a 
 STA is done at many stages in a typical ASIC design flow (Figure 1). Performing STA before detail routing only provides the approximations based on different factors. But the real picture of STA is obtained only after detail routing the entire design in the layout phase (physical design). This is because, only after detail routing the entire design, parasitics are extracted (Resistances and Capacitances) based on detailed routes which is an important input to perform STA. 
 
 <figure>
-  <img src="/images/hardware/sta-timing-paths-and-delays/sta-design-flow.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1P3jUkPKeLxuA_3LWQzY1IeUvgdusSMlQ" class="typical-image" />
   <figcaption>Figure 1. How STA fits in the ASIC design flow?</figcaption>
 </figure>
 
@@ -103,8 +105,8 @@ A timing path has a start point and an end point.
 * **End points** - All output ports/pins or D pin of sequential cells are considered as end points.
 
 <figure>
-  <img src="/images/hardware/sta-timing-paths-and-delays/timing-paths.jpg" class="typical-image" />
-  <figcaption>Figure 2. Timing Paths and its types.</figcaption>
+  <img src="https://drive.google.com/uc?id=1HQLd6MW-js-qz3QrWXXe-uGxGp_e3sX0" class="typical-image" />
+  <figcaption>Figure 2. Timing Paths and its types</figcaption>
 </figure>
 
 Based on the above mentioned start point and end point, there are four types of timing paths (Figure 2) based on <span class="coding">direction</span>. 
@@ -121,8 +123,8 @@ In addition to the above timing paths, based on <span class="coding">signal type
 2. **Data path** - The timing path which is fully traversed by data signals is called as Data path. In a data path, there could be combinational cells, data buffers etc.,
 
 <figure>
-  <img src="/images/hardware/sta-timing-paths-and-delays/timing-paths-category.jpg" class="typical-image" />
-  <figcaption>Figure 3. Timing Paths Categories.</figcaption>
+  <img src="https://drive.google.com/uc?id=1TD1divTotq2wecmy0ieA6gsPwR7LZ--e" class="typical-image" />
+  <figcaption>Figure 3. Timing Paths Categories</figcaption>
 </figure>
 
 ### Delays 
@@ -130,7 +132,7 @@ In the real world, delays are what makes STA interesting! Due to delays, there a
 
 #### 1. Cell delay
 
-CMOS transistors inside a standard cell takes finite amount of time to switch from one logic state to another. This time taken is called as the cell delay or the propagation delay of a cell which is typically specified in the cell timing library (.lib). 
+CMOS transistors inside a standard cell takes finite amount of time to switch from one logic state to another. This time taken is called as the cell delay or the propagation delay of a cell which is typically specified in the cell timing library <span class="coding">.lib</span>.
 
 The propagation delay of a standard cell depends on three factors (Figure 4).
 1. **Input Slew** - The transition time at the input i.e. the time it takes for an input pin (input capacitance) to switch between logic states (low-high or high-low).
@@ -138,8 +140,8 @@ The propagation delay of a standard cell depends on three factors (Figure 4).
 3. **Intrinsic Delay** - The internal delay of a cell when a signal with zero transition time is applied to the input pin and no output load is present.
 
 <figure>
-  <img src="/images/hardware/sta-timing-paths-and-delays/cell-delay.jpg" class="typical-image" />
-  <figcaption>Figure 4. Cell Delay and its components.</figcaption>
+  <img src="https://drive.google.com/uc?id=1kOpu5gcJOriO969-nYHRLrHMje2u3M4k" class="typical-image" />
+  <figcaption>Figure 4. Cell Delay and its components</figcaption>
 </figure>
 
 #### 2. Net delay
@@ -165,7 +167,7 @@ Apart from the functionality based timing paths, there exist two types of timing
 
 <figure>
   <img src="/images/hardware/sta-timing-paths-and-delays/max-min-timing-paths.jpg" class="typical-image" />
-  <figcaption>Figure 5. Min and Max Timing Paths.</figcaption>
+  <figcaption>Figure 5. Min and Max Timing Paths</figcaption>
 </figure>
 
 In the next post, we will see how process, voltage and temperature are important factors when designing a chip.
