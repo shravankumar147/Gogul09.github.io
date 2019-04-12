@@ -596,13 +596,12 @@ blockquote p {
 }
 
 figcaption {
-  padding: 15px;
+  padding: 20px;
   font-size: 14px;
-  color: #030303;
+  color: #8b8b8b;
   background-color: #ffffff;
   line-height: 17px;
   text-align: center;
-  border-top: 1px solid #ebebeb;
 }
 
 .reduced-width {
@@ -793,7 +792,7 @@ figcaption {
 }
 
 .blog-category-box table tr td b {
-  color: #f29a9a;
+  color: #d5151e;
   font-weight: 100;
   font-size: 12px;
   letter-spacing: 0.6px;
@@ -1741,16 +1740,16 @@ figcaption {
 
 figure {
   background-color: $white;
-  border: 1px solid #eee !important;
   border-radius: 3px;
   max-width: 900px;
-  margin: 20px auto;
+  margin: 50px auto;
   width: 100%;
   text-align:center; 
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   @include mobile {
     width: 100%;
     max-width: 500px;
+    margin: 30px auto;
   }
 }
 
@@ -3183,8 +3182,8 @@ del {
 }
 
 #nav_home:hover {
-  background-color: #3a3a3a;
-  border-radius: 50%;
+  background-color: #d4141e;
+  border-radius: 5px;
   @include mobile {
       border-radius: 0;
       background-color: #ea4335;
@@ -3202,8 +3201,8 @@ del {
 }
 
 #nav_creations:hover {
-    background-color: #3a3a3a;
-    border-radius: 50%;
+    background-color: #d4141e;
+    border-radius: 5px;
     @include mobile {
       border-radius: 0;
       background-color: #4285f4;
@@ -3221,8 +3220,8 @@ del {
 }
 
 #nav_music:hover {
-    background-color: #3a3a3a;
-    border-radius: 50%;
+    background-color: #d4141e;
+    border-radius: 5px;
     @include mobile {
       border-radius: 0;
       background-color: #fbbc05;
@@ -3240,8 +3239,8 @@ del {
 }
 
 #nav_about:hover {
-    background-color: #3a3a3a;
-    border-radius: 50%;
+    background-color: #d4141e;
+    border-radius: 5px;
     @include mobile {
       border-radius: 0;
       background-color: #34a853;
