@@ -83,7 +83,7 @@ In addition to complexity, as time to market for chips is decreasing, reuse of I
 Typical VLSI Physical Design (PD) flow is shown in Figure 3. This is a standard flow that is followed in modern IC design. Each step in the PD flow has sub flows or further steps that are needed to be performed.
 
 <figure>
-    <img src="https://drive.google.com/uc?id=1zJxKwxhj9PFRt_qrS-YOs_49M96QGNFC" class="typical-image" />
+    <img src="https://drive.google.com/uc?id=116LfKvpnRinjDT7uVDttK7q2WTqWiqh7" class="typical-image" />
     <figcaption>Figure 3. VLSI Physical Design Flow</figcaption>
 </figure>
 
@@ -120,7 +120,7 @@ Commonly used EDA tools for signoff checks are
 <h3 id="importing-inputs">Importing Inputs</h3>
 
 <div class="note">
-  <p><b>Goal</b>: Gather all the required inputs for physical design such as gate level netlist (<span class="coding">.v</span> or <span class="coding">.vhdl</span>), Technology file (<span class="coding">.tech</span>), UPF (Unified Power Format) files (<span class="coding">.upf</span>), Library files that include LIBs (<span class="coding">.lib</span>), LEFs (<span class="coding">.lef</span>), DEFs (<span class="coding">.def</span>) and GDS (<span class="coding">.gds</span>) of standard cells and IPs and SDC (Synopsys Design Constraint) files (<span class="coding">.sdc</span>). </p>
+  <p><b>Goal</b>: Gather all the required inputs for physical design such as gate level netlist <span class="coding">.v</span> / <span class="coding">.vhdl</span>, Technology file <span class="coding">.tech</span>, UPF (Unified Power Format) files <span class="coding">.upf</span>, Library files that include LIBs <span class="coding">.lib</span>, LEFs <span class="coding">.lef</span>, DEFs <span class="coding">.def</span> and GDS <span class="coding">.gds</span> of standard cells and IPs and SDC (Synopsys Design Constraint) files <span class="coding">.sdc</span>. </p>
 </div>
 
 Inputs to physical design are the most important files that you will need to start your design process. If the inputs are read in the EDA tools without any issues (warnings and errors), then your physical design flow goes smooth.

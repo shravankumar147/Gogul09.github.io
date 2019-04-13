@@ -166,7 +166,7 @@ Apart from the functionality based timing paths, there exist two types of timing
 2. **Max path**: The path between two points with largest delay.
 
 <figure>
-  <img src="/images/hardware/sta-timing-paths-and-delays/max-min-timing-paths.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1o_TFqn9Hgs5m9CWSkTtJjXOxaCFAdgDM" class="typical-image" />
   <figcaption>Figure 5. Min and Max Timing Paths</figcaption>
 </figure>
 

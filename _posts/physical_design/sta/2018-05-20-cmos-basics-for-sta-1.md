@@ -46,7 +46,7 @@ All integrated circuits (ICs) are built based on something called as "technology
 <a href="https://en.wikichip.org/wiki/technology_node" target="_blank">Technology node</a> is the measure of feature size which is further a measure of channel length between drain and source in a MOS transistor (see Figure 1). This is the smallest length used to build a MOS transistor. So, for a 28nm technology node, it means the smallest channel length between drain and source is 28nm. As we go further down in technology node, more transistors can be packed in a single chip allowing us to build designs that operates much faster.
 
 <figure>
-  <img src="/images/hardware/cmos-basics-for-sta-1/cmos-structure.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1Hbw0tTYdh6Dljzio_hDqB3sH7jensYGm" class="typical-image" />
   <figcaption>Figure 1. Structure of CMOS</figcaption>
 </figure>
 
@@ -58,7 +58,7 @@ Understanding the characteristics of a single <a href="https://en.wikipedia.org/
 * **Pull-down** - If input A is high (\\(V_{dd}\\) or logic 1), NMOS is on and PMOS is off, making the output Z to be pulled to \\(V_{ss}\\).
 
 <figure>
-  <img src="/images/hardware/cmos-basics-for-sta-1/cmos-inverter.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1jR8vFtxlRCEA1q2M5sRBCIc-1JsOTAHG" class="typical-image" />
   <figcaption>Figure 2. CMOS Inverter (Pull-up and Pull-down structures)</figcaption>
 </figure>
 
@@ -94,7 +94,7 @@ Two values \\(V_{IHmin}\\) and \\(V_{ILmax}\\) are defined based on \\(V_{dd}\\)
 For example, in a given technology node, if the signal is intended to swing between <span class="coding">0.0V</span> and <span class="coding">1.2V</span>, then any value below <span class="coding">0.2V</span> (\\(V_{ILmax}\\)) becomes a logic 0 and any value above <span class="coding">1.0V</span> (\\(V_{IHmin}\\)) becomes a logic 1.
 
 <figure>
-  <img src="/images/hardware/cmos-basics-for-sta-1/logic-levels.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1w_l8Nhnjc5PZ7WE9ckqxYXyZiGoTIkm4" class="typical-image" />
   <figcaption>Figure 3. Logic levels of CMOS (Noise margin)</figcaption>
 </figure>
 
@@ -115,7 +115,7 @@ Consider the following multi-fanout example (Figure-4) to understand how resista
 * \\(Cin(n)\\) is the input pin capacitance of the cell \\(n\\).
 
 <figure>
-  <img src="/images/hardware/cmos-basics-for-sta-1/modelling-cmos.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=15VXSO5k0Nk_VGmT-skZR0l236p-MqjlA" class="typical-image" />
   <figcaption>Figure 4. Modelling of standard cells</figcaption>
 </figure>
 
@@ -168,7 +168,7 @@ Normally, the standard cells from the foundry are designed to have equal or simi
 This is how both resistances and capacitances (parasitics) play a huge role in meeting the timing of an IC. Figure 5 shows the electrically equivalent model of Figure 4 with resistances and capacitances shown.
 
 <figure>
-  <img src="/images/hardware/cmos-basics-for-sta-1/electric-eq-model.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1Wg8KIlzSm2qMsD_7mhDCrS-c3zUWS4rv" class="typical-image" />
   <figcaption>Figure 5. Electrically equivalent model of Figure 4.</figcaption>
 </figure>
 

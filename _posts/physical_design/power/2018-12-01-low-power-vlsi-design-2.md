@@ -47,7 +47,7 @@ Imagine we have four IPs (blocks or hard-macros) of different functionality in a
 * <span class="coding">IP4</span> is an **always ON** block that needs to be ON all the time as it manages the power supply. Let's say it operates at 3.1V.
 
 <figure>
-  <img src="/images/hardware/low-power-chip-design-2/power-domains.png" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1xj9hjf0jS1mDQ4v6_iUQKDuE8hRcakvD" class="typical-image" />
   <figcaption>Figure 1. Power Domains (Multi-voltage design)</figcaption>
 </figure>
 
@@ -69,7 +69,7 @@ Logic cells that talk within their own power domain has no power constraint. But
 To reduce power consumption and to protect interfaces between power domains, there are special types of standard cells defined in library such as isolation cells, level shifters, retention registers, power switch and always ON buffers as shown in Figure 2.
 
 <figure>
-  <img src="/images/hardware/low-power-chip-design-2/power-management-cells.png" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1aqYbDcGJGHs9LqLWRfyH3sxc1O6CWSi0" class="typical-image" />
   <figcaption>Figure 2. Power management cells to reduce power consumption</figcaption>
 </figure>
 
@@ -133,7 +133,7 @@ Based on the functionality, DC-DC converters are further divided into
 3. Buck-Boost converters
 
 <figure>
-  <img src="/images/hardware/low-power-chip-design-2/power-distribution.png" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1zEiAP5_7NjbVpt01zbE-7Fq3ZRpxbFAl" class="typical-image" />
   <figcaption>Figure 3. Power Distribution Network in a smartphone</figcaption>
 </figure>
 
@@ -142,7 +142,7 @@ Based on the functionality, DC-DC converters are further divided into
 Some of the commonly used advanced low power techniques to reduce power consumption in CMOS are shown in Figure 4. All the below mentioned advanced power optimization techniques require knowledge of something called as [UPF](https://en.wikipedia.org/wiki/Unified_Power_Format){:target="_blank"} or Unified Power Format which is the IEEE standard followed in industries to specify power intent of a design. We will learn about UPF in a separate blog post.
 
 <figure>
-  <img src="/images/hardware/low-power-chip-design-2/advanced-low-power-techniques.png" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1Sst6kPRCsc3r0_A1ia_VyEeNz386iwxV" class="typical-image" />
   <figcaption>Figure 4. Advanced Low Power Techniques</figcaption>
 </figure>
 

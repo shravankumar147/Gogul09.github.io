@@ -54,7 +54,7 @@ MOSFET is an active device because it can control the flow of electrons i.e. cur
 A typical MOSFET that is hidden inside your smartphone processor has a structure shown in Fig 1. Basically, this representation is for our understanding purposes only. In real-world, the fabrication process will look a lot different than this.
 
 <figure>
-  <img src="/images/hardware/mosfet-fundamentals/mosfet-basic-structure.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1deuwcAutbjHRwsF8hYxhPeFWhRvA8UAn" class="typical-image" />
   <figcaption>Figure 1. MOSFET - Basic Structure</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ Additionally, there are five important parts that combine along with these four 
 Every chip is made of Silicon as it is the most abundant material available in this planet. And undoubtedly, p-substrate is nothing but Silicon doped with p-type material such as Boron. Doping means to add impurities to a semi-conductor so that its conducting behaviour is changed. This is mainly done to increase the conductivity of a semi-conductor material such as Silicon or Germanium. One key point to remember here is that, p-substrate mainly have holes as the majority carriers.
 
 <figure>
-  <img src="/images/hardware/mosfet-fundamentals/p-substrate.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1GkyzSidw-OUOzlZ8Lbl_M53XkRFJKQZ8" class="typical-image" />
   <figcaption>Figure 2. MOSFET - p-substrate</figcaption>
 </figure>
 
@@ -86,7 +86,7 @@ Every chip is made of Silicon as it is the most abundant material available in t
 As your smartphone chip contains millions of transistors sitting next to each other, we need isolation to protect each of these transistors so that there isn't any damage due to short-circuit or EMI. Because of this, we typically have isolation regions in every MOSFET sitting close to each other. Commonly used isolation material is Silicon dioxide (SiO2) which you find in Glass.
 
 <figure>
-  <img src="/images/hardware/mosfet-fundamentals/isolation.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1DycuD-5QmdInPKNRKd54ZTQJJxxKYR5-" class="typical-image" />
   <figcaption>Figure 3. MOSFET - Isolation region</figcaption>
 </figure>
 
@@ -94,7 +94,7 @@ As your smartphone chip contains millions of transistors sitting next to each ot
 After providing isolation, we diffuse/add n+ impurities inside the p-type substrate, mainly along the top-left and top-right regions, leaving a defined amount of space in the middle. This is done with the help of lithographic techniques that are specific to the fabrication industry. Mainly, the Source and Drain terminals of a MOSFET are taken from these n+ diffusion regions.
 
 <figure>
-  <img src="/images/hardware/mosfet-fundamentals/n+diffusion.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1HHireiruzZj7G2u-9vOrRBXhFmII4slR" class="typical-image" />
   <figcaption>Figure 4. MOSFET - n+ Diffusion region</figcaption>
 </figure>
 
@@ -102,7 +102,7 @@ After providing isolation, we diffuse/add n+ impurities inside the p-type substr
 Above the space left by n+ diffusion regions, we keep a metal-oxide layer normally built using SiO2. This acts as an insulator that does not allow current to pass through. The main reason behind adding this metal-oxide layer will be explained shortly. But, the key take away is that because of this layer, we add Oxide in a MOSFET.
 
 <figure>
-  <img src="/images/hardware/mosfet-fundamentals/metal-oxide.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1yJsUEdILzIILUWRVFuKqZsU4AuTD3Nds" class="typical-image" />
   <figcaption>Figure 5. MOSFET - SiO2 or Metal Oxide</figcaption>
 </figure>
 
@@ -110,7 +110,7 @@ Above the space left by n+ diffusion regions, we keep a metal-oxide layer normal
 Above the metal-oxide layer, we introduce a metal-layer that will be used to take the **Gate** terminal.
 
 <figure>
-  <img src="/images/hardware/mosfet-fundamentals/metal-electrode.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1cdYoWURicdlCz3dGAHaKZg16hhBkXcvt" class="typical-image" />
   <figcaption>Figure 6. MOSFET - Poly-silicon or Metal Electrode</figcaption>
 </figure>
 
@@ -132,7 +132,7 @@ In this tutorial, we will strictly focus on Enhancement mode MOSFET. We will als
 A n-channel enhancement mode MOSFET acts as a voltage-controlled current source - meaning if you provide voltage at the gate-source terminal, you create a channel between source and drain region that allows current to pass through. The symbols of enhancement mode MOSFET used while working with circuit diagrams is shown in Fig 7.
 
 <figure>
-  <img src="/images/hardware/mosfet-fundamentals/symbols.jpg"  class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1RNqYQ0YigxKDQWQ1fpAlQRMDI_hzApOJ"  class="typical-image" />
   <figcaption>Figure 7. MOSFET - Enhancement mode symbols without bulk substrate</figcaption>
 </figure>
 
@@ -174,7 +174,7 @@ In linear or triode region, the MOSFET creates a channel in between drain to sou
 The answer is CAPACITOR. Look at the figure given below.
 
 <figure>
-  <img src="/images/hardware/mosfet-fundamentals/capacitor.jpg"  class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1fGBcTAPX-JiamkBeUtsKz_HKWkTIKkju"  class="typical-image" />
   <figcaption>Figure 8. Parallel plate capacitor</figcaption>
 </figure>
 
@@ -187,7 +187,7 @@ If you slightly increase the gate-source voltage \\( V_{GS} \\), the metal elect
 Thus, by controlling the amount of push that we provide through \\( V_{GS} \\), we essentially control the width of the channel that is created between drain and source. Figure 9 shows the application of gate-source voltage and the corresponding channel creation between drain and source. Note that, we make the source and drain terminals grounded so that the resistance between them is high initially (meaning zero current).
 
 <figure>
-  <img src="/images/hardware/mosfet-fundamentals/linear-region.jpg"  class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1CxwSSZv3OutOI87k295lx2MJMIabNhoZ"  class="typical-image" />
   <figcaption>Figure 9. MOSFET - Linear or Triode region</figcaption>
 </figure>
 
@@ -311,7 +311,7 @@ $$\ i_D = \frac{1}{2} u_n C_{OX} \frac{W}{L} ((V_{GS} - V_T)^2)(1 + \lambda V_{D
 All the three operating regions of MOSFET are shown below.
 
 <figure>
-  <img src="/images/hardware/mosfet-fundamentals/three-regions.jpg"  class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1UngCuyB8tOVW1hq_zmXZ4f5LgzTl0I2J"  class="typical-image" />
   <figcaption>Figure 10. MOSFET - Regions of operation</figcaption>
 </figure>
 

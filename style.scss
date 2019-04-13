@@ -1382,20 +1382,25 @@ figcaption {
 }
 
 .note {
-  background-color: #ddffd6;
+  background-color: #d3141d;
   padding: 20px;
   border-radius: 3px;
   margin-bottom: 1.7em !important;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
-  border-left: 5px solid #7fd26d;
+  border-left: 10px solid #a01219;
   p {
     margin: 0px !important;
-    color: #1d2c1a !important;
+    color: white !important;
   }
   
   ul {
     margin: 0px !important;
+    color: white !important;
+  }
+
+  a {
+    color: #fff02a !important;
   }
   
   center {
@@ -2083,7 +2088,7 @@ u {
 }
 
 .show-comments p {
-  background-color: #c5b7a2;
+  background-color: #d3141d;
   text-align: center;
   padding: 20px;
   width: 40%;
@@ -2091,15 +2096,11 @@ u {
   font-weight: bold;
   margin-top: 0px;
   border-radius: 5px;
-  color: #222;
+  color: #ccc;
   cursor: pointer;
   @include mobile {
     margin-top: 10px;
     width: 90%;
-  }
-  &:hover, &:active {
-    background-color: #c5b7a2;
-    box-shadow: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
   }
 }
 
@@ -3286,10 +3287,10 @@ del {
 }
 
 .closers {
-  background-color: #ffe2e2 !important;
-  border-left: 5px solid #ef9999 !important;
+  background-color: #1e1e1e !important;
+  border-left: 10px solid #000000 !important;
   p {
-    color: #733333 !important;
+    color: #949494 !important;
   }
 }
 

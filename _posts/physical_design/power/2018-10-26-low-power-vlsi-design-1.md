@@ -59,7 +59,7 @@ In a low-power CMOS VLSI design, there are two types of power dissipation.
 The sources of these power dissipations as well as the techniques to solve them are different. These two types of power dissipation are further classified as shown in Figure 1.
 
 <figure>
-  <img src="/images/hardware/low-power-chip-design/types-of-power-dissipation.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1M1KzqrKbb5k1x_RGBY1-f0QwNbbxd0E3" class="typical-image" />
   <figcaption>Figure 1. Types of Power Dissipation in CMOS</figcaption>
 </figure>
 
@@ -70,7 +70,7 @@ As the name suggests, dynamic power dissipation occurs when the transistors are 
 2. Short-circuit Power
 
 <figure>
-  <img src="/images/hardware/low-power-chip-design/dynamic-power.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1ogQcgiT94JbFpybC1qmKT2n_7Lf7IH2_" class="typical-image" />
   <figcaption>Figure 2. Types of Dynamic Power</figcaption>
 </figure>
 
@@ -161,7 +161,7 @@ where
 As the name suggests, even when the chip is off or quiescent (static), there exists some amount of power dissipation due to transistor's leakage characteristics giving rise to leakage power. This is due to the characteristic of CMOS transistors itself, which is a function of power supply voltage \\( V_{DD} \\), threshold voltage \\( V_{th} \\) and transistor's dimension (width \\(W \\) and length \\( L \\)). 
 
 <figure>
-  <img src="/images/hardware/low-power-chip-design/leakage-power.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1eb4MteRTpf_Me3isJDysUSy5CAo5ofjy" class="typical-image" />
   <figcaption>Figure 3. Static or Leakage Power Dissipation</figcaption>
 </figure>
 
@@ -190,14 +190,14 @@ You can see more information on leakage power [here](https://www.youtube.com/wat
 In a typical chip, power to different blocks, standard cells and macros are provided by the power grid which consists of stack of metal layers (conductors) that run horizontally and vertically in a grid-like fashion over the floorplan. These stacked metal layers have power stripes such as \\( V_{DD} \\) and \\( V_{SS} \\) at regular intervals (pitch) with defined width and thickness, and are connected through vias from one layer to another as shown in Figure 4. This power distribution grid comprises of power rings, power stripes and power rails that are resistive by nature which creates the IR drop. 
 
 <figure>
-  <img src="/images/hardware/low-power-chip-design/metal-stack.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1IHjxB0TYTvLJk_eE7qppfdZEvg5nOzve" class="typical-image" />
   <figcaption>Figure 4. Metal layer stack (2D & 3D view)</figcaption>
 </figure>
 
 Currently, there are two approaches followed to redistribute power from package to a chip namely [Wire Bonding](https://en.wikipedia.org/wiki/Wire_bonding){:target="_blank"} and [Flip-Chip](https://en.wikipedia.org/wiki/Flip_chip){:target="_blank"} as shown in Figure 5. 
 
 <figure>
-  <img src="/images/hardware/low-power-chip-design/packaging.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1pNudcK0doHXtomzrx-lhmgK0JBqlbxwD" class="typical-image" />
   <figcaption>Figure 5. Wire-bonding and Flip-chip techniques</figcaption>
 </figure>
 

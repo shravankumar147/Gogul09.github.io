@@ -44,7 +44,7 @@ Let's consider the CMOS inverter example for this blog post and the same is appl
 As we know that both PMOS and NMOS act like switches that either allow VDD or VSS at a particular time instant, we could model a simple CMOS inverter analogous to an RC network as shown in Figure 1.
 
 <figure>
-  <img src="/images/hardware/cmos-basics-for-sta-2/switching-activity.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1p6TB9a_nmoISzDz9kPz1ZgETGwgUiE4y" class="typical-image" />
   <figcaption>Figure 1. Switching Activity in CMOS inverter + Charging and Discharging waveforms</figcaption>
 </figure>
 
@@ -76,7 +76,7 @@ It is important to analyze this transition time because it is responsible for th
 Due to the transition time that arises during the switching activity in a standard cell, we will not be able to get the output <i>instantly</i> as soon as the input changes. There is a <i>finite delay</i> involved during this transition called as the Propagation Delay. Let's quickly understand what propagation delay mean.
 
 <figure>
-  <img src="/images/hardware/cmos-basics-for-sta-2/propagation-delay.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1Dsx8Fwa1FewFqJ2XfpwngjQBgsVitkDx" class="typical-image" />
   <figcaption>Figure 2. Propagation Delay of a CMOS inverter</figcaption>
 </figure>
 
@@ -133,7 +133,7 @@ slew_upper_threshold_pct_fall : 70.0;
 ```
 
 <figure>
-  <img src="/images/hardware/cmos-basics-for-sta-2/slew-rate.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=159zTRpSISjAF6gLomkPrtErdBoqPi9X2" class="typical-image" />
   <figcaption>Figure 3. Slew rate of a waveform with 4 slew threshold points</figcaption>
 </figure>
 
@@ -166,7 +166,7 @@ If there is a rising transition at the input (source) that is causing a falling 
 If the output transition cannot be found from a single input's transition and depends on multiple input transitions, then it is called Non-Unate. Ex: XOR.
 
 <figure>
-  <img src="/images/hardware/cmos-basics-for-sta-2/timing-arcs.jpg" class="typical-image" />
+  <img src="https://drive.google.com/uc?id=1-uWx8ojIPUAuKNxrAbU27Vz1gOGcKloL" class="typical-image" />
   <figcaption>Figure 4. Timing Arcs and Unateness</figcaption>
 </figure>
 
