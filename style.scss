@@ -18,6 +18,7 @@
 @import "aidrum";
 @import "deepdrum";
 @import "splash";
+@import "carbon";
 
 #main {
   min-height: 100vh;
@@ -1962,7 +1963,7 @@ figure {
   position: relative;
   padding: 40px;
   overflow: hidden;
-  height: 190px;
+  height: auto;
   @include mobile {
     height: auto;
     padding: 15px;

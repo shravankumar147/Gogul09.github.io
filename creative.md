@@ -8,11 +8,12 @@ color: grad-creations
 permalink: /creations/
 ---
 
-<div class="blog-intro {{ page.color }} demo-head">
+<div class="blog-intro {{ page.color }}">
   <div>
     <h1>{{ page.heading }}</h1>
     <p>{{ page.subheading }}</p>
   </div>
+  <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7I623I&placement=gogul09githubio" id="_carbonads_js"></script>
 </div>
 
 <div class="home-container">

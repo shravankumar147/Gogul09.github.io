@@ -1,0 +1,130 @@
+#carbonads {
+  --width: 180px;
+  --font-size: 14px;
+}
+
+#carbonads {
+  &:hover, &:active {
+
+  }
+}
+
+#carbonads {
+  font-family: "Roboto";
+  display: block;
+  max-width: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #000000;
+  font-size: var(--font-size);
+  line-height: 1.5;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.4) !important;
+  margin: 45px auto;
+  @include mobile {
+    margin: 15px auto;
+  }
+}
+
+.carbon-wrap {
+  display: flex;
+  background: black;
+  overflow: hidden;
+}
+
+.carbon-wrap a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #989898 !important;
+    text-align: center;
+    @include mobile {
+      font-size: 11px;
+    }
+}
+
+#carbonads a {
+  text-decoration: none;
+  font-family: "Roboto";
+  font-weight: 100;
+}
+
+#carbonads a:hover {
+  color: inherit;
+  border-bottom: 0px !important;
+  text-decoration: none !important;
+}
+
+#carbonads span {
+  position: relative;
+}
+
+.carbon-img img {
+  display: block;
+  margin: 0;
+  max-width: var(--width) !important;
+  width: var(--width);
+  height: auto;
+}
+
+.carbon-text {
+  display: block;
+  padding: 0 10px;
+}
+
+.carbon-poweredby {
+  display: block;
+  padding: 10px var(--font-size);
+  background: #ececec;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-weight: 600;
+  font-size: 9px;
+  line-height: 0;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 759px) {
+  #carbonads {
+    float: none;
+    max-width: 270px;
+  }
+  #carbonads span {
+    position: relative;
+  }
+  #carbonads > span {
+    max-width: none;
+  }
+  .carbon-img {
+    float: left;
+    margin: 0;
+  }
+
+  .carbon-img img {
+    max-width: 130px !important;
+  }
+  .carbon-text {
+    float: left;
+    margin-bottom: 0;
+    padding: 10px;
+    text-align: left;
+    max-width: calc(100% - 130px - 3em);
+  }
+  .carbon-poweredby {
+    left: 130px;
+    bottom: 0;
+    display: block;
+    width: 100%;
+  }
+}
+
+a.carbon-poweredby {
+    background-color: #000000;
+    color: #888888 !important;
+    font-size: 9px !important;
+    border-top: 1px solid #272727;
+    padding-top: 10px;
+    font-family: "Poppins" !important;
+    font-weight: bold !important;
+}
