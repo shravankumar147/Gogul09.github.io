@@ -48,8 +48,8 @@ In this page, you will find the **syntax** and **most common how to's** of C She
 #!/bin/csh
 
 # declaring variables
-set a 2
-set b 6
+set a = 2
+set b = 6
 
 # math operations (white space must taken care)
 set c = `expr $a+$b`
@@ -91,8 +91,8 @@ if (-e filename) echo "File exist"
 # z - file is zero bytes long
 
 # if/then/else
-set a 5
-set b 10
+set a = 5
+set b = 10
 
 if ($a > $b) then
     echo "a is greater than b"
@@ -122,7 +122,7 @@ end
 #----------------
 # while loop
 #----------------
-set a 0
+set a = 0
 while ($a < 4)
     echo "a is $a"
     @ a++
@@ -138,7 +138,7 @@ end
 <h3 class="code-head" id="break">break<span>code</span></h3>
 
 ```shell
-set a 0
+set a = 0
 while (1 > 0)
     echo "a is $a"
     @ a++

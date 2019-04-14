@@ -174,8 +174,8 @@
 25</pre></td><td class="code"><pre><span class="c">#!/bin/csh</span>
 
 <span class="c"># declaring variables</span>
-<span class="nb">set </span>a 2
-<span class="nb">set </span>b 6
+<span class="nb">set </span>a <span class="o">=</span> 2
+<span class="nb">set </span>b <span class="o">=</span> 6
 
 <span class="c"># math operations (white space must taken care)</span>
 <span class="nb">set </span>c <span class="o">=</span> <span class="sb">`</span>expr <span class="nv">$a</span>+<span class="nv">$b</span><span class="sb">`</span>
@@ -245,8 +245,8 @@
 <span class="c"># z - file is zero bytes long</span>
 
 <span class="c"># if/then/else</span>
-<span class="nb">set </span>a 5
-<span class="nb">set </span>b 10
+<span class="nb">set </span>a <span class="o">=</span> 5
+<span class="nb">set </span>b <span class="o">=</span> 10
 
 <span class="k">if</span> <span class="o">(</span><span class="nv">$a</span> &gt; <span class="nv">$b</span><span class="o">)</span> <span class="k">then
     </span><span class="nb">echo</span> <span class="s2">"a is greater than b"</span>
@@ -301,7 +301,7 @@ end
 <span class="c">#----------------</span>
 <span class="c"># while loop</span>
 <span class="c">#----------------</span>
-<span class="nb">set </span>a 0
+<span class="nb">set </span>a <span class="o">=</span> 0
 <span class="k">while</span> <span class="o">(</span><span class="nv">$a</span> &lt; 4<span class="o">)</span>
     <span class="nb">echo</span> <span class="s2">"a is </span><span class="nv">$a</span><span class="s2">"</span>
     @ a++
@@ -330,7 +330,7 @@ end
 10
 11
 12
-13</pre></td><td class="code"><pre><span class="nb">set </span>a 0
+13</pre></td><td class="code"><pre><span class="nb">set </span>a <span class="o">=</span> 0
 <span class="k">while</span> <span class="o">(</span>1 &gt; 0<span class="o">)</span>
     <span class="nb">echo</span> <span class="s2">"a is </span><span class="nv">$a</span><span class="s2">"</span>
     @ a++
