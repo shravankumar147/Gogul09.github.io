@@ -2,25 +2,23 @@
 layout: post-doc-default
 ---
 
-<div class="containing">
-  <div class="wrapping doc-wrapping">
-
-    <div class="post-heading post-heading-wrapper post-image doc-post" style="background-image: url('{{ page.image }}')">
-      <div class="overlayer doc-overlayer">
-        <div class="grad-post">
-          <h1>{{ page.title }}</h1>
-          <div class="post-subheading">
-            <p>{{ page.class }} | {{ page.date | date_to_long_string }}</p>
-            <p><a href="#show_comments" id="comment-count" class="disqus-comment-count" data-disqus-url="https://gogul09.github.io{{ page.url }}"></a></p>
-          </div>
-        </div>
-      </div>
+<div class="post-heading post-heading-wrapper post-image">
+  <div class="grad-post">
+    <h1>{{ page.title }}</h1>
+    <div class="post-subheading">
+      <p>{{ page.class }} | {{ page.date | date_to_long_string }}</p>
+      <p><a href="#show_comments" id="comment-count" class="disqus-comment-count" data-disqus-url="https://gogul09.github.io{{ page.url }}"></a></p>
     </div>
+  </div>
+</div>
+
+<div class="containing">
+  <div class="wrapping">
 
     {% include share_fab.html %}
 
     <div class="post-cover">
-
+      <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7I623I&placement=gogul09githubio" id="_carbonads_js"></script>
       <article class="post">
         <div class="entry">
           {{ content }}

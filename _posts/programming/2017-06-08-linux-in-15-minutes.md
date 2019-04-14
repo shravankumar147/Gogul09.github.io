@@ -1,11 +1,11 @@
 ---
 layout: post
-category: hardware
-class: Programming
+category: software
+class: Programming Languages
 title: Linux in 15 minutes
 description: Learn the syntax, commands and how to's of Linux which is highly used in tech companies.
 author: Gogul Ilango
-permalink: /hardware/linux-in-15-minutes
+permalink: /software/linux-in-15-minutes
 image: https://drive.google.com/uc?id=1Oaa17RG4fx6PmOIHbijQLMkGDsYuplW2
 ---
 

@@ -1,4 +1,513 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-04-13T14:33:05+05:30</updated><id>http://localhost:4000/</id><title type="html">Gogul Ilango</title><subtitle>This blog on Deep Learning, VLSI Design and STA is written by Gogul Ilango. Master VLSI Design, Physical Design, Static Timing Analysis, Deep Learning through my articles, tutorials and resources.</subtitle><entry><title type="html">My Awesome Movies List</title><link href="http://localhost:4000/random/my-awesome-movies-list" rel="alternate" type="text/html" title="My Awesome Movies List" /><published>2019-04-08T00:00:00+05:30</published><updated>2019-04-08T00:00:00+05:30</updated><id>http://localhost:4000/random/movies-that-i-have-watched</id><content type="html" xml:base="http://localhost:4000/random/my-awesome-movies-list">&lt;p&gt;Here, I list down all those amazing movies that I have watched and yet to watch. Hope this list inspires someone somewhere! You’re cute 😍&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-04-14T14:10:04+05:30</updated><id>http://localhost:4000/</id><title type="html">Gogul Ilango</title><subtitle>This blog on Deep Learning, VLSI Design and STA is written by Gogul Ilango. Master VLSI Design, Physical Design, Static Timing Analysis, Deep Learning through my articles, tutorials and resources.</subtitle><entry><title type="html">C Shell Scripting in 15 minutes</title><link href="http://localhost:4000/software/c-shell-scripting-in-15-minutes" rel="alternate" type="text/html" title="C Shell Scripting in 15 minutes" /><published>2019-04-14T00:00:00+05:30</published><updated>2019-04-14T00:00:00+05:30</updated><id>http://localhost:4000/software/c-shell-scripting-in-15-minutes</id><content type="html" xml:base="http://localhost:4000/software/c-shell-scripting-in-15-minutes">&lt;div id=&quot;awesomeSideNav&quot; class=&quot;sidenav&quot;&gt;
+    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;closebtn&quot; onclick=&quot;closeSideNav()&quot;&gt;&amp;times;&lt;/a&gt;
+    &lt;h3&gt;&lt;a href=&quot;#basics&quot;&gt;Basics&lt;/a&gt;&lt;/h3&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#expressions&quot;&gt;Expressions&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#control-structures&quot;&gt;Control Structures&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#loops&quot;&gt;Loops&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#break&quot;&gt;break&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#continue&quot;&gt;continue&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#goto&quot;&gt;goto&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#switch&quot;&gt;switch&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#interrupt-handling&quot;&gt;Interrupt Handling&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h3&gt;&lt;a href=&quot;#how-tos&quot;&gt;How to's&lt;/a&gt;&lt;/h3&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#how-to-store-the-output-of-a-command&quot;&gt;How to store the output of a command?&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#how-to-read-user-input&quot;&gt;How to read user input?&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#how-to-use-single-and-double-quotes&quot;&gt;How to use single and double quotes?&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;sidebar_tracker&quot; id=&quot;sidebar_tracker&quot;&gt;
+  &lt;button onclick=&quot;closeSidebar('sidebar_tracker_content')&quot;&gt;X&lt;/button&gt;
+  &lt;p onclick=&quot;showSidebar('sidebar_tracker_content')&quot;&gt;Contents&lt;/p&gt;
+  &lt;ul id=&quot;sidebar_tracker_content&quot;&gt;
+    &lt;li&gt;&lt;a class=&quot;sidebar_links&quot; onclick=&quot;handleSideBarLinks(this.id)&quot; id=&quot;link_1&quot; href=&quot;#basics&quot;&gt;Basics&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;sidebar_links&quot; onclick=&quot;handleSideBarLinks(this.id)&quot; id=&quot;link_3&quot; href=&quot;#how-tos&quot;&gt;How To's&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In this page, you will find the &lt;strong&gt;syntax&lt;/strong&gt; and &lt;strong&gt;most common how to’s&lt;/strong&gt; of C Shell Scripting. This might be useful for beginners in programming or professionals in automation industries such as VLSI or Telecomm to find &lt;span class=&quot;coding&quot;&gt;csh&lt;/span&gt; syntax and code quickly using this single page online reference material. Click on any of the contents in the sidebar to view the code.&lt;/p&gt;
+
+&lt;h3 class=&quot;centered-heading&quot; id=&quot;basics&quot;&gt;&lt;span&gt;Basics&lt;/span&gt;&lt;/h3&gt;
+
+&lt;h3 class=&quot;code-head&quot; id=&quot;expressions&quot;&gt;Expressions&lt;span&gt;code&lt;/span&gt;&lt;/h3&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/csh&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# declaring variables&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;a 2
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;b 6
+
+&lt;span class=&quot;c&quot;&gt;# math operations (white space must taken care)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;c &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;expr &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;+&lt;span class=&quot;nv&quot;&gt;$b&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$c&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# prints 2+6&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# add&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;c &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;expr &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt; + &lt;span class=&quot;nv&quot;&gt;$b&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$c&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# prints 8&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# subtract&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;c &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;expr &lt;span class=&quot;nv&quot;&gt;$b&lt;/span&gt; - &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$c&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# prints 4&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# divide&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;c &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;expr &lt;span class=&quot;nv&quot;&gt;$b&lt;/span&gt; / &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$c&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# prints 12&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# remainder&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;c &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;expr &lt;span class=&quot;nv&quot;&gt;$b&lt;/span&gt; % &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$c&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# prints 12&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 class=&quot;code-head&quot; id=&quot;control-structures&quot;&gt;Control Structures&lt;span&gt;code&lt;/span&gt;&lt;/h3&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# check if file exist&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;-e filename&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;File exist&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#-------------------------&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# file status expressions&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#-------------------------&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# d - file is a directory&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# e - file exists&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# f - file is an ordinary file&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# o - user owns the file&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# r - user has read access to the file&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# w - user has write access to the file&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# x - user has execute access to the file&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# z - file is zero bytes long&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# if/then/else&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;a 5
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;b 10
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt; &amp;gt; &lt;span class=&quot;nv&quot;&gt;$b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;a is greater than b&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt; &amp;lt; &lt;span class=&quot;nv&quot;&gt;$b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;a is lesser than b&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;a is equal to b&quot;&lt;/span&gt;
+endif
+
+&lt;span class=&quot;c&quot;&gt;# prints &quot;a is lesser than b&quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 class=&quot;code-head&quot; id=&quot;loops&quot;&gt;loops&lt;span&gt;code&lt;/span&gt;&lt;/h3&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;#----------------&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# foreach loop&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#----------------&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# declare a word list&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;colors &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;white red black green blue&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# iterate over the word list (paranthesis is important)&lt;/span&gt;
+foreach c &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$colors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$c&lt;/span&gt;
+end
+
+&lt;span class=&quot;c&quot;&gt;#----------------&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# while loop&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#----------------&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;a 0
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt; &amp;lt; 4&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;a is &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    @ a++
+end
+
+&lt;span class=&quot;c&quot;&gt;# prints&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# a is 0&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# a is 1&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# a is 2&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# a is 3&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 class=&quot;code-head&quot; id=&quot;break&quot;&gt;break&lt;span&gt;code&lt;/span&gt;&lt;/h3&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;a 0
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1 &amp;gt; 0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;a is &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    @ a++
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; 4&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;break
+&lt;/span&gt;end
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;breaked from while loop after a is &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# prints&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# a is 1&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# a is 2&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# a is 3&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# breaked from while loop after a is 4&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 class=&quot;code-head&quot; id=&quot;continue&quot;&gt;continue&lt;span&gt;code&lt;/span&gt;&lt;/h3&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;colors &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;white red black green blue&quot;&lt;/span&gt;
+foreach c &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$colors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; black&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
+        &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;as color is &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$c&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;, continuing..&quot;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;continue
+    &lt;/span&gt;endif
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;color is &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$c&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+end
+
+&lt;span class=&quot;c&quot;&gt;# prints&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# color is white&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# color is red&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# as color is black, continuing..&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# color is green&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# color is blue&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 class=&quot;code-head&quot; id=&quot;goto&quot;&gt;goto&lt;span&gt;code&lt;/span&gt;&lt;/h3&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;a &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 20
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
+    &lt;/span&gt;goto csk
+&lt;span class=&quot;k&quot;&gt;else if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; 20&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
+    &lt;/span&gt;goto rcb
+&lt;span class=&quot;k&quot;&gt;else
+    &lt;/span&gt;goto kkr
+
+csk:
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;this is csk&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;1
+
+rcb:
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;this is rcb&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;1
+
+kkr:
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;this is kkr&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;1
+
+&lt;span class=&quot;c&quot;&gt;# prints &lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# this is rcb&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 class=&quot;code-head&quot; id=&quot;switch&quot;&gt;switch&lt;span&gt;code&lt;/span&gt;&lt;/h3&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$#argv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; 0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;No arguments provided..&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;1
+&lt;span class=&quot;k&quot;&gt;else
+    &lt;/span&gt;switch&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$argv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1]&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;yY][eE][sS]:
+        &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Input is YES&quot;&lt;/span&gt;
+        breaksw
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;nN][oO]:
+        &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Input is NO&quot;&lt;/span&gt;
+    default:
+        &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Input is not YES/NO&quot;&lt;/span&gt;
+        breaksw
+    endsw
+endif
+
+&lt;span class=&quot;c&quot;&gt;# source test.csh yes&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# print &quot;Input is YES&quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 class=&quot;code-head&quot; id=&quot;interrupt-handling&quot;&gt;Interrupt Handling&lt;span&gt;code&lt;/span&gt;&lt;/h3&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# used to transfer control to onintr statement once CTRL+C is done to kill the script.&lt;/span&gt;
+onintr close
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1 &amp;gt; 0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Loading avengers....&quot;&lt;/span&gt;
+    sleep 2
+end
+
+close:
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Avengers killed..&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Yet Ironman is safe!&quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 class=&quot;centered-heading&quot; id=&quot;how-tos&quot;&gt;&lt;span&gt;How to's&lt;/span&gt;&lt;/h3&gt;
+
+&lt;h3 class=&quot;code-head&quot; id=&quot;how-to-store-the-output-of-a-command&quot;&gt;How to store the output of a command?&lt;span&gt;code&lt;/span&gt;&lt;/h3&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# backquotes is used to store command's output to a variable for further processing&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;a &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;pwd&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# prints /usr2/gilango/study&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;b &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;date&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$b&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;# Sun Apr 14 13:45:25 IST 2019&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1] &lt;span class=&quot;c&quot;&gt;# Sun &lt;/span&gt;
+
+foreach f &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$f&lt;/span&gt;
+end
+
+&lt;span class=&quot;c&quot;&gt;# prints&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Sun&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Apr&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 14&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 13:45:25&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# IST&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 2019&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 class=&quot;code-head&quot; id=&quot;how-to-read-user-input&quot;&gt;How to read user input?&lt;span&gt;code&lt;/span&gt;&lt;/h3&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# two ways to read user input&lt;/span&gt;
+
+
+&lt;span class=&quot;c&quot;&gt;# method 1: set a = $&amp;lt;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; -n &lt;span class=&quot;s2&quot;&gt;&quot;Input a value for a: &quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;a &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$&amp;lt;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;You entered a as: &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# prints &lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Input a value for a: 9&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# You entered a as: 9&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# method 2: set a = `head -1`&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; -n &lt;span class=&quot;s2&quot;&gt;&quot;Input a value for a: &quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;a &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;head -1&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;You entered a as: &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# prints &lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Input a value for a: 21&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# You entered a as: 21&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 class=&quot;code-head&quot; id=&quot;how-to-use-single-and-double-quotes&quot;&gt;How to use single and double quotes?&lt;span&gt;code&lt;/span&gt;&lt;/h3&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# single quotes&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   * allow inclusion of spaces&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   * prevent variable substitution&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   * allow filename generation&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# double quotes&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   * allow inclusion of spaces&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   * allow variable substitution&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   * allow filename generation&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;a &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; -l
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ls $a'&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# prints ls $a&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ls &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# prints ls -l&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content><author><name>Gogul Ilango</name></author><category term="software" /><summary type="html">&amp;times; Basics Expressions Control Structures Loops break continue goto switch Interrupt Handling How to's How to store the output of a command? How to read user input? How to use single and double quotes? X Contents Basics How To's In this page, you will find the syntax and most common how to’s of C Shell Scripting. This might be useful for beginners in programming or professionals in automation industries such as VLSI or Telecomm to find csh syntax and code quickly using this single page online reference material. Click on any of the contents in the sidebar to view the code. Basics Expressionscode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25#!/bin/csh # declaring variables set a 2 set b 6 # math operations (white space must taken care) set c = `expr $a+$b` echo $c # prints 2+6 # add set c = `expr $a + $b` echo $c # prints 8 # subtract set c = `expr $b - $a` echo $c # prints 4 # divide set c = `expr $b / $a` echo $c # prints 12 # remainder set c = `expr $b % $a` echo $c # prints 12 Control Structurescode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28# check if file exist if (-e filename) echo &quot;File exist&quot; #------------------------- # file status expressions #------------------------- # d - file is a directory # e - file exists # f - file is an ordinary file # o - user owns the file # r - user has read access to the file # w - user has write access to the file # x - user has execute access to the file # z - file is zero bytes long # if/then/else set a 5 set b 10 if ($a &amp;gt; $b) then echo &quot;a is greater than b&quot; else if ($a &amp;lt; $b) then echo &quot;a is lesser than b&quot; else echo &quot;a is equal to b&quot; endif # prints &quot;a is lesser than b&quot; loopscode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25#---------------- # foreach loop #---------------- # declare a word list set colors = &quot;white red black green blue&quot; # iterate over the word list (paranthesis is important) foreach c ($colors) echo $c end #---------------- # while loop #---------------- set a 0 while ($a &amp;lt; 4) echo &quot;a is $a&quot; @ a++ end # prints # a is 0 # a is 1 # a is 2 # a is 3 breakcode 1 2 3 4 5 6 7 8 9 10 11 12 13set a 0 while (1 &amp;gt; 0) echo &quot;a is $a&quot; @ a++ if ($a == 4) break end echo &quot;breaked from while loop after a is $a&quot; # prints # a is 1 # a is 2 # a is 3 # breaked from while loop after a is 4 continuecode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15set colors = &quot;white red black green blue&quot; foreach c ($colors) if ($c == black) then echo &quot;as color is $c, continuing..&quot; continue endif echo &quot;color is $c&quot; end # prints # color is white # color is red # as color is black, continuing.. # color is green # color is blue gotocode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23set a = 20 if ($a == 10) then goto csk else if ($a == 20) then goto rcb else goto kkr csk: echo &quot;this is csk&quot; exit 1 rcb: echo &quot;this is rcb&quot; exit 1 kkr: echo &quot;this is kkr&quot; exit 1 # prints # this is rcb switchcode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18if ($#argv == 0) then echo &quot;No arguments provided..&quot; exit 1 else switch($argv[1]) case [yY][eE][sS]: echo &quot;Input is YES&quot; breaksw case [nN][oO]: echo &quot;Input is NO&quot; default: echo &quot;Input is not YES/NO&quot; breaksw endsw endif # source test.csh yes # print &quot;Input is YES&quot; Interrupt Handlingcode 1 2 3 4 5 6 7 8 9 10# used to transfer control to onintr statement once CTRL+C is done to kill the script. onintr close while (1 &amp;gt; 0) echo &quot;Loading avengers....&quot; sleep 2 end close: echo &quot;Avengers killed..&quot; echo &quot;Yet Ironman is safe!&quot; How to's How to store the output of a command?code 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20# backquotes is used to store command's output to a variable for further processing set a = `pwd` echo $a # prints /usr2/gilango/study set b = `date` echo $b # Sun Apr 14 13:45:25 IST 2019 echo $b[1] # Sun foreach f ($b) echo $f end # prints # Sun # Apr # 14 # 13:45:25 # IST # 2019 How to read user input?code 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20# two ways to read user input # method 1: set a = $&amp;lt; echo -n &quot;Input a value for a: &quot; set a = $&amp;lt; echo &quot;You entered a as: $a&quot; # prints # Input a value for a: 9 # You entered a as: 9 # method 2: set a = `head -1` echo -n &quot;Input a value for a: &quot; set a = `head -1` echo &quot;You entered a as: $a&quot; # prints # Input a value for a: 21 # You entered a as: 21 How to use single and double quotes?code 1 2 3 4 5 6 7 8 9 10 11 12 13# single quotes # * allow inclusion of spaces # * prevent variable substitution # * allow filename generation # double quotes # * allow inclusion of spaces # * allow variable substitution # * allow filename generation set a = -l echo 'ls $a' # prints ls $a echo &quot;ls $a&quot; # prints ls -l</summary></entry><entry><title type="html">My Awesome Movies List</title><link href="http://localhost:4000/random/my-awesome-movies-list" rel="alternate" type="text/html" title="My Awesome Movies List" /><published>2019-04-08T00:00:00+05:30</published><updated>2019-04-08T00:00:00+05:30</updated><id>http://localhost:4000/random/movies-that-i-have-watched</id><content type="html" xml:base="http://localhost:4000/random/my-awesome-movies-list">&lt;p&gt;Here, I list down all those amazing movies that I have watched and yet to watch. Hope this list inspires someone somewhere! You’re cute 😍&lt;/p&gt;
 
 &lt;h3&gt;Hollywood - MARVEL&lt;/h3&gt;
 &lt;ul class=&quot;movie-list&quot;&gt;
@@ -17,7 +526,7 @@
   &lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Ant-Man &lt;span&gt;2015&lt;/span&gt;&lt;/li&gt;
   &lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Captain America - Civil War &lt;span&gt;2016&lt;/span&gt;&lt;/li&gt;
   &lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Spider-Man Homecoming &lt;span&gt;2017&lt;/span&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; /&gt;Doctor Strange &lt;span&gt;2016&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Doctor Strange &lt;span&gt;2016&lt;/span&gt;&lt;/li&gt;
   &lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; /&gt;Thor - Ragnarok &lt;span&gt;2017&lt;/span&gt;&lt;/li&gt;
   &lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Black Panther &lt;span&gt;2018&lt;/span&gt;&lt;/li&gt;
   &lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Avengers - Infinity War &lt;span&gt;2018&lt;/span&gt;&lt;/li&gt;
@@ -2771,172 +3280,4 @@ $$
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>Gogul Ilango</name></author><category term="hardware" /><summary type="html">X Contents Console Variables Math Operations Strings Conditionals Loops Arrays Objects Functions Try Catch In this page, you will find the commonly used syntax and how to’s that are specific to JavaScript programming language. If you know what JavaScript (JS) is, but wanted to quickly refer to JS syntax, then you might find this page useful. I will keep on updating this article. So, kindly bookmark this page if you find it useful 😉 Console For any type of JavaScript developer, console is the thing that makes them alive 😅. So, in this page, you will find console.log() mostly to display the output of a specific operation. If you’re new to console in JavaScript, please open a browser (such as Google Chrome), right-click, inspect and click on console tab. From here, you can start executing the below code. Variablescode 1 2 3 4 5 6 7 8// define a variable var name = prompt(&quot;What's your name?&quot;); if(name != null) { console.log(name); } else { alert(&quot;Please enter a valid name!&quot;); } Math Operationscode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51// add console.log(&quot;5 + 4 = &quot;, 5 + 4); // prints 5 + 4 = 9 // sub console.log(&quot;5 - 4 = &quot;, 5 - 4); // prints 5 - 4 = 1 // mul console.log(&quot;5 * 4 = &quot;, 5 * 4); // prints 5 * 4 = 20 // div console.log(&quot;5 / 4 = &quot;, 5 / 4); // prints 5 / 4 = 1.25 // mod console.log(&quot;5 % 4 = &quot;, 5 % 4); // prints 5 % 4 = 1 // max number console.log(Number.MAX_VALUE); // prints 1.7976931348623157e+308 // min number console.log(Number.MIN_VALUE); // prints 5e-324 // round off a = 2.2555; console.log(a.toFixed(2)); // prints 2.26 // pre increment b = 1; console.log(++b); // prints 2 // post increment c = 1; console.log(c++); // prints 1 console.log(c); // prints 2 // math functions console.log(Math.abs(-8)); // prints 8 console.log(Math.cbrt(1000)); // prints 10 console.log(Math.ceil(6.45)); // prints 7 console.log(Math.floor(6.45)); // prints 6 console.log(Math.log(10)); // prints 2.302585092994046 console.log(Math.log10(10)); // prints 1 console.log(Math.max(10, 5)); // prints 10 console.log(Math.min(10, 5)); // prints 5 console.log(Math.pow(4, 2)); // prints 16 console.log(Math.sqrt(1000)); // prints 31.622776601683793 console.log(Math.floor(Math.random() * 10)) // prints 2 // conversions a = &quot;3.14&quot;; // note this is a string console.log(parseInt(a)); // prints 3 console.log(parseFloat(a)); // prints 3.14 Stringscode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29var str = &quot;This is a classic example for strings&quot;; // length of string console.log(str.length); // prints 37 // index of a substring console.log(str.indexOf(&quot;example&quot;)); // prints 18 // slice a string based on start index and end index console.log(str.slice(10, 17)); // prints classic // slice a string based on start index console.log(str.slice(10)); // prints classic example for strings // substring using start index and length console.log(str.substr(10, 7)); // prints classic // substring replace console.log(str.replace(&quot;classic&quot;, &quot;awesome&quot;)) // prints This is a awesome example for strings // get character at an index console.log(str.charAt(10)); // prints c // split string into an array console.log(str.split(&quot; &quot;)); // prints [&quot;This&quot;, &quot;is&quot;, &quot;a&quot;, &quot;classic&quot;, &quot;example&quot;, &quot;for&quot;, &quot;strings&quot;] // upper case and lower case console.log(str.toUpperCase()); // prints THIS IS A CLASSIC EXAMPLE FOR STRINGS console.log(str.toLowerCase()); // prints this is a classic example for strings Conditionalscode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36// relational operators : === != &amp;gt; &amp;lt; &amp;gt;= &amp;lt;= // logical operators : &amp;amp;&amp;amp; || ! // normal conditionals var num = 2; if (num &amp;lt; 4) { console.log(&quot;Pikachu!&quot;); // prints Pikachu! } else if (num &amp;gt;= 4 &amp;amp;&amp;amp; num &amp;lt; 10) { console.log(&quot;Charmander!&quot;); } else { console.log(&quot;Pokemon!&quot;); } // switch statement var age = 25; switch(age) { case 21: console.log(&quot;Awesome!&quot;); case 22: console.log(&quot;Amazing!&quot;); case 23: console.log(&quot;Astounding!&quot;); case 24: console.log(&quot;Fantastic!&quot;); case 25: console.log(&quot;Brilliant!&quot;); default: console.log(&quot;State of mind :)&quot;); } // prints Brilliant! State of mind :) // ternary operator var canVote = (age &amp;gt;= 18) ? true : false; console.log(canVote); // prints true Loopscode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48//------------ // while loop //------------ var i = 1; while(i &amp;lt;= 5) { console.log(&quot;i = &quot; + i); i += 1; } // prints // i = 1 // i = 2 // i = 3 // i = 4 // i = 5 //--------------- // do while loop //--------------- var j = 5; do { console.log(&quot;came here once!&quot;); } while(i == 10); // prints came here once! //---------- // for loop //---------- for(var k=0; k&amp;lt;4; k++) { console.log(&quot;k = &quot; + k); } // prints // k = 0 // k = 1 // k = 2 // k = 3 //----------------------------------------------- // for loop - enumerable properties of an object //----------------------------------------------- var team = {captain: &quot;dhoni&quot;, batsman: &quot;kohli&quot;, bowler: &quot;nehra&quot;}; for(t in team) { console.log(t + &quot; : &quot; + team[t]); } // prints // captain : dhoni // batsman : kohli // bowler : nehra Arrayscode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28var arr = [&quot;pikachu&quot;, &quot;charmander&quot;, &quot;bulbasaur&quot;, &quot;squirtle&quot;]; // accessing array items console.log(arr[0]) // prints pikachu // delete the 2nd item console.log(arr.splice(2, 1)); // prints [&quot;bulbasaur&quot;] console.log(arr); // prints [&quot;pikachu&quot;, &quot;charmander&quot;, &quot;squirtle&quot;] // array to string console.log(arr.toString()); // prints &quot;pikachu,charmander,squirtle&quot; // array to string using join console.log(arr.join(&quot;, &quot;)) // prints &quot;pikachu, charmander, squirtle&quot; // sort ascending console.log(arr.sort()); // prints [&quot;charmander&quot;, &quot;pikachu&quot;, &quot;squirtle&quot;] // sort descending console.log(arr.reverse()); // prints [&quot;squirtle&quot;, &quot;pikachu&quot;, &quot;charmander&quot;] // add item to the end arr.push(&quot;mewtwo&quot;); console.log(arr); // prints [&quot;squirtle&quot;, &quot;pikachu&quot;, &quot;charmander&quot;, &quot;mewtwo&quot;] // remove item from the end arr.pop(); console.log(arr); // prints [&quot;squirtle&quot;, &quot;pikachu&quot;, &quot;charmander&quot;] Objectscode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 // object similar to dictionary in python var team = {1: &quot;gogul&quot;, 2: &quot;deepan&quot;, 3: &quot;mohan&quot;, 4: &quot;sibi&quot;, 5: &quot;sathiesh&quot;} // accessing keys and values for(t in team) { console.log(t + &quot; : &quot; + team[t]); } // prints // 1 : gogul // 2 : deepan // 3 : mohan // 4 : sibi // 5 : sathiesh // get the keys in object console.log(Object.keys(team)); // prints [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;] // get the values in object console.log(Object.values(team)); // [&quot;gogul&quot;, &quot;deepan&quot;, &quot;mohan&quot;, &quot;sibi&quot;, &quot;sathiesh&quot;] // accessing values using keys (this is not index) console.log(team[&quot;2&quot;]); // prints &quot;deepan&quot; // object of object var globalTeam = {main: &quot;Not yet filled&quot;, sub: team}; console.log(globalTeam[&quot;main&quot;]); // prints &quot;Not yet filled&quot; console.log(globalTeam[&quot;sub&quot;]); // prints {1: &quot;gogul&quot;, 2: &quot;deepan&quot;, 3: &quot;mohan&quot;, 4: &quot;sibi&quot;, 5: &quot;sathiesh&quot;} Functionscode 1 2 3 4function multiply(a, b) { return (a*b); } console.log(multiply(5,4)); // prints 20 Try Catchcode 1 2 3 4 5 6var a = 10; try { console.log(&quot;Hello World&quot; + a + b); } catch(err) { console.log(err.message); // prints &quot;b is not defined&quot; }</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://drive.google.com/uc?id=1sL3r7BTCF3V2IHj5ftlB1cfX9MTZMoJX" /></entry><entry><title type="html">Emotion Recognizer</title><link href="http://localhost:4000/software/emotion-recognizer" rel="alternate" type="text/html" title="Emotion Recognizer" /><published>2018-08-11T00:00:00+05:30</published><updated>2018-08-11T00:00:00+05:30</updated><id>http://localhost:4000/software/emotion-recognizer</id><content type="html" xml:base="http://localhost:4000/software/emotion-recognizer">&lt;p style=&quot;margin-bottom: 0px !important; margin: 0px !important;&quot; id=&quot;fork-github&quot;&gt;
-  &lt;a href=&quot;https://github.com/Gogul09/emotion-recognizer&quot;&gt;
-    &lt;img style=&quot;position: fixed; top: 0; left: 0; border: 0;&quot; src=&quot;https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png&quot; alt=&quot;Fork me on GitHub&quot; /&gt;
-  &lt;/a&gt;
-&lt;/p&gt;
-
-&lt;div id=&quot;mobile-tablet-warning&quot; class=&quot;mobile-tablet-warning&quot;&gt;
-  &lt;h3&gt;Oops!&lt;/h3&gt;
-  &lt;p&gt;This demo is highly experimental in mobile and tablet devices. If you are still crazy in trying out this demo, I suggest you to use a laptop or a desktop. Thanks for your understanding! You're cute 😊&lt;/p&gt;
-  &lt;a href=&quot;https://www.youtube.com/watch?v=WBi_PZ66z5E&amp;amp;feature=youtu.be&quot; target=&quot;_blank&quot;&gt;YouTube Video Link&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
-  &lt;a href=&quot;https://github.com/Gogul09/emotion-recognizer&quot; target=&quot;_blank&quot;&gt;GitHub Code Link&lt;/a&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;emotion-container&quot; id=&quot;emotion-container&quot;&gt;
-  &lt;header class=&quot;emotion-header&quot;&gt;
-    &lt;h3&gt;Emotion Recognizer&lt;/h3&gt;
-    &lt;p&gt;This is a simple implementation of emotion recognition using two deep neural networks (extractor and classifier). You can follow the instructions &lt;a href=&quot;https://www.youtube.com/watch?v=WBi_PZ66z5E&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; to get this working.&lt;/p&gt;
-    &lt;p&gt;Made with TensorFlow.js ❤️&lt;/p&gt;
-  &lt;/header&gt;
-  &lt;div class=&quot;emotion-wrapper&quot;&gt;
-    &lt;div class=&quot;emotion-player emotion-flex&quot;&gt;  
-      &lt;div class=&quot;emotion-kit&quot;&gt;
-        &lt;div id=&quot;emotion-laugh&quot; class=&quot;emotion-kit-comps&quot;&gt;
-          &lt;img id=&quot;emoticon-laugh&quot; src=&quot;/images/live-demo/emotion/laugh.gif&quot; /&gt;
-        &lt;/div&gt;
-        &lt;div id=&quot;emotion-excited&quot; class=&quot;emotion-kit-comps&quot;&gt;
-          &lt;img id=&quot;emoticon-excited&quot; src=&quot;/images/live-demo/emotion/excited.gif&quot; /&gt;
-        &lt;/div&gt;
-        &lt;div id=&quot;emotion-sad&quot; class=&quot;emotion-kit-comps&quot;&gt;
-          &lt;img id=&quot;emoticon-sad&quot; src=&quot;/images/live-demo/emotion/sad.gif&quot; /&gt;
-        &lt;/div&gt;
-        &lt;div id=&quot;emotion-angry&quot; class=&quot;emotion-kit-comps&quot;&gt;
-          &lt;img id=&quot;emoticon-angry&quot; src=&quot;/images/live-demo/emotion/angry.gif&quot; /&gt;
-        &lt;/div&gt;
-        &lt;div id=&quot;emotion-sleep&quot; class=&quot;emotion-kit-comps&quot;&gt;
-          &lt;img id=&quot;emoticon-sleep&quot; src=&quot;/images/live-demo/emotion/sleep.gif&quot; /&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;emotion-live-cam&quot;&gt;
-        &lt;div&gt;
-          &lt;video id=&quot;main-stream-video&quot; width=&quot;200px&quot; height=&quot;200px&quot;&gt;&lt;/video&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;!--- Controller starts here --&gt;
-    &lt;div class=&quot;emotion-controller emotion-flex&quot; id=&quot;emotion-controller&quot;&gt;
-      &lt;!--- Tuner starts here --&gt;
-      &lt;div class=&quot;emotion-tuner&quot; id=&quot;emotion-tuner&quot;&gt;
-        &lt;!--- Learning Rate starts here --&gt;
-        &lt;div class=&quot;emotion-dropdown&quot;&gt;
-          &lt;div class=&quot;emotion-dropdown-cell&quot;&gt;
-          &lt;label&gt;Learning Rate&lt;/label&gt;
-          &lt;select id=&quot;emotion-learning-rate&quot;&gt;
-            &lt;option&gt;0.00001&lt;/option&gt;
-            &lt;option selected=&quot;&quot;&gt;0.0001&lt;/option&gt;
-            &lt;option&gt;0.001&lt;/option&gt;
-            &lt;option&gt;0.003&lt;/option&gt;
-          &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;!--- Learning Rate ends here --&gt;
-        &lt;!--- Batch Size starts here --&gt;
-        &lt;div class=&quot;emotion-dropdown&quot;&gt;
-          &lt;div class=&quot;emotion-dropdown-cell&quot;&gt;
-          &lt;label&gt;Batch Size&lt;/label&gt;
-          &lt;select id=&quot;emotion-batch-size&quot;&gt;
-            &lt;option&gt;0.05&lt;/option&gt;
-            &lt;option selected=&quot;&quot;&gt;0.4&lt;/option&gt;
-            &lt;option&gt;0.1&lt;/option&gt;
-            &lt;option&gt;1&lt;/option&gt;
-          &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;!--- Batch Size ends here --&gt;
-        &lt;!--- Epochs starts here --&gt;
-        &lt;div class=&quot;emotion-dropdown&quot;&gt;
-          &lt;div class=&quot;emotion-dropdown-cell&quot;&gt;
-          &lt;label&gt;Epochs&lt;/label&gt;
-          &lt;select id=&quot;emotion-epochs&quot;&gt;
-            &lt;option&gt;10&lt;/option&gt;
-            &lt;option selected=&quot;&quot;&gt;20&lt;/option&gt;
-            &lt;option&gt;40&lt;/option&gt;
-          &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;!--- Epochs ends here --&gt;
-        &lt;!--- Hidden Units starts here --&gt;
-        &lt;div class=&quot;emotion-dropdown&quot;&gt;
-          &lt;div class=&quot;emotion-dropdown-cell&quot;&gt;
-          &lt;label&gt;Hidden Units&lt;/label&gt;
-          &lt;select id=&quot;emotion-hidden-units&quot;&gt;
-            &lt;option&gt;10&lt;/option&gt;
-            &lt;option selected=&quot;&quot;&gt;100&lt;/option&gt;
-            &lt;option&gt;200&lt;/option&gt;
-          &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;!--- Hidden Units ends here --&gt;
-      &lt;/div&gt;
-      &lt;!--- Tuner ends here --&gt;
-      &lt;!--- Buttons starts here --&gt;
-      &lt;div class=&quot;emotion-buttons&quot;&gt;
-        &lt;button onclick=&quot;startWebcam()&quot;&gt;Start&lt;/button&gt;
-        &lt;button onclick=&quot;train()&quot;&gt;Train&lt;/button&gt;
-        &lt;button onclick=&quot;predictPlay()&quot;&gt;Play&lt;/button&gt;
-        &lt;button onclick=&quot;stopWebcam()&quot;&gt;Stop&lt;/button&gt;
-      &lt;/div&gt;
-      &lt;!--- Buttons ends here --&gt;
-      &lt;!--- User acquire starts here --&gt;
-      &lt;div class=&quot;emotion-acquire&quot;&gt;
-        &lt;div class=&quot;emotion-acquire-outer&quot;&gt;
-          &lt;div class=&quot;emotion-acquire-inner&quot; id=&quot;sample-laugh&quot; onclick=&quot;captureSample(this.id, 0)&quot;&gt;
-            &lt;div class=&quot;emotion-acquire-cam&quot;&gt;
-              &lt;img id=&quot;image-laugh&quot; /&gt;
-            &lt;/div&gt;
-            &lt;p&gt;Add 🤣&lt;/p&gt;
-          &lt;/div&gt;
-          &lt;p id=&quot;count-laugh&quot;&gt;0 samples&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;emotion-acquire-outer&quot;&gt;
-          &lt;div class=&quot;emotion-acquire-inner&quot; id=&quot;sample-excited&quot; onclick=&quot;captureSample(this.id, 1)&quot;&gt;
-            &lt;div class=&quot;emotion-acquire-cam&quot;&gt;
-              &lt;img id=&quot;image-excited&quot; /&gt;
-            &lt;/div&gt;
-            &lt;p&gt;Add 😲&lt;/p&gt;
-          &lt;/div&gt;
-          &lt;p id=&quot;count-excited&quot;&gt;0 samples&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;emotion-acquire-outer&quot;&gt;
-          &lt;div class=&quot;emotion-acquire-inner&quot; id=&quot;sample-sad&quot; onclick=&quot;captureSample(this.id, 2)&quot;&gt;
-            &lt;div class=&quot;emotion-acquire-cam&quot;&gt;
-              &lt;img id=&quot;image-sad&quot; /&gt;
-            &lt;/div&gt;
-            &lt;p&gt;Add 😰&lt;/p&gt;
-          &lt;/div&gt;
-          &lt;p id=&quot;count-sad&quot;&gt;0 samples&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;emotion-acquire-outer&quot;&gt;
-          &lt;div class=&quot;emotion-acquire-inner&quot; id=&quot;sample-angry&quot; onclick=&quot;captureSample(this.id, 3)&quot;&gt;
-            &lt;div class=&quot;emotion-acquire-cam&quot;&gt;
-              &lt;img id=&quot;image-angry&quot; /&gt;
-            &lt;/div&gt;
-            &lt;p&gt;Add 😡&lt;/p&gt;
-          &lt;/div&gt;
-          &lt;p id=&quot;count-angry&quot;&gt;0 samples&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;emotion-acquire-outer&quot;&gt;
-          &lt;div class=&quot;emotion-acquire-inner&quot; id=&quot;sample-sleep&quot; onclick=&quot;captureSample(this.id, 4)&quot;&gt;
-            &lt;div class=&quot;emotion-acquire-cam&quot;&gt;
-              &lt;img id=&quot;image-sleep&quot; /&gt;
-            &lt;/div&gt;
-            &lt;p&gt;Add 😴&lt;/p&gt;
-          &lt;/div&gt;
-          &lt;p id=&quot;count-sleep&quot;&gt;0 samples&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;!--- User acquire ends here --&gt;
-    &lt;/div&gt;
-    &lt;!--- Controller ends here --&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script src=&quot;https://unpkg.com/@tensorflow/tfjs&quot;&gt;&lt;/script&gt;
-
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://code.jquery.com/jquery-2.1.1.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script type=&quot;text/javascript&quot; src=&quot;/js/emotion-recognizer.js&quot;&gt;&lt;/script&gt;</content><author><name>Gogul Ilango</name></author><category term="software" /><summary type="html">Oops! This demo is highly experimental in mobile and tablet devices. If you are still crazy in trying out this demo, I suggest you to use a laptop or a desktop. Thanks for your understanding! You're cute 😊 YouTube Video Link GitHub Code Link Emotion Recognizer This is a simple implementation of emotion recognition using two deep neural networks (extractor and classifier). You can follow the instructions here to get this working. Made with TensorFlow.js ❤️ Learning Rate 0.00001 0.0001 0.001 0.003 Batch Size 0.05 0.4 0.1 1 Epochs 10 20 40 Hidden Units 10 100 200 Start Train Play Stop Add 🤣 0 samples Add 😲 0 samples Add 😰 0 samples Add 😡 0 samples Add 😴 0 samples</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/live-demo/emotion/thumbnail.png" /></entry></feed>
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>Gogul Ilango</name></author><category term="hardware" /><summary type="html">X Contents Console Variables Math Operations Strings Conditionals Loops Arrays Objects Functions Try Catch In this page, you will find the commonly used syntax and how to’s that are specific to JavaScript programming language. If you know what JavaScript (JS) is, but wanted to quickly refer to JS syntax, then you might find this page useful. I will keep on updating this article. So, kindly bookmark this page if you find it useful 😉 Console For any type of JavaScript developer, console is the thing that makes them alive 😅. So, in this page, you will find console.log() mostly to display the output of a specific operation. If you’re new to console in JavaScript, please open a browser (such as Google Chrome), right-click, inspect and click on console tab. From here, you can start executing the below code. Variablescode 1 2 3 4 5 6 7 8// define a variable var name = prompt(&quot;What's your name?&quot;); if(name != null) { console.log(name); } else { alert(&quot;Please enter a valid name!&quot;); } Math Operationscode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51// add console.log(&quot;5 + 4 = &quot;, 5 + 4); // prints 5 + 4 = 9 // sub console.log(&quot;5 - 4 = &quot;, 5 - 4); // prints 5 - 4 = 1 // mul console.log(&quot;5 * 4 = &quot;, 5 * 4); // prints 5 * 4 = 20 // div console.log(&quot;5 / 4 = &quot;, 5 / 4); // prints 5 / 4 = 1.25 // mod console.log(&quot;5 % 4 = &quot;, 5 % 4); // prints 5 % 4 = 1 // max number console.log(Number.MAX_VALUE); // prints 1.7976931348623157e+308 // min number console.log(Number.MIN_VALUE); // prints 5e-324 // round off a = 2.2555; console.log(a.toFixed(2)); // prints 2.26 // pre increment b = 1; console.log(++b); // prints 2 // post increment c = 1; console.log(c++); // prints 1 console.log(c); // prints 2 // math functions console.log(Math.abs(-8)); // prints 8 console.log(Math.cbrt(1000)); // prints 10 console.log(Math.ceil(6.45)); // prints 7 console.log(Math.floor(6.45)); // prints 6 console.log(Math.log(10)); // prints 2.302585092994046 console.log(Math.log10(10)); // prints 1 console.log(Math.max(10, 5)); // prints 10 console.log(Math.min(10, 5)); // prints 5 console.log(Math.pow(4, 2)); // prints 16 console.log(Math.sqrt(1000)); // prints 31.622776601683793 console.log(Math.floor(Math.random() * 10)) // prints 2 // conversions a = &quot;3.14&quot;; // note this is a string console.log(parseInt(a)); // prints 3 console.log(parseFloat(a)); // prints 3.14 Stringscode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29var str = &quot;This is a classic example for strings&quot;; // length of string console.log(str.length); // prints 37 // index of a substring console.log(str.indexOf(&quot;example&quot;)); // prints 18 // slice a string based on start index and end index console.log(str.slice(10, 17)); // prints classic // slice a string based on start index console.log(str.slice(10)); // prints classic example for strings // substring using start index and length console.log(str.substr(10, 7)); // prints classic // substring replace console.log(str.replace(&quot;classic&quot;, &quot;awesome&quot;)) // prints This is a awesome example for strings // get character at an index console.log(str.charAt(10)); // prints c // split string into an array console.log(str.split(&quot; &quot;)); // prints [&quot;This&quot;, &quot;is&quot;, &quot;a&quot;, &quot;classic&quot;, &quot;example&quot;, &quot;for&quot;, &quot;strings&quot;] // upper case and lower case console.log(str.toUpperCase()); // prints THIS IS A CLASSIC EXAMPLE FOR STRINGS console.log(str.toLowerCase()); // prints this is a classic example for strings Conditionalscode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36// relational operators : === != &amp;gt; &amp;lt; &amp;gt;= &amp;lt;= // logical operators : &amp;amp;&amp;amp; || ! // normal conditionals var num = 2; if (num &amp;lt; 4) { console.log(&quot;Pikachu!&quot;); // prints Pikachu! } else if (num &amp;gt;= 4 &amp;amp;&amp;amp; num &amp;lt; 10) { console.log(&quot;Charmander!&quot;); } else { console.log(&quot;Pokemon!&quot;); } // switch statement var age = 25; switch(age) { case 21: console.log(&quot;Awesome!&quot;); case 22: console.log(&quot;Amazing!&quot;); case 23: console.log(&quot;Astounding!&quot;); case 24: console.log(&quot;Fantastic!&quot;); case 25: console.log(&quot;Brilliant!&quot;); default: console.log(&quot;State of mind :)&quot;); } // prints Brilliant! State of mind :) // ternary operator var canVote = (age &amp;gt;= 18) ? true : false; console.log(canVote); // prints true Loopscode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48//------------ // while loop //------------ var i = 1; while(i &amp;lt;= 5) { console.log(&quot;i = &quot; + i); i += 1; } // prints // i = 1 // i = 2 // i = 3 // i = 4 // i = 5 //--------------- // do while loop //--------------- var j = 5; do { console.log(&quot;came here once!&quot;); } while(i == 10); // prints came here once! //---------- // for loop //---------- for(var k=0; k&amp;lt;4; k++) { console.log(&quot;k = &quot; + k); } // prints // k = 0 // k = 1 // k = 2 // k = 3 //----------------------------------------------- // for loop - enumerable properties of an object //----------------------------------------------- var team = {captain: &quot;dhoni&quot;, batsman: &quot;kohli&quot;, bowler: &quot;nehra&quot;}; for(t in team) { console.log(t + &quot; : &quot; + team[t]); } // prints // captain : dhoni // batsman : kohli // bowler : nehra Arrayscode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28var arr = [&quot;pikachu&quot;, &quot;charmander&quot;, &quot;bulbasaur&quot;, &quot;squirtle&quot;]; // accessing array items console.log(arr[0]) // prints pikachu // delete the 2nd item console.log(arr.splice(2, 1)); // prints [&quot;bulbasaur&quot;] console.log(arr); // prints [&quot;pikachu&quot;, &quot;charmander&quot;, &quot;squirtle&quot;] // array to string console.log(arr.toString()); // prints &quot;pikachu,charmander,squirtle&quot; // array to string using join console.log(arr.join(&quot;, &quot;)) // prints &quot;pikachu, charmander, squirtle&quot; // sort ascending console.log(arr.sort()); // prints [&quot;charmander&quot;, &quot;pikachu&quot;, &quot;squirtle&quot;] // sort descending console.log(arr.reverse()); // prints [&quot;squirtle&quot;, &quot;pikachu&quot;, &quot;charmander&quot;] // add item to the end arr.push(&quot;mewtwo&quot;); console.log(arr); // prints [&quot;squirtle&quot;, &quot;pikachu&quot;, &quot;charmander&quot;, &quot;mewtwo&quot;] // remove item from the end arr.pop(); console.log(arr); // prints [&quot;squirtle&quot;, &quot;pikachu&quot;, &quot;charmander&quot;] Objectscode 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 // object similar to dictionary in python var team = {1: &quot;gogul&quot;, 2: &quot;deepan&quot;, 3: &quot;mohan&quot;, 4: &quot;sibi&quot;, 5: &quot;sathiesh&quot;} // accessing keys and values for(t in team) { console.log(t + &quot; : &quot; + team[t]); } // prints // 1 : gogul // 2 : deepan // 3 : mohan // 4 : sibi // 5 : sathiesh // get the keys in object console.log(Object.keys(team)); // prints [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;] // get the values in object console.log(Object.values(team)); // [&quot;gogul&quot;, &quot;deepan&quot;, &quot;mohan&quot;, &quot;sibi&quot;, &quot;sathiesh&quot;] // accessing values using keys (this is not index) console.log(team[&quot;2&quot;]); // prints &quot;deepan&quot; // object of object var globalTeam = {main: &quot;Not yet filled&quot;, sub: team}; console.log(globalTeam[&quot;main&quot;]); // prints &quot;Not yet filled&quot; console.log(globalTeam[&quot;sub&quot;]); // prints {1: &quot;gogul&quot;, 2: &quot;deepan&quot;, 3: &quot;mohan&quot;, 4: &quot;sibi&quot;, 5: &quot;sathiesh&quot;} Functionscode 1 2 3 4function multiply(a, b) { return (a*b); } console.log(multiply(5,4)); // prints 20 Try Catchcode 1 2 3 4 5 6var a = 10; try { console.log(&quot;Hello World&quot; + a + b); } catch(err) { console.log(err.message); // prints &quot;b is not defined&quot; }</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://drive.google.com/uc?id=1sL3r7BTCF3V2IHj5ftlB1cfX9MTZMoJX" /></entry></feed>

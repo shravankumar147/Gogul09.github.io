@@ -1,11 +1,11 @@
 ---
 layout: post
-category: hardware
-class: Programming
+category: software
+class: Programming Languages
 title: Tcl in 15 minutes
 description: Learn the syntax and how to's of Tcl programming language which is highly used in VLSI and Networking companies.
 author: Gogul Ilango
-permalink: /hardware/tcl-in-15-minutes
+permalink: /software/tcl-in-15-minutes
 image: https://drive.google.com/uc?id=1cKgd7bFYwAyFIznfmvj6uNLbd2W8U0G7
 ---
 

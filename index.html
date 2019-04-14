@@ -127,18 +127,40 @@ permalink: /
       <!--CODE STARTS-->
       <div class="blog-category-box" id="box_programming">
         <div>
+          <h4><span>Programming Languages</span></h4>
           <table>
             {% for post in site.posts %}
-            {% if post.category contains 'software' or post.category contains 'hardware' %}
-            {% if post.class contains 'Programming' %}
-              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
-            {% endif %}
-            {% endif %}
+              {% if post.category contains 'software' %}
+                {% if post.class contains 'Programming Languages' %}
+                    <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
+                  {% endif %}
+                {% endif %}
+            {% endfor %}
+          </table>
+          <h4><span>Environment Setup</span></h4>
+          <table>
+            {% for post in site.posts %}
+              {% if post.categories contains 'software' %}
+                {% if post.class contains 'Environment Setup' %}
+                  <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </table>
+          <h4><span>Tools</span></h4>
+          <table>
+            {% for post in site.posts %}
+              {% if post.categories contains 'software' %}
+                {% if post.class contains 'Tools' %}
+                  <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
+                {% endif %}
+              {% endif %}
             {% endfor %}
           </table>
         </div>
       </div>
       <!--CODE ENDS-->
+
       <!--RESOURCES STARTS-->
       <div class="blog-category-box" id="box_resources">
         <div>

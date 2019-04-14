@@ -1,7 +1,7 @@
 ---
 layout: post
 category: hardware
-class: Programming
+class: Programming Languages
 title: JavaScript in 15 minutes
 description: Learn the syntax and how to's of JavaScript programming language which is highly used in Front-end Web Development and Machine Learning.
 author: Gogul Ilango

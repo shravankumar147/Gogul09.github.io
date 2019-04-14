@@ -27,7 +27,7 @@ Here, I list down all those amazing movies that I have watched and yet to watch.
   <li><input type="checkbox" disabled="disabled" checked="checked">Ant-Man <span>2015</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Captain America - Civil War <span>2016</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Spider-Man Homecoming <span>2017</span></li>
-  <li><input type="checkbox" disabled="disabled">Doctor Strange <span>2016</span></li>
+  <li><input type="checkbox" disabled="disabled" checked="checked">Doctor Strange <span>2016</span></li>
   <li><input type="checkbox" disabled="disabled">Thor - Ragnarok <span>2017</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Black Panther <span>2018</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Avengers - Infinity War <span>2018</span></li>

@@ -1,7 +1,7 @@
 ---
 layout: post
 category: software
-class: Programming
+class: Tools
 title: How to use ffmpeg in Windows?
 description: This tutorial is for beginners to get started with ffmpeg for any video related operation.
 author: Gogul Ilango
