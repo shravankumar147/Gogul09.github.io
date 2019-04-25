@@ -33,7 +33,7 @@ Here, I list down all those amazing movies that I have watched and yet to watch.
   <li><input type="checkbox" disabled="disabled" checked="checked">Avengers - Infinity War <span>2018</span></li>
   <li><input type="checkbox" disabled="disabled">Ant-Man and the Wasp <span>2018</span></li>
   <li><input type="checkbox" disabled="disabled">Captain Marvel <span>2019</span></li>
-  <li><input type="checkbox" disabled="disabled">Avengers - The Endgame <span>2019</span></li>
+  <li><input type="checkbox" disabled="disabled" checked="checked">Avengers - The Endgame <span>2019</span></li>
 </ul>
 
 <hr>
