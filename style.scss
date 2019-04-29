@@ -1964,6 +1964,12 @@ figure {
   background-blend-mode: soft-light;
 }
 
+.grad-photography {
+  background-color: #37373a !important;
+  background-image: url(/images/bg.png);
+  background-blend-mode: soft-light;
+}
+
 .blog-intro {
   position: relative;
   padding: 40px;
@@ -2007,6 +2013,10 @@ figure {
       font-size: 1.4em;
     }
   }
+}
+
+.photo-box {
+  margin-top: 10px !important;
 }
 
 .category-box h6 {
@@ -3236,6 +3246,25 @@ del {
     @include mobile {
       border-radius: 0;
       background-color: #fbbc05;
+    }
+}
+
+#nav_photography {
+  background-image: url("/images/icons/photography.png");
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  @include mobile {
+    border-bottom: 3px solid #be05fb;
+  }
+}
+
+#nav_photography:hover {
+    background-color: #d4141e;
+    border-radius: 5px;
+    @include mobile {
+      border-radius: 0;
+      background-color: #be05fb;
     }
 }
 
