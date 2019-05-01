@@ -12,7 +12,7 @@ Here, I list down all those amazing movies that I have watched and yet to watch.
 
 <h3>Hollywood - MARVEL</h3>
 <ul class="movie-list">
-  <li><input type="checkbox" disabled="disabled">Captain America - The First Avenger <span>2011</span></li>
+  <li><input type="checkbox" disabled="disabled" checked="checked">Captain America - The First Avenger <span>2011</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Iron Man <span>2008</span></li>
   <li><input type="checkbox" disabled="disabled">The Incredible Hulk <span>2008</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Iron Man 2 <span>2010</span></li>
