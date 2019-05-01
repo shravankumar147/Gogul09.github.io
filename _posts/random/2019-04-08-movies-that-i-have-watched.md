@@ -16,10 +16,10 @@ Here, I list down all those amazing movies that I have watched and yet to watch.
   <li><input type="checkbox" disabled="disabled" checked="checked">Iron Man <span>2008</span></li>
   <li><input type="checkbox" disabled="disabled">The Incredible Hulk <span>2008</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Iron Man 2 <span>2010</span></li>
-  <li><input type="checkbox" disabled="disabled">Thor <span>2011</span></li>
+  <li><input type="checkbox" disabled="disabled" checked="checked">Thor <span>2011</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">The Avengers <span>2012</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Iron Man 3 <span>2013</span></li>
-  <li><input type="checkbox" disabled="disabled">Thor - The Dark World <span>2013</span></li>
+  <li><input type="checkbox" disabled="disabled" checked="checked">Thor - The Dark World <span>2013</span></li>
   <li><input type="checkbox" disabled="disabled">Captain America - The Winter Soldier <span>2014</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Guardians of the Galaxy <span>2014</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Guardians of the Galaxy Vol 2 <span>2017</span></li>
@@ -28,7 +28,7 @@ Here, I list down all those amazing movies that I have watched and yet to watch.
   <li><input type="checkbox" disabled="disabled" checked="checked">Captain America - Civil War <span>2016</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Spider-Man Homecoming <span>2017</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Doctor Strange <span>2016</span></li>
-  <li><input type="checkbox" disabled="disabled">Thor - Ragnarok <span>2017</span></li>
+  <li><input type="checkbox" disabled="disabled" checked="checked">Thor - Ragnarok <span>2017</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Black Panther <span>2018</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Avengers - Infinity War <span>2018</span></li>
   <li><input type="checkbox" disabled="disabled">Ant-Man and the Wasp <span>2018</span></li>

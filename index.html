@@ -185,6 +185,9 @@ permalink: /
             {% if post.class contains 'Entertainment' %}
               <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
             {% endif %}
+            {% if post.class contains 'Travel' %}
+              <tr> <td><b>{{ post.date | date: "%d/%m/%Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
+            {% endif %}
             {% endif %}
             {% endfor %}
           </table>
