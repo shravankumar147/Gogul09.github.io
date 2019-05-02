@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-01T21:04:00+05:30</updated><id>http://localhost:4000/</id><title type="html">Gogul Ilango</title><subtitle>This blog on Deep Learning, VLSI Design and STA is written by Gogul Ilango. Master VLSI Design, Physical Design, Static Timing Analysis, Deep Learning through my articles, tutorials and resources.</subtitle><entry><title type="html">My First International Trip to Singapore</title><link href="http://localhost:4000/random/my-first-international-trip-to-singapore" rel="alternate" type="text/html" title="My First International Trip to Singapore" /><published>2019-05-01T00:00:00+05:30</published><updated>2019-05-01T00:00:00+05:30</updated><id>http://localhost:4000/random/my-first-international-trip-to-singapore</id><content type="html" xml:base="http://localhost:4000/random/my-first-international-trip-to-singapore">&lt;p&gt;Being an Indian, this was my first ever international travel to another country. I had never traveled alone so far. But, this 10-day trip to Singapore was an unforgettable experience in my life.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-02T09:55:13+05:30</updated><id>http://localhost:4000/</id><title type="html">Gogul Ilango</title><subtitle>This blog on Deep Learning, VLSI Design and STA is written by Gogul Ilango. Master VLSI Design, Physical Design, Static Timing Analysis, Deep Learning through my articles, tutorials and resources.</subtitle><entry><title type="html">My First International Trip to Singapore</title><link href="http://localhost:4000/random/my-first-international-trip-to-singapore" rel="alternate" type="text/html" title="My First International Trip to Singapore" /><published>2019-05-01T00:00:00+05:30</published><updated>2019-05-01T00:00:00+05:30</updated><id>http://localhost:4000/random/my-first-international-trip-to-singapore</id><content type="html" xml:base="http://localhost:4000/random/my-first-international-trip-to-singapore">&lt;div class=&quot;sidebar_tracker&quot; id=&quot;sidebar_tracker&quot;&gt;
+  &lt;button onclick=&quot;closeSidebar('sidebar_tracker_content')&quot;&gt;X&lt;/button&gt;
+  &lt;p onclick=&quot;showSidebar('sidebar_tracker_content')&quot;&gt;Contents&lt;/p&gt;
+  &lt;ul id=&quot;sidebar_tracker_content&quot;&gt;
+    &lt;li&gt;&lt;a class=&quot;sidebar_links&quot; onclick=&quot;handleSideBarLinks(this.id)&quot; id=&quot;link_1&quot; href=&quot;#flight-expenses&quot;&gt;Flight Expenses&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;sidebar_links&quot; onclick=&quot;handleSideBarLinks(this.id)&quot; id=&quot;link_2&quot; href=&quot;#places-that-i-visited&quot;&gt;Places that I visited&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;sidebar_links&quot; onclick=&quot;handleSideBarLinks(this.id)&quot; id=&quot;link_3&quot; href=&quot;#places-that-i-missed&quot;&gt;Places that I missed&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Being an Indian, this was my first ever international travel to another country. I had never traveled alone so far. But, this 10-day trip to Singapore was an unforgettable experience in my life.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;This is my first ever travelogue in this website. So, please pardon me if you find my writing vague.&lt;/p&gt;
@@ -38,7 +48,7 @@
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;places-that-i-visited-at-singapore&quot;&gt;Places that I Visited at Singapore&lt;/h3&gt;
+&lt;h3 id=&quot;places-that-i-visited&quot;&gt;Places that I visited&lt;/h3&gt;
 
 &lt;p&gt;You can know a lot about all those stunning places and neighbourhoods at Singapore &lt;a href=&quot;https://www.visitsingapore.com/en_in/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Nevertheless, I will list down all those breathtaking places that I visited at Singapore.&lt;/p&gt;
 
@@ -67,11 +77,74 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Each place listed above has different feel and ambience attached to it. To visit all these places, one can easily use Singapore’s &lt;a href=&quot;https://en.wikipedia.org/wiki/Mass_Rapid_Transit_(Singapore)&quot; target=&quot;_blank&quot;&gt;MRT&lt;/a&gt; (Mass Rapid Transit) or &lt;a href=&quot;https://en.wikipedia.org/wiki/Light_Rail_Transit_(Singapore)&quot; target=&quot;_blank&quot;&gt;LRT&lt;/a&gt; (Light Rail Transit). It is cheap to go from one location to another inside Singapore if you understand it’s MRT map shown below.&lt;/p&gt;
+&lt;p&gt;Each place listed above has different feel and ambience attached to it. To visit all these places, one can easily use Singapore’s &lt;a href=&quot;https://en.wikipedia.org/wiki/Mass_Rapid_Transit_(Singapore)&quot; target=&quot;_blank&quot;&gt;MRT&lt;/a&gt; (Mass Rapid Transit) or &lt;a href=&quot;https://en.wikipedia.org/wiki/Light_Rail_Transit_(Singapore)&quot; target=&quot;_blank&quot;&gt;LRT&lt;/a&gt; (Light Rail Transit). It is cheap to go from one location to another inside Singapore if you understand it’s MRT/LRT map shown below.&lt;/p&gt;
 
 &lt;figure&gt;
   &lt;img src=&quot;https://drive.google.com/uc?id=1SLdxEURv0BxHEl9PvMrIjDH5GvzZdUVI&quot; /&gt;
-&lt;/figure&gt;</content><author><name>Gogul Ilango</name></author><category term="random" /><summary type="html">Being an Indian, this was my first ever international travel to another country. I had never traveled alone so far. But, this 10-day trip to Singapore was an unforgettable experience in my life. This is my first ever travelogue in this website. So, please pardon me if you find my writing vague. In this travelogue, I will cover the overall expenses incurred for this 10-day trip, places I visited, places I missed, food that is available for vegetarians like me and about the city in general. Flight Expenses I planned and booked tickets well before four months of my journey. I chose INDIGO flights as I have traveled before (domestic) and also, I’m a happy INDIGO customer. Below are the expenses incurred for departure and arrival of my travel. Chennai to Singapore (17 April 2019) - INR 7,699 (Economy) Singapore to Chennai (28 April 2019) - INR 10,725 (Economy) These do not include any meal and I wasn’t choosy about my seat number either. If you need these, then your fare amount increases as per your liking. Things you need to carry during these flight travel are Your Passport (must) Your Visa to Singapore (must) Any of your Identity Card (not mandatory, but good to keep) Documents you need to get Singapore Visa are Your Passport Bank payslips for past 3 months Bank statement for past 90 days Passport of someone you know in Singapore V39A form from someone you know in Singapore Office ID card Minimum Bank Balance (INR 80,000) Passport Size Photo of You (Singapore specific) Places that I Visited at Singapore You can know a lot about all those stunning places and neighbourhoods at Singapore here. Nevertheless, I will list down all those breathtaking places that I visited at Singapore. Singapore Merlion Marina Bay Sands Gardens by the Bay Singapore Zoo Windsor Nature Park Lower Peirce Reservoir Sungei Buloh Wetland Reserve Orchard Road Takashimaya Harbourfront (VivoCity) Little India Mustafa Centre Sentosa Tanjong Beach Palawan Beach S.E.A Aquarium Maritime Experimental Museum Skyline Luge &amp;amp; Skyride Sentosa Merlion Each place listed above has different feel and ambience attached to it. To visit all these places, one can easily use Singapore’s MRT (Mass Rapid Transit) or LRT (Light Rail Transit). It is cheap to go from one location to another inside Singapore if you understand it’s MRT map shown below.</summary></entry><entry><title type="html">C Shell Scripting in 15 minutes</title><link href="http://localhost:4000/software/c-shell-scripting-in-15-minutes" rel="alternate" type="text/html" title="C Shell Scripting in 15 minutes" /><published>2019-04-14T00:00:00+05:30</published><updated>2019-04-14T00:00:00+05:30</updated><id>http://localhost:4000/software/c-shell-scripting-in-15-minutes</id><content type="html" xml:base="http://localhost:4000/software/c-shell-scripting-in-15-minutes">&lt;div id=&quot;awesomeSideNav&quot; class=&quot;sidenav&quot;&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Some of the android apps that helped me move within Singapore are&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=streetdirectory.mobile&amp;amp;hl=en&quot; target=&quot;_blank&quot;&gt;Singapore Map&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=originally.us.buses&amp;amp;hl=en&quot; target=&quot;_blank&quot;&gt;SG BusLeh: Award Winning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you are a nature lover like me, Singapore has got numerous breathtaking places where you can get fresh oxygen (if you love walking or running) as well as capture beautiful pictures.&lt;/p&gt;
+
+&lt;figure class=&quot;black-figcaption&quot;&gt;
+  &lt;img src=&quot;https://drive.google.com/uc?id=10E1G7xcLq64IehM57ajGumivJUYqEY5k&quot; /&gt;
+  &lt;figcaption&gt;Singapore - Flyer&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;black-figcaption&quot;&gt;
+  &lt;img src=&quot;https://drive.google.com/uc?id=15sAzInvyqi5hV0noFPOvopwpbN_d0wTL&quot; /&gt;
+  &lt;figcaption&gt;Singapore - Marina Bay Sands &amp;amp; Gardens by the Bay&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;black-figcaption&quot;&gt;
+  &lt;img src=&quot;https://drive.google.com/uc?id=1xDNWI0svCZbbBuAx2xNx6r0psmARuQkY&quot; /&gt;
+  &lt;figcaption&gt;Singapore - Sentosa Universal Studios&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;black-figcaption&quot;&gt;
+  &lt;img src=&quot;https://drive.google.com/uc?id=1katmWLNXsapHPukgFXox6zw_TDIVs03S&quot; /&gt;
+  &lt;figcaption&gt;Singapore - Sentosa S.E.A Aquarium&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;black-figcaption&quot;&gt;
+  &lt;img src=&quot;https://drive.google.com/uc?id=183X2iR92fusrudm_6ReOb93Q9YpSOKO2&quot; /&gt;
+  &lt;figcaption&gt;Singapore - Sungei Buloh Wetland Reserve&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;black-figcaption&quot;&gt;
+  &lt;img src=&quot;https://drive.google.com/uc?id=1zydehMd9arcX7mi-pw4qkiUB4oqucesc&quot; /&gt;
+  &lt;figcaption&gt;Singapore - Zoo&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;places-that-i-missed&quot;&gt;Places that I missed&lt;/h3&gt;
+
+&lt;p&gt;Due to time constraints, I was not able to visit some places at Singapore. But, I hope to see these places during my next visit.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hort Park&lt;/li&gt;
+  &lt;li&gt;Henderson Waves&lt;/li&gt;
+  &lt;li&gt;National University of Singapore&lt;/li&gt;
+  &lt;li&gt;Nanyang Technological University&lt;/li&gt;
+  &lt;li&gt;Chinatown&lt;/li&gt;
+  &lt;li&gt;Botanic Gardens&lt;/li&gt;
+  &lt;li&gt;Pulau Ubin&lt;/li&gt;
+  &lt;li&gt;Night Safari&lt;/li&gt;
+  &lt;li&gt;River Safari&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.tourmyindia.com/blog/top-must-visit-attractions-singapore/&quot; target=&quot;_blank&quot;&gt;Top 15 Must-Visit Attractions in Singapore 2019&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Gogul Ilango</name></author><category term="random" /><summary type="html">X Contents Flight Expenses Places that I visited Places that I missed Being an Indian, this was my first ever international travel to another country. I had never traveled alone so far. But, this 10-day trip to Singapore was an unforgettable experience in my life. This is my first ever travelogue in this website. So, please pardon me if you find my writing vague. In this travelogue, I will cover the overall expenses incurred for this 10-day trip, places I visited, places I missed, food that is available for vegetarians like me and about the city in general. Flight Expenses I planned and booked tickets well before four months of my journey. I chose INDIGO flights as I have traveled before (domestic) and also, I’m a happy INDIGO customer. Below are the expenses incurred for departure and arrival of my travel. Chennai to Singapore (17 April 2019) - INR 7,699 (Economy) Singapore to Chennai (28 April 2019) - INR 10,725 (Economy) These do not include any meal and I wasn’t choosy about my seat number either. If you need these, then your fare amount increases as per your liking. Things you need to carry during these flight travel are Your Passport (must) Your Visa to Singapore (must) Any of your Identity Card (not mandatory, but good to keep) Documents you need to get Singapore Visa are Your Passport Bank payslips for past 3 months Bank statement for past 90 days Passport of someone you know in Singapore V39A form from someone you know in Singapore Office ID card Minimum Bank Balance (INR 80,000) Passport Size Photo of You (Singapore specific) Places that I visited You can know a lot about all those stunning places and neighbourhoods at Singapore here. Nevertheless, I will list down all those breathtaking places that I visited at Singapore. Singapore Merlion Marina Bay Sands Gardens by the Bay Singapore Zoo Windsor Nature Park Lower Peirce Reservoir Sungei Buloh Wetland Reserve Orchard Road Takashimaya Harbourfront (VivoCity) Little India Mustafa Centre Sentosa Tanjong Beach Palawan Beach S.E.A Aquarium Maritime Experimental Museum Skyline Luge &amp;amp; Skyride Sentosa Merlion Each place listed above has different feel and ambience attached to it. To visit all these places, one can easily use Singapore’s MRT (Mass Rapid Transit) or LRT (Light Rail Transit). It is cheap to go from one location to another inside Singapore if you understand it’s MRT/LRT map shown below. Some of the android apps that helped me move within Singapore are Singapore Map SG BusLeh: Award Winning If you are a nature lover like me, Singapore has got numerous breathtaking places where you can get fresh oxygen (if you love walking or running) as well as capture beautiful pictures. Singapore - Flyer Singapore - Marina Bay Sands &amp;amp; Gardens by the Bay Singapore - Sentosa Universal Studios Singapore - Sentosa S.E.A Aquarium Singapore - Sungei Buloh Wetland Reserve Singapore - Zoo Places that I missed Due to time constraints, I was not able to visit some places at Singapore. But, I hope to see these places during my next visit. Hort Park Henderson Waves National University of Singapore Nanyang Technological University Chinatown Botanic Gardens Pulau Ubin Night Safari River Safari References Top 15 Must-Visit Attractions in Singapore 2019</summary></entry><entry><title type="html">C Shell Scripting in 15 minutes</title><link href="http://localhost:4000/software/c-shell-scripting-in-15-minutes" rel="alternate" type="text/html" title="C Shell Scripting in 15 minutes" /><published>2019-04-14T00:00:00+05:30</published><updated>2019-04-14T00:00:00+05:30</updated><id>http://localhost:4000/software/c-shell-scripting-in-15-minutes</id><content type="html" xml:base="http://localhost:4000/software/c-shell-scripting-in-15-minutes">&lt;div id=&quot;awesomeSideNav&quot; class=&quot;sidenav&quot;&gt;
     &lt;a href=&quot;javascript:void(0)&quot; class=&quot;closebtn&quot; onclick=&quot;closeSideNav()&quot;&gt;&amp;times;&lt;/a&gt;
     &lt;h3&gt;&lt;a href=&quot;#basics&quot;&gt;Basics&lt;/a&gt;&lt;/h3&gt;
     &lt;ul&gt;

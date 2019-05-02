@@ -8,6 +8,17 @@ author: Gogul Ilango
 permalink: random/my-first-international-trip-to-singapore
 ---
 
+<div class="sidebar_tracker" id="sidebar_tracker">
+  <button onclick="closeSidebar('sidebar_tracker_content')">X</button>
+  <p onclick="showSidebar('sidebar_tracker_content')">Contents</p>
+  <ul id="sidebar_tracker_content">
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_1" href="#flight-expenses">Flight Expenses</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_2" href="#places-that-i-visited">Places that I visited</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_3" href="#places-that-i-missed">Places that I missed</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_4" href="#references">References</a></li>
+  </ul>
+</div>
+
 Being an Indian, this was my first ever international travel to another country. I had never traveled alone so far. But, this 10-day trip to Singapore was an unforgettable experience in my life.
 
 > This is my first ever travelogue in this website. So, please pardon me if you find my writing vague.
@@ -40,7 +51,7 @@ Documents you need to get Singapore Visa are
 
 ---
 
-### Places that I Visited at Singapore
+<h3 id="places-that-i-visited">Places that I visited</h3>
 
 You can know a lot about all those stunning places and neighbourhoods at Singapore [here](https://www.visitsingapore.com/en_in/){:target="_blank"}. Nevertheless, I will list down all those breathtaking places that I visited at Singapore.
 
@@ -69,3 +80,60 @@ Each place listed above has different feel and ambience attached to it. To visit
 <figure>
   <img src="https://drive.google.com/uc?id=1SLdxEURv0BxHEl9PvMrIjDH5GvzZdUVI" />
 </figure>
+
+Some of the android apps that helped me move within Singapore are
+* [Singapore Map](https://play.google.com/store/apps/details?id=streetdirectory.mobile&hl=en){:target="_blank"}
+* [SG BusLeh: Award Winning](https://play.google.com/store/apps/details?id=originally.us.buses&hl=en){:target="_blank"}
+
+If you are a nature lover like me, Singapore has got numerous breathtaking places where you can get fresh oxygen (if you love walking or running) as well as capture beautiful pictures.
+
+<figure class="black-figcaption">
+  <img src="https://drive.google.com/uc?id=10E1G7xcLq64IehM57ajGumivJUYqEY5k" />
+  <figcaption>Singapore - Flyer</figcaption>
+</figure>
+
+<figure class="black-figcaption">
+  <img src="https://drive.google.com/uc?id=15sAzInvyqi5hV0noFPOvopwpbN_d0wTL" />
+  <figcaption>Singapore - Marina Bay Sands & Gardens by the Bay</figcaption>
+</figure>
+
+<figure class="black-figcaption">
+  <img src="https://drive.google.com/uc?id=1xDNWI0svCZbbBuAx2xNx6r0psmARuQkY" />
+  <figcaption>Singapore - Sentosa Universal Studios</figcaption>
+</figure>
+
+<figure class="black-figcaption">
+  <img src="https://drive.google.com/uc?id=1katmWLNXsapHPukgFXox6zw_TDIVs03S" />
+  <figcaption>Singapore - Sentosa S.E.A Aquarium</figcaption>
+</figure>
+
+<figure class="black-figcaption">
+  <img src="https://drive.google.com/uc?id=183X2iR92fusrudm_6ReOb93Q9YpSOKO2" />
+  <figcaption>Singapore - Sungei Buloh Wetland Reserve</figcaption>
+</figure>
+
+<figure class="black-figcaption">
+  <img src="https://drive.google.com/uc?id=1zydehMd9arcX7mi-pw4qkiUB4oqucesc" />
+  <figcaption>Singapore - Zoo</figcaption>
+</figure>
+
+---
+
+<h3 id="places-that-i-missed">Places that I missed</h3>
+
+Due to time constraints, I was not able to visit some places at Singapore. But, I hope to see these places during my next visit.
+* Hort Park
+* Henderson Waves
+* National University of Singapore
+* Nanyang Technological University
+* Chinatown
+* Botanic Gardens
+* Pulau Ubin
+* Night Safari
+* River Safari
+
+---
+
+<h3 id="references">References</h3>
+
+* [Top 15 Must-Visit Attractions in Singapore 2019](https://www.tourmyindia.com/blog/top-must-visit-attractions-singapore/){:target="_blank"}
