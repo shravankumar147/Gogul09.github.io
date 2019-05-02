@@ -6,6 +6,7 @@ title: My First International Trip to Singapore
 description: Experience fresh oxygen, green trees, forests with woods, animals, birds, colorful lights at night and much more!
 author: Gogul Ilango
 permalink: random/my-first-international-trip-to-singapore
+image: https://drive.google.com/uc?id=15sAzInvyqi5hV0noFPOvopwpbN_d0wTL
 ---
 
 <div class="sidebar_tracker" id="sidebar_tracker">
@@ -15,7 +16,8 @@ permalink: random/my-first-international-trip-to-singapore
     <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_1" href="#flight-expenses">Flight Expenses</a></li>
     <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_2" href="#places-that-i-visited">Places that I visited</a></li>
     <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_3" href="#places-that-i-missed">Places that I missed</a></li>
-    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_4" href="#references">References</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_4" href="#my-photography-toolkit">My Photography Toolkit</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_5" href="#references">References</a></li>
   </ul>
 </div>
 
@@ -23,14 +25,14 @@ Being an Indian, this was my first ever international travel to another country.
 
 > This is my first ever travelogue in this website. So, please pardon me if you find my writing vague.
 
-In this travelogue, I will cover the overall expenses incurred for this 10-day trip, places I visited, places I missed, food that is available for vegetarians like me and about the city in general.
+In this travelogue, I will discuss about the overall expenses incurred for this 10-day trip, places I visited, places I missed, my photography toolkit, food that is available for vegetarians like me and about the city in general.
 
 ---
 
 ### Flight Expenses
 I planned and booked tickets well before four months of my journey. I chose [INDIGO](https://www.goindigo.in/){:target="_blank"} flights as I have traveled before (domestic) and also, I'm a happy INDIGO customer. Below are the expenses incurred for departure and arrival of my travel.
-* Chennai to Singapore (17 April 2019) - <span class="coding">INR 7,699</span> (Economy)
-* Singapore to Chennai (28 April 2019) - <span class="coding">INR 10,725</span> (Economy)
+* Chennai to Singapore (17 April 2019) - INR 7,699 (Economy)
+* Singapore to Chennai (28 April 2019) - INR 10,725 (Economy)
 
 These do not include any meal and I wasn't choosy about my seat number either. If you need these, then your fare amount increases as per your liking.
 
@@ -46,7 +48,7 @@ Documents you need to get Singapore Visa are
 * Passport of someone you know in Singapore
 * V39A form from someone you know in Singapore
 * Office ID card
-* Minimum Bank Balance (<span class="coding">INR 80,000</span>)
+* Minimum Bank Balance (INR 80,000)
 * Passport Size Photo of You (Singapore specific)
 
 ---
@@ -88,13 +90,13 @@ Some of the android apps that helped me move within Singapore are
 If you are a nature lover like me, Singapore has got numerous breathtaking places where you can get fresh oxygen (if you love walking or running) as well as capture beautiful pictures.
 
 <figure class="black-figcaption">
-  <img src="https://drive.google.com/uc?id=10E1G7xcLq64IehM57ajGumivJUYqEY5k" />
-  <figcaption>Singapore - Flyer</figcaption>
+  <img src="https://drive.google.com/uc?id=15sAzInvyqi5hV0noFPOvopwpbN_d0wTL" />
+  <figcaption>Singapore - Marina Bay Sands & Gardens by the Bay</figcaption>
 </figure>
 
 <figure class="black-figcaption">
-  <img src="https://drive.google.com/uc?id=15sAzInvyqi5hV0noFPOvopwpbN_d0wTL" />
-  <figcaption>Singapore - Marina Bay Sands & Gardens by the Bay</figcaption>
+  <img src="https://drive.google.com/uc?id=10E1G7xcLq64IehM57ajGumivJUYqEY5k" />
+  <figcaption>Singapore - Flyer</figcaption>
 </figure>
 
 <figure class="black-figcaption">
@@ -131,6 +133,23 @@ Due to time constraints, I was not able to visit some places at Singapore. But, 
 * Pulau Ubin
 * Night Safari
 * River Safari
+
+---
+
+<h3 id="my-photography-toolkit">My Photography Toolkit</h3>
+
+If you love photography like me, Singapore has got numerous photographic locations in this planet. It is rich in dense forests with neat trails at day and rich in beautiful lights and colors shining throughout the city at night. My photography toolkit comprises the below stuff.
+* Canon EOS 700D
+* Canon EF-S55-250mm f/4-5.6 IS STM lens
+* Canon EF50mm F/1.8 STM lens
+* Canon EF-S 18–55mm lens
+
+If you are planning to visit Singapore Zoo or Night Safari or River Safari, make sure you carry a telephoto zoom lens such as [Canon EF-S55-250mm f/4-5.6 IS STM lens](https://www.amazon.in/EF-S-55-250mm-f-4-5-6-STM/dp/B00EP71ETU){:target="_blank"} with you.
+
+<figure class="black-figcaption">
+  <img src="https://drive.google.com/uc?id=1mnGI4RzzzQHeaMaSlOh4Ch9LzCqGv65K" />
+  <figcaption>Singapore - Near Durian Building</figcaption>
+</figure>
 
 ---
 
