@@ -57,7 +57,11 @@ Documents you need to get Singapore Visa are
 
 <h3 id="experience-singapore">Experience Singapore</h3>
 
-I literally had no words to express when I looked out the small rectangular window in my flight at 4.30 AM when I reached Singapore. If you travel in a flight during night to Singapore, you will be seeing a land that has colorful stars fallen from the sky which reflects the comely architecture of this country. [Changi International Airport](https://www.jewelchangiairport.com/){:target="_blank"} which welcomes you is a stunning architectural marvel where you will find numerous shopping centers, dinings, the world famous [Jewel](https://www.youtube.com/watch?v=4YcrLLEtdkc){:target="_blank"} and much more that reflects the country's modern as well as natural beauty. I was fortunate enough to walk around some beautiful natural trails around the country where I experienced a divine feeling, fresh oxygen and pure drinking water that comes out of the taps. In contrast to the lush gardens, forests and woods, Singapore has lots of impressive shopping malls, astoundingly amazing sky-kissing buildings and many popular tourist places that will make you think that you have landed on a futuristic world. 
+I literally had no words to express when I looked out the small rectangular window in my flight at 4.30 AM when I reached Singapore. If you travel in a flight during night to Singapore, you will be seeing a land that has colorful stars fallen from the sky which reflects the comely architecture of this country. 
+
+[Changi International Airport](https://www.jewelchangiairport.com/){:target="_blank"} which welcomes you is a stunning architectural marvel where you will find numerous shopping centers, dinings, the world famous [Jewel](https://www.youtube.com/watch?v=4YcrLLEtdkc){:target="_blank"} and much more that reflects the country's modern as well as natural beauty. 
+
+I was fortunate enough to walk around some beautiful natural trails around the country where I experienced a divine feeling, fresh oxygen and pure drinking water that comes out of the taps. In contrast to the lush gardens, forests and woods, Singapore has lots of impressive shopping malls, astoundingly amazing sky-kissing buildings and many popular tourist places that will make you think that you have landed on a futuristic world. 
 
 ---
 
