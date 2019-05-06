@@ -3,18 +3,18 @@ layout: post
 category: random
 class: Entertainment
 title: My Awesome Movies List
-description: I love watching/making movies. And I love lists. So, I constantly update my movies list here whenever I watch another cool movie!
+description: I love watching/making movies. And I love lists. So, I constantly update this movies list whenever I watch another cool movie in Hollywood!
 author: Gogul Ilango
 permalink: random/my-awesome-movies-list
 ---
 
-Here, I list down all those amazing movies that I have watched and yet to watch. Hope this list inspires someone somewhere! You're cute 😍
+Here, I list down all those amazing movies that I have watched and yet to watch in Hollywood. My favorite [movie genres](https://en.wikipedia.org/wiki/List_of_genres){:target="_blank"} are action, adventure, comedy, mystery, romance, science fiction and thriller.
 
-<h3>Hollywood - MARVEL</h3>
+<h3>MCU</h3>
 <ul class="movie-list">
   <li><input type="checkbox" disabled="disabled" checked="checked">Captain America - The First Avenger <span>2011</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Iron Man <span>2008</span></li>
-  <li><input type="checkbox" disabled="disabled">The Incredible Hulk <span>2008</span></li>
+  <li><input type="checkbox" disabled="disabled" checked="checked">The Incredible Hulk <span>2008</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Iron Man 2 <span>2010</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Thor <span>2011</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">The Avengers <span>2012</span></li>
@@ -38,7 +38,7 @@ Here, I list down all those amazing movies that I have watched and yet to watch.
 
 <hr>
 
-<h3>Hollywood - Others</h3>
+<h3>Others</h3>
 <ul class="movie-list">
   <li><input type="checkbox" disabled="disabled" checked="checked">A Brilliant Young Mind <span>2014</span></li>
   <li><input type="checkbox" disabled="disabled" checked="checked">Anaconda <span>1997</span></li>
