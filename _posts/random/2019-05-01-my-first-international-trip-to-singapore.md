@@ -14,18 +14,19 @@ image: https://drive.google.com/uc?id=15sAzInvyqi5hV0noFPOvopwpbN_d0wTL
   <p onclick="showSidebar('sidebar_tracker_content')">Contents</p>
   <ul id="sidebar_tracker_content">
     <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_1" href="#flight-expenses">Flight Expenses</a></li>
-    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_2" href="#places-that-i-visited">Places that I visited</a></li>
-    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_3" href="#places-that-i-missed">Places that I missed</a></li>
-    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_4" href="#my-photography-toolkit">My Photography Toolkit</a></li>
-    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_5" href="#references">References</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_2" href="#experience-singapore">Experience Singapore</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_3" href="#places-that-i-visited">Places that I visited</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_4" href="#places-that-i-missed">Places that I missed</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_5" href="#my-photography-toolkit">My Photography Toolkit</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_6" href="#references">References</a></li>
   </ul>
 </div>
 
-Being an Indian, this was my first ever international travel to another country. I had never traveled alone so far. But, this 10-day trip to Singapore was an unforgettable experience in my life.
+Being an Indian, this was my first ever international travel to another country. I never traveled alone so far in my life. But, this 10-day trip to Singapore was an unforgettable experience in my life.
 
-> This is my first ever travelogue in this website. So, please pardon me if you find my writing vague.
+> This is my first ever travelogue in this website. So, please pardon me if you find my writing vague. You're cute!
 
-In this travelogue, I will discuss about the overall expenses incurred for this 10-day trip, places I visited, places I missed, my photography toolkit, food that is available for vegetarians like me and about the city in general.
+In this travelogue, I will discuss about the overall expenses incurred for this 10-day trip, places I visited, places I missed, my photography toolkit and about the amazing Singapore city in general.
 
 ---
 
@@ -40,6 +41,7 @@ Things you need to carry during these flight travel are
 * Your Passport (must)
 * Your Visa to Singapore (must)
 * Any of your Identity Card (not mandatory, but good to keep)
+* A black pen (as you will be filling immigration form at Singapore; hence, good to keep a pen with you)
 
 Documents you need to get Singapore Visa are
 * Your Passport
@@ -53,6 +55,16 @@ Documents you need to get Singapore Visa are
 
 ---
 
+<h3 id="experience-singapore">Experience Singapore</h3>
+
+I literally had no words to express when I looked out the small rectangular window in my flight at 4.30 AM when I reached Singapore. If you travel in a flight during night to Singapore, you will be seeing a land that has colorful stars fallen from the sky which reflects the comely architecture of this country. 
+
+[Changi International Airport](https://www.jewelchangiairport.com/){:target="_blank"} which welcomes you is a stunning architectural marvel where you will find numerous shopping centers, dinings, the world famous [Jewel](https://www.youtube.com/watch?v=4YcrLLEtdkc){:target="_blank"} and much more that reflects the country's modern as well as natural beauty. 
+
+I was fortunate enough to walk around some beautiful natural trails around the country where I experienced a divine feeling, fresh oxygen and pure drinking water that comes out of the taps. In contrast to the lush gardens, forests and woods, Singapore has lots of impressive shopping malls, astoundingly amazing sky-kissing buildings and many popular tourist places that will make you think that you have landed on a futuristic world. 
+
+---
+
 <h3 id="places-that-i-visited">Places that I visited</h3>
 
 You can know a lot about all those stunning places and neighbourhoods at Singapore [here](https://www.visitsingapore.com/en_in/){:target="_blank"}. Nevertheless, I will list down all those breathtaking places that I visited at Singapore.
@@ -62,6 +74,7 @@ You can know a lot about all those stunning places and neighbourhoods at Singapo
 * Gardens by the Bay
 * Singapore Zoo
 * Windsor Nature Park
+* Woodlands Waterfront
 * Lower Peirce Reservoir
 * Sungei Buloh Wetland Reserve
 * Orchard Road
@@ -69,6 +82,7 @@ You can know a lot about all those stunning places and neighbourhoods at Singapo
 * Harbourfront (VivoCity)
 * Little India
 * Mustafa Centre
+* Jurong Point Boon Lay
 * Sentosa 
   * Tanjong Beach
   * Palawan Beach
@@ -77,17 +91,24 @@ You can know a lot about all those stunning places and neighbourhoods at Singapo
   * Skyline Luge & Skyride
   * Sentosa Merlion
 
-Each place listed above has different feel and ambience attached to it. To visit all these places, one can easily use Singapore's [MRT](https://en.wikipedia.org/wiki/Mass_Rapid_Transit_(Singapore)){:target="_blank"} (Mass Rapid Transit) or [LRT](https://en.wikipedia.org/wiki/Light_Rail_Transit_(Singapore)){:target="_blank"} (Light Rail Transit). It is cheap to go from one location to another inside Singapore if you understand it's MRT/LRT map shown below.
+Each place listed above has different feel and ambience attached to it. To visit all these places, one can easily use Singapore's [MRT](https://en.wikipedia.org/wiki/Mass_Rapid_Transit_(Singapore)){:target="_blank"} (Mass Rapid Transit) or [LRT](https://en.wikipedia.org/wiki/Light_Rail_Transit_(Singapore)){:target="_blank"} (Light Rail Transit). It is cheap to go from one location to another inside Singapore if you understand it's MRT/LRT map shown below. Only the first ride in an MRT/LRT will be anxious. After your first ride, you will understand how simple it is to move around the city using this cool commute system.
 
 <figure>
   <img src="https://drive.google.com/uc?id=1SLdxEURv0BxHEl9PvMrIjDH5GvzZdUVI" />
 </figure>
 
-Some of the android apps that helped me move within Singapore are
+Some of the android apps that helped me move around Singapore are
 * [Singapore Map](https://play.google.com/store/apps/details?id=streetdirectory.mobile&hl=en){:target="_blank"}
 * [SG BusLeh: Award Winning](https://play.google.com/store/apps/details?id=originally.us.buses&hl=en){:target="_blank"}
 
-If you are a nature lover like me, Singapore has got numerous breathtaking places where you can get fresh oxygen (if you love walking or running) as well as capture beautiful pictures.
+If you are a nature lover (peace lover) like me, Singapore has got numerous breathtaking trails where you can get fresh oxygen (if you love walking or running) as well as capture beautiful pictures. You will fall in love again and again with nature's beauty while walking along those amazing natural trails. Some of the natural trails that I walked are 
+* Windsor Nature Park
+* Sungei Buloh Wetland Reserve
+* Lower Peirce Reservoir
+* Singapore Zoo
+* Woodlands Waterfront
+
+Some of the clicks that I have captured at Singapore are shown below. You can also visit my [photography](https://gogul09.github.io/photography/){:target="_blank"} page to see more such clicks of mine.
 
 <figure class="black-figcaption">
   <img src="https://drive.google.com/uc?id=15sAzInvyqi5hV0noFPOvopwpbN_d0wTL" />
@@ -133,12 +154,20 @@ Due to time constraints, I was not able to visit some places at Singapore. But, 
 * Pulau Ubin
 * Night Safari
 * River Safari
+* Universal Studios
+* Buddha Tooth Relic Temple
+* Clarke Quay
+* Jurong Bird Park
+* Kusu Island
+* F1 Track
+* Butterfly Park And Insect Kingdom
+* Siloso Beach
 
 ---
 
 <h3 id="my-photography-toolkit">My Photography Toolkit</h3>
 
-If you love photography like me, Singapore has got numerous photographic locations in this planet. It is rich in dense forests with neat trails at day and rich in beautiful lights and colors shining throughout the city at night. My photography toolkit comprises the below stuff.
+If you love photography like me, Singapore has got numerous photographic locations in this planet. It is rich in dense forests with neat trails at day and rich in beautiful lights and colors shining throughout the country at night. My photography toolkit comprises the below stuff.
 * Canon EOS 700D
 * Canon EF-S55-250mm f/4-5.6 IS STM lens
 * Canon EF50mm F/1.8 STM lens
@@ -156,3 +185,6 @@ If you are planning to visit Singapore Zoo or Night Safari or River Safari, make
 <h3 id="references">References</h3>
 
 * [Top 15 Must-Visit Attractions in Singapore 2019](https://www.tourmyindia.com/blog/top-must-visit-attractions-singapore/){:target="_blank"}
+* [18 Best Things to Do in Singapore](http://www.singapore-guide.com/attractions/10mustsee.htm){:target="_blank"}
+* [What are the must-see places in Singapore?](https://www.quora.com/What-are-the-must-see-places-in-Singapore){:target="_blank"}
+* [47 Remarkable Places To Visit In Singapore In 2019 Where A Wandering Heart Finds Peace](https://traveltriangle.com/blog/singapore-tourist-attractions/){:target="_blank"}
