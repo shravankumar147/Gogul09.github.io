@@ -3,7 +3,7 @@ layout: post-doc
 category: software
 class: Programming Languages
 title: Python Learning Notes
-description: Understand the syntax, modules and how to's of Python programming language which is heavily used in today's tech industry.
+description: Understand the syntax, modules and how to's of Python programming language which is heavily used in today's technology industry.
 author: Gogul Ilango
 permalink: /software/python-learning-notes
 image: https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk
