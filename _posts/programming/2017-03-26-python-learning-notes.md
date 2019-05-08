@@ -24,13 +24,15 @@ image: https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk
         <li><a href="#lists">List</a></li>
         <li><a href="#tuples">Tuple</a></li>
         <li><a href="#dictionaries">Dictionary</a></li>
-        <li><a href="#set">Set</a></li>
         <li><a href="#functions_1">Functions</a></li>
         <li><a href="#regular-expressions">Regular Expressions</a></li>
     </ul>
     <h3><a href="#intermediate">Intermediate</a></h3>
     <ul>
-        <li><a href="#comprehensions">Comprehensions</a></li>
+        <li><a href="#list-comprehensions">List Comprehensions</a></li>
+        <li><a href="#dict-comprehensions">Dict Comprehensions</a></li>
+        <li><a href="#set-comprehensions">Set Comprehensions</a></li>
+        <li><a href="#generator-expressions">Generator Expressions</a></li>
     </ul>
     <h3><a href="#modules">Modules</a></h3>
     <ul>
@@ -508,7 +510,7 @@ print searches.group(2) # prints datacamp.com
 
 <h3 class="centered-heading" id="intermediate"><span>Intermediate</span></h3>
 
-<h3 class="code-head" id="comprehensions">Comprehensions<span>code</span></h3>
+<h3 class="code-head" id="list-comprehensions">List Comprehensions<span>code</span></h3>
 
 ```python
 nums = [1, 2, 3, 4, 5, 6, 7]
@@ -560,6 +562,103 @@ print(l) # prints '[('a', 0), ('a', 1), ('b', 0), ('b', 1)]'
 # same thing using list comp
 l = [(letter, num) for letter in "ab" for num in range(2)]
 print(l) # prints '[('a', 0), ('a', 1), ('b', 0), ('b', 1)]'
+```
+
+<h3 class="code-head" id="dict-comprehensions">Dict Comprehensions<span>code</span></h3>
+
+```python
+names = ["Robert Downey Jr", "Chris Evans", "Chris Hemsworth", "Mark Ruffalo"]
+heros = ["Ironman", "Captain America", "Thor", "Hulk"]
+
+# traditional dictionary using zip()
+d = {}
+for name, hero in zip(names, heros):
+    d[name] = hero
+for name in d:
+    print(name + " - " + d[name])
+
+'''
+prints 
+Mark Ruffalo - Hulk
+Chris Hemsworth - Thor
+Robert Downey Jr - Ironman
+Chris Evans - Captain America
+'''
+
+# meet dict comprehension
+d = {name: hero for name, hero in zip(names, heros)}
+for name in d:
+    print(name + " - " + d[name])
+
+'''
+prints 
+Mark Ruffalo - Hulk
+Chris Hemsworth - Thor
+Robert Downey Jr - Ironman
+Chris Evans - Captain America
+'''
+
+# dict comprehension with condition
+d = {name: hero for name, hero in zip(names, heros) if name != "Mark Ruffalo"}
+for name in d:
+    print(name + " - " + d[name])
+
+'''
+prints 
+Chris Hemsworth - Thor
+Robert Downey Jr - Ironman
+Chris Evans - Captain America
+'''
+```
+
+<h3 class="code-head" id="set-comprehensions">Set Comprehensions<span>code</span></h3>
+
+```python
+nums = [1, 1, 2, 1, 3, 4, 4, 5, 5, 6, 7, 8, 8, 9]
+
+# traditional set (list of unique elements)
+s = set()
+for n in nums:
+    s.add(n)
+print(s) # prints {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+# meet set comprehension
+s = {n for n in nums}
+print(s) # prints {1, 2, 3, 4, 5, 6, 7, 8, 9}
+```
+
+<h3 class="code-head" id="generator-expressions">Generator Expressions<span>code</span></h3>
+
+```python
+# I need to yield 'n*n' for each 'n' in nums
+nums = [1,2,3,4,5,6,7,8,9]
+
+# traditional generator function
+def gen_func(nums):
+    for n in nums:
+        yield n*n
+
+m = gen_func(nums)
+for i in m:
+    print(i)
+
+# generator expression
+m = (n*n for n in nums)
+for i in m:
+    print(i)
+
+'''
+both prints 
+1 
+4 
+9 
+16
+25
+36
+49
+64
+81
+'''
 ```
 
 

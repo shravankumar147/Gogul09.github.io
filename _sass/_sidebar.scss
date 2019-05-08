@@ -45,14 +45,14 @@
 	}
 	button {
 		border: none;
-		position: absolute;
-		top: 28px;
-		right: 10px;
-		font-size: 14px;
-		background-color: transparent;
-		border-radius: 5px;
-		padding: 5px 10px;
-		cursor: pointer;
+	    position: absolute;
+	    top: 32px;
+	    right: 10px;
+	    font-size: 13px;
+	    background-color: transparent;
+	    border-radius: 5px;
+	    padding: 5px 10px;
+	    cursor: pointer;
 		@include mobile {
 			top: 20px;
 		}
