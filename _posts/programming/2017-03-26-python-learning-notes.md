@@ -28,6 +28,10 @@ image: https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk
         <li><a href="#functions_1">Functions</a></li>
         <li><a href="#regular-expressions">Regular Expressions</a></li>
     </ul>
+    <h3><a href="#intermediate">Intermediate</a></h3>
+    <ul>
+        <li><a href="#comprehensions">Comprehensions</a></li>
+    </ul>
     <h3><a href="#modules">Modules</a></h3>
     <ul>
         <li><a href="#os-module">OS module</a></li>
@@ -499,6 +503,65 @@ print searches.group()  # prints support@datacamp.com
 print searches.group(1) # prints support
 print searches.group(2) # prints datacamp.com
 ```
+
+<!-- --------------------------------------------------------------------- -->
+
+<h3 class="centered-heading" id="intermediate"><span>Intermediate</span></h3>
+
+<h3 class="code-head" id="comprehensions">Comprehensions<span>code</span></h3>
+
+```python
+nums = [1, 2, 3, 4, 5, 6, 7]
+
+# traditional for loop
+l = []
+for n in nums:
+    l.append(n)
+print(l) # prints '[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]'
+
+# meet list comprehension
+l = [n for n in nums]
+print(l) # prints '[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]'
+
+# get square of each number
+l = [n*n for n in nums]
+print(l) # prints '[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]'
+
+# same thing achieved using 'map' + 'lambda'
+# 'map' means running everything in the list for a certain function
+# 'lambda' means an anonymous function
+l = map(lambda n: n*n, nums)
+for x in l:
+    print(x) 
+
+# prints 
+# 1
+# 4
+# 9
+# 16
+# 25
+# 36
+# 49
+# 64
+# 81
+# 100
+
+# using 'if' in list comprehension
+l = [n for n in nums if n%2 == 0]
+print(l) # prints '[2, 4, 6, 8, 10]'
+
+# returning tuples with two for loops in list comprehension
+l = []
+for letter in "ab":
+    for num in range(2):
+        l.append((letter, num))
+print(l) # prints '[('a', 0), ('a', 1), ('b', 0), ('b', 1)]'
+
+# same thing using list comp
+l = [(letter, num) for letter in "ab" for num in range(2)]
+print(l) # prints '[('a', 0), ('a', 1), ('b', 0), ('b', 1)]'
+```
+
 
 <!-- --------------------------------------------------------------------- -->
 
