@@ -1381,14 +1381,23 @@ figcaption {
   border-left: 3px solid #e18af1 !important;
 }
 
+.note-update ul li a {
+    color: #d3141d !important;
+}
+
+.note-update ul li {
+    color: black;
+}
+
 .note {
-  background-color: #d3141d;
+  background-color: #d1f6fc;
   padding: 20px;
   border-radius: 3px;
   margin-bottom: 1.7em !important;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
-  border-left: 10px solid #a01219;
+  border-left: 10px solid #9be6f39e !important;
+  border: 1px solid #a7d9e1;
   p {
     margin: 0px !important;
     color: white !important;
