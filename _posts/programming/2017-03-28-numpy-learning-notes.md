@@ -1,11 +1,11 @@
 ---
 layout: post
 category: software
-class: Programming
-title: NumPy in 15 minutes
-description: Learn the syntax and how to's of NumPy python package which is highly used for scientific computing and data manipulation.
+class: Programming Languages
+title: NumPy Learning Notes
+description: Understand the syntax and how to's of NumPy python package which is highly used for scientific computing and data manipulation.
 author: Gogul Ilango
-permalink: /software/numpy-in-15-minutes
+permalink: /software/numpy-learning-notes
 image: https://drive.google.com/uc?id=1kpEvCKb6ETgknBQzIqPu3ihThz_FZ9uK
 ---
 

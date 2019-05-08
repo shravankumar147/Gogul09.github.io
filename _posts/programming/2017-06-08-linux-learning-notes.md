@@ -2,10 +2,10 @@
 layout: post
 category: software
 class: Programming Languages
-title: Linux in 15 minutes
-description: Learn the syntax, commands and how to's of Linux which is highly used in tech companies.
+title: Linux Learning Notes
+description: Understand the syntax, commands and how to's of Linux which is highly used in tech companies.
 author: Gogul Ilango
-permalink: /software/linux-in-15-minutes
+permalink: /software/linux-learning-notes
 image: https://drive.google.com/uc?id=1Oaa17RG4fx6PmOIHbijQLMkGDsYuplW2
 ---
 

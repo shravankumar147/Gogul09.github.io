@@ -1,11 +1,11 @@
 ---
 layout: post
-category: hardware
+category: software
 class: Programming Languages
-title: JavaScript in 15 minutes
-description: Learn the syntax and how to's of JavaScript programming language which is highly used in Front-end Web Development and Machine Learning.
+title: JavaScript Learning Notes
+description: Understand the syntax and how to's of JavaScript programming language which is highly used in Front-end Web Development and Machine Learning.
 author: Gogul Ilango
-permalink: /software/javascript-in-15-minutes
+permalink: /software/javascript-learning-notes
 image: https://drive.google.com/uc?id=1sL3r7BTCF3V2IHj5ftlB1cfX9MTZMoJX
 ---
 

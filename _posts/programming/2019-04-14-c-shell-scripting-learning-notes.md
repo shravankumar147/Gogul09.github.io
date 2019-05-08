@@ -2,10 +2,10 @@
 layout: post-doc
 category: software
 class: Programming Languages
-title: C Shell Scripting in 15 minutes
+title: C Shell Scripting Learning Notes
 description: Learn the syntax and how to's of C Shell Scripting which is used to automate repeated manual tasks in most of the industries.
 author: Gogul Ilango
-permalink: /software/c-shell-scripting-in-15-minutes
+permalink: /software/c-shell-scripting-learning-notes
 ---
 
 <div id="awesomeSideNav" class="sidenav">

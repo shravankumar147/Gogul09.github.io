@@ -27,10 +27,10 @@ image: https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk
         <li><a href="#dictionaries">Dictionary</a></li>
         <li><a href="#exception-handling">Exception Handling</a></li>
         <li><a href="#functions_1">Functions</a></li>
-        <li><a href="#regular-expressions">Regular Expressions</a></li>
     </ul>
     <h3><a href="#intermediate">Intermediate</a></h3>
     <ul>
+        <li><a href="#lambda">Lambda</a></li>
         <li><a href="#list-comprehensions">List Comprehensions</a></li>
         <li><a href="#dict-comprehensions">Dict Comprehensions</a></li>
         <li><a href="#set-comprehensions">Set Comprehensions</a></li>
@@ -38,7 +38,8 @@ image: https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk
     </ul>
     <h3><a href="#modules">Modules</a></h3>
     <ul>
-        <li><a href="#os-module">OS module</a></li>
+        <li><a href="#re-module">re module</a></li>
+        <li><a href="#os-module">os module</a></li>
     </ul>
     <h3><a href="#oop">OOP</a></h3>
     <ul>
@@ -462,162 +463,25 @@ def squared(x):
 print squared(2)   # prints "4"
 ```
 
-<div class="code-head" id="regular-expressions">
-    <span title="click to see re rules" id="btn-re-python" onclick="boxHandler(this.id)">re rules    
-    </span>
-    <div class="rule-box" id="box-re-python">
-        <p><b>Identifiers</b></p>
-        <div style="text-align: center; width: 100%">
-            <table>
-                <tr>
-                    <td>\d</td>
-                    <td>any number</td>
-                </tr>
-                <tr>
-                    <td>\D</td>
-                    <td>anything but a number</td>
-                </tr>
-                <tr>
-                    <td>\s</td>
-                    <td>space</td>
-                </tr>
-                <tr>
-                    <td>\S</td>
-                    <td>anything but a space</td>
-                </tr>
-                <tr>
-                    <td>\w</td>
-                    <td>any character</td>
-                </tr>
-                <tr>
-                    <td>\W</td>
-                    <td>anything but a character</td>
-                </tr>
-                <tr>
-                    <td>.</td>
-                    <td>any character, except for a newline</td>
-                </tr>
-                <tr>
-                    <td>\b</td>
-                    <td>the whitespace around words</td>
-                </tr>
-                <tr>
-                    <td>\.</td>
-                    <td>a period</td>
-                </tr>
-            </table>
-        </div>
-        <p><b>Modifiers</b></p>
-        <div style="text-align: center; width: 100%">
-            <table>
-                <tr>
-                    <td>{1,3}</td>
-                    <td>expecting 1-3 digits ~ \d{1,3}</td>
-                </tr>
-                <tr>
-                    <td>+</td>
-                    <td>match 1 or more</td>
-                </tr>
-                <tr>
-                    <td>?</td>
-                    <td>match 0 or 1</td>
-                </tr>
-                <tr>
-                    <td>*</td>
-                    <td>match 0 or more</td>
-                </tr>
-                <tr>
-                    <td>$</td>
-                    <td>match the end of a string</td>
-                </tr>
-                <tr>
-                    <td>^</td>
-                    <td>match the start of a string</td>
-                </tr>
-                <tr>
-                    <td>|</td>
-                    <td>either or (\d{1-3} | \w{5-6})</td>
-                </tr>
-                <tr>
-                    <td>[]</td>
-                    <td>range or variance</td>
-                </tr>
-                <tr>
-                    <td>{x}</td>
-                    <td>expecting "x" amount (of digits)</td>
-                </tr>
-            </table>
-        </div>
-        <p><b>White Space Characters</b></p>
-        <div style="text-align: center; width: 100%">
-            <table>
-                <tr>
-                    <td>\n</td>
-                    <td>new line</td>
-                </tr>
-                <tr>
-                    <td>\s</td>
-                    <td>space</td>
-                </tr>
-                <tr>
-                    <td>\t</td>
-                    <td>tab</td>
-                </tr>
-                <tr>
-                    <td>\e</td>
-                    <td>escape</td>
-                </tr>
-                <tr>
-                    <td>\f</td>
-                    <td>form feed</td>
-                </tr>
-                <tr>
-                    <td>\r</td>
-                    <td>return</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-Regular Expressions</div>
-
-
-```python
-import re 
-
-# multi-line string example
-str = '''
-Rahul is 19 years old, and Ashok is 24 years old.
-Manoj is 65, and his grandfather, Naveen, is 77.
-'''
-
-# findall()
-ages  = re.findall(r'\d{1,3}', str)
-names = re.findall(r'[A-Z][a-z]*', str) 
-
-print ages  # prints ['Rahul', 'Ashok', 'Manoj', 'Naveen']
-print names # prints ['19', '24', '65', '77']
-
-# split()
-str = "This is an example string"
-splitted = re.split(r'\s*', str)
-print splitted # prints ['This', 'is', 'an', 'example', 'string']
-
-# match()
-str = "Dogs are braver than Cats"
-matches = re.match(r'[A-Z][a-z]*', str)
-print matches.group() # prints "Dogs"
-
-# search()
-str = "For data science help, reach support@datacamp.com"
-searches = re.search(r'([\w\.-]+)@([\w\.-]+)', str)
-print searches.group()  # prints support@datacamp.com
-print searches.group(1) # prints support
-print searches.group(2) # prints datacamp.com
-```
-
 <!-- --------------------------------------------------------------------- -->
 
 <h3 class="centered-heading" id="intermediate"><span>Intermediate</span></h3>
+
+<h3 class="code-head" id="lambda">Lambda<span>code</span></h3>
+
+```python
+# a lambda function = a small anonymous function
+# takes any number of arguments, but can have only one expression
+# lambda arguments : expression
+
+# lambda function with one argument
+add_hundred = lambda x : x + 100
+print(add_hundred(5)) # prints 105
+
+# lambda function with multiple arguments
+multiply = lambda a, b, c : a*b*c
+print(multiply(10,5,10)) # prints 500
+```
 
 <h3 class="code-head" id="list-comprehensions">List Comprehensions<span>code</span></h3>
 
@@ -776,7 +640,159 @@ both prints
 
 <h3 class="centered-heading" id="modules"><span>Modules</span></h3>
 
-<h3 class="code-head" id="os-module">OS module<span>code</span></h3>
+<div class="code-head" id="re-module">
+    <span title="click to see re rules" id="btn-re-python" onclick="boxHandler(this.id)">re rules    
+    </span>
+    <div class="rule-box" id="box-re-python">
+        <p><b>Identifiers</b></p>
+        <div style="text-align: center; width: 100%">
+            <table>
+                <tr>
+                    <td>\d</td>
+                    <td>any number</td>
+                </tr>
+                <tr>
+                    <td>\D</td>
+                    <td>anything but a number</td>
+                </tr>
+                <tr>
+                    <td>\s</td>
+                    <td>space</td>
+                </tr>
+                <tr>
+                    <td>\S</td>
+                    <td>anything but a space</td>
+                </tr>
+                <tr>
+                    <td>\w</td>
+                    <td>any character</td>
+                </tr>
+                <tr>
+                    <td>\W</td>
+                    <td>anything but a character</td>
+                </tr>
+                <tr>
+                    <td>.</td>
+                    <td>any character, except for a newline</td>
+                </tr>
+                <tr>
+                    <td>\b</td>
+                    <td>the whitespace around words</td>
+                </tr>
+                <tr>
+                    <td>\.</td>
+                    <td>a period</td>
+                </tr>
+            </table>
+        </div>
+        <p><b>Modifiers</b></p>
+        <div style="text-align: center; width: 100%">
+            <table>
+                <tr>
+                    <td>{1,3}</td>
+                    <td>expecting 1-3 digits ~ \d{1,3}</td>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>match 1 or more</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>match 0 or 1</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>match 0 or more</td>
+                </tr>
+                <tr>
+                    <td>$</td>
+                    <td>match the end of a string</td>
+                </tr>
+                <tr>
+                    <td>^</td>
+                    <td>match the start of a string</td>
+                </tr>
+                <tr>
+                    <td>|</td>
+                    <td>either or (\d{1-3} | \w{5-6})</td>
+                </tr>
+                <tr>
+                    <td>[]</td>
+                    <td>range or variance</td>
+                </tr>
+                <tr>
+                    <td>{x}</td>
+                    <td>expecting "x" amount (of digits)</td>
+                </tr>
+            </table>
+        </div>
+        <p><b>White Space Characters</b></p>
+        <div style="text-align: center; width: 100%">
+            <table>
+                <tr>
+                    <td>\n</td>
+                    <td>new line</td>
+                </tr>
+                <tr>
+                    <td>\s</td>
+                    <td>space</td>
+                </tr>
+                <tr>
+                    <td>\t</td>
+                    <td>tab</td>
+                </tr>
+                <tr>
+                    <td>\e</td>
+                    <td>escape</td>
+                </tr>
+                <tr>
+                    <td>\f</td>
+                    <td>form feed</td>
+                </tr>
+                <tr>
+                    <td>\r</td>
+                    <td>return</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+Regular Expressions</div>
+
+
+```python
+import re 
+
+# multi-line string example
+str = '''
+Rahul is 19 years old, and Ashok is 24 years old.
+Manoj is 65, and his grandfather, Naveen, is 77.
+'''
+
+# findall()
+ages  = re.findall(r'\d{1,3}', str)
+names = re.findall(r'[A-Z][a-z]*', str) 
+print ages  # prints ['Rahul', 'Ashok', 'Manoj', 'Naveen']
+print names # prints ['19', '24', '65', '77']
+
+# split()
+str = "This is an example string"
+splitted = re.split(r'\s*', str)
+print splitted # prints ['This', 'is', 'an', 'example', 'string']
+
+# match()
+str = "Dogs are braver than Cats"
+matches = re.match(r'[A-Z][a-z]*', str)
+print matches.group() # prints "Dogs"
+
+# search()
+str = "For data science help, reach support@datacamp.com"
+searches = re.search(r'([\w\.-]+)@([\w\.-]+)', str)
+print searches.group()  # prints support@datacamp.com
+print searches.group(1) # prints support
+print searches.group(2) # prints datacamp.com
+```
+
+<h3 class="code-head" id="os-module">os module<span>code</span></h3>
 
 ```python
 # os module is a powerful module in python
@@ -933,12 +949,21 @@ four different methods (modes) to open a file
 <h3 class="code-head" id="how-to-read-file-line-by-line">How to read file line-by-line?<span>code</span></h3>
 
 ```python
+# not the memory efficient way
 filename = "entry_1.txt"
 with open(filename) as f:
     data = f.readlines()
-
 # remove whitespaces at end of each line
 data = [x.strip() for x in data] 
+
+# memory efficient way
+filename = "entry_1.txt"
+data = []
+with open(filename) as f:
+    for line in f:
+        data.append(line)
+# remove whitespaces at end of each line
+data = [x.strip() for x in data]
 ```
 
 <h3 class="code-head" id="how-to-write-file-line-by-line">How to write file line-by-line?<span>code</span></h3>
