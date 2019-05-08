@@ -47,12 +47,14 @@ image: https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk
     </ul>
     <h3><a href="#how-tos">How to's</a></h3>
     <ul>
+        <li><a href="#how-to-handle-files">How to handle files?</a></li>
         <li><a href="#how-to-read-file-line-by-line">How to read file line-by-line?</a></li>
         <li><a href="#how-to-write-file-line-by-line">How to write file line-by-line?</a></li>
         <li><a href="#how-to-load-json-file">How to load json file?</a></li>
         <li><a href="#how-to-check-if-list-is-empty">How to check if list is empty?</a></li>
         <li><a href="#how-to-access-index-in-for-loop">How to access index in for loop?</a></li>
         <li><a href="#how-to-sort-a-dictionary-by-key-alphabetically">How to sort a dictionary by key alphabetically?</a></li>
+        <li><a href="#how-to-call-tcl-procedure-in-python">How to call tcl procedure in python?</a></li>
     </ul>
 </div>
 
@@ -913,6 +915,21 @@ if __name__ == '__main__':
 
 <h3 class="centered-heading" id="how-tos"><span>How to's</span></h3>
 
+<h3 class="code-head" id="how-to-handle-files">How to handle files?<span>code</span></h3>
+
+```python
+'''
+four different methods (modes) to open a file
+"r" - read; default mode; opens a file for reading, error if the file does not exist.
+"a" - append; opens a file for appending, creates the file if it does not exist.
+"w" - write; opens a file for writing, creates the file if it does not exist.
+"x" - create; creates the file, returns an error if the file exist.
+
+"t" - text; default/text mode
+"b" - binary; binary mode
+'''
+```
+
 <h3 class="code-head" id="how-to-read-file-line-by-line">How to read file line-by-line?<span>code</span></h3>
 
 ```python
@@ -992,6 +1009,29 @@ for key in sorted(a.keys(), key=lambda x:x.lower()):
 # Australia - Smith
 # India - Dhoni
 # SouthAfrica - ABD
+```
+
+<h3 class="code-head" id="how-to-call-tcl-procedure-in-python">How to call tcl procedure in python?<span>code</span></h3>
+
+```tcl
+# let's say you have a tcl file named 'test.tcl' with contents as below.
+puts "Hello"
+proc sum {a b} {
+    set c [expr $a + $b]
+    puts "Addition of $a and $b is $c"
+}
+```
+
+```python
+# to call a tcl proc in python, we need 'tkinter' library which comes with python usually.
+import tkinter
+r = tkinter.Tk()
+r.tk.eval("source test.tcl")
+r.tk.eval("sum 10 20")
+
+# prints 
+# Hello
+# Addition of 10 and 20 is 30
 ```
 
 <h3 class="centered-heading" id="resources"><span>Resources</span></h3>
