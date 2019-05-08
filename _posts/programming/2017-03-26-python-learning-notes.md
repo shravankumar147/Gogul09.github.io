@@ -20,10 +20,12 @@ image: https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk
         <li><a href="#logical-operations">Logical operations</a></li>
         <li><a href="#conditions">Conditions</a></li>
         <li><a href="#loops">Loops</a></li>
-        <li><a href="#string-operations">Strings</a></li>
+        <li><a href="#strings">Strings</a></li>
         <li><a href="#lists">List</a></li>
         <li><a href="#tuples">Tuple</a></li>
+        <li><a href="#set">Set</a></li>
         <li><a href="#dictionaries">Dictionary</a></li>
+        <li><a href="#exception-handling">Exception Handling</a></li>
         <li><a href="#functions_1">Functions</a></li>
         <li><a href="#regular-expressions">Regular Expressions</a></li>
     </ul>
@@ -59,10 +61,11 @@ image: https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk
   <p onclick="showSidebar('sidebar_tracker_content')">Contents</p>
   <ul id="sidebar_tracker_content">
     <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_1" href="#basics">Basics</a></li>
-    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_2" href="#modules">Modules</a></li>
-    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_3" href="#oop">OOP</a></li>
-    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_4" href="#how-tos">How To's</a></li>
-    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_5" href="#resources">Resources</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_2" href="#intermediate">Intermediate</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_3" href="#modules">Modules</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_4" href="#oop">OOP</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_5" href="#how-tos">How To's</a></li>
+    <li><a class="sidebar_links" onclick="handleSideBarLinks(this.id)" id="link_6" href="#resources">Resources</a></li>
   </ul>
 </div>
  
@@ -328,19 +331,123 @@ l_to_t = tuple(l)
 print type(l_to_t) # prints <class 'tuple'>
 ```
 
+<h3 class="code-head" id="set">Set<span>code</span></h3>
+
+```python
+# set is a collection of unordered and unindexed data which is written with curly brackets.
+s = {"ironman", "hulk", "thor", "thanos"}
+
+for x in s:
+    print(x)
+
+'''
+prints 
+ironman
+thor
+hulk
+thanos
+'''
+
+# check if value exist in set
+if "thanos" in s:
+    print("endgame") # prints 'endgame'
+
+# add a single item to a set using 'add'
+s.add("rocket")
+
+# add multiple items to a set using 'update'
+s.update(["blackhood", "blackwidow"])
+
+# get length of a set
+print(len(s)) # prints 7
+
+# 'remove' or 'discard' an item from the set
+# 'remove' raise an error if item to remove does not exist
+# 'discard' will not raise any error if item to remove does not exist
+s.remove("thanos")
+s.discard("blackwidow")
+
+# clear the set
+s.clear()
+
+# delete the set
+del s
+```
+
 <h3 class="code-head" id="dictionaries">Dictionaries<span>code</span></h3>
 
 ```python
 # declare a dictionary
-d = {"1" : "Pikachu", "2": "Charmander", "3": "Squirtle"}
+d = { "1" : "Ironman", 
+      "2" : "Captain America", 
+      "3" : "Thor"
+    }
 
 print type(d)    # prints "<type 'dict'>"
-print d["1"]     # prints "Pikachu"
+print d["1"]     # prints "Ironman"
 
 # loop over dictionary
 for key in d:
     print key    # prints each key in d
     print d[key] # prints value of each key in d (unsorted)
+
+# change values in the dictionary
+d["2"] = "Hulk"
+for key, value in d.items():
+    print(key + " - " + value)
+
+'''
+prints
+1 - Ironman
+2 - Hulk
+3 - Thor
+'''
+
+# check if key exists in a dictionary
+if "3" in d:
+    print("Yes! 3 is " + d["3"])
+# prints 'Yes! 3 is Thor'
+
+# get length of the dictionary
+print(len(d)) # prints 3
+
+# insert a key-value pair to a dictionary
+d["4"] = "Thanos"
+
+# remove a key-value pair from the dictionary
+d.pop("4")
+
+# same thing using 'del' keyword
+del d["2"]
+
+# clear a dictionary
+d.clear()
+```
+
+<h3 class="code-head" id="exception-handling">Exception Handling<span>code</span></h3>
+
+```python
+# try-except-finally
+# try: test a block of code for errors.
+# except: allows handling of errors.
+# finally: execute code, regardless of the result of try and except blocks.
+try:
+    print(x)
+except:
+    print("Something is wrong!")
+
+# prints 'Something is wrong!' as x is not defined
+
+try:
+    print(x)
+except: 
+    print("Something is wrong!")
+finally:
+    print("Finally always execute after try-except.")
+
+# prints
+# Something is wrong!
+# Finally always execute after try-except.
 ```
 
 <h3 class="code-head" id="functions_1">Functions<span>code</span></h3>
