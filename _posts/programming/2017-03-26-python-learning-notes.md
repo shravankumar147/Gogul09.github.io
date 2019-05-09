@@ -40,6 +40,7 @@ image: https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk
     <ul>
         <li><a href="#re-module">re module</a></li>
         <li><a href="#os-module">os module</a></li>
+        <li><a href="#sys-module">sys module</a></li>
     </ul>
     <h3><a href="#oop">OOP</a></h3>
     <ul>
@@ -765,14 +766,25 @@ import re
 # multi-line string example
 str = '''
 Rahul is 19 years old, and Ashok is 24 years old.
-Manoj is 65, and his grandfather, Naveen, is 77.
+Murali is 65, and his grandfather, Karthik, is 77.
 '''
 
 # findall()
 ages  = re.findall(r'\d{1,3}', str)
 names = re.findall(r'[A-Z][a-z]*', str) 
-print ages  # prints ['Rahul', 'Ashok', 'Manoj', 'Naveen']
-print names # prints ['19', '24', '65', '77']
+print ages  # prints ['19', '24', '65', '77']
+print names # prints ['Rahul', 'Ashok', 'Murali', 'Karthik']
+
+# finditer()
+ages = re.finditer(r'\d{1,3}', str)
+for m in ages:
+    print(m.group())
+
+# prints 
+# 19
+# 24
+# 65
+# 77
 
 # split()
 str = "This is an example string"
@@ -865,6 +877,30 @@ print(os.path.isdir("G:\\workspace\\python\\learning\\Strings"))
 # accessing environment variable
 print(os.environ.get("HOME"))
 # prints 'C:\\Users\\Gogul Ilango'
+```
+
+<h3 class="code-head" id="sys-module">sys module<span>code</span></h3>
+
+```python
+# sys module is used to parse input arguments given to a python file.
+# this is used if you call a python script with arguments in command line.
+import sys
+
+firstarg  = ""
+secondarg = ""
+try:
+    firstarg  = sys.argv[1]
+    secondarg = sys.argv[2]
+except:
+    if (firstarg == ""):
+        print("No first argument!")
+    if (secondarg == ""):
+        print("No second argument!")
+
+# error text
+sys.stderr.write("This is stderr text\n")
+sys.stderr.flush()
+sys.stdout.write("This is stdout text\n")
 ```
 
 <!-- --------------------------------------------------------------------- -->
