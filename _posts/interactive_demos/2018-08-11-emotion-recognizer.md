@@ -26,8 +26,8 @@ image: /images/live-demo/emotion/thumbnail.png
 <div class="emotion-container" id="emotion-container">
   <header class="emotion-header">
     <h3>Emotion Recognizer</h3>
-    <p>This is a simple implementation of emotion recognition using two deep neural networks (extractor and classifier). You can follow the instructions <a href="https://www.youtube.com/watch?v=WBi_PZ66z5E" target="_blank">here</a> to get this working.</p>
-    <p>Made with TensorFlow.js ❤️</p>
+    <p>This is a simple implementation of emotion recognition using two deep neural networks (extractor and classifier).</p>
+    <p>You can follow the instructions <a href="https://www.youtube.com/watch?v=WBi_PZ66z5E" target="_blank">here</a> to get this working. Made with TensorFlow.js ❤️</p>
   </header>
   <div class="emotion-wrapper">
     <div class="emotion-player emotion-flex">  
