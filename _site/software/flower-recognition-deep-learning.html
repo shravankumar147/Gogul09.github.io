@@ -158,15 +158,19 @@ In this blog post, we will quickly understand how to use state-of-the-art Deep L
   <figcaption>Figure 1. Flower Species Recognition using Pretrained Deep Learning models.</figcaption>
 </figure>
 
-<div class="note note-update">
-<ul>
-<li><b>Update (16/12/2017):</b> After installing Anaconda with Python 3.6 to work with TensorFlow in Windows 10, I found two additional pretrained models added to Keras applications module - InceptionResNetV2 and MobileNet. I have updated my code accordingly to enable these models to work for our own dataset.<br /><br />
-</li>
-<li><b>Update (10/06/2018)</b>: If you use <a href="https://github.com/keras-team/keras/releases" target="_blank">Keras 2.2.0</a> version, then you will not find the <span class="coding">applications</span> module inside keras installed directory. Keras has externalized the <span class="coding">applications</span> module to a separate directory called <a href="https://github.com/keras-team/keras-applications" target="_blank">keras_applications</a> from where all the pre-trained models will now get imported. To make changes to any &lt;pre-trained_model&gt;.py file, simply go to the below directory where you will find all the pre-trained models .py files.<br /><br />
-</li>
-<li><b>Update (16/12/2017):</b> You could also see the new MobileNet architecture achieves the best accuracy compared to other architectures. In addition, I found that MobileNet uses DepthwiseConvolution layers and has lesser number of parameters, reduced weights size and depth. More details about this can be found at - <a href="https://arxiv.org/pdf/1704.04861.pdf" target="_blank">MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications</a>.  
-</li>
-</ul>
+<div class="note">
+  <p><b>Update (16/12/2017):</b> After installing Anaconda with Python 3.6 to work with TensorFlow in Windows 10, I found two additional pretrained models added to Keras applications module - InceptionResNetV2 and MobileNet. I have updated my code accordingly to enable these models to work for our own dataset.
+  </p>
+</div>
+
+<div class="note">
+  <p><b>Update (10/06/2018)</b>: If you use <a href="https://github.com/keras-team/keras/releases" target="_blank">Keras 2.2.0</a> version, then you will not find the <span class="coding">applications</span> module inside keras installed directory. Keras has externalized the <span class="coding">applications</span> module to a separate directory called <a href="https://github.com/keras-team/keras-applications" target="_blank">keras_applications</a> from where all the pre-trained models will now get imported. To make changes to any &lt;pre-trained_model&gt;.py file, simply go to the below directory where you will find all the pre-trained models .py files.
+  </p>
+</div>
+
+<div class="note">
+  <p><b>Update (16/12/2017):</b> You could also see the new MobileNet architecture achieves the best accuracy compared to other architectures. In addition, I found that MobileNet uses DepthwiseConvolution layers and has lesser number of parameters, reduced weights size and depth. More details about this can be found at - <a href="https://arxiv.org/pdf/1704.04861.pdf" target="_blank">MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications</a>.
+  </p>
 </div>
 
 <h3 id="beautiful-keras">Beautiful Keras</h3>
@@ -483,7 +487,7 @@ In this blog post, we will quickly understand how to use state-of-the-art Deep L
 <span class="kn">import</span> <span class="nn">datetime</span>
 
 <span class="c"># print start time</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] program started on - "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] program started on - "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">))</span>
 
 <span class="c"># get the input and output path</span>
 <span class="n">input_path</span>  <span class="o">=</span> <span class="s">"G:</span><span class="se">\\</span><span class="s">workspace</span><span class="se">\\</span><span class="s">machine-intelligence</span><span class="se">\\</span><span class="s">deep-learning</span><span class="se">\\</span><span class="s">flower-recognition</span><span class="se">\\</span><span class="s">17flowers</span><span class="se">\\</span><span class="s">jpg"</span>
@@ -526,7 +530,7 @@ In this blog post, we will quickly understand how to use state-of-the-art Deep L
 	<span class="n">label</span> <span class="o">+=</span> <span class="mi">1</span>
 
 <span class="c"># print end time</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] program ended on - "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] program ended on - "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">))</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -795,7 +799,7 @@ In this blog post, we will quickly understand how to use state-of-the-art Deep L
 <span class="n">model_path</span>    <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s">"model_path"</span><span class="p">]</span>
 
 <span class="c"># start time</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"[STATUS] start time - {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">"</span><span class="si">%</span><span class="s">Y-</span><span class="si">%</span><span class="s">m-</span><span class="si">%</span><span class="s">d </span><span class="si">%</span><span class="s">H:</span><span class="si">%</span><span class="s">M"</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[STATUS] start time - {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">"</span><span class="si">%</span><span class="s">Y-</span><span class="si">%</span><span class="s">m-</span><span class="si">%</span><span class="s">d </span><span class="si">%</span><span class="s">H:</span><span class="si">%</span><span class="s">M"</span><span class="p">)))</span>
 <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 
 <span class="c"># create the pretrained models</span>
@@ -832,13 +836,13 @@ In this blog post, we will quickly understand how to use state-of-the-art Deep L
 <span class="k">else</span><span class="p">:</span>
   <span class="n">base_model</span> <span class="o">=</span> <span class="bp">None</span>
 
-<span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] successfully loaded base model and model..."</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] successfully loaded base model and model..."</span><span class="p">)</span>
 
 <span class="c"># path to training dataset</span>
 <span class="n">train_labels</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">train_path</span><span class="p">)</span>
 
 <span class="c"># encode the labels</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] encoding labels..."</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] encoding labels..."</span><span class="p">)</span>
 <span class="n">le</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
 <span class="n">le</span><span class="o">.</span><span class="n">fit</span><span class="p">([</span><span class="n">tl</span> <span class="k">for</span> <span class="n">tl</span> <span class="ow">in</span> <span class="n">train_labels</span><span class="p">])</span>
 
@@ -860,17 +864,17 @@ In this blog post, we will quickly understand how to use state-of-the-art Deep L
     <span class="n">flat</span> <span class="o">=</span> <span class="n">feature</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
     <span class="n">features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">flat</span><span class="p">)</span>
     <span class="n">labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
-    <span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] processed - "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">count</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"[INFO] processed - "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">count</span><span class="p">))</span>
     <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-  <span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] completed label - "</span> <span class="o">+</span> <span class="n">label</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"[INFO] completed label - "</span> <span class="o">+</span> <span class="n">label</span><span class="p">)</span>
 
 <span class="c"># encode the labels using LabelEncoder</span>
 <span class="n">le</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
 <span class="n">le_labels</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
 
 <span class="c"># get the shape of training labels</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"[STATUS] training labels: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">le_labels</span><span class="p">))</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"[STATUS] training labels shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">le_labels</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[STATUS] training labels: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">le_labels</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[STATUS] training labels shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">le_labels</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 
 <span class="c"># save features and labels</span>
 <span class="n">h5f_data</span> <span class="o">=</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">features_path</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
@@ -891,11 +895,11 @@ In this blog post, we will quickly understand how to use state-of-the-art Deep L
 <span class="n">model</span><span class="o">.</span><span class="n">save_weights</span><span class="p">(</span><span class="n">model_path</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">test_size</span><span class="p">)</span> <span class="o">+</span> <span class="s">".h5"</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s">"[STATUS] saved model and weights to disk.."</span><span class="p">)</span>
 
-<span class="k">print</span> <span class="p">(</span><span class="s">"[STATUS] features and labels saved.."</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[STATUS] features and labels saved.."</span><span class="p">)</span>
 
 <span class="c"># end time</span>
 <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"[STATUS] end time - {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">"</span><span class="si">%</span><span class="s">Y-</span><span class="si">%</span><span class="s">m-</span><span class="si">%</span><span class="s">d </span><span class="si">%</span><span class="s">H:</span><span class="si">%</span><span class="s">M"</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[STATUS] end time - {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">"</span><span class="si">%</span><span class="s">Y-</span><span class="si">%</span><span class="s">m-</span><span class="si">%</span><span class="s">d </span><span class="si">%</span><span class="s">H:</span><span class="si">%</span><span class="s">M"</span><span class="p">)))</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -1116,29 +1120,29 @@ The pre-trained models are loaded from the <span class="coding">application</spa
 <span class="n">h5f_label</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="c"># verify the shape of features and labels</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] features shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] labels shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">labels</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] features shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] labels shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">labels</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] training started..."</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] training started..."</span><span class="p">)</span>
 <span class="c"># split the training and testing data</span>
 <span class="p">(</span><span class="n">trainData</span><span class="p">,</span> <span class="n">testData</span><span class="p">,</span> <span class="n">trainLabels</span><span class="p">,</span> <span class="n">testLabels</span><span class="p">)</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">features</span><span class="p">),</span>
                                                                   <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">labels</span><span class="p">),</span>
                                                                   <span class="n">test_size</span><span class="o">=</span><span class="n">test_size</span><span class="p">,</span>
                                                                   <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
 
-<span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] splitted train and test data..."</span><span class="p">)</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] train data  : {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] test data   : {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] train labels: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainLabels</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] test labels : {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testLabels</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] splitted train and test data..."</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] train data  : {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] test data   : {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] train labels: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainLabels</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] test labels : {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testLabels</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 
 <span class="c"># use logistic regression as the model</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] creating model..."</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] creating model..."</span><span class="p">)</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">trainData</span><span class="p">,</span> <span class="n">trainLabels</span><span class="p">)</span>
 
 <span class="c"># use rank-1 and rank-5 predictions</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] evaluating model..."</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] evaluating model..."</span><span class="p">)</span>
 <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span>
 <span class="n">rank_1</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">rank_5</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1174,11 +1178,11 @@ The pre-trained models are loaded from the <span class="coding">application</spa
 <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="c"># dump classifier to file</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] saving model..."</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] saving model..."</span><span class="p">)</span>
 <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">classifier_path</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">))</span>
 
 <span class="c"># display the confusion matrix</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"[INFO] confusion matrix"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] confusion matrix"</span><span class="p">)</span>
 
 <span class="c"># get the list of training lables</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">train_path</span><span class="p">)))</span>

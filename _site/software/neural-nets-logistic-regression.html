@@ -143,6 +143,10 @@
 
 <p>Before understanding the math behind a Deep Neural Network and implementing it in code, it is better to get a mindset of how Logistic Regression could be modelled as a simple Neural Network that actually learns from data.</p>
 
+<blockquote>
+  <p><strong>Update</strong>: As Python2 faces <a href="https://pythonclock.org/">end of life</a>, the below code only supports <strong>Python3</strong>.</p>
+</blockquote>
+
 <div class="code-head">Objectives</div>
 
 <div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
@@ -448,11 +452,11 @@
 <span class="n">train_x</span> <span class="o">=</span> <span class="n">train_x</span><span class="o">/</span><span class="mf">255.</span>
 <span class="n">test_x</span>  <span class="o">=</span> <span class="n">test_x</span><span class="o">/</span><span class="mf">255.</span>
 
-<span class="k">print</span> <span class="p">(</span><span class="s">"train_labels : "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">train_labels</span><span class="p">))</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"train_x shape: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">train_x</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"train_y shape: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">train_y</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"test_x shape : "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">test_x</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"test_y shape : "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">test_y</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"train_labels : "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">train_labels</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"train_x shape: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">train_x</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"train_y shape: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">train_y</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"test_x shape : "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">test_x</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"test_y shape : "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">test_y</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 
 <span class="c">#-----------------</span>
 <span class="c"># save using h5py</span>
@@ -755,7 +759,7 @@ $$
 
 		<span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 			<span class="n">costs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cost</span><span class="p">)</span>
-			<span class="k">print</span> <span class="p">(</span><span class="s">"cost after </span><span class="si">%</span><span class="s">i epochs: </span><span class="si">%</span><span class="s">f"</span> <span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">cost</span><span class="p">))</span>
+			<span class="k">print</span><span class="p">(</span><span class="s">"cost after </span><span class="si">%</span><span class="s">i epochs: </span><span class="si">%</span><span class="s">f"</span> <span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">cost</span><span class="p">))</span>
 
 	<span class="c"># param dict</span>
 	<span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s">"w"</span><span class="p">:</span> <span class="n">w</span><span class="p">,</span> <span class="s">"b"</span><span class="p">:</span> <span class="n">b</span><span class="p">}</span>
@@ -881,8 +885,8 @@ $$
 	<span class="n">Y_predict_train</span> <span class="o">=</span> <span class="n">predict</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">X_train</span><span class="p">)</span>
 	<span class="n">Y_predict_test</span>  <span class="o">=</span> <span class="n">predict</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">X_test</span><span class="p">)</span>
 
-	<span class="k">print</span> <span class="p">(</span><span class="s">"train_accuracy: {} </span><span class="si">%</span><span class="s">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="nb">abs</span><span class="p">(</span><span class="n">Y_predict_train</span> <span class="o">-</span> <span class="n">Y_train</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>
-	<span class="k">print</span> <span class="p">(</span><span class="s">"test_accuracy : {} </span><span class="si">%</span><span class="s">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="nb">abs</span><span class="p">(</span><span class="n">Y_predict_test</span>  <span class="o">-</span> <span class="n">Y_test</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">"train_accuracy: {} </span><span class="si">%</span><span class="s">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="nb">abs</span><span class="p">(</span><span class="n">Y_predict_train</span> <span class="o">-</span> <span class="n">Y_train</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">"test_accuracy : {} </span><span class="si">%</span><span class="s">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="nb">abs</span><span class="p">(</span><span class="n">Y_predict_test</span>  <span class="o">-</span> <span class="n">Y_test</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>
 
 	<span class="n">log_reg_model</span> <span class="o">=</span> <span class="p">{</span><span class="s">"costs"</span><span class="p">:</span> <span class="n">costs</span><span class="p">,</span>
 				     <span class="s">"Y_predict_test"</span><span class="p">:</span> <span class="n">Y_predict_test</span><span class="p">,</span> 

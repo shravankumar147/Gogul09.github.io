@@ -45,6 +45,8 @@ cardimage: https://drive.google.com/uc?id=1lJRANugElZw2CAIJPTRUabWNqDNO_8ud
 
 Before understanding the math behind a Deep Neural Network and implementing it in code, it is better to get a mindset of how Logistic Regression could be modelled as a simple Neural Network that actually learns from data.
 
+> **Update**: As Python2 faces [end of life](https://pythonclock.org/), the below code only supports **Python3**.
+
 <div class="code-head">Objectives</div>
 
 ```
@@ -226,11 +228,11 @@ for i, label in enumerate(test_labels):
 train_x = train_x/255.
 test_x  = test_x/255.
 
-print ("train_labels : " + str(train_labels))
-print ("train_x shape: " + str(train_x.shape))
-print ("train_y shape: " + str(train_y.shape))
-print ("test_x shape : " + str(test_x.shape))
-print ("test_y shape : " + str(test_y.shape))
+print("train_labels : " + str(train_labels))
+print("train_x shape: " + str(train_x.shape))
+print("train_y shape: " + str(train_y.shape))
+print("test_x shape : " + str(test_x.shape))
+print("test_y shape : " + str(test_y.shape))
 
 #-----------------
 # save using h5py
@@ -449,7 +451,7 @@ def optimize(w, b, X, Y, epochs, lr):
 
 		if i % 100 == 0:
 			costs.append(cost)
-			print ("cost after %i epochs: %f" %(i, cost))
+			print("cost after %i epochs: %f" %(i, cost))
 
 	# param dict
 	params = {"w": w, "b": b}
@@ -522,8 +524,8 @@ def model(X_train, Y_train, X_test, Y_test, epochs, lr):
 	Y_predict_train = predict(w, b, X_train)
 	Y_predict_test  = predict(w, b, X_test)
 
-	print ("train_accuracy: {} %".format(100-np.mean(np.abs(Y_predict_train - Y_train)) * 100))
-	print ("test_accuracy : {} %".format(100-np.mean(np.abs(Y_predict_test  - Y_test)) * 100))
+	print("train_accuracy: {} %".format(100-np.mean(np.abs(Y_predict_train - Y_train)) * 100))
+	print("test_accuracy : {} %".format(100-np.mean(np.abs(Y_predict_test  - Y_test)) * 100))
 
 	log_reg_model = {"costs": costs,
 				     "Y_predict_test": Y_predict_test, 

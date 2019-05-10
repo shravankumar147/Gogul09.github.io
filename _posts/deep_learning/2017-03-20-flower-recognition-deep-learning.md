@@ -60,15 +60,19 @@ Let's start feature extraction using Deep Convolutional Neural Networks! What we
   <figcaption>Figure 1. Flower Species Recognition using Pretrained Deep Learning models.</figcaption>
 </figure>
 
-<div class="note note-update">
-<ul>
-<li><b>Update (16/12/2017):</b> After installing Anaconda with Python 3.6 to work with TensorFlow in Windows 10, I found two additional pretrained models added to Keras applications module - InceptionResNetV2 and MobileNet. I have updated my code accordingly to enable these models to work for our own dataset.<br><br>
-</li>
-<li><b>Update (10/06/2018)</b>: If you use <a href="https://github.com/keras-team/keras/releases" target="_blank">Keras 2.2.0</a> version, then you will not find the <span class="coding">applications</span> module inside keras installed directory. Keras has externalized the <span class="coding">applications</span> module to a separate directory called <a href="https://github.com/keras-team/keras-applications" target="_blank">keras_applications</a> from where all the pre-trained models will now get imported. To make changes to any &lt;pre-trained_model&gt;.py file, simply go to the below directory where you will find all the pre-trained models .py files.<br><br>
-</li>
-<li><b>Update (16/12/2017):</b> You could also see the new MobileNet architecture achieves the best accuracy compared to other architectures. In addition, I found that MobileNet uses DepthwiseConvolution layers and has lesser number of parameters, reduced weights size and depth. More details about this can be found at - <a href="https://arxiv.org/pdf/1704.04861.pdf" target="_blank">MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications</a>.  
-</li>
-</ul>
+<div class="note">
+  <p><b>Update (16/12/2017):</b> After installing Anaconda with Python 3.6 to work with TensorFlow in Windows 10, I found two additional pretrained models added to Keras applications module - InceptionResNetV2 and MobileNet. I have updated my code accordingly to enable these models to work for our own dataset.
+  </p>
+</div>
+
+<div class="note">
+  <p><b>Update (10/06/2018)</b>: If you use <a href="https://github.com/keras-team/keras/releases" target="_blank">Keras 2.2.0</a> version, then you will not find the <span class="coding">applications</span> module inside keras installed directory. Keras has externalized the <span class="coding">applications</span> module to a separate directory called <a href="https://github.com/keras-team/keras-applications" target="_blank">keras_applications</a> from where all the pre-trained models will now get imported. To make changes to any &lt;pre-trained_model&gt;.py file, simply go to the below directory where you will find all the pre-trained models .py files.
+  </p>
+</div>
+
+<div class="note">
+  <p><b>Update (16/12/2017):</b> You could also see the new MobileNet architecture achieves the best accuracy compared to other architectures. In addition, I found that MobileNet uses DepthwiseConvolution layers and has lesser number of parameters, reduced weights size and depth. More details about this can be found at - <a href="https://arxiv.org/pdf/1704.04861.pdf" target="_blank">MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications</a>.
+  </p>
 </div>
 
 <h3 id="beautiful-keras">Beautiful Keras</h3>
@@ -286,7 +290,7 @@ import glob
 import datetime
 
 # print start time
-print ("[INFO] program started on - " + str(datetime.datetime.now))
+print("[INFO] program started on - " + str(datetime.datetime.now))
 
 # get the input and output path
 input_path  = "G:\\workspace\\machine-intelligence\\deep-learning\\flower-recognition\\17flowers\\jpg"
@@ -329,7 +333,7 @@ for x in range(1, class_limit+1):
 	label += 1
 
 # print end time
-print ("[INFO] program ended on - " + str(datetime.datetime.now))
+print("[INFO] program ended on - " + str(datetime.datetime.now))
 ```
 
 <h3 id="deep-learning-pipeline">Deep Learning pipeline</h3>
@@ -433,7 +437,7 @@ results     = config["results"]
 model_path    = config["model_path"]
 
 # start time
-print ("[STATUS] start time - {}".format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M")))
+print("[STATUS] start time - {}".format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M")))
 start = time.time()
 
 # create the pretrained models
@@ -470,13 +474,13 @@ elif model_name == "xception":
 else:
   base_model = None
 
-print ("[INFO] successfully loaded base model and model...")
+print("[INFO] successfully loaded base model and model...")
 
 # path to training dataset
 train_labels = os.listdir(train_path)
 
 # encode the labels
-print ("[INFO] encoding labels...")
+print("[INFO] encoding labels...")
 le = LabelEncoder()
 le.fit([tl for tl in train_labels])
 
@@ -498,17 +502,17 @@ for i, label in enumerate(train_labels):
     flat = feature.flatten()
     features.append(flat)
     labels.append(label)
-    print ("[INFO] processed - " + str(count))
+    print("[INFO] processed - " + str(count))
     count += 1
-  print ("[INFO] completed label - " + label)
+  print("[INFO] completed label - " + label)
 
 # encode the labels using LabelEncoder
 le = LabelEncoder()
 le_labels = le.fit_transform(labels)
 
 # get the shape of training labels
-print ("[STATUS] training labels: {}".format(le_labels))
-print ("[STATUS] training labels shape: {}".format(le_labels.shape))
+print("[STATUS] training labels: {}".format(le_labels))
+print("[STATUS] training labels shape: {}".format(le_labels.shape))
 
 # save features and labels
 h5f_data = h5py.File(features_path, 'w')
@@ -529,11 +533,11 @@ with open(model_path + str(test_size) + ".json", "w") as json_file:
 model.save_weights(model_path + str(test_size) + ".h5")
 print("[STATUS] saved model and weights to disk..")
 
-print ("[STATUS] features and labels saved..")
+print("[STATUS] features and labels saved..")
 
 # end time
 end = time.time()
-print ("[STATUS] end time - {}".format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M")))
+print("[STATUS] end time - {}".format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M")))
 ```
 
 * **How to run this script?**<br>
@@ -603,29 +607,29 @@ h5f_data.close()
 h5f_label.close()
 
 # verify the shape of features and labels
-print ("[INFO] features shape: {}".format(features.shape))
-print ("[INFO] labels shape: {}".format(labels.shape))
+print("[INFO] features shape: {}".format(features.shape))
+print("[INFO] labels shape: {}".format(labels.shape))
 
-print ("[INFO] training started...")
+print("[INFO] training started...")
 # split the training and testing data
 (trainData, testData, trainLabels, testLabels) = train_test_split(np.array(features),
                                                                   np.array(labels),
                                                                   test_size=test_size,
                                                                   random_state=seed)
 
-print ("[INFO] splitted train and test data...")
-print ("[INFO] train data  : {}".format(trainData.shape))
-print ("[INFO] test data   : {}".format(testData.shape))
-print ("[INFO] train labels: {}".format(trainLabels.shape))
-print ("[INFO] test labels : {}".format(testLabels.shape))
+print("[INFO] splitted train and test data...")
+print("[INFO] train data  : {}".format(trainData.shape))
+print("[INFO] test data   : {}".format(testData.shape))
+print("[INFO] train labels: {}".format(trainLabels.shape))
+print("[INFO] test labels : {}".format(testLabels.shape))
 
 # use logistic regression as the model
-print ("[INFO] creating model...")
+print("[INFO] creating model...")
 model = LogisticRegression(random_state=seed)
 model.fit(trainData, trainLabels)
 
 # use rank-1 and rank-5 predictions
-print ("[INFO] evaluating model...")
+print("[INFO] evaluating model...")
 f = open(results, "w")
 rank_1 = 0
 rank_5 = 0
@@ -661,11 +665,11 @@ f.write("{}\n".format(classification_report(testLabels, preds)))
 f.close()
 
 # dump classifier to file
-print ("[INFO] saving model...")
+print("[INFO] saving model...")
 pickle.dump(model, open(classifier_path, 'wb'))
 
 # display the confusion matrix
-print ("[INFO] confusion matrix")
+print("[INFO] confusion matrix")
 
 # get the list of training lables
 labels = sorted(list(os.listdir(train_path)))

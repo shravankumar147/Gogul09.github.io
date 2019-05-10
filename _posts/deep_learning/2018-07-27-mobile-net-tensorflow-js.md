@@ -57,7 +57,6 @@ The interactive demo of what we will be making at the end of the tutorial is sho
 </ol>
 
 <div class="demo-container">
-  <span class="demo-banner">demo</span>
   <h3>Keras MobileNet + TensorFlow.js Demo</h3>
   <div class="demo-wrapper">
     <div>
@@ -198,7 +197,7 @@ if __name__ == '__main__':
 * Line 32 prints out the top-5 predictions of the test image.
 * Lines 36-38 converts <a href="#convert-keras-model-into-tf-js-layers-format">keras mobilenet model into tf.js layers format</a> at <span class="coding">save_path</span>.
 
-Please make sure you change the <span class="coding">test_img_path</span> in line 19 to test an image from your disk. Figure 1 (shown below) is the test image that I have chosen and the MobileNet model accurately predicted it as a <span class="coding">peacock</span> with a probability of 99.99%. Pretty cool! 😍 
+Please make sure you change the <span class="coding">test_img_path</span> in line 19 to test an image from your disk. Figure 2 (shown below) is the test image that I have chosen and the MobileNet model accurately predicted it as a <span class="coding">peacock</span> with a probability of 99.99%. Pretty cool! 😍 
 
 <figure>
   <img src="/images/software/mobile-net-tensorflow-js/test_image_1.jpg" class="typical-image">
