@@ -231,23 +231,23 @@ comment in python
 18
 19</pre></td><td class="code"><pre><span class="c"># declare an integer</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">12</span>
-<span class="k">print</span> <span class="n">a</span>       <span class="c"># prints "12"</span>
-<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c"># prints &lt;type 'int'&gt;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>       <span class="c"># prints "12"</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="c"># prints &lt;type 'int'&gt;</span>
 
 <span class="c"># declare a float</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">1.7</span>
-<span class="k">print</span> <span class="n">b</span>       <span class="c"># prints "1.7"</span>
-<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c"># prints &lt;type 'float'&gt;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>       <span class="c"># prints "1.7"</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span> <span class="c"># prints &lt;type 'float'&gt;</span>
 
 <span class="c"># declare a string</span>
 <span class="n">c</span> <span class="o">=</span> <span class="s">"Python"</span>
-<span class="k">print</span> <span class="n">c</span>       <span class="c"># prints "Python"</span>
-<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c"># prints &lt;type 'str'&gt;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>       <span class="c"># prints "Python"</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">))</span> <span class="c"># prints &lt;type 'str'&gt;</span>
 
 <span class="c"># declare a boolean</span>
 <span class="n">d</span> <span class="o">=</span> <span class="bp">True</span>
-<span class="k">print</span> <span class="n">d</span>       <span class="c"># prints "True"</span>
-<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="c"># prints &lt;type 'bool'&gt;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>       <span class="c"># prints "True"</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">))</span> <span class="c"># prints &lt;type 'bool'&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -268,9 +268,9 @@ comment in python
 <span class="c"># assign values with different data types to multiple variables in a single line</span>
 <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="s">"hello"</span>
 
-<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c"># prints &lt;type 'int'&gt;</span>
-<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c"># prints &lt;type 'float'&gt;</span>
-<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c"># prints &lt;type 'str'&gt;</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="c"># prints &lt;type 'int'&gt;</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span> <span class="c"># prints &lt;type 'float'&gt;</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">))</span> <span class="c"># prints &lt;type 'str'&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -285,11 +285,11 @@ comment in python
 6
 7</pre></td><td class="code"><pre><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
 
-<span class="k">print</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c"># Addition: prints "11"</span>
-<span class="k">print</span> <span class="n">a</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c"># Subtraction: prints "9"</span>
-<span class="k">print</span> <span class="n">a</span> <span class="o">*</span> <span class="mi">2</span>  <span class="c"># Multiplication: prints "20"</span>
-<span class="k">print</span> <span class="n">a</span> <span class="o">/</span> <span class="mi">2</span>  <span class="c"># Division: prints "5"</span>
-<span class="k">print</span> <span class="n">a</span>  <span class="mi">2</span> <span class="c"># Exponentiation: prints "100"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c"># Addition: prints "11"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c"># Subtraction: prints "9"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>  <span class="c"># Multiplication: prints "20"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>  <span class="c"># Division: prints "5"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="c"># Exponentiation: prints "100"</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -307,10 +307,10 @@ comment in python
 <span class="n">x</span> <span class="o">=</span> <span class="bp">True</span>
 <span class="n">y</span> <span class="o">=</span> <span class="bp">False</span>
 
-<span class="k">print</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">y</span>  <span class="c"># prints "False"</span>
-<span class="k">print</span> <span class="n">x</span> <span class="ow">or</span> <span class="n">y</span>   <span class="c"># prints "True"</span>
-<span class="k">print</span> <span class="ow">not</span> <span class="n">x</span>    <span class="c"># prints "False"</span>
-<span class="k">print</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span>    <span class="c"># prints "False"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">and</span> <span class="n">y</span><span class="p">)</span>  <span class="c"># prints "False"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">or</span> <span class="n">y</span><span class="p">)</span>   <span class="c"># prints "True"</span>
+<span class="k">print</span><span class="p">(</span><span class="ow">not</span> <span class="n">x</span><span class="p">)</span>    <span class="c"># prints "False"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span><span class="p">)</span>    <span class="c"># prints "False"</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -344,7 +344,7 @@ comment in python
 
 <span class="c"># the conditionals</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"Number - "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="s">" is less than 100"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Number - "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="s">" is less than 100"</span><span class="p">)</span>
 <span class="k">elif</span> <span class="p">(</span><span class="n">b</span> <span class="o">&gt;=</span> <span class="mi">100</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="s">"Number - "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="s">" is greater than or equal to 100 but less than 200"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
@@ -386,7 +386,7 @@ comment in python
 26</pre></td><td class="code"><pre><span class="c"># while loop</span>
 <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="k">print</span> <span class="p">(</span><span class="n">c</span><span class="p">,</span>  <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">,</span>  <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
     <span class="n">c</span> <span class="o">+=</span> <span class="mi">1</span>
 
 <span class="c"># prints 0123456789</span>
@@ -394,7 +394,7 @@ comment in python
 <span class="c"># for loop</span>
 <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-    <span class="k">print</span> <span class="n">x</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
 <span class="c"># prints 1</span>
 <span class="c">#        2</span>
@@ -402,7 +402,7 @@ comment in python
 
 <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">print</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 
 <span class="c"># prints 0</span>
 <span class="c">#        1</span>
@@ -432,16 +432,16 @@ comment in python
 <span class="n">a</span> <span class="o">=</span> <span class="s">"Python"</span>
 <span class="n">b</span> <span class="o">=</span> <span class="s">" is awesome!"</span>
 
-<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>                        <span class="c"># Length of the string: prints "6"</span>
-<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>                        <span class="c"># prints "12"</span>
-<span class="k">print</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>                         <span class="c"># String concatenation: prints "Python is awesome!"</span>
-<span class="k">print</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>                          <span class="c"># prints "Python  is awesome!"</span>
-<span class="k">print</span> <span class="s">"{}{}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>           <span class="c"># prints "Python is awesome!"</span>
-<span class="k">print</span> <span class="s">"</span><span class="si">%</span><span class="s">s</span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>               <span class="c"># sprintf style formatting: prints "Python is awesome!"</span>
-<span class="k">print</span> <span class="n">a</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>                     <span class="c"># converts all characters to uppercase: prints "PYTHON"</span>
-<span class="k">print</span> <span class="n">a</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>                     <span class="c"># converts all characters to lowercase: prints "python"</span>
-<span class="k">print</span> <span class="n">b</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>                     <span class="c"># removes trailing and leading whitespaces: prints "is awesome!"</span>
-<span class="k">print</span> <span class="n">b</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"awesome"</span><span class="p">,</span> <span class="s">"great"</span><span class="p">)</span> <span class="c"># replace a substring with a new string: prints " is great!"</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>                        <span class="c"># Length of the string: prints "6"</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>                        <span class="c"># prints "12"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>                         <span class="c"># String concatenation: prints "Python is awesome!"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>                          <span class="c"># prints "Python  is awesome!"</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"{}{}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>          <span class="c"># prints "Python is awesome!"</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="si">%</span><span class="s">s</span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>               <span class="c"># sprintf style formatting: prints "Python is awesome!"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>                    <span class="c"># converts all characters to uppercase: prints "PYTHON"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>                     <span class="c"># converts all characters to lowercase: prints "python"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>                     <span class="c"># removes trailing and leading whitespaces: prints "is awesome!"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"awesome"</span><span class="p">,</span> <span class="s">"great"</span><span class="p">))</span> <span class="c"># replace a substring with a new string: prints " is great!"</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -515,66 +515,66 @@ comment in python
 <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
 
 <span class="c"># length of list</span>
-<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>      <span class="c"># prints "5"</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">))</span>      <span class="c"># prints "5"</span>
 
 <span class="c"># indexing</span>
-<span class="k">print</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>        <span class="c"># prints "1"</span>
-<span class="k">print</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>        <span class="c"># prints "2"</span>
-<span class="k">print</span> <span class="n">l</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c"># prints "5"</span>
-<span class="k">print</span> <span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>       <span class="c"># negative indexing: prints "5"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>        <span class="c"># prints "1"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>        <span class="c"># prints "2"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c"># prints "5"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>       <span class="c"># negative indexing: prints "5"</span>
 
 <span class="c"># insert and remove</span>
 <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>        <span class="c"># inserts "6" at last</span>
-<span class="k">print</span> <span class="n">l</span>            <span class="c"># prints "[1,2,3,4,5,6]"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>            <span class="c"># prints "[1,2,3,4,5,6]"</span>
 <span class="n">item</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>     <span class="c"># removes last element and returns that element</span>
-<span class="k">print</span> <span class="n">item</span>         <span class="c"># prints "6"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>         <span class="c"># prints "6"</span>
 <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">"string"</span><span class="p">)</span> <span class="c"># adds different data type too</span>
-<span class="k">print</span> <span class="n">l</span>            <span class="c"># prints "[1,2,3,4,5,'string']"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>            <span class="c"># prints "[1,2,3,4,5,'string']"</span>
 <span class="n">l</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>            <span class="c"># removes last string element</span>
 
 <span class="c"># slicing list</span>
-<span class="k">print</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>       <span class="c"># prints "2"</span>
-<span class="k">print</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>       <span class="c"># prints "2,3"</span>
-<span class="k">print</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">:]</span>        <span class="c"># prints "[1,2,3,4,5,'string']"</span>
-<span class="k">print</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>      <span class="c"># prints "[1,2,3,4,5]"</span>
-<span class="k">print</span> <span class="n">l</span><span class="p">[:]</span>         <span class="c"># prints "[1,2,3,4,5,'string']"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>       <span class="c"># prints "2"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>       <span class="c"># prints "2,3"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">:])</span>        <span class="c"># prints "[1,2,3,4,5,'string']"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>      <span class="c"># prints "[1,2,3,4,5]"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">[:])</span>         <span class="c"># prints "[1,2,3,4,5,'string']"</span>
 
 <span class="c"># loop over the list</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
-    <span class="k">print</span> <span class="n">item</span>     <span class="c"># prints each item in list one by one</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>     <span class="c"># prints each item in list one by one</span>
 
 <span class="c"># enumerate over the list</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
-    <span class="k">print</span> <span class="s">"{}-{}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span> <span class="c"># prints each item with its index</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"{}-{}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">item</span><span class="p">))</span> <span class="c"># prints each item with its index</span>
 
 
 <span class="c"># squaring elements in a list</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">item</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">print</span> <span class="n">item2</span>      <span class="c"># square each even number in the list</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">item2</span><span class="p">)</span>      <span class="c"># square each even number in the list</span>
 
 <span class="c"># above can be achieved using a list comprehension too! (one-line)</span>
-<span class="k">print</span> <span class="p">[</span><span class="n">x2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">print</span><span class="p">([</span><span class="n">x2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">])</span>
 
 <span class="c"># sort the list</span>
 <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 
 <span class="c"># ascending order</span>
 <span class="n">b</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="k">print</span> <span class="n">b</span>  <span class="c"># prints [2, 4, 5, 7, 9]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>  <span class="c"># prints [2, 4, 5, 7, 9]</span>
 
 <span class="c"># descending order</span>
 <span class="n">b</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">b</span> <span class="c"># prints [9, 7, 5, 4, 2]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c"># prints [9, 7, 5, 4, 2]</span>
 
 <span class="c"># reverse the list (notice this is not descending order sort)</span>
 <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s">"dhoni"</span><span class="p">,</span> <span class="s">"sachin"</span><span class="p">,</span> <span class="s">"warner"</span><span class="p">,</span> <span class="s">"abd"</span><span class="p">]</span>
 <span class="n">a</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
-<span class="k">print</span> <span class="n">a</span> <span class="c"># prints ['abd', 'warner', 'sachin', 'dhoni']</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c"># prints ['abd', 'warner', 'sachin', 'dhoni']</span>
 
 <span class="c"># count of object in list</span>
 <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">66</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span> 
-<span class="k">print</span> <span class="n">a</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span> <span class="c"># prints 2</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">22</span><span class="p">))</span> <span class="c"># prints 2</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -610,30 +610,30 @@ comment in python
 27</pre></td><td class="code"><pre><span class="c"># declare a tuple</span>
 <span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
 
-<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>    <span class="c"># prints "&lt;type 'tuple'&gt;"</span>
-<span class="k">print</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>       <span class="c"># prints 200</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>    <span class="c"># prints "&lt;type 'tuple'&gt;"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>       <span class="c"># prints 200</span>
 
 <span class="c"># tuple of tuples</span>
 <span class="n">tt</span> <span class="o">=</span> <span class="p">((</span><span class="mi">200</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span> <span class="n">t</span><span class="p">)</span>
 
-<span class="k">print</span> <span class="n">tt</span>         <span class="c"># prints "((200, 100), (500, 200))"</span>
-<span class="k">print</span> <span class="n">tt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>      <span class="c"># prints "(500, 200)"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">tt</span><span class="p">)</span>         <span class="c"># prints "((200, 100), (500, 200))"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">tt</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>      <span class="c"># prints "(500, 200)"</span>
 
 <span class="c"># loop over tuple</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">t</span><span class="p">:</span>
-    <span class="k">print</span> <span class="n">item</span>   <span class="c"># prints each item in the tuple</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>   <span class="c"># prints each item in the tuple</span>
 
 
 <span class="c"># built-in tuple commands</span>
-<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="c"># prints the length of tuple which is 2</span>
-<span class="k">print</span> <span class="nb">max</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="c"># prints the max-valued element which is 500</span>
-<span class="k">print</span> <span class="nb">min</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="c"># prints the min-valued element which is 200</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="c"># prints the length of tuple which is 2</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="c"># prints the max-valued element which is 500</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="c"># prints the min-valued element which is 200</span>
 
 <span class="c"># convert list to tuple</span>
 <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">400</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">1200</span><span class="p">]</span>
 <span class="n">l_to_t</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 
-<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">l_to_t</span><span class="p">)</span> <span class="c"># prints &lt;class 'tuple'&gt;</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">l_to_t</span><span class="p">))</span> <span class="c"># prints &lt;class 'tuple'&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -771,13 +771,13 @@ thanos
       <span class="s">"3"</span> <span class="p">:</span> <span class="s">"Thor"</span>
     <span class="p">}</span>
 
-<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>    <span class="c"># prints "&lt;type 'dict'&gt;"</span>
-<span class="k">print</span> <span class="n">d</span><span class="p">[</span><span class="s">"1"</span><span class="p">]</span>     <span class="c"># prints "Ironman"</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>    <span class="c"># prints "&lt;type 'dict'&gt;"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s">"1"</span><span class="p">])</span>     <span class="c"># prints "Ironman"</span>
 
 <span class="c"># loop over dictionary</span>
 <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
-    <span class="k">print</span> <span class="n">key</span>    <span class="c"># prints each key in d</span>
-    <span class="k">print</span> <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="c"># prints value of each key in d (unsorted)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>    <span class="c"># prints each key in d</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">])</span> <span class="c"># prints value of each key in d (unsorted)</span>
 
 <span class="c"># change values in the dictionary</span>
 <span class="n">d</span><span class="p">[</span><span class="s">"2"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Hulk"</span>
@@ -869,7 +869,7 @@ prints
 4</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">squared</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
 
-<span class="k">print</span> <span class="n">squared</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>   <span class="c"># prints "4"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">squared</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>   <span class="c"># prints "4"</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -1360,8 +1360,8 @@ Murali is 65, and his grandfather, Karthik, is 77.
 <span class="c"># findall()</span>
 <span class="n">ages</span>  <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">r'</span><span class="err">\</span><span class="s">d{1,3}'</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
 <span class="n">names</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">r'[A-Z][a-z]*'</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> 
-<span class="k">print</span> <span class="n">ages</span>  <span class="c"># prints ['19', '24', '65', '77']</span>
-<span class="k">print</span> <span class="n">names</span> <span class="c"># prints ['Rahul', 'Ashok', 'Murali', 'Karthik']</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ages</span><span class="p">)</span>  <span class="c"># prints ['19', '24', '65', '77']</span>
+<span class="k">print</span><span class="p">(</span><span class="n">names</span><span class="p">)</span> <span class="c"># prints ['Rahul', 'Ashok', 'Murali', 'Karthik']</span>
 
 <span class="c"># finditer()</span>
 <span class="n">ages</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="s">r'</span><span class="err">\</span><span class="s">d{1,3}'</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
@@ -1377,19 +1377,19 @@ Murali is 65, and his grandfather, Karthik, is 77.
 <span class="c"># split()</span>
 <span class="nb">str</span> <span class="o">=</span> <span class="s">"This is an example string"</span>
 <span class="n">splitted</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">r'</span><span class="err">\</span><span class="s">s*'</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">splitted</span> <span class="c"># prints ['This', 'is', 'an', 'example', 'string']</span>
+<span class="k">print</span><span class="p">(</span><span class="n">splitted</span><span class="p">)</span> <span class="c"># prints ['This', 'is', 'an', 'example', 'string']</span>
 
 <span class="c"># match()</span>
 <span class="nb">str</span> <span class="o">=</span> <span class="s">"Dogs are braver than Cats"</span>
 <span class="n">matches</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">r'[A-Z][a-z]*'</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">matches</span><span class="o">.</span><span class="n">group</span><span class="p">()</span> <span class="c"># prints "Dogs"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">matches</span><span class="o">.</span><span class="n">group</span><span class="p">())</span> <span class="c"># prints "Dogs"</span>
 
 <span class="c"># search()</span>
 <span class="nb">str</span> <span class="o">=</span> <span class="s">"For data science help, reach support@datacamp.com"</span>
 <span class="n">searches</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">r'([</span><span class="err">\</span><span class="s">w</span><span class="err">\</span><span class="s">.-]+)@([</span><span class="err">\</span><span class="s">w</span><span class="err">\</span><span class="s">.-]+)'</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">searches</span><span class="o">.</span><span class="n">group</span><span class="p">()</span>  <span class="c"># prints support@datacamp.com</span>
-<span class="k">print</span> <span class="n">searches</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c"># prints support</span>
-<span class="k">print</span> <span class="n">searches</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c"># prints datacamp.com</span>
+<span class="k">print</span><span class="p">(</span><span class="n">searches</span><span class="o">.</span><span class="n">group</span><span class="p">())</span>  <span class="c"># prints support@datacamp.com</span>
+<span class="k">print</span><span class="p">(</span><span class="n">searches</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c"># prints support</span>
+<span class="k">print</span><span class="p">(</span><span class="n">searches</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c"># prints datacamp.com</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>

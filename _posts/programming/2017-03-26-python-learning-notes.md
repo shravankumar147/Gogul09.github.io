@@ -103,23 +103,23 @@ comment in python
 ```python
 # declare an integer
 a = 12
-print a       # prints "12"
-print type(a) # prints <type 'int'>
+print(a)       # prints "12"
+print(type(a)) # prints <type 'int'>
 
 # declare a float
 b = 1.7
-print b       # prints "1.7"
-print type(b) # prints <type 'float'>
+print(b)       # prints "1.7"
+print(type(b)) # prints <type 'float'>
 
 # declare a string
 c = "Python"
-print c       # prints "Python"
-print type(c) # prints <type 'str'>
+print(c)       # prints "Python"
+print(type(c)) # prints <type 'str'>
 
 # declare a boolean
 d = True
-print d       # prints "True"
-print type(d) # prints <type 'bool'>
+print(d)       # prints "True"
+print(type(d)) # prints <type 'bool'>
 ```
 
 <h3 class="code-head" id="multiple-variable-assignments">Multiple variable assignments<span>code</span></h3>
@@ -131,9 +131,9 @@ a, b, c = 1, 2, 3
 # assign values with different data types to multiple variables in a single line
 a, b, c = 1, 3.5, "hello"
 
-print type(a) # prints <type 'int'>
-print type(b) # prints <type 'float'>
-print type(c) # prints <type 'str'>
+print(type(a)) # prints <type 'int'>
+print(type(b)) # prints <type 'float'>
+print(type(c)) # prints <type 'str'>
 ```
 
 <h3 class="code-head" id="math-operations">Math operations<span>code</span></h3>
@@ -141,11 +141,11 @@ print type(c) # prints <type 'str'>
 ```python
 a = 10
 
-print a + 1  # Addition: prints "11"
-print a - 1  # Subtraction: prints "9"
-print a * 2  # Multiplication: prints "20"
-print a / 2  # Division: prints "5"
-print a  2 # Exponentiation: prints "100"
+print(a + 1)  # Addition: prints "11"
+print(a - 1)  # Subtraction: prints "9"
+print(a * 2)  # Multiplication: prints "20"
+print(a / 2)  # Division: prints "5"
+print(a ** 2) # Exponentiation: prints "100"
 ```
 
 <h3 class="code-head" id="logical-operations">Logical operations<span>code</span></h3>
@@ -155,10 +155,10 @@ print a  2 # Exponentiation: prints "100"
 x = True
 y = False
 
-print x and y  # prints "False"
-print x or y   # prints "True"
-print not x    # prints "False"
-print x & y    # prints "False"
+print(x and y)  # prints "False"
+print(x or y)   # prints "True"
+print(not x)    # prints "False"
+print(x & y)    # prints "False"
 ```
 
 <h3 class="code-head" id="conditions">Conditions<span>code</span></h3>
@@ -174,7 +174,7 @@ b = random.choice(a)
 
 # the conditionals
 if (b < 100):
-    print("Number - " + str(a) + " is less than 100")
+    print("Number - " + str(b) + " is less than 100")
 elif (b >= 100 and b < 200):
     print("Number - " + str(b) + " is greater than or equal to 100 but less than 200")
 else:
@@ -190,7 +190,7 @@ else:
 # while loop
 c = 0
 while (c < 10):
-    print (c,  end='')
+    print(c,  end='')
     c += 1
 
 # prints 0123456789
@@ -198,7 +198,7 @@ while (c < 10):
 # for loop
 numbers = [1, 2, 4]
 for x in numbers:
-    print x
+    print(x)
 
 # prints 1
 #        2
@@ -206,7 +206,7 @@ for x in numbers:
 
 x = 5
 for c in range(x):
-    print (c)
+    print(c)
 
 # prints 0
 #        1
@@ -222,16 +222,16 @@ for c in range(x):
 a = "Python"
 b = " is awesome!"
 
-print len(a)                        # Length of the string: prints "6"
-print len(b)                        # prints "12"
-print a + b                         # String concatenation: prints "Python is awesome!"
-print a, b                          # prints "Python  is awesome!"
-print "{}{}".format(a, b)           # prints "Python is awesome!"
-print "%s%s" % (a, b)               # sprintf style formatting: prints "Python is awesome!"
-print a.upper()                     # converts all characters to uppercase: prints "PYTHON"
-print a.lower()                     # converts all characters to lowercase: prints "python"
-print b.strip()                     # removes trailing and leading whitespaces: prints "is awesome!"
-print b.replace("awesome", "great") # replace a substring with a new string: prints " is great!"
+print(len(a))                        # Length of the string: prints "6"
+print(len(b))                        # prints "12"
+print(a + b)                         # String concatenation: prints "Python is awesome!"
+print(a, b)                          # prints "Python  is awesome!"
+print("{}{}".format(a, b))          # prints "Python is awesome!"
+print("%s%s" % (a, b))               # sprintf style formatting: prints "Python is awesome!"
+print(a.upper())                    # converts all characters to uppercase: prints "PYTHON"
+print(a.lower())                     # converts all characters to lowercase: prints "python"
+print(b.strip())                     # removes trailing and leading whitespaces: prints "is awesome!"
+print(b.replace("awesome", "great")) # replace a substring with a new string: prints " is great!"
 ```
 
 <h3 class="code-head" id="lists">Lists<span>code</span></h3>
@@ -241,66 +241,66 @@ print b.replace("awesome", "great") # replace a substring with a new string: pri
 l = [1,2,3,4,5]
 
 # length of list
-print len(l)      # prints "5"
+print(len(l))      # prints "5"
 
 # indexing
-print l[0]        # prints "1"
-print l[1]        # prints "2"
-print l[len(l)-1] # prints "5"
-print l[-1]       # negative indexing: prints "5"
+print(l[0])        # prints "1"
+print(l[1])        # prints "2"
+print(l[len(l)-1]) # prints "5"
+print(l[-1])       # negative indexing: prints "5"
 
 # insert and remove
 l.append(6)        # inserts "6" at last
-print l            # prints "[1,2,3,4,5,6]"
+print(l)            # prints "[1,2,3,4,5,6]"
 item = l.pop()     # removes last element and returns that element
-print item         # prints "6"
+print(item)         # prints "6"
 l.append("string") # adds different data type too
-print l            # prints "[1,2,3,4,5,'string']"
+print(l)            # prints "[1,2,3,4,5,'string']"
 l.pop()            # removes last string element
 
 # slicing list
-print l[1:2]       # prints "2"
-print l[1:3]       # prints "2,3"
-print l[0:]        # prints "[1,2,3,4,5,'string']"
-print l[0:-1]      # prints "[1,2,3,4,5]"
-print l[:]         # prints "[1,2,3,4,5,'string']"
+print(l[1:2])       # prints "2"
+print(l[1:3])       # prints "2,3"
+print(l[0:])        # prints "[1,2,3,4,5,'string']"
+print(l[0:-1])      # prints "[1,2,3,4,5]"
+print(l[:])         # prints "[1,2,3,4,5,'string']"
 
 # loop over the list
 for item in l:
-    print item     # prints each item in list one by one
+    print(item)     # prints each item in list one by one
 
 # enumerate over the list
 for i, item in enumerate(l):
-    print "{}-{}".format(i, item) # prints each item with its index
+    print("{}-{}".format(i, item)) # prints each item with its index
 
 
 # squaring elements in a list
 for item in l:
     if item%2 == 0:
-        print item2      # square each even number in the list
+        print(item2)      # square each even number in the list
 
 # above can be achieved using a list comprehension too! (one-line)
-print [x2 for x in l if x%2==0]
+print([x2 for x in l if x%2==0])
 
 # sort the list
 b = [5, 7, 2, 4, 9]
 
 # ascending order
 b.sort()
-print b  # prints [2, 4, 5, 7, 9]
+print(b)  # prints [2, 4, 5, 7, 9]
 
 # descending order
 b.sort(reverse=True)
-print b # prints [9, 7, 5, 4, 2]
+print(b) # prints [9, 7, 5, 4, 2]
 
 # reverse the list (notice this is not descending order sort)
 a = ["dhoni", "sachin", "warner", "abd"]
 a.reverse()
-print a # prints ['abd', 'warner', 'sachin', 'dhoni']
+print(a) # prints ['abd', 'warner', 'sachin', 'dhoni']
 
 # count of object in list
 a = [66, 55, 44, 22, 11, 55, 22] 
-print a.count(22) # prints 2
+print(a.count(22)) # prints 2
 ```
 
 <h3 class="code-head" id="tuples">Tuples<span>code</span></h3>
@@ -309,30 +309,30 @@ print a.count(22) # prints 2
 # declare a tuple
 t = (500, 200)
 
-print type(t)    # prints "<type 'tuple'>"
-print t[1]       # prints 200
+print(type(t))    # prints "<type 'tuple'>"
+print(t[1])       # prints 200
 
 # tuple of tuples
 tt = ((200,100), t)
 
-print tt         # prints "((200, 100), (500, 200))"
-print tt[1]      # prints "(500, 200)"
+print(tt)         # prints "((200, 100), (500, 200))"
+print(tt[1])      # prints "(500, 200)"
 
 # loop over tuple
 for item in t:
-    print item   # prints each item in the tuple
+    print(item)   # prints each item in the tuple
 
 
 # built-in tuple commands
-print len(t) # prints the length of tuple which is 2
-print max(t) # prints the max-valued element which is 500
-print min(t) # prints the min-valued element which is 200
+print(len(t)) # prints the length of tuple which is 2
+print(max(t)) # prints the max-valued element which is 500
+print(min(t)) # prints the min-valued element which is 200
 
 # convert list to tuple
 l = [400, 800, 1200]
 l_to_t = tuple(l)
 
-print type(l_to_t) # prints <class 'tuple'>
+print(type(l_to_t)) # prints <class 'tuple'>
 ```
 
 <h3 class="code-head" id="set">Set<span>code</span></h3>
@@ -387,13 +387,13 @@ d = { "1" : "Ironman",
       "3" : "Thor"
     }
 
-print type(d)    # prints "<type 'dict'>"
-print d["1"]     # prints "Ironman"
+print(type(d))    # prints "<type 'dict'>"
+print(d["1"])     # prints "Ironman"
 
 # loop over dictionary
 for key in d:
-    print key    # prints each key in d
-    print d[key] # prints value of each key in d (unsorted)
+    print(key)    # prints each key in d
+    print(d[key]) # prints value of each key in d (unsorted)
 
 # change values in the dictionary
 d["2"] = "Hulk"
@@ -461,7 +461,7 @@ finally:
 def squared(x):
     return x*x
 
-print squared(2)   # prints "4"
+print(squared(2))   # prints "4"
 ```
 
 <!-- --------------------------------------------------------------------- -->
@@ -772,8 +772,8 @@ Murali is 65, and his grandfather, Karthik, is 77.
 # findall()
 ages  = re.findall(r'\d{1,3}', str)
 names = re.findall(r'[A-Z][a-z]*', str) 
-print ages  # prints ['19', '24', '65', '77']
-print names # prints ['Rahul', 'Ashok', 'Murali', 'Karthik']
+print(ages)  # prints ['19', '24', '65', '77']
+print(names) # prints ['Rahul', 'Ashok', 'Murali', 'Karthik']
 
 # finditer()
 ages = re.finditer(r'\d{1,3}', str)
@@ -789,19 +789,19 @@ for m in ages:
 # split()
 str = "This is an example string"
 splitted = re.split(r'\s*', str)
-print splitted # prints ['This', 'is', 'an', 'example', 'string']
+print(splitted) # prints ['This', 'is', 'an', 'example', 'string']
 
 # match()
 str = "Dogs are braver than Cats"
 matches = re.match(r'[A-Z][a-z]*', str)
-print matches.group() # prints "Dogs"
+print(matches.group()) # prints "Dogs"
 
 # search()
 str = "For data science help, reach support@datacamp.com"
 searches = re.search(r'([\w\.-]+)@([\w\.-]+)', str)
-print searches.group()  # prints support@datacamp.com
-print searches.group(1) # prints support
-print searches.group(2) # prints datacamp.com
+print(searches.group())  # prints support@datacamp.com
+print(searches.group(1)) # prints support
+print(searches.group(2)) # prints datacamp.com
 ```
 
 <h3 class="code-head" id="os-module">os module<span>code</span></h3>
@@ -920,7 +920,7 @@ class Customer(object):
 
     # a simple print method
     def print_customer(self):
-        print ("Customer: {}, Age: {}".format(self.name, self.age))
+        print("Customer: {}, Age: {}".format(self.name, self.age))
 
 # define an instance
 a = Customer("Gogul", "24")
@@ -944,7 +944,7 @@ class Customer(object):
         Customer.num_of_custs += 1
 
     def apply_raise(self):
-        print ("Customer {} new pay is {}".format(self.name, float(self.pay) * self.raise_amount))
+        print("Customer {} new pay is {}".format(self.name, float(self.pay) * self.raise_amount))
 
 if __name__ == '__main__':
     # class variable not updated
@@ -957,10 +957,10 @@ if __name__ == '__main__':
     b.apply_raise() # Customer Mahadevan new pay is 12299.999999999998
 
     # print dict of an instance
-    print (a.__dict__) # prints {'name': 'Gogul', 'age': '24', 'pay': '5000'}
+    print(a.__dict__) # prints {'name': 'Gogul', 'age': '24', 'pay': '5000'}
 
     # There are 2 customers
-    print ("There are {} customers".format(Customer.num_of_custs))
+    print("There are {} customers".format(Customer.num_of_custs))
 ```
 
 <!-- --------------------------------------------------------------------- -->
@@ -1027,11 +1027,11 @@ with open(file_input) as data_file:
 ```python
 # method 1 
 if not myList:
-    print "list is empty"
+    print("list is empty")
 
 # method 2
 if len(myList) == 0:
-    print "list is empty"
+    print("list is empty")
 ```
 
 <h3 class="code-head" id="how-to-access-index-in-for-loop">How to access index in for loop?<span>code</span></h3>
@@ -1041,12 +1041,12 @@ myList = ["a", "b", "c"]
 
 # method 1
 for idx, l in enumerate(myList):
-    print str(idx) + "-" + l
+    print(str(idx) + "-" + l)
 
 # method 2
 idx = 0
 for l in myList:
-    print str(idx) + "-" + l
+    print(str(idx) + "-" + l)
     idx += 1
 
 # both methods print
@@ -1064,7 +1064,7 @@ a["SouthAfrica"] = "ABD"
 a["Australia"] = "Smith"
 
 for key in sorted(a.keys(), key=lambda x:x.lower()):
-    print ("{0} - {1}".format(key, a[key]))
+    print("{0} - {1}".format(key, a[key]))
 
 # prints 
 # Australia - Smith
