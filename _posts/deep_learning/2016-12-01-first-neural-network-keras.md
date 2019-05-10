@@ -45,6 +45,8 @@ cardimage: https://drive.google.com/uc?id=1KqcxcuO1_x3Tq7DT0XZ92daV0iVHzJDA
 
 To all those who want to actually write some code to build a Deep Neural Network, but don't know where to begin, I highly suggest you to visit [Keras](https://keras.io/){:target="_blank"} website as well as it's [github](https://github.com/fchollet/keras){:target="_blank"} page. 
 
+> **Update**: As Python2 faces [end of life](https://pythonclock.org/), the below code only supports **Python3**.
+
 In this post, we will learn the simple 6 steps with which we can create our first deep neural network using Keras and Python. Let's get started!
 
 <h3 class="code-head">Objectives</h3>
@@ -277,7 +279,7 @@ After fitting the dataset to the model, the model needs to be evaluated. Evaluat
 ```python
 # evaluate the model
 scores = model.evaluate(X_test, Y_test)
-print ("Accuracy: %.2f%%" %(scores[1]*100))
+print("Accuracy: %.2f%%" %(scores[1]*100))
 ```
 
 ### Complete code

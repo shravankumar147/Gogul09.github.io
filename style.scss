@@ -225,8 +225,8 @@
     font-size: 22px;
     border-radius: 3px;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    border-left: 10px solid #90f6d8 !important;
-    border: 1px solid #7cf1cf;
+    border-left: 10px solid #fff982 !important;
+    border: 1px solid #fff866;
   }
 
   .comments {
@@ -243,13 +243,13 @@
 blockquote {
   width: 100%;
   margin: 50px auto;
-  color: #555555;
+  color: #000;
   padding: 0.6em 1em;
   line-height: 1.6;
   position: relative;
-  background-color: #cbfff0;
+  background-color: #ffffbc;
   p {
-    color: #245144;
+    color: #000;
   }
 }
 

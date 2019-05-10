@@ -48,13 +48,15 @@ cardimage: https://drive.google.com/uc?id=1MmLXQwBFhCSBMxnrvyJFI8ZkQb0GUfx3
 
 **In this tutorial, we will learn how to recognize handwritten digit using a simple Multi-Layer Perceptron (MLP) in Keras. We will also learn how to build a near state-of-the-art deep neural network model using Python and Keras. A quick Google search about this dataset will give you tons of information - [MNIST](https://en.wikipedia.org/wiki/MNIST_database){:target="_blank"}.**
 
+> **Update**: As Python2 faces [end of life](https://pythonclock.org/), the below code only supports **Python3**.
+
 This tutorial is intended for beginners exploring how to implement a neural network using Keras. We will strictly focus towards the implementation of a neural network without concentrating too much on the theory part. To learn more Deep Learning theory, please visit [this](http://deeplearning.stanford.edu/tutorial/){:target="_blank"} awesome website.
 
 <div class="note" style="margin-bottom: 0px !important">
 	<p><b>Note</b>: Before implementing anything in code, we need to setup our environment to do Deep Learning. Make sure you use the below links to do that and then come here.</p>
 	<ul style="margin-bottom: 0px !important">
-		<li><a href="https://gogul09.github.io/helpers/deep-learning-windows" target="_blank">Deep Learning Environment Setup (Windows)</a></li>
-		<li><a href="https://gogul09.github.io/helpers/deep-learning-linux" target="_blank">Deep Learning Environment Setup for (Linux)</a></li>
+		<li><a href="https://gogul09.github.io/software/deep-learning-windows" target="_blank">Deep Learning Environment Setup (Windows)</a></li>
+		<li><a href="https://gogul09.github.io/software/deep-learning-linux" target="_blank">Deep Learning Environment Setup for (Linux)</a></li>
 	</ul>
 </div>
 
@@ -161,10 +163,10 @@ v_length = 784
 ```python
 # split the mnist data into train and test
 (trainData, trainLabels), (testData, testLabels) = mnist.load_data()
-print "[INFO] train data shape: {}".format(trainData.shape)
-print "[INFO] test data shape: {}".format(testData.shape)
-print "[INFO] train samples: {}".format(trainData.shape[0])
-print "[INFO] test samples: {}".format(testData.shape[0])
+print("[INFO] train data shape: {}".format(trainData.shape))
+print("[INFO] test data shape: {}".format(testData.shape))
+print("[INFO] train samples: {}".format(trainData.shape[0]))
+print("[INFO] test samples: {}".format(testData.shape[0]))
 ```
 
 <div class="code-out">
@@ -185,10 +187,10 @@ testData = testData.astype("float32")
 trainData /= 255
 testData /= 255
 
-print "[INFO] train data shape: {}".format(trainData.shape)
-print "[INFO] test data shape: {}".format(testData.shape)
-print "[INFO] train samples: {}".format(trainData.shape[0])
-print "[INFO] test samples: {}".format(testData.shape[0])
+print("[INFO] train data shape: {}".format(trainData.shape))
+print("[INFO] test data shape: {}".format(testData.shape))
+print("[INFO] train samples: {}".format(trainData.shape[0]))
+print("[INFO] test samples: {}".format(testData.shape[0]))
 ```
 
 <div class="code-out">
@@ -255,9 +257,7 @@ After creating the model, we need to compile the model for optimization and lear
 
 ```python
 # compile the model
-model.compile(loss="categorical_crossentropy",
-							optimizer="adam",
-							metrics=["accuracy"])
+model.compile(loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
 ```
 
 ### Fit the model 
@@ -267,12 +267,7 @@ After compiling the model, we need to fit the model with the MNIST dataset. Usin
 
 ```python
 # fit the model
-history = model.fit(trainData, 
-				 	mTrainLabels,
-					validation_data=(testData, mTestLabels),
-					batch_size=batch_size,
-					nb_epoch=nb_epoch,
-					verbose=2)
+history = model.fit(trainData, mTrainLabels, validation_data=(testData, mTestLabels), batch_size=batch_size, nb_epoch=nb_epoch, verbose=2)
 ```
 
 ### Evaluate the model 
@@ -282,7 +277,7 @@ After fitting the model, the model can be evaluated on the unseen test data. Usi
 
 ```python
 # print the history keys
-print history.history.keys()
+print(history.history.keys())
 
 # evaluate the model
 scores = model.evaluate(testData, mTestLabels, verbose=0)
@@ -306,8 +301,8 @@ plt.legend(["train", "test"], loc="upper left")
 plt.show()
 
 # print the results
-print "[INFO] test score - {}".format(scores[0])
-print "[INFO] test accuracy - {}".format(scores[1])
+print("[INFO] test score - {}".format(scores[0]))
+print("[INFO] test accuracy - {}".format(scores[1]))
 ```
 
 <div class="code-out">
@@ -350,10 +345,10 @@ v_length = 784
 
 # split the mnist data into train and test
 (trainData, trainLabels), (testData, testLabels) = mnist.load_data()
-print "[INFO] train data shape: {}".format(trainData.shape)
-print "[INFO] test data shape: {}".format(testData.shape)
-print "[INFO] train samples: {}".format(trainData.shape[0])
-print "[INFO] test samples: {}".format(testData.shape[0])
+print("[INFO] train data shape: {}".format(trainData.shape))
+print("[INFO] test data shape: {}".format(testData.shape))
+print("[INFO] train samples: {}".format(trainData.shape[0]))
+print("[INFO] test samples: {}".format(testData.shape[0]))
 
 # reshape the dataset
 trainData = trainData.reshape(train_size, v_length)
@@ -363,10 +358,10 @@ testData = testData.astype("float32")
 trainData /= 255
 testData /= 255
 
-print "[INFO] train data shape: {}".format(trainData.shape)
-print "[INFO] test data shape: {}".format(testData.shape)
-print "[INFO] train samples: {}".format(trainData.shape[0])
-print "[INFO] test samples: {}".format(testData.shape[0])
+print("[INFO] train data shape: {}".format(trainData.shape))
+print("[INFO] test data shape: {}".format(testData.shape))
+print("[INFO] train samples: {}".format(trainData.shape[0]))
+print("[INFO] test samples: {}".format(testData.shape[0]))
 
 # convert class vectors to binary class matrices --> one-hot encoding
 mTrainLabels = np_utils.to_categorical(trainLabels, num_classes)
@@ -387,20 +382,13 @@ model.add(Activation("softmax"))
 model.summary()
 
 # compile the model
-model.compile(loss="categorical_crossentropy",
-			  optimizer="adam",
-			  metrics=["accuracy"])
+model.compile(loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
 
 # fit the model
-history = model.fit(trainData, 
-				 	mTrainLabels,
-					validation_data=(testData, mTestLabels),
-					batch_size=batch_size,
-					nb_epoch=nb_epoch,
-					verbose=2)
+history = model.fit(trainData, mTrainLabels, validation_data=(testData, mTestLabels), batch_size=batch_size, nb_epoch=nb_epoch, verbose=2)
 
 # print the history keys
-print history.history.keys()
+print(history.history.keys())
 
 # evaluate the model
 scores = model.evaluate(testData, mTestLabels, verbose=0)
@@ -424,8 +412,8 @@ plt.legend(["train", "test"], loc="upper left")
 plt.show()
 
 # print the results
-print "[INFO] test score - {}".format(scores[0])
-print "[INFO] test accuracy - {}".format(scores[1])
+print("[INFO] test score - {}".format(scores[0]))
+print("[INFO] test accuracy - {}".format(scores[1]))
 ```
 
 ### Testing the model
@@ -441,7 +429,7 @@ test_images = testData[1:5]
 
 # reshape the test images to standard 28x28 format
 test_images = test_images.reshape(test_images.shape[0], 28, 28)
-print "[INFO] test images shape - {}".format(test_images.shape)
+print("[INFO] test images shape - {}".format(test_images.shape))
 
 # loop over each of the test images
 for i, test_image in enumerate(test_images, start=1):
@@ -455,7 +443,7 @@ for i, test_image in enumerate(test_images, start=1):
 	prediction = model.predict_classes(test_image, verbose=0)
 	
 	# display the prediction and image
-	print "[INFO] I think the digit is - {}".format(prediction[0])
+	print("[INFO] I think the digit is - {}".format(prediction[0]))
 	plt.subplot(220+i)
 	plt.imshow(org_image, cmap=plt.get_cmap('gray'))
 

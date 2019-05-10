@@ -188,6 +188,10 @@
 </ul>
 </div>
 
+<blockquote>
+  <p><strong>Update</strong>: As Python2 faces <a href="https://pythonclock.org/">end of life</a>, the below code only supports <strong>Python3</strong>.</p>
+</blockquote>
+
 <h3 class="centered-heading" id="basics"><span>Basics</span></h3>
 
 <h3 class="code-head" id="hello-world">Hello World<span>code</span></h3>
@@ -1612,7 +1616,7 @@ Files:  ['formatting.py']
 
     <span class="c"># a simple print method</span>
     <span class="k">def</span> <span class="nf">print_customer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="p">(</span><span class="s">"Customer: {}, Age: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Customer: {}, Age: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
 
 <span class="c"># define an instance</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">Customer</span><span class="p">(</span><span class="s">"Gogul"</span><span class="p">,</span> <span class="s">"24"</span><span class="p">)</span>
@@ -1667,7 +1671,7 @@ Files:  ['formatting.py']
         <span class="n">Customer</span><span class="o">.</span><span class="n">num_of_custs</span> <span class="o">+=</span> <span class="mi">1</span>
 
     <span class="k">def</span> <span class="nf">apply_raise</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="p">(</span><span class="s">"Customer {} new pay is {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pay</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">raise_amount</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Customer {} new pay is {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pay</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">raise_amount</span><span class="p">))</span>
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
     <span class="c"># class variable not updated</span>
@@ -1680,10 +1684,10 @@ Files:  ['formatting.py']
     <span class="n">b</span><span class="o">.</span><span class="n">apply_raise</span><span class="p">()</span> <span class="c"># Customer Mahadevan new pay is 12299.999999999998</span>
 
     <span class="c"># print dict of an instance</span>
-    <span class="k">print</span> <span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">__dict__</span><span class="p">)</span> <span class="c"># prints {'name': 'Gogul', 'age': '24', 'pay': '5000'}</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">__dict__</span><span class="p">)</span> <span class="c"># prints {'name': 'Gogul', 'age': '24', 'pay': '5000'}</span>
 
     <span class="c"># There are 2 customers</span>
-    <span class="k">print</span> <span class="p">(</span><span class="s">"There are {} customers"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Customer</span><span class="o">.</span><span class="n">num_of_custs</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"There are {} customers"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Customer</span><span class="o">.</span><span class="n">num_of_custs</span><span class="p">))</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -1792,11 +1796,11 @@ four different methods (modes) to open a file
 6
 7</pre></td><td class="code"><pre><span class="c"># method 1 </span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">myList</span><span class="p">:</span>
-    <span class="k">print</span> <span class="s">"list is empty"</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"list is empty"</span><span class="p">)</span>
 
 <span class="c"># method 2</span>
 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="k">print</span> <span class="s">"list is empty"</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"list is empty"</span><span class="p">)</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -1822,12 +1826,12 @@ four different methods (modes) to open a file
 
 <span class="c"># method 1</span>
 <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">myList</span><span class="p">):</span>
-    <span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span> <span class="o">+</span> <span class="s">"-"</span> <span class="o">+</span> <span class="n">l</span>
+    <span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span> <span class="o">+</span> <span class="s">"-"</span> <span class="o">+</span> <span class="n">l</span><span class="p">)</span>
 
 <span class="c"># method 2</span>
 <span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">myList</span><span class="p">:</span>
-    <span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span> <span class="o">+</span> <span class="s">"-"</span> <span class="o">+</span> <span class="n">l</span>
+    <span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span> <span class="o">+</span> <span class="s">"-"</span> <span class="o">+</span> <span class="n">l</span><span class="p">)</span>
     <span class="n">idx</span> <span class="o">+=</span> <span class="mi">1</span>
 
 <span class="c"># both methods print</span>
@@ -1857,7 +1861,7 @@ four different methods (modes) to open a file
 <span class="n">a</span><span class="p">[</span><span class="s">"Australia"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Smith"</span>
 
 <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()):</span>
-    <span class="k">print</span> <span class="p">(</span><span class="s">"{0} - {1}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"{0} - {1}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span>
 
 <span class="c"># prints </span>
 <span class="c"># Australia - Smith</span>

@@ -84,6 +84,8 @@ In this page, you will find the **syntax**, **modules** and most common **how to
 </ul>
 </div>
 
+> **Update**: As Python2 faces [end of life](https://pythonclock.org/), the below code only supports **Python3**.
+
 <h3 class="centered-heading" id="basics"><span>Basics</span></h3>
 
 <h3 class="code-head" id="hello-world">Hello World<span>code</span></h3>

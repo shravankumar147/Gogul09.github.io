@@ -146,13 +146,17 @@
 
 <p><strong>In this tutorial, we will learn how to recognize handwritten digit using a simple Multi-Layer Perceptron (MLP) in Keras. We will also learn how to build a near state-of-the-art deep neural network model using Python and Keras. A quick Google search about this dataset will give you tons of information - <a href="https://en.wikipedia.org/wiki/MNIST_database" target="_blank">MNIST</a>.</strong></p>
 
+<blockquote>
+  <p><strong>Update</strong>: As Python2 faces <a href="https://pythonclock.org/">end of life</a>, the below code only supports <strong>Python3</strong>.</p>
+</blockquote>
+
 <p>This tutorial is intended for beginners exploring how to implement a neural network using Keras. We will strictly focus towards the implementation of a neural network without concentrating too much on the theory part. To learn more Deep Learning theory, please visit <a href="http://deeplearning.stanford.edu/tutorial/" target="_blank">this</a> awesome website.</p>
 
 <div class="note" style="margin-bottom: 0px !important">
 	<p><b>Note</b>: Before implementing anything in code, we need to setup our environment to do Deep Learning. Make sure you use the below links to do that and then come here.</p>
 	<ul style="margin-bottom: 0px !important">
-		<li><a href="https://gogul09.github.io/helpers/deep-learning-windows" target="_blank">Deep Learning Environment Setup (Windows)</a></li>
-		<li><a href="https://gogul09.github.io/helpers/deep-learning-linux" target="_blank">Deep Learning Environment Setup for (Linux)</a></li>
+		<li><a href="https://gogul09.github.io/software/deep-learning-windows" target="_blank">Deep Learning Environment Setup (Windows)</a></li>
+		<li><a href="https://gogul09.github.io/software/deep-learning-linux" target="_blank">Deep Learning Environment Setup for (Linux)</a></li>
 	</ul>
 </div>
 
@@ -302,10 +306,10 @@
 5
 6</pre></td><td class="code"><pre><span class="c"># split the mnist data into train and test</span>
 <span class="p">(</span><span class="n">trainData</span><span class="p">,</span> <span class="n">trainLabels</span><span class="p">),</span> <span class="p">(</span><span class="n">testData</span><span class="p">,</span> <span class="n">testLabels</span><span class="p">)</span> <span class="o">=</span> <span class="n">mnist</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
-<span class="k">print</span> <span class="s">"[INFO] train data shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="k">print</span> <span class="s">"[INFO] test data shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="k">print</span> <span class="s">"[INFO] train samples: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="k">print</span> <span class="s">"[INFO] test samples: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] train data shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] test data shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] train samples: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] test samples: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -338,10 +342,10 @@
 <span class="n">trainData</span> <span class="o">/=</span> <span class="mi">255</span>
 <span class="n">testData</span> <span class="o">/=</span> <span class="mi">255</span>
 
-<span class="k">print</span> <span class="s">"[INFO] train data shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="k">print</span> <span class="s">"[INFO] test data shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="k">print</span> <span class="s">"[INFO] train samples: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="k">print</span> <span class="s">"[INFO] test samples: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] train data shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] test data shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] train samples: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] test samples: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -478,12 +482,8 @@
 <div class="code-head"><span>code</span>train.py</div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4</pre></td><td class="code"><pre><span class="c"># compile the model</span>
-<span class="n">model</span><span class="o">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s">"categorical_crossentropy"</span><span class="p">,</span>
-							<span class="n">optimizer</span><span class="o">=</span><span class="s">"adam"</span><span class="p">,</span>
-							<span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s">"accuracy"</span><span class="p">])</span>
+2</pre></td><td class="code"><pre><span class="c"># compile the model</span>
+<span class="n">model</span><span class="o">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s">"categorical_crossentropy"</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s">"adam"</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s">"accuracy"</span><span class="p">])</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -494,18 +494,8 @@
 <div class="code-head"><span>code</span>train.py</div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7</pre></td><td class="code"><pre><span class="c"># fit the model</span>
-<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">trainData</span><span class="p">,</span> 
-				 	<span class="n">mTrainLabels</span><span class="p">,</span>
-					<span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">testData</span><span class="p">,</span> <span class="n">mTestLabels</span><span class="p">),</span>
-					<span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span>
-					<span class="n">nb_epoch</span><span class="o">=</span><span class="n">nb_epoch</span><span class="p">,</span>
-					<span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+2</pre></td><td class="code"><pre><span class="c"># fit the model</span>
+<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">trainData</span><span class="p">,</span> <span class="n">mTrainLabels</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">testData</span><span class="p">,</span> <span class="n">mTestLabels</span><span class="p">),</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">nb_epoch</span><span class="o">=</span><span class="n">nb_epoch</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -542,7 +532,7 @@
 25
 26
 27</pre></td><td class="code"><pre><span class="c"># print the history keys</span>
-<span class="k">print</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 
 <span class="c"># evaluate the model</span>
 <span class="n">scores</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">testData</span><span class="p">,</span> <span class="n">mTestLabels</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -566,8 +556,8 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="c"># print the results</span>
-<span class="k">print</span> <span class="s">"[INFO] test score - {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="k">print</span> <span class="s">"[INFO] test accuracy - {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] test score - {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] test accuracy - {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -679,14 +669,7 @@
 87
 88
 89
-90
-91
-92
-93
-94
-95
-96
-97</pre></td><td class="code"><pre><span class="c"># organize imports</span>
+90</pre></td><td class="code"><pre><span class="c"># organize imports</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
@@ -707,10 +690,10 @@
 
 <span class="c"># split the mnist data into train and test</span>
 <span class="p">(</span><span class="n">trainData</span><span class="p">,</span> <span class="n">trainLabels</span><span class="p">),</span> <span class="p">(</span><span class="n">testData</span><span class="p">,</span> <span class="n">testLabels</span><span class="p">)</span> <span class="o">=</span> <span class="n">mnist</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
-<span class="k">print</span> <span class="s">"[INFO] train data shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="k">print</span> <span class="s">"[INFO] test data shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="k">print</span> <span class="s">"[INFO] train samples: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="k">print</span> <span class="s">"[INFO] test samples: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] train data shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] test data shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] train samples: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] test samples: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 
 <span class="c"># reshape the dataset</span>
 <span class="n">trainData</span> <span class="o">=</span> <span class="n">trainData</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">train_size</span><span class="p">,</span> <span class="n">v_length</span><span class="p">)</span>
@@ -720,10 +703,10 @@
 <span class="n">trainData</span> <span class="o">/=</span> <span class="mi">255</span>
 <span class="n">testData</span> <span class="o">/=</span> <span class="mi">255</span>
 
-<span class="k">print</span> <span class="s">"[INFO] train data shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="k">print</span> <span class="s">"[INFO] test data shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="k">print</span> <span class="s">"[INFO] train samples: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="k">print</span> <span class="s">"[INFO] test samples: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] train data shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] test data shape: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] train samples: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trainData</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] test samples: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testData</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 
 <span class="c"># convert class vectors to binary class matrices --&gt; one-hot encoding</span>
 <span class="n">mTrainLabels</span> <span class="o">=</span> <span class="n">np_utils</span><span class="o">.</span><span class="n">to_categorical</span><span class="p">(</span><span class="n">trainLabels</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">)</span>
@@ -744,20 +727,13 @@
 <span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 
 <span class="c"># compile the model</span>
-<span class="n">model</span><span class="o">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s">"categorical_crossentropy"</span><span class="p">,</span>
-			  <span class="n">optimizer</span><span class="o">=</span><span class="s">"adam"</span><span class="p">,</span>
-			  <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s">"accuracy"</span><span class="p">])</span>
+<span class="n">model</span><span class="o">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s">"categorical_crossentropy"</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s">"adam"</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s">"accuracy"</span><span class="p">])</span>
 
 <span class="c"># fit the model</span>
-<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">trainData</span><span class="p">,</span> 
-				 	<span class="n">mTrainLabels</span><span class="p">,</span>
-					<span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">testData</span><span class="p">,</span> <span class="n">mTestLabels</span><span class="p">),</span>
-					<span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span>
-					<span class="n">nb_epoch</span><span class="o">=</span><span class="n">nb_epoch</span><span class="p">,</span>
-					<span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">trainData</span><span class="p">,</span> <span class="n">mTrainLabels</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">testData</span><span class="p">,</span> <span class="n">mTestLabels</span><span class="p">),</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">nb_epoch</span><span class="o">=</span><span class="n">nb_epoch</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="c"># print the history keys</span>
-<span class="k">print</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 
 <span class="c"># evaluate the model</span>
 <span class="n">scores</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">testData</span><span class="p">,</span> <span class="n">mTestLabels</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -781,8 +757,8 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="c"># print the results</span>
-<span class="k">print</span> <span class="s">"[INFO] test score - {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="k">print</span> <span class="s">"[INFO] test accuracy - {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] test score - {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] test accuracy - {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -824,7 +800,7 @@
 
 <span class="c"># reshape the test images to standard 28x28 format</span>
 <span class="n">test_images</span> <span class="o">=</span> <span class="n">test_images</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">test_images</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span>
-<span class="k">print</span> <span class="s">"[INFO] test images shape - {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">test_images</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] test images shape - {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">test_images</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 
 <span class="c"># loop over each of the test images</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">test_image</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">test_images</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
@@ -838,7 +814,7 @@
 	<span class="n">prediction</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_classes</span><span class="p">(</span><span class="n">test_image</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 	
 	<span class="c"># display the prediction and image</span>
-	<span class="k">print</span> <span class="s">"[INFO] I think the digit is - {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">prediction</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">"[INFO] I think the digit is - {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">prediction</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 	<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">220</span><span class="o">+</span><span class="n">i</span><span class="p">)</span>
 	<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">org_image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s">'gray'</span><span class="p">))</span>
 
