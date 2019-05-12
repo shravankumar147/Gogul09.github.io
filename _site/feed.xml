@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-10T22:06:06+05:30</updated><id>http://localhost:4000/</id><title type="html">Gogul Ilango</title><subtitle>This blog on Deep Learning, VLSI Design and STA is written by Gogul Ilango. Master VLSI Design, Physical Design, Static Timing Analysis, Deep Learning through my articles, tutorials and resources.</subtitle><entry><title type="html">My First International Trip to Singapore</title><link href="http://localhost:4000/random/my-first-international-trip-to-singapore" rel="alternate" type="text/html" title="My First International Trip to Singapore" /><published>2019-05-01T00:00:00+05:30</published><updated>2019-05-01T00:00:00+05:30</updated><id>http://localhost:4000/random/my-first-international-trip-to-singapore</id><content type="html" xml:base="http://localhost:4000/random/my-first-international-trip-to-singapore">&lt;div class=&quot;sidebar_tracker&quot; id=&quot;sidebar_tracker&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-12T10:46:23+05:30</updated><id>http://localhost:4000/</id><title type="html">Gogul Ilango</title><subtitle>This blog on Deep Learning, VLSI Design and STA is written by Gogul Ilango. Master VLSI Design, Physical Design, Static Timing Analysis, Deep Learning through my articles, tutorials and resources.</subtitle><entry><title type="html">My First International Trip to Singapore</title><link href="http://localhost:4000/random/my-first-international-trip-to-singapore" rel="alternate" type="text/html" title="My First International Trip to Singapore" /><published>2019-05-01T00:00:00+05:30</published><updated>2019-05-01T00:00:00+05:30</updated><id>http://localhost:4000/random/my-first-international-trip-to-singapore</id><content type="html" xml:base="http://localhost:4000/random/my-first-international-trip-to-singapore">&lt;div class=&quot;sidebar_tracker&quot; id=&quot;sidebar_tracker&quot;&gt;
   &lt;button onclick=&quot;closeSidebar('sidebar_tracker_content')&quot;&gt;X&lt;/button&gt;
   &lt;p onclick=&quot;showSidebar('sidebar_tracker_content')&quot;&gt;Contents&lt;/p&gt;
   &lt;ul id=&quot;sidebar_tracker_content&quot;&gt;
@@ -720,7 +720,7 @@ end
   &lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;The Avengers &lt;span&gt;2012&lt;/span&gt;&lt;/li&gt;
   &lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Iron Man 3 &lt;span&gt;2013&lt;/span&gt;&lt;/li&gt;
   &lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Thor - The Dark World &lt;span&gt;2013&lt;/span&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; /&gt;Captain America - The Winter Soldier &lt;span&gt;2014&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Captain America - The Winter Soldier &lt;span&gt;2014&lt;/span&gt;&lt;/li&gt;
   &lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Guardians of the Galaxy &lt;span&gt;2014&lt;/span&gt;&lt;/li&gt;
   &lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Guardians of the Galaxy Vol 2 &lt;span&gt;2017&lt;/span&gt;&lt;/li&gt;
   &lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Avengers - Age of Ultron &lt;span&gt;2015&lt;/span&gt;&lt;/li&gt;
@@ -2752,6 +2752,9 @@ $$
 									&lt;/div&gt;
 								&lt;/div&gt;
 							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;deepdrum-top-control-box&quot;&gt;
+							&lt;img src=&quot;/images/live-demo/deepdrum/avengers.png&quot; class=&quot;avengers-logo&quot; /&gt;
 						&lt;/div&gt;
 						&lt;div class=&quot;deepdrum-top-control-box&quot;&gt;
 							&lt;span nexus-ui=&quot;toggle&quot; id=&quot;toggle-midi&quot;&gt;&lt;/span&gt;

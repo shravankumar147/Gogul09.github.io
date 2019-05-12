@@ -3,7 +3,7 @@
 //---------------------------------
 function initTagPatterns() {
 	var initTag = document.getElementById("btn-tag-a");
-	initTag.style.backgroundColor = "rgb(228, 185, 54)";
+	initTag.style.backgroundColor = "rgb(255, 255, 255)";
 	initTag.style.color = "rgb(0, 0, 0)";
 	selectedTagId = "A";
 }
@@ -53,7 +53,7 @@ function enableTag(id) {
 	}
 
 	var clicked_tag = document.getElementById(id);
-	clicked_tag.style.backgroundColor = "rgb(228, 185, 54)";
+	clicked_tag.style.backgroundColor = "rgb(255, 255, 255)";
 	clicked_tag.style.color = "rgb(0, 0, 0)";
 
 	selectedTagId = id.split("-")[2].toUpperCase();

@@ -27,7 +27,7 @@ function initChordPattern() {
 		for (var j = 0; j < col_elements.length; j++) {
 			if (j == (arpSequence[i])) {
 				col_elements[j].setAttribute("arp-mode", "on");
-				col_elements[j].style.backgroundColor = "#e4b936";
+				col_elements[j].style.backgroundColor = "#ffffff";
 				col_elements[j].style.color = "#000";
 			}
 		}
@@ -96,7 +96,7 @@ function enableChordNote(li_id) {
 	}
 
 	document.getElementById(li_id).setAttribute("arp-mode", "on");
-	document.getElementById(li_id).style.backgroundColor = "#e4b936";
+	document.getElementById(li_id).style.backgroundColor = "#ffffff";
 	document.getElementById(li_id).style.color = "#000";
 
 	arpSequence[arp_col] = parseInt(arp_row-1);
@@ -152,7 +152,7 @@ function addArpCols(id) {
 			li_id = "deepdrum-arp-" + col + "-" + row;
 			
 			if (j == 0) {
-				var liElement = "<li id='" + li_id + "' onclick='enableChordNote(this.id)' style='background-color: #e4b936; color: #000;'>" + row + "</li>";
+				var liElement = "<li id='" + li_id + "' onclick='enableChordNote(this.id)' style='background-color: #ffffff; color: #000;'>" + row + "</li>";
 			} else if (j == (arpRows - 1)) { 
 				var liElement = "<li id='" + li_id + "' class='deepdrum-arp-note'>" + (cur_bass_notes[col].split(/([0-9]+)/)[0] + mode_chords[mode][0]) + "</li>";
 			}else {
@@ -231,7 +231,7 @@ function updateDisplayArpChord() {
 
 var hold_arp_limit = 5;
 var hold_arp_val   = 1;
-var hold_arp_colors = ["#e4b936", "#e4b936", "#31973f", "#4e9cc7", "#b83f7b"];
+var hold_arp_colors = ["#f62e2e", "#ffffff", "#f62e2e", "#ffffff", "#f62e2e"];
 
 function holdArp() {
 	var btn_hold = document.getElementById("deepdrum-arp-hold");

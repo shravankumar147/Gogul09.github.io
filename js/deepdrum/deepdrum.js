@@ -137,7 +137,7 @@ var temperature_arp = 1.0;
 // create nexus UI dials/toggles
 //--------------------------------
 function createUItuners() {
-	Nexus.colors.accent = "#e4b936";
+	Nexus.colors.accent = "#f62e2e";
 	Nexus.colors.fill = "#242424ad";
 
 	dial_tempo = new Nexus.Slider('#dial-tempo',{
@@ -328,6 +328,11 @@ function createUItuners() {
 	    'lowNote': 12,
 	    'highNote': 72
 	});
+
+	piano.colors.dark = "000";
+	piano.colors.mediumDark = "000";
+	piano.colors.fill = "000";
+	piano.colorize();
 
 	piano.on('change',function(v) {
 		let note  = Tonal.Note.fromMidi(v["note"] + 24);
@@ -874,8 +879,8 @@ function createVolumeDials() {
 		  'step': 1,
 		  'value': 2
 		});
-		dial_volume_name.colorize("accent","#9d62c7");
-		dial_volume_name.colorize("fill","#333");
+		dial_volume_name.colorize("accent","#f62e2e");
+		dial_volume_name.colorize("fill","#000");
 
 		if(i == 0) {
 			dial_volume_name.on('change', function(v) {
@@ -1197,7 +1202,7 @@ function playTimeline(time) {
 
 			if(colId == count) {
 				var sb_in = document.getElementById("drum_9_" + indicator_count);
-				sb_in.style.backgroundColor = "#8156a0";
+				sb_in.style.backgroundColor = "#ffffff";
 				
 				if(tick == 1) {
 					if(rowId == "0") {
@@ -1327,7 +1332,7 @@ function playPattern(time) {
 				if(s[2] == count) {
 
 					var sb_indicator = document.getElementById("drum_9_" + s[2]);
-					sb_indicator.style.backgroundColor = "#8156a0";
+					sb_indicator.style.backgroundColor = "#ffffff";
 					
 					if(step_buttons[i].getAttribute("btn-mode") == "on") {
 						var note = step_buttons[i].dataset.note;
