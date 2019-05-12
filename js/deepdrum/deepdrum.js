@@ -1439,7 +1439,7 @@ function downloadPattern(id) {
 		count_display_timeline = 0;
 		chunks    = [];
 
-		btn.style.backgroundColor = "#e4b936";
+		btn.style.backgroundColor = "#ffffff";
 		btn.style.backgroundImage = "url('/images/live-demo/deepdrum/record-start.png')";
 		toggle_play = 0;
 		playDeepDrum("deepdrum-play");
@@ -1454,7 +1454,7 @@ function downloadPattern(id) {
 			recorder.stop();
 		}
 
-		btn.style.backgroundColor = "#41c443";
+		btn.style.backgroundColor = "#f62e2e";
 		btn.style.backgroundImage = "url('/images/live-demo/deepdrum/record-stop.png')";
 		toggle_play = 1;
 		playDeepDrum("deepdrum-play");
