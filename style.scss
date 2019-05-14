@@ -750,6 +750,7 @@ figcaption {
     text-shadow: none;
     text-align: center;
     padding-left: 5px;
+    font-size: 18px;
     @include mobile {
       font-size: 12px;
     }
@@ -757,6 +758,7 @@ figcaption {
   a {
     color: #333 !important;
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    font-size: 16px;
     @include mobile {
       font-size: 13px;
     }
@@ -764,7 +766,6 @@ figcaption {
   a:hover {
     text-decoration: none;
     border-bottom: none !important;
-    font-weight: bold;
   }
 }
 
@@ -781,6 +782,17 @@ figcaption {
   border: none !important;
   text-align: left;
   padding: 10px 5px;
+  padding-bottom: 20px;
+}
+
+.blog-category-box table tr:last-child td {
+  padding-bottom: 10px;
+}
+
+.blog-category-box table tr:hover td a {
+  background-color: #fffcb4;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .blog-category-box table tr {
@@ -796,13 +808,21 @@ figcaption {
 .blog-category-box table tr td b {
   color: #d5151e;
   font-weight: 100;
-  font-size: 12px;
   letter-spacing: 0.6px;
+  white-space: nowrap;
+  font-size: 15px;
+  @include mobile {
+    font-size: 12px;
+  }
 }
 
 .blog-category-box table tr td i {
   font-style: normal;
   color: #c4c4c4;
+  font-size: 15px;
+  @include mobile {
+    font-size: 13px;
+  }
 }
 
 .category-tab {
