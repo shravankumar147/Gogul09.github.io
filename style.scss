@@ -3504,3 +3504,16 @@ del {
   background-color: black;
   color: white;
 }
+
+.highlight-box {
+  background-color: #ffffbd;
+  border: 1px solid #ffe47a9e;
+  padding: 10px 25px;
+  padding-bottom: 20px;
+  border-radius: 3px;
+  border-left: 10px solid #ffe47a9e !important;
+  @include mobile {
+    padding: 10px;;
+    padding-bottom: 20px;
+  }
+}
