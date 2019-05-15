@@ -88,7 +88,7 @@ function loadDemoImage() {
 	document.getElementById("predict-list").innerHTML = "";
 
 	base_path = "/images/software/mobile-net-tensorflow-js/test_image_"
-	maximum = 4;
+	maximum = 8;
 	minimum = 1;
 	var randomnumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 	img_path = base_path + randomnumber + ".jpg"

@@ -22,7 +22,7 @@ permalink: /about/
         </ul>
       </div>
       <!--Summary STARTS-->
-      <div class="blog-category-box work-category-box" id="box_summary">
+      <div class="blog-category-box" id="box_summary">
         <div>
           <div class="about_me_body">
             <div class="social">
@@ -139,7 +139,7 @@ permalink: /about/
       </div>
       <!--Publications ENDS-->
       <!--Projects STARTS-->
-      <div class="blog-category-box work-category-box" id="box_projects">
+      <div class="work-category-box blog-category-box" id="box_projects">
         <div class="work-inner-box">
           <h2>2018</h2>
           <ul>
@@ -289,11 +289,11 @@ permalink: /about/
               </tr>
               <tr>
                 <td>Other Domains</td>
-                <td>Automation, Machine Learning, Deep Learning, Web Development, Tool Development</td>
+                <td>Automation, Machine Learning, Deep Learning, Full-Stack Web Development, Tool Development</td>
               </tr>
               <tr>
                 <td>Languages</td>
-                <td>Python, Tcl, Shell, Perl, HTML5, CSS3, JavaScript</td>
+                <td>Python, Tcl, Shell, HTML5, CSS3, JavaScript</td>
               </tr>
             </table>
           </div>
