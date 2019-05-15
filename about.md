@@ -2,15 +2,15 @@
 layout: post-default
 heading: about me
 title: About Me
-subheading: what i do/did as an engineer
-description: what i do/did as an engineer
+subheading: a tiny little space for me in this mighty universe
+description: a tiny little space for me in this mighty universe
 color: grad-about
 permalink: /about/
 ---
 
 {% include colorful-header.html %}
 
-<div class="home-container">
+<div class="about-container">
   <div class="home-articles">
     <div class="home-wrapper about-wrapper">
       <div class="category-tab" id="category-tab">
@@ -22,7 +22,7 @@ permalink: /about/
         </ul>
       </div>
       <!--Summary STARTS-->
-      <div class="blog-category-box" id="box_summary">
+      <div class="blog-category-box work-category-box" id="box_summary" style="box-shadow: none !important;">
         <div>
           <div class="about_me_body">
             <div class="social">
@@ -31,6 +31,7 @@ permalink: /about/
               <a href="https://www.linkedin.com/in/gogulilango" target="_blank"><img src="/images/icons/linkedin.png" title="LinkedIn" /></a>
               <a href="https://www.quora.com/profile/Gogul-Ilango" target="_blank"><img src="/images/icons/quora.png" title="Quora" /></a>
               <a href="https://twitter.com/gogul_ilango" target="_blank"><img src="/images/icons/twitter.png" title="Twitter" /></a>
+              <a href="https://www.instagram.com/gogultech" target="_blank"><img src="/images/icons/instagram.png" title="Instagram" /></a>
               <a href="https://soundcloud.com/gogul" target="_blank"><img src="/images/icons/soundcloud.png" title="SoundCloud" /></a>
               <a href="https://www.youtube.com/c/GogulIlangoMusic" target="_blank"><img src="/images/icons/youtube.png" title="YouTube" /></a>
             </div>
@@ -93,7 +94,7 @@ permalink: /about/
         </div>
       </div>
       <!--Publications STARTS-->
-      <div class="blog-category-box work-category-box" id="box_publications">
+      <div class="blog-category-box work-category-box" id="box_publications" style="box-shadow: none !important;">
         <div class="work-inner-box">
           <h2>2017</h2>
           <ul>
@@ -139,7 +140,7 @@ permalink: /about/
       </div>
       <!--Publications ENDS-->
       <!--Projects STARTS-->
-      <div class="work-category-box blog-category-box" id="box_projects">
+      <div class="work-category-box blog-category-box" id="box_projects" style="box-shadow: none !important;">
         <div class="work-inner-box">
           <h2>2018</h2>
           <ul>
@@ -266,7 +267,7 @@ permalink: /about/
       </div>
       <!--Projects ENDS-->
       <!--Industry STARTS-->
-      <div class="blog-category-box work-category-box" id="box_industry">
+      <div class="blog-category-box work-category-box" id="box_industry" style="box-shadow: none !important;">
         <div class="work-inner-box">
           <h3>Qualcomm</h3>
           <div>

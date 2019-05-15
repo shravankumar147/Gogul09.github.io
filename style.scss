@@ -19,6 +19,7 @@
 @import "deepdrum";
 @import "splash";
 @import "carbon";
+@import "about";
 
 #main {
   min-height: 100vh;
@@ -299,11 +300,6 @@ footer {
         font-size: 12px;
       }
     }
-}
-
-.about_me_body h4 {
-  color: $primary_500;
-  font-weight: bold;
 }
 
 .fa-facebook-official {
@@ -602,7 +598,7 @@ figcaption {
   font-size: 14px;
   color: #8b8b8b;
   background-color: #ffffff;
-  line-height: 17px;
+  line-height: 20px;
   text-align: center;
 }
 
@@ -828,10 +824,7 @@ figcaption {
 
 .work-inner-box {
   background-color: white;
-  padding: 20px 70px;
-  @include mobile {
-    padding: 0px;
-  }
+  padding: 0px;
   div {
     padding: 0 20px;
   }
@@ -1138,25 +1131,6 @@ figcaption {
   }
 }
 
-.about_container {
-  width: 100%;
-}
-
-.about_page {
-  width: 100%;
-}
-
-.about_me_header {
-  width: 100%;
-  height: 60px;
-  background: $primary_500;
-  margin: 0px auto;
-  z-index: -1;
-  @include mobile {
-    height: 20px;
-  }
-}
-
 .pic_circle{
     width: 130px;
     height: 130px;
@@ -1172,28 +1146,6 @@ figcaption {
     @include mobile {
        margin-top: -50px;
     }
-}
-
-.about_me_body {
-  width: 80%;
-  padding: 20px 25px;
-  margin: 0px auto;
-  position: relative;
-  background-color: white;
-  @include mobile {
-    width: 100%;
-    margin-top: 0px !important;
-    padding: 5px;
-    padding-top: 0px !important;
-    border: none;
-  }
-}
-
-.about_me_body a {
-  color: #cf2321 !important;
-  @include mobile {
-    font-size: 14px !important;
-  }
 }
 
 .some-pad {
@@ -1264,10 +1216,6 @@ figcaption {
 
 .licenses {
   font-size: 10px;
-}
-
-.about_footer div div div p {
-  color: $primary_500;
 }
 
 .outer-container {
@@ -1535,23 +1483,6 @@ figcaption {
   border: 2px solid white;
 }
 
-.about-music {
-  display: table;
-}
-
-.about-music div {
-  display: table-row;
-}
-
-.about-music div div {
-  display: inline-block;
-  width: 60%;
-  @include mobile {
-    display: block;
-    width: 100%;
-  }
-}
-
 #pic-div {
   width: 40% !important;
   @include mobile {
@@ -1584,17 +1515,6 @@ figcaption {
   background: none !important;
   background-color: none !important;
   background-image: none !important;
-}
-
-.about-date {
-    color: #ccc !important;
-    margin-top: 20px !important;
-    border: 1px solid #ccc;
-    max-width: 200px;
-    margin: 0px auto !important;
-    padding: 9px !important;
-    border-radius: 5px;
-    text-align: center;
 }
 
 .landing-container {
@@ -1876,47 +1796,6 @@ figure {
   }
 }
 
-.about-span {
-  font-family: monospace;
-  font-size: 13px;
-  background-color: white;
-  padding: 2px 5px;
-  color: #ec6764;
-  border:1px solid white;
-  border-radius: 10px;
-}
-
-.about-section {
-  text-align: center;
-}
-
-.about-section span {
-  margin-top: 0px;
-  text-align: left;
-  padding-top: 20px;
-  padding: 10px 15px;
-  color: #fff !important;
-  border-radius: 3px;
-  font-size: 16px;
-  font-family: $font_body;
-  font-weight: 500;
-  background-color: #222;
-}
-
-.about-last {
-  background-color: #222;
-  padding: 20px;
-  padding-bottom: 0px;
-  width: 100%;
-  margin: 0px auto;
-  text-align: center;
-  background-image: url(/images/bg.png);
-}
-
-.about_me_body p span {
-  color: #cf2321;
-}
-
 #my-description {
   font-weight: normal;
   font-size: 17px;
@@ -2076,27 +1955,6 @@ figure {
   @include mobile {
     font-size: 14px;
   }
-}
-
-.about-image {
-  width: 120px;
-  height: 150px;
-  border-radius: 10px;
-  border: 2px solid #ebebeb;
-  float: left;
-  margin-right: 15px;
-  object-fit: cover;
-  transition: filter .5s ease-in-out;
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
-  &:hover, &:active {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-  }
-}
-
-.about-div {
-  width: 100%;
 }
 
 .code-out {
@@ -2925,77 +2783,6 @@ del {
   padding-left: 15px;
 }
 
-.about-wrapper {
-  width: 60% !important;
-  @include mobile {
-    width: 100% !important;
-  }
-}
-
-.about-container {
-  display: flex;
-  flex-direction: row;
-  width: 70%;
-  height: auto !important;
-  padding: 40px 20px;
-  margin: 0px auto;
-  align-items: center;
-  justify-content: center;
-  @include mobile {
-    width: 100%;
-    padding: 20px;
-    flex-direction: column;
-  }
-}
-
-.about-box-left {
-    flex: 1;
-
-    img {
-      height: 200px;
-      border-radius: 4px;
-      @include mobile {
-        height: 150px;
-      }
-    }
-}
-
-.about-box-right {
-  flex: 2;
-  @include mobile {
-    padding: 10px 0;
-  }
-}
-
-.about-box-right p {
-  color: white;
-  text-align: left;
-  margin: 0px !important;
-  @include mobile {
-    text-align: center;
-  }
-}
-
-.about-box-right h1 {
-  color: white;
-  text-align: left;
-  margin: 0px !important;
-  margin-bottom: 10px !important;
-  font-size: 2.5em;
-  @include mobile {
-    text-align: center;
-    font-size: 1.7em;
-  }
-}
-
-.about-box-right a {
-  color: #ffde35 !important;
-}
-
-.about-box-right a:hover {
-  border-bottom: 1px solid #ffde35 !important;
-}
-
 .music-box-wrapper {
   padding: 0 20px;
 }
@@ -3424,18 +3211,6 @@ del {
     margin: 0px 10px !important;
     margin-top: 20px !important;
   }
-}
-
-.about-quote {
-    padding: 0px 20px;
-    color: #bcbcbc;
-    width: 85%;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 0 !important;
-    @include mobile {
-      width: 100%;
-    }
 }
 
 .hi {
