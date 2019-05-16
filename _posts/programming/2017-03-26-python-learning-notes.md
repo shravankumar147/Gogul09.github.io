@@ -31,6 +31,7 @@ image: https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk
     <h3><a href="#intermediate">Intermediate</a></h3>
     <ul>
         <li><a href="#lambda">Lambda</a></li>
+        <li><a href="#generators">Generators</a></li>
         <li><a href="#list-comprehensions">List Comprehensions</a></li>
         <li><a href="#dict-comprehensions">Dict Comprehensions</a></li>
         <li><a href="#set-comprehensions">Set Comprehensions</a></li>
@@ -484,6 +485,66 @@ print(add_hundred(5)) # prints 105
 # lambda function with multiple arguments
 multiply = lambda a, b, c : a*b*c
 print(multiply(10,5,10)) # prints 500
+```
+
+<h3 class="code-head" id="generators">Generators<span>code</span></h3>
+
+```python
+# generators uses the keyword 'yield' to take one element at a time
+# it helps increase performance and make code more readable
+def square_numbers(nums):
+    for i in nums:
+        yield (i*i)
+
+nums = square_numbers([1,2,3,4,5])
+print(type(nums)) # <class 'generator'>
+print(nums)       # <generator object square_numbers at 0x0000018525078B48>
+for n in nums:
+    print(n)
+# prints 
+# 1
+# 4
+# 9
+# 16
+# 25
+
+
+# another example
+def people_list(num_people):
+    result = []
+    for i in xrange(num_people):
+        person = {
+                   "id"    : i,
+                   "name"  : random.choice(names),
+                   "major" : random.choice(majors) 
+                }
+        result.append(person)
+    return result
+
+def people_generator(num_people):
+    for i in xrange(num_people):
+        person = {
+                    "id"    : i,
+                    "name"  : random.choice(names),
+                    "major" : random.choice(majors)
+                  }
+        yield person
+
+t1 = time.clock()
+people = people_list(1000000)
+t2 = time.clock()
+
+print("[INFO] Took {} seconds".format(t2-t1))
+# prints
+# [INFO] Took 1.2467856325541558 seconds
+
+t1 = time.clock()
+people = people_generator(1000000)
+t2 = time.clock()
+
+print("[INFO] Took {} seconds".format(t2-t1))
+# prints
+# [INFO] Took 0.12330942238179077 seconds
 ```
 
 <h3 class="code-head" id="list-comprehensions">List Comprehensions<span>code</span></h3>
