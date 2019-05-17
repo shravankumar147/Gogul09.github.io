@@ -160,7 +160,7 @@
         <li><a href="#how-to-load-json-file">How to load json file?</a></li>
         <li><a href="#how-to-check-if-list-is-empty">How to check if list is empty?</a></li>
         <li><a href="#how-to-access-index-in-for-loop">How to access index in for loop?</a></li>
-        <li><a href="#how-to-sort-a-dictionary-by-key-alphabetically">How to sort a dictionary by key alphabetically?</a></li>
+        <li><a href="#how-to-sort-a-dictionary-by-key-or-value-alphabetically">How to sort a dictionary by key or value alphabetically?</a></li>
         <li><a href="#how-to-call-tcl-procedure-in-python">How to call tcl procedure in python?</a></li>
     </ul>
 </div>
@@ -1958,7 +1958,7 @@ four different methods (modes) to open a file
 </div>
 </div>
 
-<h3 class="code-head" id="how-to-sort-a-dictionary-by-key-alphabetically">How to sort a dictionary by key alphabetically?<span>code</span></h3>
+<h3 class="code-head" id="how-to-sort-a-dictionary-by-key-or-value-alphabetically">How to sort a dictionary by key or value alphabetically?<span>code</span></h3>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -1971,11 +1971,22 @@ four different methods (modes) to open a file
 9
 10
 11
-12</pre></td><td class="code"><pre><span class="n">a</span> <span class="o">=</span> <span class="p">{}</span>
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></td><td class="code"><pre><span class="n">a</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">a</span><span class="p">[</span><span class="s">"India"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Dhoni"</span>
 <span class="n">a</span><span class="p">[</span><span class="s">"SouthAfrica"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"ABD"</span>
 <span class="n">a</span><span class="p">[</span><span class="s">"Australia"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Smith"</span>
 
+<span class="c"># sort dictionary based on 'key' alphabetically</span>
 <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()):</span>
     <span class="k">print</span><span class="p">(</span><span class="s">"{0} - {1}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span>
 
@@ -1983,6 +1994,15 @@ four different methods (modes) to open a file
 <span class="c"># Australia - Smith</span>
 <span class="c"># India - Dhoni</span>
 <span class="c"># SouthAfrica - ABD</span>
+
+<span class="c"># sort dictionary based on 'value' alphabetically</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">a</span><span class="p">[</span><span class="n">x</span><span class="p">]):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"{0} - {1}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span>
+
+<span class="c"># prints </span>
+<span class="c"># SouthAfrica - ABD</span>
+<span class="c"># India - Dhoni</span>
+<span class="c"># Australia - Smith</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>

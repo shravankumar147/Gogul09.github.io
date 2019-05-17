@@ -56,7 +56,7 @@ image: https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk
         <li><a href="#how-to-load-json-file">How to load json file?</a></li>
         <li><a href="#how-to-check-if-list-is-empty">How to check if list is empty?</a></li>
         <li><a href="#how-to-access-index-in-for-loop">How to access index in for loop?</a></li>
-        <li><a href="#how-to-sort-a-dictionary-by-key-alphabetically">How to sort a dictionary by key alphabetically?</a></li>
+        <li><a href="#how-to-sort-a-dictionary-by-key-or-value-alphabetically">How to sort a dictionary by key or value alphabetically?</a></li>
         <li><a href="#how-to-call-tcl-procedure-in-python">How to call tcl procedure in python?</a></li>
     </ul>
 </div>
@@ -1118,7 +1118,7 @@ for l in myList:
 # 2-c
 ```
 
-<h3 class="code-head" id="how-to-sort-a-dictionary-by-key-alphabetically">How to sort a dictionary by key alphabetically?<span>code</span></h3>
+<h3 class="code-head" id="how-to-sort-a-dictionary-by-key-or-value-alphabetically">How to sort a dictionary by key or value alphabetically?<span>code</span></h3>
 
 ```python
 a = {}
@@ -1126,6 +1126,7 @@ a["India"] = "Dhoni"
 a["SouthAfrica"] = "ABD"
 a["Australia"] = "Smith"
 
+# sort dictionary based on 'key' alphabetically
 for key in sorted(a.keys(), key=lambda x:x.lower()):
     print("{0} - {1}".format(key, a[key]))
 
@@ -1133,6 +1134,15 @@ for key in sorted(a.keys(), key=lambda x:x.lower()):
 # Australia - Smith
 # India - Dhoni
 # SouthAfrica - ABD
+
+# sort dictionary based on 'value' alphabetically
+for key in sorted(a.keys(), key=lambda x:a[x]):
+    print("{0} - {1}".format(key, a[key]))
+
+# prints 
+# SouthAfrica - ABD
+# India - Dhoni
+# Australia - Smith
 ```
 
 <h3 class="code-head" id="how-to-call-tcl-procedure-in-python">How to call tcl procedure in python?<span>code</span></h3>

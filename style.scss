@@ -785,7 +785,7 @@ figcaption {
 }
 
 .blog-category-box table tr:hover td a {
-  background-color: #fffcb4;
+  background-color: #c8ffe6;
   padding: 5px;
   border-radius: 5px;
 }
@@ -3017,9 +3017,6 @@ del {
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: center;
-  @include mobile {
-    border-bottom: 3px solid #ea4335;
-  }
 }
 
 #nav_home:hover {
@@ -3027,7 +3024,7 @@ del {
   border-radius: 5px;
   @include mobile {
       border-radius: 0;
-      background-color: #ea4335;
+      background-color: #d4141e;
     }
 }
 
@@ -3036,9 +3033,6 @@ del {
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: center;
-  @include mobile {
-    border-bottom: 3px solid #4285f4;
-  }
 }
 
 #nav_creations:hover {
@@ -3046,7 +3040,7 @@ del {
     border-radius: 5px;
     @include mobile {
       border-radius: 0;
-      background-color: #4285f4;
+      background-color: #d4141e;
     }
 }
 
@@ -3055,9 +3049,6 @@ del {
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: center;
-  @include mobile {
-    border-bottom: 3px solid #fbbc05;
-  }
 }
 
 #nav_music:hover {
@@ -3065,7 +3056,7 @@ del {
     border-radius: 5px;
     @include mobile {
       border-radius: 0;
-      background-color: #fbbc05;
+      background-color: #d4141e;
     }
 }
 
@@ -3074,9 +3065,6 @@ del {
   background-repeat: no-repeat;
   background-size: 25px;
   background-position: center;
-  @include mobile {
-    border-bottom: 3px solid #be05fb;
-  }
 }
 
 #nav_photography:hover {
@@ -3084,7 +3072,7 @@ del {
     border-radius: 5px;
     @include mobile {
       border-radius: 0;
-      background-color: #be05fb;
+      background-color: #d4141e;
     }
 }
 
@@ -3093,9 +3081,6 @@ del {
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: center;
-  @include mobile {
-    border-bottom: 3px solid #34a853;
-  }
 }
 
 #nav_about:hover {
@@ -3103,7 +3088,7 @@ del {
     border-radius: 5px;
     @include mobile {
       border-radius: 0;
-      background-color: #34a853;
+      background-color: #d4141e;
     }
 }
 

@@ -132,7 +132,7 @@ function showTabBox(id) {
   }
 
   box.style.display = "block";
-  tab.style.backgroundColor = "wheat";
+  tab.style.backgroundColor = "#ffea82";
   tab.style.fontWeight = "bold";
   tab.style.borderBottom = "5px solid #ad8a493b";
 }

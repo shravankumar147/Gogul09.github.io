@@ -3,6 +3,9 @@
   background-color: #252525;
   border: none;
   z-index: 2000;
+  border-bottom: 3px solid;
+  border-image-source: linear-gradient(45deg, #d32828, rgb(84, 42, 251));
+  border-image-slice: 1;
 }
 
 .inner-container {
