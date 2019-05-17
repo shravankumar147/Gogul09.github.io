@@ -30,11 +30,12 @@ image: https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk
     </ul>
     <h3><a href="#intermediate">Intermediate</a></h3>
     <ul>
-        <li><a href="#lambda">Lambda</a></li>
-        <li><a href="#generators">Generators</a></li>
         <li><a href="#list-comprehensions">List Comprehensions</a></li>
         <li><a href="#dict-comprehensions">Dict Comprehensions</a></li>
         <li><a href="#set-comprehensions">Set Comprehensions</a></li>
+        <li><a href="#lambda">Lambda</a></li>
+        <li><a href="#generators">Generators</a></li>
+        <li><a href="#args-and-kwargs">args & kwargs</a></li>
         <li><a href="#generator-expressions">Generator Expressions</a></li>
     </ul>
     <h3><a href="#modules">Modules</a></h3>
@@ -42,6 +43,7 @@ image: https://drive.google.com/uc?id=1-OEoUjX1r1V-Nx6kJIwUmEVt44rZnJxk
         <li><a href="#re-module">re module</a></li>
         <li><a href="#os-module">os module</a></li>
         <li><a href="#sys-module">sys module</a></li>
+        <li><a href="#sys-module">shutil module</a></li>
     </ul>
     <h3><a href="#oop">OOP</a></h3>
     <ul>
@@ -471,82 +473,6 @@ print(squared(2))   # prints "4"
 
 <h3 class="centered-heading" id="intermediate"><span>Intermediate</span></h3>
 
-<h3 class="code-head" id="lambda">Lambda<span>code</span></h3>
-
-```python
-# a lambda function = a small anonymous function
-# takes any number of arguments, but can have only one expression
-# lambda arguments : expression
-
-# lambda function with one argument
-add_hundred = lambda x : x + 100
-print(add_hundred(5)) # prints 105
-
-# lambda function with multiple arguments
-multiply = lambda a, b, c : a*b*c
-print(multiply(10,5,10)) # prints 500
-```
-
-<h3 class="code-head" id="generators">Generators<span>code</span></h3>
-
-```python
-# generators uses the keyword 'yield' to take one element at a time
-# it helps increase performance and make code more readable
-def square_numbers(nums):
-    for i in nums:
-        yield (i*i)
-
-nums = square_numbers([1,2,3,4,5])
-print(type(nums)) # <class 'generator'>
-print(nums)       # <generator object square_numbers at 0x0000018525078B48>
-for n in nums:
-    print(n)
-# prints 
-# 1
-# 4
-# 9
-# 16
-# 25
-
-
-# another example
-def people_list(num_people):
-    result = []
-    for i in xrange(num_people):
-        person = {
-                   "id"    : i,
-                   "name"  : random.choice(names),
-                   "major" : random.choice(majors) 
-                }
-        result.append(person)
-    return result
-
-def people_generator(num_people):
-    for i in xrange(num_people):
-        person = {
-                    "id"    : i,
-                    "name"  : random.choice(names),
-                    "major" : random.choice(majors)
-                  }
-        yield person
-
-t1 = time.clock()
-people = people_list(1000000)
-t2 = time.clock()
-
-print("[INFO] Took {} seconds".format(t2-t1))
-# prints
-# [INFO] Took 1.2467856325541558 seconds
-
-t1 = time.clock()
-people = people_generator(1000000)
-t2 = time.clock()
-
-print("[INFO] Took {} seconds".format(t2-t1))
-# prints
-# [INFO] Took 0.12330942238179077 seconds
-```
-
 <h3 class="code-head" id="list-comprehensions">List Comprehensions<span>code</span></h3>
 
 ```python
@@ -698,6 +624,110 @@ both prints
 '''
 ```
 
+<h3 class="code-head" id="lambda">Lambda<span>code</span></h3>
+
+```python
+# a lambda function = a small anonymous function
+# takes any number of arguments, but can have only one expression
+# lambda arguments : expression
+
+# lambda function with one argument
+add_hundred = lambda x : x + 100
+print(add_hundred(5)) # prints 105
+
+# lambda function with multiple arguments
+multiply = lambda a, b, c : a*b*c
+print(multiply(10,5,10)) # prints 500
+```
+
+<h3 class="code-head" id="generators">Generators<span>code</span></h3>
+
+```python
+# generators uses the keyword 'yield' to take one element at a time
+# it helps increase performance and make code more readable
+def square_numbers(nums):
+    for i in nums:
+        yield (i*i)
+
+nums = square_numbers([1,2,3,4,5])
+print(type(nums)) # <class 'generator'>
+print(nums)       # <generator object square_numbers at 0x0000018525078B48>
+for n in nums:
+    print(n)
+# prints 
+# 1
+# 4
+# 9
+# 16
+# 25
+
+
+# another example
+def people_list(num_people):
+    result = []
+    for i in xrange(num_people):
+        person = {
+                   "id"    : i,
+                   "name"  : random.choice(names),
+                   "major" : random.choice(majors) 
+                }
+        result.append(person)
+    return result
+
+def people_generator(num_people):
+    for i in xrange(num_people):
+        person = {
+                    "id"    : i,
+                    "name"  : random.choice(names),
+                    "major" : random.choice(majors)
+                  }
+        yield person
+
+t1 = time.clock()
+people = people_list(1000000)
+t2 = time.clock()
+
+print("[INFO] Took {} seconds".format(t2-t1))
+# prints
+# [INFO] Took 1.2467856325541558 seconds
+
+t1 = time.clock()
+people = people_generator(1000000)
+t2 = time.clock()
+
+print("[INFO] Took {} seconds".format(t2-t1))
+# prints
+# [INFO] Took 0.12330942238179077 seconds
+```
+
+<h3 class="code-head" id="args-and-kwargs">args & kwargs<span>code</span></h3>
+
+```python
+# *args used to pass non-keyworded variable-length arguments to a function
+def my_nums(*args):
+    for n in args:
+        print(n, end=" ")
+    print(type(args))
+
+# prints
+my_nums(1,2,4,5,6)
+# prints 
+# '1 2 4 5 6'
+# <class 'tuple'>
+
+# **kwargs used to pass keyworded variable-length arguments to a function
+def my_fullname(**kwargs):
+    for key, value in kwargs.items():
+        print(key + " - " + value)
+    print(type(kwargs))
+
+# prints
+my_fullname(firstname="Gogul", lastname="Ilango") 
+# prints 
+# lastname - Ilango
+# firstname - Gogul
+# <class 'dict'>
+```
 
 <!-- --------------------------------------------------------------------- -->
 
@@ -861,10 +891,15 @@ print(matches.group()) # prints "Dogs"
 
 # search()
 str = "For data science help, reach support@datacamp.com"
-searches = re.search(r'([\w\.-]+)@([\w\.-]+)', str)
+searches = re.search(r'([\w]+)@([\w\.]+)', str)
 print(searches.group())  # prints support@datacamp.com
 print(searches.group(1)) # prints support
 print(searches.group(2)) # prints datacamp.com
+
+# sub()
+str = "Ironman is the strongest avenger!"
+result = re.sub('Ironman',  'Thor', str)
+print(result)
 ```
 
 <h3 class="code-head" id="os-module">os module<span>code</span></h3>
@@ -882,6 +917,11 @@ print(os.getcwd()) # prints 'G:\\workspace\\python\\learning'
 
 # list directories in the current working directory
 print(os.listdir()) # prints ['built-ins', 'Lists', 'numpy', 'strings']
+
+# list only files in the current working directory
+files = [f for f in os.listdir('.') if os.path.isfile(f)]
+for f in files:
+    print(f)
 
 # create a directory in the current working directory
 os.mkdir("dicts")
@@ -964,6 +1004,22 @@ except:
 sys.stderr.write("This is stderr text\n")
 sys.stderr.flush()
 sys.stdout.write("This is stdout text\n")
+```
+
+<h3 class="code-head" id="shutil-module">shutil module<span>code</span></h3>
+
+```python
+# shutil module is used for copying, moving, removing directory trees.
+import shutil 
+
+# copy file from one location to another
+shutil.copyfile("/path/to/file_source", "path/to/file_destination")
+
+# recursively copy entire directory tree from source to destination
+shutil.copytree("source_dir", "destination_dir")
+
+# recursively delete a directory tree
+shutil.rmtree("/one/two/three")
 ```
 
 <!-- --------------------------------------------------------------------- -->
