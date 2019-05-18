@@ -13,7 +13,6 @@ permalink: /creations/
     <h1>{{ page.heading }}</h1>
     <p>{{ page.subheading }}</p>
   </div>
-  <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7I623I&placement=gogul09githubio" id="_carbonads_js"></script>
 </div>
 
 <div class="home-container">
@@ -30,6 +29,7 @@ permalink: /creations/
                     <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">
                         <div class='demo_box'>
                           <img src="{{ post.image }}" />
+                          <h4>{{ post.title }}</h4>
                           <p>{{ post.description }}</p>
                         </div>
                      </a>

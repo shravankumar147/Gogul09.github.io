@@ -25,6 +25,7 @@
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-bottom: 20px;
+	background-image: url(/images/live-demo/deepdrum/bg.png);
 	@include mobile {
 		height: 100%;
 		padding: 0px;
@@ -32,37 +33,60 @@
 	}
 }
 
+.emotion-header a {
+   color: #ffa417 !important;
+}
+
 .emotion-header {
 	width: 100%;
 	text-align: center;
 	border-top-right-radius: 20px;
 	border-top-left-radius: 20px;
-	background-color: #252525;
 	padding-top: 20px;
 	@include mobile {
 		border-top-right-radius: 0px;
 		border-top-left-radius: 0px;
+		padding-top: 10px;
 	}
     h3 {
     	margin: 0px;
     	padding: 0px;
-    	font-size: 25px;
+    	font-size: 20px;
     	color: #d3131c;
     	font-family: "Poppins";
+    	background-color: #181818;
+	    padding: 5px;
+	    width: 25%;
+	    margin: 0 auto;
+	    border-radius: 3px;
+	    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+	    margin-bottom: 15px;
+	    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	    cursor: pointer;
     	@include mobile {
-    		font-size: 20px;
+    		width: 65%;
+    		font-size: 18px;
+    		margin-bottom: 10px;
+    	}
+    	&:hover, &:active {
+    		background-color: #d3131c;
+    		color: #fff;
     	}
     }
     p {
     	margin: 0px !important;
     	margin-bottom: 0px !important;
-    	color: lightgrey;
+    	color: #a0a0a0;
     	font-size: 13px;
-    }
+    	padding: 0px 20px;
+    	display: none;
+    	@include mobile {
+    		font-size: 11px;
+    	}
+	}
 }
 
 .emotion-wrapper {
-	background-color: #252525;
 	padding: 20px;
 	width: 100%;
 	height: 80%;
@@ -74,6 +98,7 @@
 		display: block;
 		border-bottom-left-radius: 0px;
 		border-bottom-right-radius: 0px;
+		padding-top: 0px;
 	}
 }
 
@@ -81,15 +106,15 @@
 	flex: 1;
 	width: 100%;
 	height: 100%;
-	background-color: #252525;
 }
 
 .emotion-player {
 	padding: 20px 0px;
 	border-right: 1px solid #252933;
 	@include mobile {
-		border-bottom: 1px solid #252933;
+		border-bottom: 1px solid #2a2a2a;
 		border-right: 0px;
+		padding-top: 0px;
 	}
 }
 
@@ -147,6 +172,7 @@
 	justify-content: center;
 	width: 100%;
 	flex: 1;
+	margin-top: 15px;
 
 	.emotion-acquire-outer {
 		padding: 10px 0px;
@@ -184,6 +210,9 @@
 		    position: absolute;
 		    bottom: 0px;
 		    width: 100%;
+		    @include mobile {
+		    	font-size: 11px;
+		    }
 		}
 
 		.emotion-acquire-cam img {
@@ -194,10 +223,13 @@
 		margin: 0px;
 	    margin-bottom: 0px !important;
 	    font-size: 10px;
-	    color: #d4141d;
+	    color: #868686;
 	    text-align: center;
 	    padding: 3px;
 	    width: 100%;
+	    @include mobile {
+	    	font-size: 8px;
+	    }
 	}
 }
 
@@ -233,7 +265,7 @@
 	    	height: 60px;
 	    	padding: 10px;
 	    	font-size: 12px;
-	    	margin: 0 10px;
+	    	margin: 10px;
 	    }
 	}
 	button:focus {
@@ -266,8 +298,8 @@
 	    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 	    box-shadow: 4px 6px 6px rgba(0,0,0,0.4);
 	    @include mobile {
-	    	width: 60px;
-	    	height: 60px;
+	    	width: 45px;
+	    	height: 45px;
 	    }
 
 	    audio {
@@ -333,16 +365,21 @@
 }
 
 .emotion-loss {
-	color: #e13527;
-    font-size: 15px;
+    color: #e1a127;
+    font-size: 13px;
     margin-bottom: 0px !important;
-    margin: 0px !important;
-    padding: 0px 20px !important;
+    margin: 20px auto !important;
     display: flex;
     position: relative;
-    bottom: 25px;
-    width: 100%;
+    bottom: 20px;
+    width: 50%;
     text-align: center;
     font-weight: bold;
     justify-content: center;
+    background-color: #181818;
+    padding: 9px 0px;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.54);
+    @include mobile {
+    	bottom: 10px;
+    }
 }

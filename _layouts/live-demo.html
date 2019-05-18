@@ -19,14 +19,13 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
   </head>
 
-  <body style="background-color: #252525 !important; overflow: hidden;">
+  <body style="background-color: #252525; overflow: hidden; background-image: url(/images/live-demo/deepdrum/bg.png);">
     <div class="outer-wrapping">
       <div class="inner-container">
-        <div class="header-left">
-          <a class='logo' href="https://gogul09.github.io/"><img src="/images/icons/logo.png"/></a>
-        </div>
-        <div class="topnav header-right" id="top_navigator">
-          <div>
+          <div class="header-left">
+            <a class='logo' href="https://gogul09.github.io/"><img src="/images/icons/logo.png"/></a>
+          </div>
+          <div class="topnav header-right" id="top_navigator">
             <a title="home" id = "nav_home" href="{{ site.baseurl }}/"></a>
             <a title="creations" id = "nav_creations" href="{{ site.baseurl }}/creations"></a>
             <a title="music" id = "nav_music" href="{{ site.baseurl }}/music"></a>
@@ -34,13 +33,12 @@
             <a title="about" id = "nav_about" href="{{ site.baseurl }}/about"></a>
             <a href = "javascript:void(0);" style="font-size:14px;" class="icon" onclick="top_navigation()">&#9776;</a>
           </div>
-        </div>
       </div>
     </div>
 
-    <div id="main-demo" role="main">
+    <div id="main" role="main">
       {{ content }}
-    </div>ss
+    </div>
 
     <button onclick="topScroller()" id="btnScrollTop" title="Go to top" class="w3-animate-bottom"></button>
 

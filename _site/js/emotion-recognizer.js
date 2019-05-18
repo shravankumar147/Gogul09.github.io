@@ -30,6 +30,17 @@ var CLASS_MAP = {
 	4: "emoticon-sleep"
 }
 
+var boolEmotionDesc = 0;
+function showEmotionDescription() {
+	if(boolEmotionDesc == 0) {
+		document.getElementById("emotion-description").style.display = "block";
+		boolEmotionDesc = 1;
+	} else {
+		document.getElementById("emotion-description").style.display = "none";
+		boolEmotionDesc = 0;
+	}
+}
+
 //-----------------------------
 // disable support for mobile 
 // and tablet
@@ -43,12 +54,14 @@ function mobileAndTabletcheck() {
 window.onload = function() {
 	mobileAndTabletcheck();
 	if (isMobileOrTablet) {
-		document.getElementById("emotion-container").style.display = "none";
-		document.getElementById("fork-github").style.display = "none";
-		document.getElementById("mobile-tablet-warning").style.display = "block";
-	} else {
-		loadExtractor();
-	}
+		document.body.style.overflow = "auto";
+		//document.getElementById("emotion-container").style.display = "none";
+		//document.getElementById("fork-github").style.display = "none";
+		//document.getElementById("mobile-tablet-warning").style.display = "block";
+	} 
+	//else {
+	loadExtractor();
+	//}
 }
 
 //-----------------------

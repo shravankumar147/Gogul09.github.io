@@ -3,31 +3,26 @@ layout: live-demo
 category: software
 class: Demo
 title: Emotion Recognizer
-subheading: An interactive demo that uses deep learning to predict emotion
-description: An interactive demo that uses deep learning to predict emotion after learning.
+subheading: An interactive demo that uses deep learning to predict emotion after learning live in the browser using Google's Tensorflow.js
+description: An interactive demo that uses deep learning to predict emotion after learning live in the browser using Google's Tensorflow.js
 author: Gogul Ilango
 permalink: /software/emotion-recognizer
-image: /images/live-demo/emotion/thumbnail.png
+image: https://drive.google.com/uc?id=1XyjJNykHALeJE_tZp81i86BqQgHkm5K_
 ---
 
-<p style="margin-bottom: 0px !important; margin: 0px !important;" id="fork-github">
-  <a href="https://github.com/Gogul09/emotion-recognizer">
-    <img style="position: fixed; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub">
-  </a>
-</p>
-
+<!--
 <div id="mobile-tablet-warning" class="mobile-tablet-warning">
   <h3>Oops!</h3>
   <p>This demo is highly experimental in mobile and tablet devices. If you are still crazy in trying out this demo, I suggest you to use a laptop or a desktop. Thanks for your understanding! You're cute 😊</p>
   <a href="https://www.youtube.com/watch?v=WBi_PZ66z5E&feature=youtu.be" target="_blank">YouTube Video Link</a><br><br>
   <a href="https://github.com/Gogul09/emotion-recognizer" target="_blank">GitHub Code Link</a>
 </div>
+-->
 
 <div class="emotion-container" id="emotion-container">
   <header class="emotion-header">
-    <h3>Emotion Recognizer</h3>
-    <p>This is a simple implementation of emotion recognition using two deep neural networks (extractor and classifier).</p>
-    <p>You can follow the instructions <a href="https://www.youtube.com/watch?v=WBi_PZ66z5E" target="_blank">here</a> to get this working. Made with TensorFlow.js ❤️</p>
+    <h3 onclick='showEmotionDescription()'>Emotion Recognizer</h3>
+    <p id="emotion-description">This is a simple implementation of emotion recognition using two deep neural networks (extractor and classifier).<br>You can follow the instructions <a href="https://www.youtube.com/watch?v=WBi_PZ66z5E" target="_blank">here</a> to get this working. Made with <a href="https://github.com/Gogul09/emotion-recognizer" target="_blank">TensorFlow.js</a> and ❤️</p>
   </header>
   <div class="emotion-wrapper">
     <div class="emotion-player emotion-flex">  

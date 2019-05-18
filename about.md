@@ -1,5 +1,5 @@
 ---
-layout: post-default
+layout: page-default
 heading: about me
 title: About Me
 subheading: a tiny little space for me in this mighty universe
@@ -8,7 +8,12 @@ color: grad-about
 permalink: /about/
 ---
 
-{% include colorful-header.html %}
+<div class="blog-intro {{ page.color }} about-header-fix">
+  <div>
+    <h1>{{ page.heading }}</h1>
+    <p>{{ page.subheading }}</p>
+  </div>
+</div>
 
 <div class="about-container">
   <div class="home-articles">
@@ -47,20 +52,20 @@ permalink: /about/
           <p>I completed my <span class="coding">bachelors</span> in Electronics and Communication Engineering at <a href="https://www.tce.edu/" target="_blank">Thiagarajar College of Engineering, Madurai</a> with a CGPA <b>9.05</b>/10.</p>
           <p style="margin-bottom: 0px !important;">My technical areas of interest are</p>
           <ul class="interest-box">
-            <li>ASIC Design</li>
-            <li>Physical Design</li>
-            <li>Static Timing Analysis</li>
-            <li>Automation</li>
-            <li>Embedded Systems</li>
-            <li>Machine Learning</li>
-            <li>Deep Learning</li>
-            <li>Computer Vision</li>
-            <li>User Experience</li>
-            <li>User Interface Design</li>
-            <li>Web Design</li>
-            <li>Full-stack Web Development</li>
-            <li>Music Composition</li>
-            <li>Music Production</li>
+            <li>asic_design</li>
+            <li>physical_design</li>
+            <li>static_timing_analysis</li>
+            <li>automation</li>
+            <li>embedded_systems</li>
+            <li>machine_learning</li>
+            <li>deep_learning</li>
+            <li>computer_vision</li>
+            <li>user_experience</li>
+            <li>user_interface_design</li>
+            <li>web_design</li>
+            <li>full_stack_web_development</li>
+            <li>music_composition</li>
+            <li>music_production</li>
           </ul>
           <p>In this personal website, you will find collection of my thoughts, notes, tutorials and resources based on my experience in technology. I still learn by myself about the technical topics that I write here so that I get a clear understanding of it.</p>
           <div class="note">
@@ -77,7 +82,7 @@ permalink: /about/
             <p>In case you're wondering, this site is </p>
             <ul style="margin: 0px !important;">
               <li>Hosted proudly through <a href="https://github.com/" target="_blank">GitHub</a>.</li>
-              <li>Designed and developed on a Windows 10 machine.</li>
+              <li>Designed and developed on a <a href="https://www.microsoft.com/en-in/software-download/windows10" target="_blank">Windows 10</a> machine.</li>
               <li>Written using my favorite text-editor <a href="https://www.sublimetext.com/3" target="_blank">Sublime Text 3</a>.</li>
               <li>Handcrafted using the awesome <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>.</li>
               <li>Uses the beautiful <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.</li>
@@ -346,7 +351,7 @@ permalink: /about/
 
 <script type="text/javascript">
   document.getElementById("box_summary").style.display = "block";
-  document.getElementById("tab_summary").style.backgroundColor = "wheat";
+  document.getElementById("tab_summary").style.backgroundColor = "rgb(255, 234, 130)";
   document.getElementById("tab_summary").style.fontWeight = "bold";
-  document.getElementById("tab_summary").style.borderBottom = "3px solid #ad8a493b";
+  document.getElementById("tab_summary").style.borderBottom = "5px solid rgba(173, 138, 73, 0.23)";
 </script>
