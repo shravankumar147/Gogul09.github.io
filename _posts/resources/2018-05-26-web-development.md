@@ -3,7 +3,7 @@ layout: post
 category: hardware
 class: Resources
 title: Web Development
-description: Collection of frameworks, tools, libraries, plugins and text editors that would be helpful for someone who's interested in front-end and back-end web development. 
+description: Resources that would be helpful for someone who's interested in front-end and back-end web development. 
 author: Gogul Ilango
 permalink: /software/web-development
 image: https://drive.google.com/uc?id=17Va0kso6wFY9v0w7K35iLzKTeaBn1ZAg

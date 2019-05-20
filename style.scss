@@ -785,9 +785,10 @@ figcaption {
 }
 
 .blog-category-box table tr:hover td a {
-  background-color: #c8ffe6;
+  background-color: rgb(255, 234, 130);
   padding: 5px;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 .blog-category-box table tr {
@@ -2116,6 +2117,9 @@ u {
   font-weight: bold;
   &:hover, &:active {
     background-color: #fed970;
+  }
+  @include mobile {
+    font-size: 11px;
   }
 }
 
