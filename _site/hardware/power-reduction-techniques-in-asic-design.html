@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Low Power VLSI Design Basics (Part 2) – Gogul Ilango </title>
+  <title>Power Reduction Techniques in ASIC Design – Gogul Ilango </title>
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,400|Roboto:300" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="/images/favicon_gi.png"/>
@@ -13,33 +13,33 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
-    <meta property="og:title" content="Low Power VLSI Design Basics (Part 2)" />
+    <meta property="og:title" content="Power Reduction Techniques in ASIC Design" />
     <meta name="description" content="Understand what are power domains, power management cells, power management IC, advanced low power techniques and much more related to power distribution in a VLSI design." />
     <meta property="og:description" content="Understand what are power domains, power management cells, power management IC, advanced low power techniques and much more related to power distribution in a VLSI design." />
-    <meta property="twitter:title" content="Low Power VLSI Design Basics (Part 2)" />
+    <meta property="twitter:title" content="Power Reduction Techniques in ASIC Design" />
 
     <meta property="og:image" content="images/icons/logo.png"/>
     <meta property="og:image:width" content="180" />
     <meta property="og:image:height" content="110" />
 
-    <meta name="twitter:title" content="Low Power VLSI Design Basics (Part 2)">
+    <meta name="twitter:title" content="Power Reduction Techniques in ASIC Design">
     <meta name="twitter:description" content="Understand what are power domains, power management cells, power management IC, advanced low power techniques and much more related to power distribution in a VLSI design.">
     <meta name="twitter:image" content="images/icons/logo.png">
   <!-- Begin Jekyll SEO tag v2.2.2 -->
-<title>Low Power VLSI Design Basics (Part 2) | Gogul Ilango</title>
-<meta property="og:title" content="Low Power VLSI Design Basics (Part 2)" />
+<title>Power Reduction Techniques in ASIC Design | Gogul Ilango</title>
+<meta property="og:title" content="Power Reduction Techniques in ASIC Design" />
 <meta name="author" content="Gogul Ilango" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Understand what are power domains, power management cells, power management IC, advanced low power techniques and much more related to power distribution in a VLSI design." />
 <meta property="og:description" content="Understand what are power domains, power management cells, power management IC, advanced low power techniques and much more related to power distribution in a VLSI design." />
-<link rel="canonical" href="http://localhost:4000/hardware/low-power-vlsi-design-basics-2" />
-<meta property="og:url" content="http://localhost:4000/hardware/low-power-vlsi-design-basics-2" />
+<link rel="canonical" href="http://localhost:4000/hardware/power-reduction-techniques-in-asic-design" />
+<meta property="og:url" content="http://localhost:4000/hardware/power-reduction-techniques-in-asic-design" />
 <meta property="og:site_name" content="Gogul Ilango" />
 <meta property="og:image" content="https://drive.google.com/uc?id=1TsYhJZdSqldmF8aEiM4pMP54EldLgCfb" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-12-01T00:00:00+05:30" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Low Power VLSI Design Basics (Part 2)","author":{"@type":"Person","name":"Gogul Ilango"},"image":"https://drive.google.com/uc?id=1TsYhJZdSqldmF8aEiM4pMP54EldLgCfb","datePublished":"2018-12-01T00:00:00+05:30","dateModified":"2018-12-01T00:00:00+05:30","description":"Understand what are power domains, power management cells, power management IC, advanced low power techniques and much more related to power distribution in a VLSI design.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/hardware/low-power-vlsi-design-basics-2"},"url":"http://localhost:4000/hardware/low-power-vlsi-design-basics-2"}</script>
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"Power Reduction Techniques in ASIC Design","author":{"@type":"Person","name":"Gogul Ilango"},"image":"https://drive.google.com/uc?id=1TsYhJZdSqldmF8aEiM4pMP54EldLgCfb","datePublished":"2018-12-01T00:00:00+05:30","dateModified":"2018-12-01T00:00:00+05:30","description":"Understand what are power domains, power management cells, power management IC, advanced low power techniques and much more related to power distribution in a VLSI design.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/hardware/power-reduction-techniques-in-asic-design"},"url":"http://localhost:4000/hardware/power-reduction-techniques-in-asic-design"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -80,10 +80,10 @@
     <div id="main" role="main">
       <div class="post-heading post-heading-wrapper post-image">
 	<div class="grad-post">
-		<h1>Low Power VLSI Design Basics (Part 2)</h1>
+		<h1>Power Reduction Techniques in ASIC Design</h1>
 		<div class="post-subheading">
 			<p>PDN Concepts | 01 December 2018</p>
-			<p><a href="#show_comments" id="comment-count" class="disqus-comment-count" data-disqus-url="https://gogul09.github.io/hardware/low-power-vlsi-design-basics-2"></a></p>
+			<p><a href="#show_comments" id="comment-count" class="disqus-comment-count" data-disqus-url="https://gogul09.github.io/hardware/power-reduction-techniques-in-asic-design"></a></p>
 		</div>
 	</div>
 </div>
@@ -96,10 +96,10 @@
 	<div id="top-share-box" class="top-share-box">
 		<h5>Share</h5>
 		<ul>
-			<li class="whatsapp-white"><a href="whatsapp://send?text=http://localhost:4000/hardware/low-power-vlsi-design-basics-2" data-action="share/whatsapp/share">WhatsApp</a></li>
-			<li class="facebook-white"><a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/hardware/low-power-vlsi-design-basics-2" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" >Facebook</a></li>
-			<li class="twitter-white"><a href="https://twitter.com/intent/tweet?text=Low Power VLSI Design Basics (Part 2)&url=http://localhost:4000/hardware/low-power-vlsi-design-basics-2" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">Twitter</a></li>
-			<li class="linkedin-white"><a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/hardware/low-power-vlsi-design-basics-2&title=Low Power VLSI Design Basics (Part 2)&summary=Understand what are power domains, power management cells, power management IC, advanced low power techniques and much more related to power distribution in a VLSI design.&source=webjeda" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" >LinkedIn</a></li>
+			<li class="whatsapp-white"><a href="whatsapp://send?text=http://localhost:4000/hardware/power-reduction-techniques-in-asic-design" data-action="share/whatsapp/share">WhatsApp</a></li>
+			<li class="facebook-white"><a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/hardware/power-reduction-techniques-in-asic-design" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" >Facebook</a></li>
+			<li class="twitter-white"><a href="https://twitter.com/intent/tweet?text=Power Reduction Techniques in ASIC Design&url=http://localhost:4000/hardware/power-reduction-techniques-in-asic-design" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">Twitter</a></li>
+			<li class="linkedin-white"><a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/hardware/power-reduction-techniques-in-asic-design&title=Power Reduction Techniques in ASIC Design&summary=Understand what are power domains, power management cells, power management IC, advanced low power techniques and much more related to power distribution in a VLSI design.&source=webjeda" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" >LinkedIn</a></li>
 		</ul>
 	</div>
 </div>
@@ -124,25 +124,19 @@
 
 <p>When it comes to reducing power dissipation in a chip, there are different techniques followed in industry at different levels of abstraction (circuit-level, logic-level, physical-level etc.,). In this blog post, we will focus on physical-level power management techniques and industry jargons related to power management in chip design.</p>
 
-<p>Before proceeding with this tutorial, kindly read <a href="https://gogul09.github.io/hardware/low-power-chip-design-basics-1" target="_blank">Low Power Chip Design Basics - (Part 1)</a> so that you get to know some of the basic concepts needed to understand the concepts given in this tutorial.</p>
+<p>Before proceeding with this tutorial, kindly read <a href="https://gogul09.github.io/hardware/power-distribution-network-in-asic-physical-design" target="_blank">Power Distribution Network in ASIC Physical Design</a> so that you get to know some of the basic concepts needed to understand the concepts that we will discuss in this tutorial.</p>
 
-<h3 class="code-head">Objectives</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7</pre></td><td class="code"><pre>After reading this tutorial, we will understand
-* What are power domains?
-* What are voltage islands?
-* What are power management cells?
-* What is a power management unit?
-* What are ESD cells?
-* What are some of the advanced low power techniques?
-</pre></td></tr></tbody></table>
-</div>
+<div class="objectives">
+  <h3>Objectives</h3>
+  <p>After reading this tutorial, we will understand</p>
+  <ul>
+    <li>What are power domains?</li>
+    <li>What are voltage islands?</li>
+    <li>What are power management cells?</li>
+    <li>What is a power management unit?</li>
+    <li>What are ESD cells?</li>
+    <li>What are some of the advanced low power techniques?</li>
+  </ul>
 </div>
 
 <h3 id="power-domains">Power Domains</h3>
@@ -317,22 +311,22 @@
 <div class="share-it-box">
 <p class="share-this">Share this post! </p>
 <div id="share-box"> 
-		<a href="whatsapp://send?text=http://localhost:4000/hardware/low-power-vlsi-design-basics-2" data-action="share/whatsapp/share"><img src="/images/icons/whatsapp.png"/></a>
+		<a href="whatsapp://send?text=http://localhost:4000/hardware/power-reduction-techniques-in-asic-design" data-action="share/whatsapp/share"><img src="/images/icons/whatsapp.png"/></a>
 
-        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/hardware/low-power-vlsi-design-basics-2" onclick="window.open(this.href, 'mywin',
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/hardware/power-reduction-techniques-in-asic-design" onclick="window.open(this.href, 'mywin',
 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><img src="/images/icons/facebook.png"/></a>
        
-        <a href="https://twitter.com/intent/tweet?text=Low Power VLSI Design Basics (Part 2)&url=http://localhost:4000/hardware/low-power-vlsi-design-basics-2" onclick="window.open(this.href, 'mywin',
+        <a href="https://twitter.com/intent/tweet?text=Power Reduction Techniques in ASIC Design&url=http://localhost:4000/hardware/power-reduction-techniques-in-asic-design" onclick="window.open(this.href, 'mywin',
 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><img src="/images/icons/twitter.png"/></a>
 
-       <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/hardware/low-power-vlsi-design-basics-2&title=Low Power VLSI Design Basics (Part 2)&summary=Understand what are power domains, power management cells, power management IC, advanced low power techniques and much more related to power distribution in a VLSI design.&source=webjeda" onclick="window.open(this.href, 'mywin',
+       <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/hardware/power-reduction-techniques-in-asic-design&title=Power Reduction Techniques in ASIC Design&summary=Understand what are power domains, power management cells, power management IC, advanced low power techniques and much more related to power distribution in a VLSI design.&source=webjeda" onclick="window.open(this.href, 'mywin',
 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><img src="/images/icons/linkedin.png"/></a>                               
 </div>
 </div>
 <hr>
 			</article>
 			
-			<div class="show-comments" onclick="showComments()"><p id="show_comments"><span id="comment_count" class="disqus-comment-count" data-disqus-url="https://gogul09.github.io/hardware/low-power-vlsi-design-basics-2"></span></p></div>
+			<div class="show-comments" onclick="showComments()"><p id="show_comments"><span id="comment_count" class="disqus-comment-count" data-disqus-url="https://gogul09.github.io/hardware/power-reduction-techniques-in-asic-design"></span></p></div>
 
 			<div id="disqus_thread"></div>
 			<script>
@@ -390,8 +384,8 @@
 
 		ga('create', 'UA-93019594-1', 'auto');
 		ga('send', 'pageview', {
-		  'page': '/hardware/low-power-vlsi-design-basics-2',
-		  'title': 'Low Power VLSI Design Basics (Part 2)'
+		  'page': '/hardware/power-reduction-techniques-in-asic-design',
+		  'title': 'Power Reduction Techniques in ASIC Design'
 		});
 	</script>
 	<!-- End Google Analytics -->

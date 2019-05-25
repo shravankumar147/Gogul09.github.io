@@ -2,10 +2,10 @@
 layout: post
 category: hardware
 class: PDN Concepts
-title: Low Power VLSI Design Basics (Part 2)
+title: Power Reduction Techniques in ASIC Design
 description: Understand what are power domains, power management cells, power management IC, advanced low power techniques and much more related to power distribution in a VLSI design.
 author: Gogul Ilango
-permalink: /hardware/low-power-vlsi-design-basics-2
+permalink: /hardware/power-reduction-techniques-in-asic-design
 image: https://drive.google.com/uc?id=1TsYhJZdSqldmF8aEiM4pMP54EldLgCfb
 cardimage: https://drive.google.com/uc?id=1xj9hjf0jS1mDQ4v6_iUQKDuE8hRcakvD
 ---
@@ -26,19 +26,20 @@ cardimage: https://drive.google.com/uc?id=1xj9hjf0jS1mDQ4v6_iUQKDuE8hRcakvD
 
 When it comes to reducing power dissipation in a chip, there are different techniques followed in industry at different levels of abstraction (circuit-level, logic-level, physical-level etc.,). In this blog post, we will focus on physical-level power management techniques and industry jargons related to power management in chip design.
 
-Before proceeding with this tutorial, kindly read [Low Power Chip Design Basics - (Part 1)](https://gogul09.github.io/hardware/low-power-chip-design-basics-1){:target="_blank"} so that you get to know some of the basic concepts needed to understand the concepts given in this tutorial.
+Before proceeding with this tutorial, kindly read [Power Distribution Network in ASIC Physical Design](https://gogul09.github.io/hardware/power-distribution-network-in-asic-physical-design){:target="_blank"} so that you get to know some of the basic concepts needed to understand the concepts that we will discuss in this tutorial.
 
-<h3 class="code-head">Objectives</h3>
-
-```
-After reading this tutorial, we will understand
-* What are power domains?
-* What are voltage islands?
-* What are power management cells?
-* What is a power management unit?
-* What are ESD cells?
-* What are some of the advanced low power techniques?
-```
+<div class="objectives">
+  <h3>Objectives</h3>
+  <p>After reading this tutorial, we will understand</p>
+  <ul>
+    <li>What are power domains?</li>
+    <li>What are voltage islands?</li>
+    <li>What are power management cells?</li>
+    <li>What is a power management unit?</li>
+    <li>What are ESD cells?</li>
+    <li>What are some of the advanced low power techniques?</li>
+  </ul>
+</div>
 
 <h3 id="power-domains">Power Domains</h3>
 Imagine we have four IPs (blocks or hard-macros) of different functionality in a chip. Let's say <span class="coding">IP1</span> is a CPU, <span class="coding">IP2</span> is a Graphic Processor, <span class="coding">IP3</span> is an Audio Processor and <span class="coding">IP4</span> is a Power Management Unit (mixed signal). Based on its functionality, we can say that

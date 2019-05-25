@@ -2,10 +2,10 @@
 layout: post
 category: hardware
 class: PDN Concepts
-title: Low Power VLSI Design Basics (Part 1)
+title: Power Distribution Network in ASIC Physical Design
 description: Understand power dissipation, types of power dissipation, IR drop, reasons for IR drop and some strategies to minimize IR drop from a VLSI physical design perspective.
 author: Gogul Ilango
-permalink: /hardware/low-power-vlsi-design-basics-1
+permalink: /hardware/power-distribution-network-in-asic-physical-design
 image: https://drive.google.com/uc?id=1xyGDoXG5-zywLrc3yOrrnCI02FFD7DxW
 cardimage: https://drive.google.com/uc?id=1pNudcK0doHXtomzrx-lhmgK0JBqlbxwD
 ---
@@ -32,22 +32,38 @@ Power & Battery life have become very important factors be to considered during 
 
 Almost any electronic device that you hold in your hand (smartphone, tablet, notebook, laptop etc.,) consume power from a limited power supply (battery). Thus, making the chip consume less power is a mandatory problem to be solved.
 
-<h3 class="code-head">Objectives</h3>
-
-```
-After reading this tutorial, we will understand
-* Why power is important in VLSI design?
-* What are the different types of power dissipation?
-* What are switching power, short-circuit power and leakage power?
-* What is IR drop & different types of IR drop?
-* What are the reasons for high IR drop?
-* What are the tools available to analyse IR drop?
-* What are some strategies to reduce power dissipation?
-```
+<div class="objectives">
+  <h3>Objectives</h3>
+  <p>After reading this tutorial, we will understand</p>
+  <ul>
+    <li>Why power is important in VLSI design?</li>
+    <li>What are the different types of power dissipation?</li>
+    <li>What are switching power, short-circuit power and leakage power?</li>
+    <li>What is IR drop & different types of IR drop?</li>
+    <li>What are the reasons for high IR drop?</li>
+    <li>What are the tools available to analyse IR drop?</li>
+    <li>What are some strategies to reduce power dissipation?</li>
+  </ul>
+</div>
 
 <h3 id="power-dissipation">Power Dissipation</h3>
 
-The process in which a chip produces heat (waste energy) as an unwanted byproduct of its primary action is termed as Power Dissipation. If the chip dissipates power than its maximum limit, it could lead to functionality failure or even burn out. Hence, reducing power dissipation is a necessity in modern semiconductor design due to lower technology nodes, higher frequencies, complex functionalities and portability. 
+The process in which a chip produces heat (waste energy) as an unwanted byproduct of its primary action is termed as Power Dissipation. If the chip dissipates power than its maximum limit, it could lead to functionality failure or even burn out. Hence, reducing power dissipation is a necessity in modern semiconductor design due to lower technology nodes, higher frequencies, complex functionalities and portability.
+
+When dealing with power, we need to take care of modeling our circuits during both logic design phase as well as physical design phase. 
+
+During logic design, industries follow something called as [UPF](https://en.wikipedia.org/wiki/Unified_Power_Format){:target="_blank"} (Unified Power Format) to introduce power reduction strategies along with RTL code. We will discuss more about this in future posts.
+
+During physical design, we build the entire power distribution network in silicon that's made up of metal layer stack which we will discuss as we proceed in this tutorial. But wait! Let me show you how it looks when we analyze IR drop in power analysis tools such as Apache RedHawk 🙄 
+
+<figure>
+  <img src="https://drive.google.com/uc?id=1wwcj27RbP_RRvIo5VF141qTaa6raRa2l" class="typical-image" />
+  <figcaption>[source: <a href="https://www.apache-da.com/products/redhawk/redhawk-nx050112" target="_blank">Apache RedHawk NX</a>]</figcaption>
+</figure>
+
+The above image shows the standard IR drop map of a design in Apache RedHawk. A design engineer's job is to reduce all those regions in red so that power number is within limits.
+
+Before diving into how do we reduce power dissipation during physical design phase, we need to understand some basic concepts of power.
 
 <h3 id="types-of-power-dissipation">Types of Power Dissipation</h3>
 
@@ -128,7 +144,7 @@ Thus, we can reduce dynamic power by
 * Reducing the supply voltage \\( V_{DD} \\) of the transistor.
 * Reducing the clock frequency \\( f \\) of the transistor. 
 
-From an implementation perspective, 
+From an physical design implementation perspective, 
 
 * \\( C \\) comes from <span class="coding">.spef</span> file of the design.
 * \\( V_{DD} \\) comes from the chosen <span class="coding">corner</span> of the design.
@@ -179,22 +195,24 @@ P_{leakage}(V_{DD}, V_{th}, W, L)
 $$
 </div>
 
-From an implementation perspective, <span class="coding">.lib</span> files of a standard cell contains leakage power related information which is further given to power analysis tools such as Apache RedHawk for power verification.
+From a PD implementation perspective, <span class="coding">.lib</span> files of a standard cell contains leakage power related information which is further given to power analysis tools such as Apache RedHawk for power verification.
 
-You can see more information on leakage power [here](https://www.youtube.com/watch?v=d0OxV2rA398){:target="_blank"}.
+You can read more on leakage power [here](https://www.youtube.com/watch?v=d0OxV2rA398){:target="_blank"}.
 
 ---
 
 <h3 id="what-is-ir-drop">What is IR drop?</h3>
 
-In a typical chip, power to different blocks, standard cells and macros are provided by the power grid which consists of stack of metal layers (conductors) that run horizontally and vertically in a grid-like fashion over the floorplan. These stacked metal layers have power stripes such as \\( V_{DD} \\) and \\( V_{SS} \\) at regular intervals (pitch) with defined width and thickness, and are connected through vias from one layer to another as shown in Figure 4. This power distribution grid comprises of power rings, power stripes and power rails that are resistive by nature which creates the IR drop. 
+In an ASIC, power to different blocks, IO pads, standard cells and macros are provided by the power grid which consists of stack of metal layers (conductors) that run horizontally and vertically in a grid-like fashion over the entire floorplan.
+
+These stacked metal layers have power stripes such as \\( V_{DD} \\) and \\( V_{SS} \\) at regular intervals (pitch) with defined width and thickness, and are connected through vias from one layer to another as shown in Figure 4. This power distribution grid (or network) comprises of power rings, power stripes and power rails that are resistive by nature which creates the IR drop (or voltage drop). 
 
 <figure>
   <img src="https://drive.google.com/uc?id=1IHjxB0TYTvLJk_eE7qppfdZEvg5nOzve" class="typical-image" />
   <figcaption>Figure 4. Metal layer stack (2D & 3D view)</figcaption>
 </figure>
 
-Currently, there are two approaches followed to redistribute power from package to a chip namely [Wire Bonding](https://en.wikipedia.org/wiki/Wire_bonding){:target="_blank"} and [Flip-Chip](https://en.wikipedia.org/wiki/Flip_chip){:target="_blank"} as shown in Figure 5. 
+Currently, there are two approaches followed in industry to redistribute power from package to core namely [Wire Bonding](https://en.wikipedia.org/wiki/Wire_bonding){:target="_blank"} and [Flip-Chip](https://en.wikipedia.org/wiki/Flip_chip){:target="_blank"} as shown in Figure 5. 
 
 <figure>
   <img src="https://drive.google.com/uc?id=1pNudcK0doHXtomzrx-lhmgK0JBqlbxwD" class="typical-image" />
@@ -214,16 +232,16 @@ Thus, we can summarize that the voltage level seen at an instance in the design 
 <div class="math-cover">
 $$
 \begin{align}
-V_{instance} = V_{power-supply} - (drop_{metal-stack} + drop_{package-leads} + drop_{decaps})
+V_{instance} = V_{powersupply} - (drop_{metalstack} + drop_{packageleads} + drop_{decaps})
 \end{align}
 $$
 </div>
 
 From an implementation perspective, if 
 
-* \\( V_{power-supply} = 2V \\) 
-* \\( drop_{metal-stack} = 0.2V\\)
-* \\( drop_{package-leads} = 0.1V \\)
+* \\( V_{powersupply} = 2V \\) 
+* \\( drop_{metalstack} = 0.2V\\)
+* \\( drop_{packageleads} = 0.1V \\)
 * \\( drop_{decaps} = 0.1V \\)
 
 then, \\( V_{instance} = 1.6V \\). 
@@ -255,19 +273,19 @@ Some of the standard reasons for high IR drop in a design are
 * High parasitics in package leads.
 * Lesser length or width of power stripes in RDL layer.
 * Lesser power sources such as power bumps (in flip-chip).
-* Incorrect input files such as <span class="coding">.lef</span>, <span class="coding">.def</span>, <span class="coding">.lib</span>, <span class="coding">.spef</span>, <span class="coding">.sta</span>, <span class="coding">.ploc</span> or <span class="coding">APL</span> files.
+* Incorrect input files (to power analysis tools) such as <span class="coding">.lef</span>, <span class="coding">.def</span>, <span class="coding">.lib</span>, <span class="coding">.spef</span>, <span class="coding">.sta</span>, <span class="coding">.ploc</span> or <span class="coding">APL</span> files.
 
 <h3 id="tools-for-ir-drop-analysis">Tools for IR drop analysis</h3>
 
 There are different tools available to perform IR drop analysis for a design from physical design perspective. Some of the industry standard tools are [Apache RedHawk](https://www.ansys.com/products/semiconductors/ansys-redhawk){:target="_blank"} and [Cadence VoltageStorm](https://www.slideshare.net/AlanTran3/voltagestorm){:target="_blank"}. 
 
-In Apache RedHawk, we can do static as well as dynamic IR drop analysis. Also, we can analyze the power grid of the design and find out weaknesses such as shorts, opens, missing vias etc., before performing actual IR drop analysis.
+In Apache RedHawk, we can do static as well as dynamic IR drop analysis. Also, we can analyze the power grid of the design and find out weaknesses such as shorts, opens, missing vias, high resistance path to an instance etc., before performing actual IR drop analysis.
 
 After completing IR drop analysis for a design in RedHawk, we can review and analyze different types of maps such as Average IR drop map, Frequency map, Load capacitance map etc., and reports dumped by RedHawk to check for potential issues in the design. 
 
 <h3 id="conclusion">Conclusion</h3>
 
-In this tutorial, we looked at saving power from a physical design perspective. We have understood the different types of power dissipation in a CMOS based circuit design, understood what is IR drop at physical level, why IR drop occur at physical level, what are some techniques to reduce IR drop at physical level and tools available to analyze IR drop.
+In this tutorial, we looked at saving power from a physical design perspective. We understood the different types of power dissipation in a CMOS based circuit design, understood what is IR drop at physical level, why IR drop occur in silicon, what are some techniques to reduce IR drop and tools available to analyze IR drop at physical design stage.
 
 <h3 id="references">References</h3>
 
