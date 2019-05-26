@@ -32,9 +32,14 @@ When I was a kid, I used to spend time with playstation and computers. At that t
 
 In this blog post, we will learn the basics of VLSI physical design or VLSI backend design that is used to create modern Integrated Circuits (ICs) that power up numerous electronic applications such as desktop, laptop, tablet, smartphone etc.
 
+<figure>
+    <img src="https://drive.google.com/uc?id=19X_ir_iqjaZjwyd7TOUbWucIo7M9juXC" class="typical-image" />
+    <figcaption>Logic Design (Frontend) vs Physical Design (Backend)</figcaption>
+</figure>
+
 <h3 id="what-is-vlsi-physical-design">What is VLSI Physical Design?</h3>
 
-The final output of a frontend design or circuit design or logic design is a [netlist](https://en.wikipedia.org/wiki/Netlist){:target="_blank"}. Netlist contains the logical functionality of your chip. This netlist could be viewed as a plethora of instances with interconnections (nets) between them based on the functionality you wish to implement. 
+The final output of a frontend design or circuit design or logic design is a [netlist](https://en.wikipedia.org/wiki/Netlist){:target="_blank"}. Netlist is a text file (ending with <span class="coding">.v</span> or <span class="coding">.vhdl</span>) that contains the logical functionality of your chip. This netlist could be viewed as a plethora of instances (standard cells, macros, io pads etc.,) with interconnections (nets) between them based on the functionality you wish to implement. 
 
 This connectivity information in a netlist is a layer of abstraction of your hardware which must be converted to a physically realizable format (having geometric shapes) that is manufacturable. 
 
@@ -45,9 +50,9 @@ This connectivity information in a netlist is a layer of abstraction of your har
     <figcaption>Figure 1. Circuit to Layout</figcaption>
 </figure>
 
-Actually, Physical Design contains a lot more steps to be done than the above simplified definition. Figure 1 shows the conversion of a simple transistor level circuit to a physically realizable layout. 
+Actually, Physical Design contains a lot more steps to be done than the above simplified definition. Figure 1 shows the conversion of a simple transistor level circuit to a physically realizable layout. It would be a dream come true for any hardware engineer if there is a tool that takes in a gate-level netlist and constructs a physical layout that is optimized for performance, power and area! 
 
-The [GDSII](https://en.wikipedia.org/wiki/GDSII){:target="_blank"} layout format is a binary file format that represents your IC layout using geometric shapes, text labels and additional foundry specific information in a hierarchical form. You might understand what this means by looking at the video below which shows a GDSII layout file in 3D (created by IC Design Group at University of Twente).
+The [GDSII](https://en.wikipedia.org/wiki/GDSII){:target="_blank"} layout format is a binary file format that represents your IC layout using geometric shapes, text labels and additional foundry specific information in a hierarchical form. You will understand what this means by looking at the video below which shows a GDSII layout file in 3D (created by IC Design Group at University of Twente).
 
 <div class="youtube-video-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/F4EArOqNNSU?start=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -148,7 +153,7 @@ In today's IC design, because of huge design complexity, hierarchical design app
 Figure 4 shows a typical <span class="coding">TOP_LEVEL</span> floorplan module of an IC with abutted blocks, non-abutted blocks and routing channels.
 
 <figure>
-    <img src="https://drive.google.com/uc?id=1FgocjfTQNYG5MJF8g17_WQzb-3ss1aBG" class="typical-image" />
+    <img src="https://drive.google.com/uc?id=1OEMmPap64JbLTyrgeSCv-GoQ9xCGhzv5" class="typical-image" />
     <figcaption>Figure 4. A typical view of top-level floorplan of an IC</figcaption>
 </figure>
 
@@ -183,7 +188,7 @@ During floorplanning, power planning is a step that is done to construct the pow
     <figcaption>Figure 6. Power Planning (or Power Distribution) in an IC</figcaption>
 </figure>
 
-As shown in Figure 6, there are two types of power distribution strategies followed in chip design namely Wire Bonding and Flip-Chip [(read more)](https://gogul09.github.io/hardware/low-power-vlsi-design-basics-1){:target="_blank"}. Using any one of these two power distribution strategies, we usually form power rings, stripes and rails through out the design.
+As shown in Figure 6, there are two types of power distribution strategies followed in chip design namely Wire Bonding and Flip-Chip [(read more)](https://gogul09.github.io/hardware/power-distribution-network-in-asic-physical-design){:target="_blank"}. Using any one of these two power distribution strategies, we usually form power rings, stripes and rails through out the design.
 
 1. **Rings** - Supplies <span class="coding">VDD</span> and <span class="coding">VSS</span> around the chip.
 2. **Stripes** - Supplies <span class="coding">VDD</span> and <span class="coding">VSS</span> across/throughout the chip.
@@ -310,8 +315,8 @@ Similar to timing validation, power analysis and debugging is done to ensure tha
 Only if the design meets power numbers specified in the design specifications, it can last longer. Hence, power is a primary concern for chip designers due to decreasing technology node and increasing metal layer stack.
 
 You can read more about low power design in the below links. 
-* [Low Power VLSI Design Basics (Part 1)](https://gogul09.github.io/hardware/low-power-vlsi-design-basics-1){:target="_blank"} 
-* [Low Power VLSI Design Basics (Part 2)](https://gogul09.github.io/hardware/low-power-vlsi-design-basics-2){:target="_blank"}.
+* [Power Distribution Network in ASIC Physical Design](https://gogul09.github.io/hardware/power-distribution-network-in-asic-physical-design){:target="_blank"} 
+* [Power Reduction Techniques in ASIC Design](https://gogul09.github.io/hardware/power-reduction-techniques-in-asic-design){:target="_blank"}.
 
 ---
 
