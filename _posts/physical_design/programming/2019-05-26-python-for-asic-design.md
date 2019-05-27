@@ -127,9 +127,9 @@ Another python based hardware modeling framework is [PyMTL](https://github.com/c
 
 Apart from the hypes that machine learning (ML) and deep learning (DL) have created in the recent years, still VLSI domain isn't deeply affected by ML or DL. This is because, VLSI industry is so complex because of conflicting goals to optimize hardware designs for timing, power and area with lesser time to market.
 
-This is the definitely the time to use ML or DL in hardware design, particularly creating ML models for smaller tasks in a bigger design flow. I have documented some of the current research papers and articles related to using ML or DL in VLSI chip design [here](https://gogul09.github.io/hardware/research-papers-vlsi-ml){:target="_blank"}.
+This is definitely the time to use ML or DL in hardware design, particularly creating ML models for smaller tasks in a bigger design flow. I have documented some of the current research papers and articles related to using ML or DL in VLSI chip design [here](https://gogul09.github.io/hardware/research-papers-vlsi-ml){:target="_blank"}.
 
-But, for a beginner who is interested to use ML or DL in hardware design, below are the python libraries need to get started.
+But, for a beginner who is interested to use ML or DL in hardware design, below are the python libraries needed to get started.
 
 **Scientific Computing Stack**
 * [NumPy](https://www.numpy.org/){:target="_blank"}
@@ -169,4 +169,4 @@ Using the python libraries given below, and with some HTML, CSS and JavaScript k
 
 <h3 id="conclusion">Conclusion</h3>
 
-As you can see, <span class="coding">python</span> can be used in multiple areas in hardware design. According to me, python has just started to find its place in hardware design. I also feel that it will be used by engineers around the world very soon due to its simpler nature. If you have found anything related to python that could be used for hardware design, please leave that in the comments below. Peace!
+As you can see, <span class="coding">python</span> can be used in multiple areas in hardware design. According to me, python has just started to find its place in hardware design. Also, I feel that it will be used by engineers around the world very soon due to its simpler nature. If you have found anything related to python that could be used for hardware design, please leave that in the comments below. Peace!
