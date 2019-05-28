@@ -14,204 +14,43 @@ permalink: /
 <div class="home-container">
   <div class="home-articles">
     <div class="home-wrapper">
-
-    <div class="category-tab" id="category-tab">
-      <ul>
-        <li id="tab_asic_design" onclick="showTabBox(this.id)">asic design</li>
-        <li id="tab_deep_learning" onclick="showTabBox(this.id)">deep learning</li>
-        <li id="tab_machine_learning" onclick="showTabBox(this.id)">machine learning</li>
-        <li id="tab_computer_vision" onclick="showTabBox(this.id)">computer vision</li>
-        <li id="tab_programming" onclick="showTabBox(this.id)">programming</li>
-        <li id="tab_resources" onclick="showTabBox(this.id)">resources</li>
-        <li id="tab_random" onclick="showTabBox(this.id)">random</li>
-      </ul>
-    </div>
-
-      <!--PD STARTS-->
-      <div class="blog-category-box" id="box_asic_design">
-        <div>
-          <h4><span>Timing Analysis</span></h4>
-          <table>
-            {% for post in site.posts %}
-              {% if post.categories contains 'hardware' %}
-                {% if post.class contains 'STA Concepts' %}
-                    <tr> <td><b>{{ post.date | date: "%b %d %Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
-                  {% endif %}
-                {% endif %}
-            {% endfor %}
-          </table>
-          <h4><span>Power Analysis</span></h4>
-          <table>
-            {% for post in site.posts %}
-              {% if post.categories contains 'hardware' %}
-                {% if post.class contains 'PDN Concepts' %}
-                  <tr> <td><b>{{ post.date | date: "%b %d %Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
-                {% endif %}
-              {% endif %}
-            {% endfor %}
-          </table>
-          <h4><span>Physical Design</span></h4>
-          <table>
-            {% for post in site.posts %}
-              {% if post.categories contains 'hardware' %}
-                {% if post.class contains 'PD Concepts' %}
-                  <tr> <td><b>{{ post.date | date: "%b %d %Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
-                {% endif %}
-              {% endif %}
-            {% endfor %}
-          </table>
-          <h4><span>Intelligence in Hardware Design</span></h4>
-          <table>
-            {% for post in site.posts %}
-              {% if post.categories contains 'hardware' %}
-                {% if post.class contains 'ML for PD' %}
-                  <tr> <td><b>{{ post.date | date: "%b %d %Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
-                {% endif %}
-              {% endif %}
-            {% endfor %}
-          </table>
+      <div class="gem-box">
+        <div class="asic-design" onclick="location.href='{{ site.baseurl }}/asic-design';">
+          <img src="/images/gems/asic-design.png" />
+          <h4>ASIC Design</h4>
+          <p>Learn how to design a chip using which you could create electronics applications.</p>
+        </div>
+        <div class="deep-learning" onclick="location.href='{{ site.baseurl }}/deep-learning';">
+            <img src="/images/gems/deep-learning.png" />
+            <h4>Deep Learning</h4>
+            <p>Learn how to create deep neural networks to solve challenging problems.</p>
+        </div>
+        <div class="machine-learning" onclick="location.href='{{ site.baseurl }}/machine-learning';">
+            <img src="/images/gems/machine-learning.png" />
+            <h4>Machine Learning</h4>
+            <p>Learn how to create algorithms that don't require you to write logic.</p>
+        </div>
+        <div class="computer-vision" onclick="location.href='{{ site.baseurl }}/computer-vision';">
+          <img src="/images/gems/computer-vision.png" />
+          <h4>Computer Vision</h4>
+          <p>Learn how to make your USB webcam or camera to perceive the world.</p>
+        </div>
+        <div class="programming" onclick="location.href='{{ site.baseurl }}/programming';">
+          <img src="/images/gems/programming.png" />
+          <h4>Programming</h4>
+          <p>Learn how to make use of your brain to write code.</p>
+        </div>
+        <div class="resources" onclick="location.href='{{ site.baseurl }}/resources';">
+          <img src="/images/gems/resources.png" />
+          <h4>Resources</h4>
+          <p>Learn how to make use of internet to learn anything free.</p>
+        </div>
+        <div class="random" onclick="location.href='{{ site.baseurl }}/random';">
+          <img src="/images/gems/random.png" />
+          <h4>Random</h4>
+          <p>Learn what I do apart from these technical stuff.</p>
         </div>
       </div>
-      <!--PD ENDS-->
-
-      <!--DL STARTS-->
-      <div class="blog-category-box" id="box_deep_learning">
-        <div>
-          <table>
-            {% for post in site.posts %}
-
-            {% if post.category contains 'software' %}
-            {% if post.class contains 'Deep Learning' %}
-              <tr> <td><b>{{ post.date | date: "%b %d %Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-          </table>
-        </div>
-      </div>
-      <!--DL ENDS-->
-
-      <!--ML STARTS-->
-      <div class="blog-category-box" id="box_machine_learning">
-        <div>
-          <table>
-            {% for post in site.posts %}
-
-            {% if post.category contains 'software' %}
-            {% if post.class contains 'Machine Learning' %}
-              <tr> <td><b>{{ post.date | date: "%b %d %Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-          </table>
-        </div>
-      </div>
-      <!--ML ENDS-->
-
-      <!--COMPUTER VISION STARTS-->
-      <div class="blog-category-box" id="box_computer_vision">
-        <div>
-          <table>
-            {% for post in site.posts %}
-            {% if post.category contains 'software' %}
-            {% if post.class contains 'Computer Vision' %}
-              <tr> <td><b>{{ post.date | date: "%b %d %Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-          </table>
-        </div>
-      </div>
-      <!--COMPUTER VISION ENDS-->
-    
-      <!--CODE STARTS-->
-      <div class="blog-category-box" id="box_programming">
-        <div>
-          <h4><span>Front-End Web</span></h4>
-          <table>
-            {% for post in site.posts %}
-              {% if post.categories contains 'software' %}
-                {% if post.class contains 'Front-End Web' %}
-                  <tr> <td><b>{{ post.date | date: "%b %d %Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
-                {% endif %}
-              {% endif %}
-            {% endfor %}
-          </table>
-          <h4><span>Programming Languages</span></h4>
-          <table>
-            {% for post in site.posts %}
-              {% if post.category contains 'software' %}
-                {% if post.class contains 'Programming Languages' %}
-                    <tr> <td><b>{{ post.date | date: "%b %d %Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
-                  {% endif %}
-                {% endif %}
-            {% endfor %}
-          </table>
-          <h4><span>Environment Setup</span></h4>
-          <table>
-            {% for post in site.posts %}
-              {% if post.categories contains 'software' %}
-                {% if post.class contains 'Environment Setup' %}
-                  <tr> <td><b>{{ post.date | date: "%b %d %Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
-                {% endif %}
-              {% endif %}
-            {% endfor %}
-          </table>
-          <h4><span>Tools</span></h4>
-          <table>
-            {% for post in site.posts %}
-              {% if post.categories contains 'software' %}
-                {% if post.class contains 'Tools' %}
-                  <tr> <td><b>{{ post.date | date: "%b %d %Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
-                {% endif %}
-              {% endif %}
-            {% endfor %}
-          </table>
-        </div>
-      </div>
-      <!--CODE ENDS-->
-
-      <!--RESOURCES STARTS-->
-      <div class="blog-category-box" id="box_resources">
-        <div>
-          <table>
-            {% for post in site.posts %}
-            {% if post.category contains 'software' or post.category contains 'hardware' %}
-            {% if post.class contains 'Resources' %}
-              <tr> <td><b>{{ post.date | date: "%b %d %Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-          </table>
-        </div>
-      </div>
-      <!--RESOURCES ENDS-->
-      <!--RANDOM STARTS-->
-      <div class="blog-category-box" id="box_random">
-        <div>
-          <table>
-            {% for post in site.posts %}
-            {% if post.category contains 'random'%}
-            {% if post.class contains 'Entertainment' %}
-              <tr> <td><b>{{ post.date | date: "%b %d %Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
-            {% endif %}
-            {% if post.class contains 'Travel' %}
-              <tr> <td><b>{{ post.date | date: "%b %d %Y" }}</b></td> <td><a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br><i>{{ post.description }}</i></td></tr>
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-          </table>
-        </div>
-      </div>
-      <!--RANDOM ENDS-->
-
     </div>
   </div>
 </div>
-
-<script type="text/javascript">
-  document.getElementById("box_asic_design").style.display = "block";
-  document.getElementById("tab_asic_design").style.backgroundColor = "#ffea82";
-  document.getElementById("tab_asic_design").style.fontWeight = "bold";
-  document.getElementById("tab_asic_design").style.borderBottom = "5px solid #ad8a493b";
-</script>

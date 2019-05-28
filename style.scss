@@ -20,6 +20,8 @@
 @import "splash";
 @import "carbon";
 @import "about";
+@import "home";
+@import "page";
 
 #main {
   min-height: 100vh;
@@ -698,7 +700,7 @@ figcaption {
 
 .home-wrapper {
   margin: 0px auto;
-  width: 50%;
+  width: 70%;
   hr {
     margin: 5px !important;
     border-top: 1px solid #ebebeb !important;
@@ -1233,19 +1235,6 @@ figcaption {
   }
 }
 
-.post-heading {
-    text-align: left;
-    font-weight: bold;
-    margin: 0px auto;
-    font-weight: bold;
-    overflow: hidden;
-    @include mobile {
-      border-radius: 0px;
-      border: none;
-      padding: 40px;
-    }
-}
-
 #particles-js {
   position: absolute;
   top: 0;
@@ -1257,49 +1246,6 @@ figcaption {
 
 .intro-para {
   font-weight: bold;
-}
-
-.post-heading h1 {
-  max-width: 580px;
-  color: #fff !important;
-  font-size: 1.8em;
-  text-align: center;
-  word-wrap: break-word;
-  line-height: 1.3em;
-  font-family: $font_header;
-  padding: 10px 10px 0px 0px;
-  margin: 0px auto;
-  font-weight: 200;
-  letter-spacing: 0.6px;
-  @include mobile {
-    font-size: 1.2rem;
-    padding: 0px;
-  }
-}
-
-.post-subheading {
-	text-align: center !important;
-	margin: 0px auto;
-  opacity: 1;
-  color: #fff !important;
-	p {
-		color: #ffffff80;
-		font-family: $font_body;
-		font-size: 12px;
-    margin-bottom: 0px !important;
-	}
-}
-
-.post-heading h6 {
-  color: $white;
-  background-color: $primary_500;
-  font-style: normal;
-  padding: 5px 10px;
-  font-size: 13px;
-  padding-top: 7px;
-  @include mobile {
-    padding-top: 7px;
-  }
 }
 
 .date-header {
@@ -1647,10 +1593,6 @@ figcaption {
   padding: 0px;
 }
 
-.post-heading span {
-  margin-top: 10px;
-}
-
 .contact-details {
   display: block;
   padding-top: 20px;
@@ -1819,23 +1761,6 @@ figure {
 
 .mobile-only {
   padding-top: 0px;
-}
-
-.post-heading-wrapper {
-  background-image: url("/images/bg.png");
-  background-color: #37373a !important;
-  @include mobile {
-    padding: 0px;
-    height: 250px;
-    border-radius: 0px;
-  }
-  .overlayer {
-    background-color: rgba(0,0,0,0.6);
-    height: 400px;
-    @include mobile {
-      height: 250px;
-    }
-  }
 }
 
 .grad-post {
@@ -2350,13 +2275,6 @@ code {
     border-radius: 5px;
     font-size: 15px;
   }
-}
-
-.post-link p {
-    margin: 6px 0 0 0;
-    padding: 0;
-    font-size: 14px;
-    color: #6b6b6b;
 }
 
 hr {
