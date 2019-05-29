@@ -149,15 +149,31 @@
 }
 
 .page-holder h3 {
-  margin: 20px 0px;
   display: inline-block;
-  background: #fff5ab;
-  color: black;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 13px;
-  font-family: monospace;
-  font-weight: 100;
+  text-shadow: #fff -2px 2px 0px, #f8ff90 -4px 4px 0px;
+  color: #d02c2a;
+  padding: 5px 0px;
+  transition: color 0.3s ease 0s;
+  position: relative;
+  z-index: 1;
+  font-size: 18px;
+  @include mobile {
+    font-size: 16px;
+  }
+}
+
+.page-holder h3::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: calc(30% + 40px);
+  margin-left: -25px;
+  z-index: -1;
+  background: linear-gradient(90deg, #b1ffec, #fffb80);
+  transition: width 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  border-radius: 3px;
 }
 
 .page-holder {

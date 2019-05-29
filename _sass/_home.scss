@@ -20,7 +20,7 @@
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
   @include mobile {
-    width: 150px;
+    width: 140px;
     height: initial;
     padding: 10px;
   }

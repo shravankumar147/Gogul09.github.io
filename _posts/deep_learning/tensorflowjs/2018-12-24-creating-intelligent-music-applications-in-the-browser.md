@@ -1,7 +1,7 @@
 ---
 layout: post
 category: software
-class: Deep Learning
+class: TensorFlow.js
 title: Creating Intelligent Music Applications in the Browser
 description: In this blog post, we will learn and understand Google's TensorFlow.js and Magenta.js, and explore ways to create AI music applications in the browser.
 author: Gogul Ilango
